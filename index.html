@@ -1020,8 +1020,18 @@ function toggleDevPanel() {
 function updateDevStatus() {
   const total = allProjects.length;
   const today = new Date().toLocaleDateString('zh-CN');
+  const dataEl = document.getElementById('tender-data');
+  let version = 'v24';
+  if (dataEl) {
+    try {
+      const data = JSON.parse(dataEl.textContent);
+      version = data.version || 'v24';
+    } catch (e) {
+      version = 'v24';
+    }
+  }
   document.getElementById('dev-status-text').textContent = 
-    `${total}个项目 | ${today} | 当前版本: v24`;
+    `${total}个项目 | ${today} | 当前版本: ${version}`;
 }
 
 // 文件拖放处理

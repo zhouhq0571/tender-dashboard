@@ -459,7 +459,7 @@ th.col-project,td.col-project{border-right:2px solid var(--primary-light)}
       "contact": "未披露",
       "tags": [
         "财富管理",
-        "渠道系统"
+        "资产管理"
       ],
       "rec": "★☆☆ 可关注",
       "url": "http://qdcgzb.com.cn/",
@@ -720,7 +720,7 @@ function updateStats() {
   const suggest = allProjects.filter(p => p.rec === '⭐ ★★☆ 建议投标');
   const trust = allProjects.filter(p => {
     const c = p.company;
-    return c.includes('信托') && !c.includes('银行');
+    return (c.includes('信托') && !c.includes('银行')) || c === '中信登';
   });
   const bank = allProjects.filter(p => !trust.includes(p));
   

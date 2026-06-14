@@ -1,0 +1,668 @@
+[
+  {
+    "seq": 1,
+    "region": "东北",
+    "province": "吉林",
+    "company": "吉林银行",
+    "project": "数据资产管理平台建设采购项目",
+    "overview": "建设数据资产管理平台，安装上线后包括对产品进行全流程业务指导、产品优化升级等。2026年10月底前完成系统的所有功能，并完成质量交付物且评审通过，以及生产环境部署、上线及试运行。",
+    "budget": "150万元（最高限价）",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "资产管理"
+    ],
+    "recommendation": "⭐ ★★☆ 建议投标",
+    "source": "全国招标平台",
+    "source_url": "http://www.qgzbcgjypt.com/zhengfucaigou/82035.html"
+  },
+  {
+    "seq": 7,
+    "region": "东北",
+    "province": "黑龙江",
+    "company": "哈尔滨银行",
+    "project": "2025-2026年哈行新管理会计系统和资产负债管理系统维保项目",
+    "overview": "新管理会计系统和资产负债管理系统维保，首次合同维保期限2026年1月1日至2026年12月31日。合同签订采用1+1+1续签形式。",
+    "budget": "38万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "资产管理运维服务"
+    ],
+    "recommendation": "⭐ ★★☆ 建议投标",
+    "source": "广西招标",
+    "source_url": "https://www.gxzbcg.com.cn/fwcgzb/20509.html"
+  },
+  {
+    "seq": 8,
+    "region": "华北",
+    "province": "北京",
+    "company": "中信信托",
+    "project": "综合资产管理系统FOF投资策略配置项目（二次招标）",
+    "overview": "综合资产管理系统FOF投资策略配置功能开发与实施",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "资产管理资产服务信托"
+    ],
+    "recommendation": "🔥 ★★★ 强烈建议投标",
+    "source": "365招标",
+    "source_url": "https://www.365trade.com.cn/jfwzb/799254.jhtml"
+  },
+  {
+    "seq": 13,
+    "region": "华北",
+    "province": "北京",
+    "company": "国开行",
+    "project": "2026年资金业务系统、金融市场系统前台业务运维项目",
+    "overview": "资金业务系统（Summit）、金融市场业务系统（FMBS）均为资金交易业务重要的生产系统。引入外部人员协助资金部对系统使用中业务问题进行规范、管理和解决，加强业务支持的响应效率和支持能力，保障业务合规有序运行。项目预算108万元。",
+    "budget": "108万元",
+    "deadline": "未披露",
+    "method": "征集公告/竞争性谈判",
+    "contact": "未披露",
+    "tags": [
+      "金融市场/资金/同业运维服务"
+    ],
+    "recommendation": "⭐ ★★☆ 建议投标",
+    "source": "国开行",
+    "source_url": "https://cg.cdb.com.cn/cmscaigou/9a4db2fc5ec64aa1b74394f81f571993.html"
+  },
+  {
+    "seq": 21,
+    "region": "华北",
+    "province": "天津",
+    "company": "天津银行",
+    "project": "理财资产管理系统新增批复到期提醒及产品收益测算等功能项目",
+    "overview": "天津银行理财资产管理系统新增批复到期提醒及产品收益测算等功能，具体内容详见项目需求书。",
+    "budget": "23.5万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "财富管理资产管理"
+    ],
+    "recommendation": "🔥 ★★★ 强烈建议投标",
+    "source": "全国招标平台",
+    "source_url": "http://qgzbcgjypt.com/zhaobiaocaigou/89575.html"
+  },
+  {
+    "seq": 65,
+    "region": "华南",
+    "province": "广东",
+    "company": "广州银行",
+    "project": "2026年综合理财销售系统功能升级建设采购项目（第二次）",
+    "overview": "综合理财销售系统顺应监管要求及市场发展进行系统迭代升级，落实监管合规要求（自营理财垫资模式改造优化、系统信创改造等），对接更多合作机构，支持产品优化创新，提升产品竞争力，根据业务发展优化各业务功能。采购数量1套，实施周期12个月。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "黄小姐 jzcg3@gzcb.com.cn；代理机构何小姐、魏先生 020-87554038",
+    "tags": [
+      "财富管理"
+    ],
+    "recommendation": "⭐ ★★☆ 建议投标",
+    "source": "广州银行",
+    "source_url": "http://www.gzcb.com.cn/jrgy/xwgg/zygg/cggg/202605/t20260515_71803.html"
+  },
+  {
+    "seq": 66,
+    "region": "华南",
+    "province": "广东",
+    "company": "广州银行",
+    "project": "2026-2027年不良资产收益权中介机构选聘项目",
+    "overview": "2026-2027年分期发行不良资产收益权/证券化产品，基础资产类型包括信用卡不良资产、个人按揭不良资产、个人经营性贷款不良资产等。选聘证券公司、信托公司、律师事务所、信用评级机构、资产评估机构各2家。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "资产管理"
+    ],
+    "recommendation": "⭐ ★★☆ 建议投标",
+    "source": "广州银行",
+    "source_url": "http://www.gzcb.com.cn/jrgy/xwgg/zygg/cggg/202601/t20260113_70625.html"
+  },
+  {
+    "seq": 2,
+    "region": "东北",
+    "province": "吉林",
+    "company": "吉林银行",
+    "project": "客户财务系统升级及司库系统建设采购项目",
+    "overview": "ERP系统升级采购，将原有系统（用友NC65）升级到最新版本（用友BIP），具备历史数据迁移能力。合同签订3个月内完成产品安装调试。",
+    "budget": "210万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "财富管理"
+    ],
+    "recommendation": "➖ ☆☆☆ 不建议",
+    "source": "全国招标平台",
+    "source_url": "http://qgzbcgjypt.com/zhaobiaocaigou/87994.html"
+  },
+  {
+    "seq": 6,
+    "region": "东北",
+    "province": "辽宁",
+    "company": "邮储银行辽宁分行",
+    "project": "2026年反电信网络诈骗数据治理服务项目（二次）",
+    "overview": "反电信网络诈骗数据治理服务，用于电诈风险账户识别，包括安装、相关调试对接、技术支持、培训等服务。首次服务期限1年。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "左晓婷、高阳 024-82901399",
+    "tags": [
+      "风控合规"
+    ],
+    "recommendation": "➖ ☆☆☆ 不建议",
+    "source": "中国邮政",
+    "source_url": "https://www.chinapost.com.cn/html1/report/26041/1076-1.htm"
+  },
+  {
+    "seq": 9,
+    "region": "华北",
+    "province": "北京",
+    "company": "中国银行",
+    "project": "2026年度软件中心支持服务（大模型技术服务）",
+    "overview": "协助行内人员以大模型能力为基础，将AI模型技术能力进行公共提取和集中化管理，以平台化方式提供封装的、可扩展的、具备大小模型协同的支撑服务，规模化支撑金融创新、场景应用落地。总需求500人天（高级100人天+中级400人天）。服务期自合同签订之日起至2026年12月31日。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "大模型应用运维服务"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "移动支付",
+    "source_url": "https://m.mpaypass.com.cn/news/202601/16104815.html"
+  },
+  {
+    "seq": 10,
+    "region": "华北",
+    "province": "北京",
+    "company": "中银理财",
+    "project": "2026年11层办公区改造项目",
+    "overview": "11层办公区改造装修，项目编号0686-26200A274351N",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "其他"
+    ],
+    "recommendation": "➖ ☆☆☆ 不建议",
+    "source": "中银理财",
+    "source_url": "https://www.bocwm.cn/html/1//186/162/32251.html"
+  },
+  {
+    "seq": 12,
+    "region": "华北",
+    "province": "北京",
+    "company": "光大银行",
+    "project": "公司业务管理系统-对公客户企微服务管理子系统新建项目",
+    "overview": "通过引入企业微信服务，实现'每名小微客户经理都成为我行小微企业服务的窗口'，提高客户经理工作效率，助力基础客群数字化运营体系建设，提升光大银行普惠金融品牌形象。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "财富管理"
+    ],
+    "recommendation": "➖ ☆☆☆ 不建议",
+    "source": "全国招标平台",
+    "source_url": "http://qgzbcgjypt.com/zhaobiaocaigou/87731.html"
+  },
+  {
+    "seq": 22,
+    "region": "华北",
+    "province": "天津",
+    "company": "天津银行",
+    "project": "金融市场数据中台监管合规数字化体系深化建设项目",
+    "overview": "金融市场数据中台监管合规数字化体系深化建设，具体内容详见项目需求书。",
+    "budget": "101万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "金融市场/资金/同业风控合规"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "全国招标平台",
+    "source_url": "http://qgzbcgjypt.com/jingxuanxiangmu/78030.html"
+  },
+  {
+    "seq": 23,
+    "region": "华北",
+    "province": "天津",
+    "company": "天津银行",
+    "project": "金融市场综合业务系统运营管理能力提升及实时风控对接项目",
+    "overview": "金融市场综合业务系统运营管理能力提升及实时风控对接，具体内容详见项目需求书。",
+    "budget": "106.4万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "金融市场/资金/同业风控合规"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "全国招标平台",
+    "source_url": "http://www.qgzbcgjypt.com/zhengfucaigou/77778.html"
+  },
+  {
+    "seq": 24,
+    "region": "华北",
+    "province": "天津",
+    "company": "天津银行",
+    "project": "运行管理人力外包项目（2026-2027）",
+    "overview": "运行管理人力外包项目（2026-2027）。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "人力外包入围"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "全国招标平台",
+    "source_url": "http://www.qgzbcgjypt.com/zhaobiaocaigou/77440.html"
+  },
+  {
+    "seq": 27,
+    "region": "华北",
+    "province": "河北",
+    "company": "河北银行",
+    "project": "2026年掌上河行系统功能升级改造项目科技外包人力服务（二次）",
+    "overview": "掌上河行系统功能升级改造项目科技外包人力服务。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "人力外包入围"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "智料标讯",
+    "source_url": "https://hb.zhiliaobiaoxun.com/article/95684418"
+  },
+  {
+    "seq": 28,
+    "region": "华北",
+    "province": "河北",
+    "company": "河北银行",
+    "project": "2025年二代征信上报与征信查询系统功能优化及信创改造项目",
+    "overview": "二代征信上报与征信查询系统功能优化及信创改造，自合同签订日起至所有流程上线投产，工期不超过5.5个月。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "风控合规信创"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "招标采购",
+    "source_url": "http://www.china-zbycg.com/agent_4734335.html"
+  },
+  {
+    "seq": 29,
+    "region": "华北",
+    "province": "河北",
+    "company": "秦皇岛银行",
+    "project": "2026年中高级安全人天服务入围项目",
+    "overview": "2026年7月1日至2027年6月30日安全服务，包括渗透测试、代码审计等工作内容。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "风控合规人力外包入围"
+    ],
+    "recommendation": "➖ ☆☆☆ 不建议",
+    "source": "广西招标",
+    "source_url": "https://www.gxzztoubiao.cn/dlzb/34768.html"
+  },
+  {
+    "seq": 34,
+    "region": "华东",
+    "province": "上海",
+    "company": "中国信托登记",
+    "project": "2026年度信息系统建设人力外包服务供应商入围项目",
+    "overview": "2026年度信息系统建设人力外包服务供应商入围，分2个标段：开发类人力外包服务供应商入围、测试类人力外包服务供应商入围。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "人力外包入围"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "全国招标平台",
+    "source_url": "http://qgzbcgjypt.com/zhaobiaocaigou/93810.html"
+  },
+  {
+    "seq": 35,
+    "region": "华东",
+    "province": "上海",
+    "company": "中国外汇交易中心",
+    "project": "中汇公司2026-2029年人力外包服务采购项目（包1）",
+    "overview": "2026-2029年人力外包服务采购。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "郭先生/赵女士 010-66195911/010-66195465",
+    "tags": [
+      "人力外包入围"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "jzcg.pbc.gov.cn",
+    "source_url": "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/ca19e6cbed9d4db7b1c61c4320dd6720.html"
+  },
+  {
+    "seq": 40,
+    "region": "华东",
+    "province": "江苏",
+    "company": "南京银行",
+    "project": "核心业务系统信创改造测试项目",
+    "overview": "核心业务系统信创改造测试。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "信创"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "财招网",
+    "source_url": "http://www.caizhaowang.com/news-1-53e5aeb26f3b5cd9eda879cb75874979c0d7f315b604c640.html"
+  },
+  {
+    "seq": 41,
+    "region": "华东",
+    "province": "江苏",
+    "company": "紫金农商行",
+    "project": "2026年度金融市场信息终端采购项目",
+    "overview": "采购金融市场信息终端，用于查询全球金融市场的数据与信息，内容包括股票、债券、期货、外汇、基金、指数、权证、宏观行业等多品种，查询行业宏观微观数据信息，收集行业研究报告。",
+    "budget": "68.8万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "金融市场/资金/同业"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "www.zjrcbank.co",
+    "source_url": "http://www.zjrcbank.com/zjnshrcb/qtlm/jzcg/cggg/1321483/index.html"
+  },
+  {
+    "seq": 42,
+    "region": "华东",
+    "province": "江苏",
+    "company": "紫金农商行",
+    "project": "2026年度金融科技通用人力外包现场服务采购项目",
+    "overview": "拟采购具备系统持续性优化开发能力的外包人员，人员类型主要为软件开发、数据开发，工作内容主要是完成各类系统投产后业务部门所提出新增需求的开发。预算519.38万元，服务期1年，拟入围6家。",
+    "budget": "519.38万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "人力外包入围"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "紫金农商行",
+    "source_url": "https://www.tcrcb.com/zjnshrcb/qtlm/jzcg/cggg/1307037/index.html"
+  },
+  {
+    "seq": 44,
+    "region": "华东",
+    "province": "江苏",
+    "company": "苏州银行",
+    "project": "贷后管理智能体建设服务采购项目",
+    "overview": "贷后管理智能体建设服务，持续加码金融AI智能体布局。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "风控合规大模型应用"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "东方财富",
+    "source_url": "https://wap.eastmoney.com/a/202606063762331522.html"
+  },
+  {
+    "seq": 46,
+    "region": "华东",
+    "province": "浙江",
+    "company": "工行浙江分行",
+    "project": "2026至2029年特约商户专业化外包服务及客服项目",
+    "overview": "特约商户专业化外包服务及客服项目，A子项特约商户专业化外包服务预估金额1427万元，B子项商户客服项目预估金额270万元，项目有效期1年内预估1697万元。",
+    "budget": "1697万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "人力外包入围"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "云飞招标",
+    "source_url": "https://m.yfbzb.com/inviteBid/detail/20260526_600276042.html"
+  },
+  {
+    "seq": 48,
+    "region": "华东",
+    "province": "浙江",
+    "company": "金华银行",
+    "project": "操作系统维保和虚拟化系统维保项目（2026年度）",
+    "overview": "操作系统维保和虚拟化系统维保，维保服务1年。最高限价64万元。",
+    "budget": "64万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "运维服务"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "金华银行",
+    "source_url": "https://www.jhccb.com.cn/art/2026/3/16/art_67_4003165.html"
+  },
+  {
+    "seq": 52,
+    "region": "华中",
+    "province": "河南",
+    "company": "郑州银行",
+    "project": "2026年云平台信创化改造项目",
+    "overview": "云平台进行信创化系统改造，适配国产化服务器、操作系统、数据库、中间件等，配合外围系统进行国产化适配的联调测试，并同步进行同城灾备建设工作。计划实施周期6个月。",
+    "budget": "61.20万元（最高限价）",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "信创"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "公共资源平台",
+    "source_url": "https://ggzyjypt.cn/bszz/158559.html"
+  },
+  {
+    "seq": 53,
+    "region": "华中",
+    "province": "河南",
+    "company": "郑州银行",
+    "project": "2026年云商平台信创化改造项目",
+    "overview": "云商平台进行信创化系统改造，适配国产化服务器、操作系统、数据库、中间件等，配合外围系统进行国产化适配的联调测试，并同步进行同城灾备建设工作。计划实施周期6个月。",
+    "budget": "61.20万元（最高限价）",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "信创"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "全国招标平台",
+    "source_url": "http://www.qgzbcgjypt.com/gonggaogongshi/70030.html"
+  },
+  {
+    "seq": 54,
+    "region": "华中",
+    "province": "湖北",
+    "company": "众邦银行",
+    "project": "2026年银行驻场运营人力外包供应商入围采购项目",
+    "overview": "择优选择不超过5家入围供应商，提供运营岗位驻场人员外包服务，预计采购服务人员18人。入围服务期2年（合同一年一签）。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "竞争性磋商",
+    "contact": "未披露",
+    "tags": [
+      "运维服务人力外包入围"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "众邦银行",
+    "source_url": "https://www.ztzbpt.com/dlzb/163291.html"
+  },
+  {
+    "seq": 55,
+    "region": "华中",
+    "province": "湖南",
+    "company": "江永农商行",
+    "project": "人力资源外包服务项目",
+    "overview": "将营业网点大堂服务，总行公务车辆司勤、综合文秘、门卫室服务，总行及支行食堂炊事服务，临时性、阶段性的辅助型人力资源服务外包给专业的劳务公司。",
+    "budget": "175万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "人力外包入围"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "全国招标平台",
+    "source_url": "http://qgzbcgjypt.com/zhaobiaocaigou/88066.html"
+  },
+  {
+    "seq": 56,
+    "region": "华中",
+    "province": "湖南",
+    "company": "湖南银行",
+    "project": "2026年度私人银行客户活动项目-季度主题活动和小型沙龙活动",
+    "overview": "2026年度私人银行客户活动项目，包括季度主题活动和小型沙龙活动。项目预算230万元。",
+    "budget": "230万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "周女士 0731-89829735",
+    "tags": [
+      "财富管理"
+    ],
+    "recommendation": "➖ ☆☆☆ 不建议",
+    "source": "湖南银行",
+    "source_url": "https://www.hunan-bank.com/96599/2026-03/26/article_2026032611065974553.shtml"
+  },
+  {
+    "seq": 58,
+    "region": "华南",
+    "province": "广东",
+    "company": "中信信用卡中心",
+    "project": "2026-2029年度技术服务入围采购项目-运维支持",
+    "overview": "2026-2029年度技术服务入围采购运维支持，保障生产系统安全稳定运行，解决人力资源无法满足运维工作需求的问题。服务期自2026年4月1日起至2029年3月31日。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "运维服务人力外包入围"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "千里马",
+    "source_url": "https://gd.qianlima.com/zbcontent-569573161.html"
+  },
+  {
+    "seq": 62,
+    "region": "华南",
+    "province": "广东",
+    "company": "广州农商行",
+    "project": "2026年度数据中心信创防火墙采购项目",
+    "overview": "采购数据中心信创防火墙及配套安装、调试、维保等相关技术支持服务，推进数据中心防火墙信创改造，加速IT基础设备自主可控进程。预算120万元。",
+    "budget": "120万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "风控合规信创"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "广州农商行",
+    "source_url": "https://newcpm.grcbank.com:8079/jcepp-esp/notice/toNoticeDetails?newsId=a63b5cd81bb64e4ab2a784da1ec270e1"
+  },
+  {
+    "seq": 63,
+    "region": "华南",
+    "province": "广东",
+    "company": "广州农商行",
+    "project": "2026年网络数据安全风险评估项目",
+    "overview": "聘请第三方评估机构对招标人网络数据安全管理情况实施风险评估，落实《网络数据安全管理条例》《银行保险机构数据安全管理办法》等监管要求。预算45万元。",
+    "budget": "45万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "风控合规"
+    ],
+    "recommendation": "➖ ☆☆☆ 不建议",
+    "source": "广州农商行",
+    "source_url": "https://www.grcbank.com/grcbank/gywx/cggg/2026052517162190451/index.shtml"
+  },
+  {
+    "seq": 64,
+    "region": "华南",
+    "province": "广东",
+    "company": "广州农商行",
+    "project": "2026年业务性能监控系统授权许可扩容项目",
+    "overview": "CrossFlow业务性能监控系统授权许可扩容，加强业务系统运维监控及故障定位能力，提升生产问题处置时效，保障业务连续性。预算79.58万元。",
+    "budget": "79.58万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "运维服务"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "广州农商行",
+    "source_url": "https://www.grcbank.com/grcbank/gywx/cggg/2026051818115112636/index.shtml"
+  },
+  {
+    "seq": 69,
+    "region": "西南",
+    "province": "云南",
+    "company": "禄丰农商行",
+    "project": "\"同业\"新系统上线首批柜面前台PC电脑终端、扫描仪等设备采购项目",
+    "overview": "\"同业\"新系统上线首批柜面前台PC电脑终端、扫描仪等设备采购。",
+    "budget": "91.08万元",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "金融市场/资金/同业"
+    ],
+    "recommendation": "★☆☆ 可关注",
+    "source": "广西招标",
+    "source_url": "http://gxzzzb.top/?m=home&c=View&a=index&aid=4088"
+  },
+  {
+    "seq": 72,
+    "region": "西北",
+    "province": "甘肃",
+    "company": "兰州银行",
+    "project": "新一代核心系统群\"兰芯\"工程-云平台存储采购项目",
+    "overview": "移动雁滩数据中心与电信彭家坪数据中心采购2台集中式存储和2台云平台备份一体机，每台集中式存储容量不少于300TB（可用容量），每台备份一体机容量不少于60TB（可用容量），包括硬件设备安装部署、软件授权、项目集成所需辅材、实施服务、售后维保服务等。",
+    "budget": "未披露",
+    "deadline": "未披露",
+    "method": "公开招标",
+    "contact": "未披露",
+    "tags": [
+      "其他"
+    ],
+    "recommendation": "➖ ☆☆☆ 不建议",
+    "source": "招标采购",
+    "source_url": "http://www.china-zbycg.com/agent_4741747.html"
+  }
+]

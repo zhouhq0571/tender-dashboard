@@ -1,0 +1,273 @@
+[
+  {
+    "industry": "银行",
+    "region": "华南",
+    "province": "广东",
+    "company": "广州农村商业银行股份有限公司",
+    "project_name": "2026年数据中心信创SDN网络扩容项目",
+    "overview": "为满足2026年服务器接入需求以及测试环境搬迁需要，开展数据中心信创SDN网络扩容，采购交换机、板卡以及相关技术支持服务，预算324.96万元",
+    "budget": "324.96万元",
+    "deadline": "2026-06-11 23:59",
+    "method": "公开招标",
+    "contact": "吕先生 020-22389091 lvhuipeng@grcbank.com",
+    "tags": [
+      "IT系统建设",
+      "信创/国产化",
+      "数据中心"
+    ],
+    "source": "广州农村商业银行官网",
+    "url": "https://www.grcbank.com/grcbank/gywx/cggg/2026060417525899782/index.shtml"
+  },
+  {
+    "industry": "银行",
+    "region": "华东",
+    "province": "山东",
+    "company": "东营银行股份有限公司",
+    "project_name": "信创基础软件采购供应商入围项目",
+    "overview": "A包：信创服务器操作系统，拟入围2家；B包：信创集中式数据库，拟入围3家；C包：信创分布式数据库，拟入围2家；D包：信创中间件，拟入围2家",
+    "budget": "A包0.6万元/套；B包12万元/套；C包13.5万元/套；D包3万元/套",
+    "deadline": "2026-06-26 09:00",
+    "method": "公开招标",
+    "contact": "黄先生 0546-8309198 / 15552751800",
+    "tags": [
+      "信创/国产化",
+      "IT系统建设"
+    ],
+    "source": "东营银行官网",
+    "url": "https://www.dyccb.net/dyccb/2026-06/03/article_2026060309142624708.html"
+  },
+  {
+    "industry": "信托登记",
+    "region": "华东",
+    "province": "上海",
+    "company": "中国信托登记有限责任公司",
+    "project_name": "2026-2028年度信息系统建设人力外包服务供应商入围项目",
+    "overview": "分为开发类人力外包服务供应商入围项目（包件一，最多12名中标人）和测试类人力外包服务供应商入围项目（包件二，最多6名中标人）两个包件，为招标人提供信息系统建设人力外包服务，服务期为自合同签订起贰年，并根据工作要求按时、分批到岗。",
+    "budget": "",
+    "deadline": "2026-06-22 10:00",
+    "method": "公开招标",
+    "contact": "陈吉 13581595570，徐梦莹 18611886439，邮箱：gxzbvip518@163.com",
+    "tags": [
+      "人力外包",
+      "IT系统建设",
+      "运维服务"
+    ],
+    "source": "国信招标与采购信息平台",
+    "url": "http://qgzbcgjypt.com/zhaobiaocaigou/93810.html"
+  },
+  {
+    "industry": "信托",
+    "region": "华东",
+    "province": "江苏",
+    "company": "苏州信托有限公司",
+    "project_name": "AI智能双录系统",
+    "overview": "AI智能双录系统建设项目，项目划分为1个标段，采购内容包含即时通讯软件账号和合规管理后台，以及配套的数据接口服务实现与智能交易辅助平台对接，同时需提供相关过程配合和其他售后服务工作。",
+    "budget": "98万元",
+    "deadline": "2026-06-23 14:00",
+    "method": "公开招标",
+    "contact": "郑工 13041093518，邮箱：guoxinzhaobiao0001@163.com",
+    "tags": [
+      "AI应用",
+      "财富管理",
+      "系统建设"
+    ],
+    "source": "国信招标与采购信息平台",
+    "url": "https://www.ggzyjypt.cn/bszz/195498.html"
+  },
+  {
+    "industry": "城商行",
+    "region": "西南",
+    "province": "四川",
+    "company": "四川银行股份有限公司",
+    "project_name": "四川银行2026至2027年软件研发通用技术服务采购项目",
+    "overview": "软件研发7个单元化团队的数字化转型、信贷流程优化、网点竞争力提升、子机构吸收合并、外部机构和监管要求，以及各系统的迭代升级和系统稳定性、安全性优化等需求研发工作，预计需求量为3,018人月。涵盖核心运营、信投资管、生态银行、线上渠道、内部管理、网点运营、公共平台等7个团队。",
+    "budget": "7421万元",
+    "deadline": "2026-06-26 10:00",
+    "method": "公开招标",
+    "contact": "向老师 028-63289737；代理机构：陶冶/张引/代娥/任毅/王达原 15708432070/19208055177，邮箱：826712870@qq.com",
+    "tags": [
+      "IT系统建设",
+      "人力外包"
+    ],
+    "source": "四川银行官网",
+    "url": "https://www.scbank.cn/cn/col322/6796662.html"
+  },
+  {
+    "industry": "金融基础设施",
+    "region": "华北",
+    "province": "北京",
+    "company": "中国人民银行清算总中心",
+    "project_name": "2025年清算总中心ARM服务器及配件采购",
+    "overview": "采购ARM服务器及配件，包括ARM服务器-配置1（13台）、配置2（10台）、配置3（8台）、配置4（2台）、配置5（2台）、配置6（3台）以及网卡（2块），共38台服务器及配件。",
+    "budget": "1429.40万元",
+    "deadline": "2026-06-24 09:30",
+    "method": "公开招标",
+    "contact": "郄女士 010-68401491；监督电话：010-68401874，监督邮箱：sjhgb@cncc.cn",
+    "tags": [
+      "信创",
+      "国产化"
+    ],
+    "source": "中国人民银行集中采购中心",
+    "url": "https://jzcg.pbc.gov.cn/freecms/site/rmyh/ggxx/info/2026/dac52bc999d64eb586aed8d29399f614.html"
+  },
+  {
+    "industry": "消费金融",
+    "region": "华南",
+    "province": "广东",
+    "company": "中邮消费金融有限公司",
+    "project_name": "中邮消费金融有限公司2026年统一文件备份系统采购项目",
+    "overview": "采购一套统一文件备份系统（包含备份存储容量授权数量100TB），服务期限2年。",
+    "budget": "46万元",
+    "deadline": "2026-06-15 09:30",
+    "method": "公开招标",
+    "contact": "黎小姐 020-22361020；代理机构：赵经理 18148610004/13533410607/13928836504/17724049873，邮箱：zt_bidding@163.com",
+    "tags": [
+      "IT系统建设"
+    ],
+    "source": "中国邮政官网",
+    "url": "https://www.chinapost.com.cn/cn/report/2605/8176-1.htm"
+  },
+  {
+    "industry": "理财子公司",
+    "region": "华东",
+    "province": "山东",
+    "company": "光大理财有限责任公司",
+    "project_name": "光大理财有限责任公司金融基础数据报送系统2026年监管制度升级及信创改造项目（二次招标）",
+    "overview": "完成系统制度升级，满足监管制度改造要求，保障金融基础数据报送顺利进行。",
+    "budget": "49万元",
+    "deadline": "2026-06-24 09:00",
+    "method": "公开招标",
+    "contact": "董天 13041093518，徐工 18611886439，邮箱：guoxinzhaobiao123@163.com",
+    "tags": [
+      "信创",
+      "国产化",
+      "理财子公司"
+    ],
+    "source": "国信招标与采购信息平台",
+    "url": "http://www.qgzbcgjypt.com/xinwenzhongxin/94891.html"
+  },
+  {
+    "industry": "理财子公司",
+    "region": "华东",
+    "province": "浙江",
+    "company": "宁银理财有限责任公司",
+    "project_name": "宁银理财有限责任公司TA系统功能升级项目",
+    "overview": "在TA管理系统现有功能基础上进行功能升级，包括资金模块升级（T0.5垫资、T0垫资新增对手方）、中后台功能升级、批前校验指标新增、产品功能优化（养老产品功能升级）、清算功能改造、代销对接改造、管理功能及接口新增等。",
+    "budget": "",
+    "deadline": "2026-06-12",
+    "method": "竞争性磋商",
+    "contact": "刘震 0574-87087592（科技部），陆俊晓 0574-87087560（运营部），张寅 0574-87209316（综合部），邮箱：190073@wmbnb.com",
+    "tags": [
+      "TA系统",
+      "理财子公司"
+    ],
+    "source": "宁银理财官网",
+    "url": "http://www.nbgodo.com/info.aspx?id=12319&chid=11"
+  },
+  {
+    "industry": "理财子公司",
+    "region": "华北",
+    "province": "北京",
+    "company": "中邮理财有限责任公司",
+    "project_name": "中邮理财各类模型验证及资本并表计量第三方确认咨询服务采购项目（包1压力测试检验评估）（第四次）",
+    "overview": "模型验证及资本并表计量第三方确认咨询服务，包1为压力测试检验评估。",
+    "budget": "",
+    "deadline": "2026-06-24 09:30",
+    "method": "公开招标",
+    "contact": "李鹏 13105318981、滕漫玥 18022382999；代理机构：公诚管理咨询有限公司",
+    "tags": [
+      "资管系统",
+      "理财子公司"
+    ],
+    "source": "中国邮政官网",
+    "url": "http://xizang.chinapost.com.cn/cn/report/2606/0867-1.htm"
+  },
+  {
+    "industry": "农商行",
+    "region": "华南",
+    "province": "广东",
+    "company": "广州农村商业银行股份有限公司",
+    "project_name": "广州农村商业银行2026年数据中心信创SDN网络扩容项目",
+    "overview": "为满足2026年服务器接入需求以及测试环境搬迁需要，开展数据中心信创SDN网络扩容，采购内容包括交换机、板卡以及相关技术支持服务，最终确认1名中标供应商。",
+    "budget": "324.96万元",
+    "deadline": "2026-07-02 09:00",
+    "method": "公开招标",
+    "contact": "吕先生 020-22389091，邮箱：lvhuipeng@grcbank.com",
+    "tags": [
+      "信创",
+      "国产化"
+    ],
+    "source": "广州农村商业银行官网",
+    "url": "https://www.grcbank.com/grcbank/gywx/cggg/2026060417525899782/index.shtml"
+  },
+  {
+    "industry": "农商行",
+    "region": "华南",
+    "province": "广东",
+    "company": "广州农村商业银行股份有限公司",
+    "project_name": "广州农村商业银行2026年国产域名解析设备采购项目",
+    "overview": "为满足动态域名解析等技术的发展需要，开展国产域名解析设备采购，为现有DNS系统扩容升级，采购内容包括域名解析集群设备、域名解析逃生设备以及相关技术支持服务。",
+    "budget": "190万元",
+    "deadline": "2026-06-30 09:00",
+    "method": "公开招标",
+    "contact": "潘先生 020-22389241，邮箱：panchaoning@grcbank.com",
+    "tags": [
+      "信创",
+      "国产化"
+    ],
+    "source": "广州农村商业银行官网",
+    "url": "https://www.grcbank.com/grcbank/gywx/cggg/2026060417505767139/index.shtml"
+  },
+  {
+    "industry": "农商行",
+    "region": "华南",
+    "province": "广东",
+    "company": "广州农村商业银行股份有限公司",
+    "project_name": "广州农村商业银行2026年数据中心Web应用防火墙设备采购项目",
+    "overview": "数据中心Web应用防火墙设备采购项目",
+    "budget": "",
+    "deadline": "2026-06-11 23:59",
+    "method": "公开招标",
+    "contact": "吕先生 020-22389091",
+    "tags": [
+      "IT系统建设"
+    ],
+    "source": "广州农村商业银行官网",
+    "url": "https://www.grcbank.com/grcbank/gywx/cggg/index.shtml"
+  },
+  {
+    "industry": "农商行",
+    "region": "华南",
+    "province": "广东",
+    "company": "广州农村商业银行股份有限公司",
+    "project_name": "广州农村商业银行2026年云原生网络流量可观测性平台采集许可扩容项目",
+    "overview": "云原生网络流量可观测性平台采集许可扩容",
+    "budget": "",
+    "deadline": "2026-06-09 23:59",
+    "method": "公开招标",
+    "contact": "",
+    "tags": [
+      "IT系统建设"
+    ],
+    "source": "广州农村商业银行官网",
+    "url": "https://www.grcbank.com/grcbank/gywx/cggg/index.shtml"
+  },
+  {
+    "industry": "农商行",
+    "region": "华南",
+    "province": "广东",
+    "company": "广州农村商业银行股份有限公司",
+    "project_name": "广州农村商业银行2026年度数据中心信创防火墙采购项目",
+    "overview": "数据中心信创防火墙采购",
+    "budget": "",
+    "deadline": "2026-06-09 23:59",
+    "method": "公开招标",
+    "contact": "",
+    "tags": [
+      "信创",
+      "国产化"
+    ],
+    "source": "广州农村商业银行官网",
+    "url": "https://www.grcbank.com/grcbank/gywx/cggg/index.shtml"
+  }
+]

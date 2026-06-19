@@ -1026,17 +1026,31 @@ th.col-project,td.col-project{border-right:2px solid var(--primary-light)}
 // 增删项目只需修改JSON数据，统计数字自动同步
 
 const REC_PRIORITY = {
-  '🔥 ★★★ 强烈建议投标': 1,
-  '⭐ ★★☆ 建议投标': 2,
-  '★☆☆ 可关注': 3,
-  '☆☆☆ 已截止': 4,
+  '★★★强烈建议': 1,
+  '★★☆建议': 2,
+  '★☆☆可关注': 3,
+  '☆☆☆已截止': 4,
+  '☆☆☆不建议': 5,
+};
+
+// 地理区域从北到南排序权重
+const REGION_ORDER = {
+  '东北': 1,
+  '华北': 2,
+  '西北': 3,
+  '华东': 4,
+  '华中': 5,
+  '西南': 6,
+  '华南': 7,
+  '其他': 8,
 };
 
 const REC_CLASS = {
-  '🔥 ★★★ 强烈建议投标': 'rec-strong',
-  '⭐ ★★☆ 建议投标': 'rec-suggest',
-  '★☆☆ 可关注': 'rec-watch',
-  '☆☆☆ 已截止': 'rec-none',
+  '★★★强烈建议': 'rec-strong',
+  '★★☆建议': 'rec-suggest',
+  '★☆☆可关注': 'rec-watch',
+  '☆☆☆已截止': 'rec-none',
+  '☆☆☆不建议': 'rec-no',
 };
 
 // 读取JSON数据
@@ -1061,26 +1075,31 @@ function parseDeadline(d) {
   }
 }
 
-// 排序：按推荐等级优先级 + 截止日期升序（已截止项目排最后）
+// 排序：按推荐等级优先级 → 截止日期升序 → 地理区域从北到南
 function sortProjects(projects) {
   return [...projects].sort((a, b) => {
-    const pa = REC_PRIORITY[a.rec] || 99;
-    const pb = REC_PRIORITY[b.rec] || 99;
+    const pa = REC_PRIORITY[a.recommendation] || 99;
+    const pb = REC_PRIORITY[b.recommendation] || 99;
     if (pa !== pb) return pa - pb;
-    return parseDeadline(a.deadline) - parseDeadline(b.deadline);
+    const da = parseDeadline(a.deadline);
+    const db = parseDeadline(b.deadline);
+    if (da - db !== 0) return da - db;
+    const ra = REGION_ORDER[a.region] || 99;
+    const rb = REGION_ORDER[b.region] || 99;
+    return ra - rb;
   });
 }
 
 // 生成单行HTML
 function renderRow(p, seq, tabPrefix) {
   const zebraClass = (seq % 2 === 0) ? ' zebra' : '';
-  const recClass = REC_CLASS[p.rec] || 'rec-watch';
+  const recClass = REC_CLASS[p.recommendation] || 'rec-watch';
   const tagsHtml = p.tags.map(t => 
     `<span class="biz-tag" data-tag="${t}" onclick="filterByTag('${t}')">${t}</span>`
   ).join(' ');
   const budgetDisplay = p.budget || '';
   
-  return `<tr class="${zebraClass}" data-company="${p.company}" data-method="${p.method}" data-project="${p.project}" data-tags="${p.tags.join(',')}" data-province="${p.province}" data-rec="${p.rec}" id="${tabPrefix}-row-${seq}">
+  return `<tr class="${zebraClass}" data-company="${p.company}" data-method="${p.method}" data-project="${p.project}" data-tags="${p.tags.join(',')}" data-province="${p.province}" data-rec="${p.recommendation}" id="${tabPrefix}-row-${seq}">
     <td class="col-seq">${seq}</td>
     <td class="col-region"><span class="region-badge">${p.region}</span></td>
     <td class="col-province">${p.province}</td>
@@ -1092,7 +1111,7 @@ function renderRow(p, seq, tabPrefix) {
     <td class="col-method"><span class="method-badge">${p.method}</span></td>
     <td class="col-contact">${p.contact}</td>
     <td class="col-tags">${tagsHtml}</td>
-    <td class="col-rec"><span class="${recClass}">${p.rec}</span></td>
+    <td class="col-rec"><span class="${recClass}">${p.recommendation}</span></td>
     <td class="col-url"><a href="${p.url}" target="_blank" class="url-link-colored" title="${p.source}">${p.source}</a></td>
   </tr>`;
 }
@@ -1109,8 +1128,8 @@ function renderTabBody(tbodyId, projects, tabPrefix) {
 // 更新统计数字（核心函数：所有数字从此处统一计算）
 function updateStats() {
   // 按推荐等级分类
-  const strong = allProjects.filter(p => p.rec === '🔥 ★★★ 强烈建议投标');
-  const suggest = allProjects.filter(p => p.rec === '⭐ ★★☆ 建议投标');
+  const strong = allProjects.filter(p => p.recommendation === '★★★强烈建议');
+  const suggest = allProjects.filter(p => p.recommendation === '★★☆建议');
   const trust = allProjects.filter(p => {
     const c = p.company;
     return (c.includes('信托') && !c.includes('银行')) || c === '中信登';
@@ -1188,7 +1207,7 @@ function updateEmptyState(tabId, count) {
 function populateFilters() {
   const provinces = [...new Set(allProjects.map(p => p.province))].sort();
   const methods = [...new Set(allProjects.map(p => p.method))].sort();
-  const recs = [...new Set(allProjects.map(p => p.rec))].sort();
+  const recs = [...new Set(allProjects.map(p => p.recommendation))].sort();
   const companies = [...new Set(allProjects.map(p => p.company))].sort();
   const sources = [...new Set(allProjects.map(p => p.source))].sort();
   

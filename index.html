@@ -1026,11 +1026,11 @@ th.col-project,td.col-project{border-right:2px solid var(--primary-light)}
 // 增删项目只需修改JSON数据，统计数字自动同步
 
 const REC_PRIORITY = {
-  '★★★强烈建议': 1,
-  '★★☆建议': 2,
-  '★☆☆可关注': 3,
-  '☆☆☆已截止': 4,
-  '☆☆☆不建议': 5,
+  '🔥 ★★★ 强烈建议投标': 1,
+  '⭐ ★★☆ 建议投标': 2,
+  '★☆☆ 可关注': 3,
+  '☆☆☆ 已截止': 4,
+  '☆☆☆ 不建议': 5,
 };
 
 // 地理区域从北到南排序权重
@@ -1045,12 +1045,30 @@ const REGION_ORDER = {
   '其他': 8,
 };
 
+// 省份从北到南排序权重（同大区内按纬度从高到低）
+const PROVINCE_ORDER = {
+  // 东北
+  '黑龙江': 1, '吉林': 2, '辽宁': 3, '内蒙古': 4,
+  // 华北
+  '北京': 10, '天津': 11, '河北': 12, '山西': 13,
+  // 西北
+  '新疆': 20, '甘肃': 21, '宁夏': 22, '青海': 23, '陕西': 24,
+  // 华东
+  '山东': 30, '江苏': 31, '安徽': 32, '上海': 33, '浙江': 34, '江西': 35, '福建': 36,
+  // 华中
+  '河南': 40, '湖北': 41, '湖南': 42,
+  // 西南
+  '四川': 50, '重庆': 51, '贵州': 52, '云南': 53, '西藏': 54,
+  // 华南
+  '广东': 60, '广西': 61, '海南': 62, '香港': 63, '澳门': 64, '台湾': 65,
+};
+
 const REC_CLASS = {
-  '★★★强烈建议': 'rec-strong',
-  '★★☆建议': 'rec-suggest',
-  '★☆☆可关注': 'rec-watch',
-  '☆☆☆已截止': 'rec-none',
-  '☆☆☆不建议': 'rec-no',
+  '🔥 ★★★ 强烈建议投标': 'rec-strong',
+  '⭐ ★★☆ 建议投标': 'rec-suggest',
+  '★☆☆ 可关注': 'rec-watch',
+  '☆☆☆ 已截止': 'rec-none',
+  '☆☆☆ 不建议': 'rec-no',
 };
 
 // 读取JSON数据
@@ -1075,31 +1093,32 @@ function parseDeadline(d) {
   }
 }
 
-// 排序：按推荐等级优先级 → 截止日期升序 → 地理区域从北到南
+// 排序规则：地理区域从北到南 → 省份从北到南 → 投标建议从高到低 → 截止日期从早到晚
 function sortProjects(projects) {
   return [...projects].sort((a, b) => {
-    const pa = REC_PRIORITY[a.recommendation] || 99;
-    const pb = REC_PRIORITY[b.recommendation] || 99;
-    if (pa !== pb) return pa - pb;
-    const da = parseDeadline(a.deadline);
-    const db = parseDeadline(b.deadline);
-    if (da - db !== 0) return da - db;
     const ra = REGION_ORDER[a.region] || 99;
     const rb = REGION_ORDER[b.region] || 99;
-    return ra - rb;
+    if (ra !== rb) return ra - rb;
+    const pa = PROVINCE_ORDER[a.province] || 99;
+    const pb = PROVINCE_ORDER[b.province] || 99;
+    if (pa !== pb) return pa - pb;
+    const recA = REC_PRIORITY[a.rec] || 99;
+    const recB = REC_PRIORITY[b.rec] || 99;
+    if (recA !== recB) return recA - recB;
+    return parseDeadline(a.deadline) - parseDeadline(b.deadline);
   });
 }
 
 // 生成单行HTML
 function renderRow(p, seq, tabPrefix) {
   const zebraClass = (seq % 2 === 0) ? ' zebra' : '';
-  const recClass = REC_CLASS[p.recommendation] || 'rec-watch';
+  const recClass = REC_CLASS[p.rec] || 'rec-watch';
   const tagsHtml = p.tags.map(t => 
     `<span class="biz-tag" data-tag="${t}" onclick="filterByTag('${t}')">${t}</span>`
   ).join(' ');
   const budgetDisplay = p.budget || '';
   
-  return `<tr class="${zebraClass}" data-company="${p.company}" data-method="${p.method}" data-project="${p.project}" data-tags="${p.tags.join(',')}" data-province="${p.province}" data-rec="${p.recommendation}" id="${tabPrefix}-row-${seq}">
+  return `<tr class="${zebraClass}" data-company="${p.company}" data-method="${p.method}" data-project="${p.project}" data-tags="${p.tags.join(',')}" data-province="${p.province}" data-rec="${p.rec}" id="${tabPrefix}-row-${seq}">
     <td class="col-seq">${seq}</td>
     <td class="col-region"><span class="region-badge">${p.region}</span></td>
     <td class="col-province">${p.province}</td>
@@ -1111,7 +1130,7 @@ function renderRow(p, seq, tabPrefix) {
     <td class="col-method"><span class="method-badge">${p.method}</span></td>
     <td class="col-contact">${p.contact}</td>
     <td class="col-tags">${tagsHtml}</td>
-    <td class="col-rec"><span class="${recClass}">${p.recommendation}</span></td>
+    <td class="col-rec"><span class="${recClass}">${p.rec}</span></td>
     <td class="col-url"><a href="${p.url}" target="_blank" class="url-link-colored" title="${p.source}">${p.source}</a></td>
   </tr>`;
 }
@@ -1128,8 +1147,8 @@ function renderTabBody(tbodyId, projects, tabPrefix) {
 // 更新统计数字（核心函数：所有数字从此处统一计算）
 function updateStats() {
   // 按推荐等级分类
-  const strong = allProjects.filter(p => p.recommendation === '★★★强烈建议');
-  const suggest = allProjects.filter(p => p.recommendation === '★★☆建议');
+  const strong = allProjects.filter(p => p.rec === '🔥 ★★★ 强烈建议投标');
+  const suggest = allProjects.filter(p => p.rec === '⭐ ★★☆ 建议投标');
   const trust = allProjects.filter(p => {
     const c = p.company;
     return (c.includes('信托') && !c.includes('银行')) || c === '中信登';
@@ -1207,7 +1226,7 @@ function updateEmptyState(tabId, count) {
 function populateFilters() {
   const provinces = [...new Set(allProjects.map(p => p.province))].sort();
   const methods = [...new Set(allProjects.map(p => p.method))].sort();
-  const recs = [...new Set(allProjects.map(p => p.recommendation))].sort();
+  const recs = [...new Set(allProjects.map(p => p.rec))].sort();
   const companies = [...new Set(allProjects.map(p => p.company))].sort();
   const sources = [...new Set(allProjects.map(p => p.source))].sort();
   

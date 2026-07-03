@@ -256,7 +256,7 @@ th.col-project,td.col-project{border-right:2px solid var(--primary-light)}
 </div>
 
 <script type="application/json" id="tender-data">{
-  "version": "v65",
+  "version": "v66",
   "date": "2026年07月03日",
   "timePeriod": "上午",
   "projects": [
@@ -1322,7 +1322,7 @@ th.col-project,td.col-project{border-right:2px solid var(--primary-light)}
       "id": "57"
     }
   ],
-  "cacheVersion": "v65-20260703"
+  "cacheVersion": "v66-20260703"
 }</script>
 
 <script>
@@ -1398,7 +1398,7 @@ function parseDeadline(d) {
   }
 }
 
-// 排序规则：地理区域从北到南 → 省份从北到南 → 投标建议从高到低 → 截止日期从早到晚
+// 排序规则：地理区域从北到南 → 省份从北到南 → 公司名（同公司连续）→ 投标建议从高到低 → 截止日期从早到晚
 function sortProjects(projects) {
   return [...projects].sort((a, b) => {
     const ra = REGION_ORDER[a.region] || 99;
@@ -1407,6 +1407,7 @@ function sortProjects(projects) {
     const pa = PROVINCE_ORDER[a.province] || 99;
     const pb = PROVINCE_ORDER[b.province] || 99;
     if (pa !== pb) return pa - pb;
+    if (a.company !== b.company) return a.company.localeCompare(b.company);
     const recA = REC_PRIORITY[a.rec] || 99;
     const recB = REC_PRIORITY[b.rec] || 99;
     if (recA !== recB) return recA - recB;

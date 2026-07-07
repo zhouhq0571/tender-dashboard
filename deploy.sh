@@ -154,6 +154,26 @@ info ""
 info "步骤 3: 验证 index.html 内容..."
 
 # 检查 JSON 中项目数量
+# ★★★ 修复：用jq精确计数，避免grep误匹配JS代码中的"company"引用 ★★★
+if command -v jq &> /dev/null; then
+    PROJECT_COUNT=$(jq '.projects | length' index.html 2>/dev/null || echo 0)
+else
+    # 降级方案：从JSON数据块中提取计数
+    PROJECT_COUNT=$(python3 -c "
+import json, re
+with open('index.html', 'r') as f:
+    html = f.read()
+match = re.search(r'<script type=\"application/json\" id=\"tender-data\">(.*?)</script>', html, re.DOTALL)
+if match:
+    data = json.loads(match.group(1))
+    print(len(data.get('projects', [])))
+else:
+    print(0)
+" 2>/dev/null || echo 0)
+fi
+if [ "$PROJECT_COUNT" -eq 0 ]; then
+    error "index.html 中没有找到项目数据"
+fi
 PROJECT_COUNT=$(grep -o '"company"' index.html | wc -l | tr -d ' ')
 if [ "$PROJECT_COUNT" -eq 0 ]; then
     error "index.html 中没有找到项目数据 (company 字段为 0)"

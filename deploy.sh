@@ -52,13 +52,23 @@ if ! git rev-parse --git-dir > /dev/null 2>&1; then
     error "当前目录不是 git 仓库: ${REPO_DIR}"
 fi
 
+# ★★★ 分支保护：必须在 main 分支上执行，防止误推送到 gh-pages ★★★
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ "$CURRENT_BRANCH" != "${BACKUP_BRANCH}" ]; then
+    error "deploy.sh 必须在 ${BACKUP_BRANCH} 分支上执行！当前分支: ${CURRENT_BRANCH}
+如需手动推送，请使用: git push origin ${BACKUP_BRANCH}:${DEPLOY_BRANCH} --force"
+fi
+
+# 删除可能残留的本地 gh-pages 分支，防止后续操作误用（安全，仅删除本地分支）
+git branch -D ${DEPLOY_BRANCH} 2>/dev/null || true
+
 # 检查远程仓库
 REMOTE_URL=$(git remote get-url origin 2>/dev/null || echo "")
 if [[ "$REMOTE_URL" != *"${GITHUB_USER}/${REPO_NAME}"* ]]; then
     error "远程仓库不正确。期望: ${GITHUB_USER}/${REPO_NAME}, 实际: ${REMOTE_URL}"
 fi
 
-ok "前置检查通过: 仓库=${REPO_NAME}, 远程=${REMOTE_URL}"
+ok "前置检查通过: 仓库=${REPO_NAME}, 分支=${CURRENT_BRANCH}, 远程=${REMOTE_URL}"
 
 # ---------- 步骤 2：自动更新封面/封底时间（一劳永逸机制） ----------
 info ""
@@ -108,11 +118,10 @@ if old_date != new_date or old_time != new_time:
         f.write(html)
     print(f'Time updated: {old_date} {old_time} -> {new_date} {new_time}')
 else:
-    print(f'Time already correct: {new_date} {new_time}')
+    print(f'Time already correct: {new_date} ${new_time}')
 " || error "Python 时间更新失败"
 
 # 更新静态封面/封底时间（双重保障，即使 JS 覆盖也有静态文本正确）
-# 先备份，再逐行替换（避免 sed 正则表达式问题）
 python3 -c "
 import re, sys
 with open('index.html', 'r', encoding='utf-8') as f:
@@ -142,7 +151,7 @@ ok "时间更新完成: ${DATE_STR} ${TIME_PERIOD}"
 
 # ---------- 步骤 3：读取并验证 index.html 内容 ----------
 info ""
-info "步骤 2: 验证 index.html 内容..."
+info "步骤 3: 验证 index.html 内容..."
 
 # 检查 JSON 中项目数量
 PROJECT_COUNT=$(grep -o '"company"' index.html | wc -l | tr -d ' ')
@@ -170,9 +179,9 @@ fi
 
 ok "index.html 验证通过: ${PROJECT_COUNT} 个项目, 版本=${VERSION}, 日期=${DATE} ${TIME_PERIOD}"
 
-# ---------- 步骤 3：检查封面/封底时间一致性 ----------
+# ---------- 步骤 4：检查封面/封底时间一致性 ----------
 info ""
-info "步骤 3: 检查封面/封底时间一致性..."
+info "步骤 4: 检查封面/封底时间一致性..."
 
 COVER_TIME=$(grep -o 'id="cover-update-time">[^<]*' index.html | sed 's/id="cover-update-time">数据更新时间：//;s/<\/div//g')
 FOOTER_TIME=$(grep -o 'id="footer-update-time">[^<]*' index.html | sed 's/id="footer-update-time">//;s/<\/span//g')
@@ -183,9 +192,9 @@ fi
 
 ok "封面/封底时间一致: ${COVER_TIME}"
 
-# ---------- 步骤 4：提交到本地 ----------
+# ---------- 步骤 5：提交到本地 ----------
 info ""
-info "步骤 4: 提交到本地 git..."
+info "步骤 5: 提交到本地 git..."
 
 git add index.html
 
@@ -198,27 +207,28 @@ fi
 git commit -m "${VERSION}: ${DATE} ${TIME_PERIOD} 更新 (${PROJECT_COUNT} 个项目)"
 ok "本地提交完成: ${VERSION}"
 
-# ---------- 步骤 5：推送到远程（关键！） ----------
+# ---------- 步骤 6：推送到远程（关键！） ----------
 info ""
-info "步骤 5: 推送到远程仓库..."
+info "步骤 6: 推送到远程仓库..."
 info "  部署分支: ${DEPLOY_BRANCH} (GitHub Pages 服务分支)"
 info "  备份分支: ${BACKUP_BRANCH}"
 
 # 强制推送到 gh-pages（GitHub Pages 实际服务分支）
-git push origin HEAD:${DEPLOY_BRANCH} --force || error "推送到 ${DEPLOY_BRANCH} 失败"
+# ★★★ 明确从 main 分支推送，不使用 HEAD，防止分支漂移导致版本回退 ★★★
+git push origin ${BACKUP_BRANCH}:${DEPLOY_BRANCH} --force || error "推送到 ${DEPLOY_BRANCH} 失败"
 ok "推送到 ${DEPLOY_BRANCH} 成功"
 
 # 也推送到 main（备份）
-git push origin HEAD:${BACKUP_BRANCH} || warn "推送到 ${BACKUP_BRANCH} 失败（非致命）"
+git push origin ${BACKUP_BRANCH}:${BACKUP_BRANCH} || warn "推送到 ${BACKUP_BRANCH} 失败（非致命）"
 
-# ---------- 步骤 6：等待 GitHub Pages 构建 ----------
+# ---------- 步骤 7：等待 GitHub Pages 构建 ----------
 info ""
-info "步骤 6: 等待 GitHub Pages 构建 (30 秒)..."
+info "步骤 7: 等待 GitHub Pages 构建 (30 秒)..."
 sleep 30
 
-# ---------- 步骤 7：验证 GitHub Pages 直接地址 ----------
+# ---------- 步骤 8：验证 GitHub Pages 直接地址 ----------
 info ""
-info "步骤 7: 验证 GitHub Pages 直接地址 (${GITHUB_PAGES_URL})..."
+info "步骤 8: 验证 GitHub Pages 直接地址 (${GITHUB_PAGES_URL})..."
 
 RETRY=0
 MAX_RETRY=5
@@ -240,9 +250,9 @@ while [ $RETRY -lt $MAX_RETRY ]; do
     fi
 done
 
-# ---------- 步骤 8：验证自定义域名 ----------
+# ---------- 步骤 9：验证自定义域名 ----------
 info ""
-info "步骤 8: 验证自定义域名 (${DOMAIN})..."
+info "步骤 9: 验证自定义域名 (${DOMAIN})..."
 
 RETRY=0
 while [ $RETRY -lt $MAX_RETRY ]; do

@@ -29,7 +29,34 @@
 - 兴宝国际信托 → 兴宝信托
 - 中国农业银行江苏分行 → 农业银行江苏分行
 
-## 部署流程
+## 部署流程（安全红线）
+1. **修改 index.html 数据**
+2. **运行 `python3 validate_new_projects.py` 验证**（强制）
+3. **运行 `python3 health_check.py` 检查**（强制）
+4. **运行 `bash deploy.sh` 部署**（唯一允许的部署方式）
+5. **验证网站** `curl -s -L https://hstender.cn/ | grep -o 'company' | wc -l`
+
+### ❌ 绝对禁止
+- **禁止手动 `git push origin gh-pages`**（已导致 v77→v48 回退事故）
+- **禁止直接操作 gh-pages 分支**（本地 gh-pages 已删除）
+- **禁止在 JSON 字符串中写入裸换行符**（已导致项目清零事故）
+- **禁止跳过验证直接部署**
+
+### 部署问题根因与根除机制
+详见: `/Users/zhouhq/Documents/kimi/workspace/bidding-daily/DEPLOY_SAFETY.md`
+
+## 凭据存储
+- **加密存储**: `credential_store.py` → `~/.config/tender-dashboard/credentials.enc`
+- **读取方式**: `python3 credential_store.py get qianlima`
+- **切勿硬编码**: 任何脚本不得明文写入密码
+
+## 文件位置
+- 看板文件: `/Users/zhouhq/Documents/kimi/workspace/bidding-daily/index.html`
+- 验证脚本: `/Users/zhouhq/Documents/kimi/workspace/bidding-daily/validate_new_projects.py`
+- 健康检查: `/Users/zhouhq/Documents/kimi/workspace/bidding-daily/health_check.py`
+- 部署脚本: `/Users/zhouhq/Documents/kimi/workspace/bidding-daily/deploy.sh`
+- 安全配置: `/Users/zhouhq/Documents/kimi/workspace/bidding-daily/DEPLOY_SAFETY.md`
+- 新增项目指南: `/Users/zhouhq/Documents/kimi/workspace/bidding-daily/NEW_PROJECT_GUIDE.md`
 1. 修改index.html
 2. 运行 validate_new_projects.py 验证
 3. git add -A && git commit -m "..." && git push origin main

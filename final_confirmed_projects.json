@@ -1,0 +1,41 @@
+[
+  {
+    "seq": 1,
+    "company": "山西信托股份有限公司",
+    "company_short": "山西信托",
+    "title": "客户关系管理系统（CRM）建设项目",
+    "bid_deadline": "待补充（需访问千里马详情页或联系招标代理）",
+    "business_tag": "财富管理、渠道系统",
+    "bid_advice": "★★★ 强烈建议",
+    "budget_amount": "待补充",
+    "bid_url": "https://www.qianlima.com/bid-611660158.html",
+    "bid_num": "611660158",
+    "source_file": "信托-20260709.xlsx"
+  },
+  {
+    "seq": 18,
+    "company": "中国农业银行股份有限公司江苏省分行",
+    "company_short": "中国农业银行江苏分行",
+    "title": "智能资产配置服务项目",
+    "bid_deadline": "2026-07-29",
+    "business_tag": "财富管理",
+    "bid_advice": "★★★ 强烈建议",
+    "budget_amount": "424.5万元（不含税）",
+    "bid_url": "https://www.qianlima.com/bid-611924850.html",
+    "bid_num": "611924850",
+    "source_file": "银行-20260709使用新关键词.xlsx"
+  },
+  {
+    "seq": 30,
+    "company": "绍兴银行股份有限公司",
+    "company_short": "绍兴银行",
+    "title": "一表通系统信创改造采购项目",
+    "bid_deadline": "2026-07-13 09:30",
+    "business_tag": "风控合规、数据平台",
+    "bid_advice": "★☆☆ 可关注",
+    "budget_amount": "64万元",
+    "bid_url": "https://www.qianlima.com/bid-611435978.html",
+    "bid_num": "611435978",
+    "source_file": "银行-20260709使用旧关键词.xlsx"
+  }
+]

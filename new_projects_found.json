@@ -1,0 +1,119 @@
+{
+  "search_summary": {
+    "phase0_count": 0,
+    "phaseA_count": 6,
+    "phaseB_count": 0,
+    "phaseC_count": 0,
+    "total_found": 6,
+    "after_dedup": 6,
+    "after_filter": 6,
+    "pending_update": 0
+  },
+  "new_projects": [
+    {
+      "region": "华中",
+      "province": "湖南",
+      "company": "湖南银行",
+      "project": "个人综合积分及权益系统国产化改造项目",
+      "overview": "湖南银行个人综合积分及权益系统国产化改造，适配信创环境，提升系统自主可控能力，满足信息技术应用创新要求。预算60万元。",
+      "budget": "60万元",
+      "deadline": "2026-07-22 10:00",
+      "method": "公开招标",
+      "contact": "周女士 0731-89829735；代理机构：杨桃、吴洋、董征、张玉珍 0731-84418163、15243678487",
+      "tags": ["信创/国产化", "渠道系统"],
+      "rec": "★☆☆ 可关注",
+      "url": "https://www.hunan-bank.com/96599/2026-07/01/article_2026070117532936834.shtml",
+      "source": "湖南银行官网"
+    },
+    {
+      "region": "华中",
+      "province": "湖南",
+      "company": "湖南银行",
+      "project": "智能安全运营中心建设项目（分项4：主机安全平台扩容）",
+      "overview": "湖南银行智能安全运营中心建设之子项，对主机安全平台进行扩容，增强安全防护能力，提升安全运营水平。预算50万元。",
+      "budget": "50万元",
+      "deadline": "2026-07-13 15:00",
+      "method": "竞争性谈判",
+      "contact": "周女士 0731-89829735",
+      "tags": ["风控合规", "信创/国产化"],
+      "rec": "★☆☆ 可关注",
+      "url": "https://www.hunan-bank.com/96599/2026-07/02/article_2026070216253035499.shtml",
+      "source": "湖南银行官网"
+    },
+    {
+      "region": "华北",
+      "province": "天津",
+      "company": "天津银行",
+      "project": "理财系统远程视频签约功能项目等两个项目（视频服务平台）",
+      "overview": "天津银行理财系统远程视频签约功能建设，涉及视频服务平台采购，支持理财业务远程视频签约需求，提升客户服务体验与业务合规能力。预算36.70万元。",
+      "budget": "36.70万元",
+      "deadline": "2026-07-24",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": ["渠道系统", "财富管理"],
+      "rec": "★☆☆ 可关注",
+      "url": "https://industry.qianlima.com/industry/505673-26",
+      "source": "千里马招标网"
+    },
+    {
+      "region": "华北",
+      "province": "天津",
+      "company": "天津银行",
+      "project": "视频服务平台\"实时音视频功能节点资源\"服务采购项目",
+      "overview": "天津银行视频服务平台实时音视频功能节点资源采购，为视频服务提供基础设施资源支撑，保障音视频服务质量。预算30万元。",
+      "budget": "30万元",
+      "deadline": "2026-07-15",
+      "method": "竞争性磋商",
+      "contact": "-",
+      "tags": ["渠道系统"],
+      "rec": "★☆☆ 可关注",
+      "url": "https://industry.qianlima.com/industry/505673-26",
+      "source": "千里马招标网"
+    },
+    {
+      "region": "华北",
+      "province": "河北",
+      "company": "秦皇岛银行",
+      "project": "数据中心运行维护项目（二次招标）",
+      "overview": "秦皇岛银行数据中心运行维护服务二次招标，保障数据中心基础设施稳定运行，提升运维服务连续性。预算未披露。",
+      "budget": "-",
+      "deadline": "2026-07-28",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": ["运维服务"],
+      "rec": "★☆☆ 可关注",
+      "url": "https://hb.qianlima.com/zbcontent-611729268.html",
+      "source": "千里马招标网"
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "中邮理财",
+      "project": "金嘉大厦动环视频设备维保服务采购项目",
+      "overview": "中邮理财金嘉大厦动环视频设备维保服务及UPS蓄电池更换，维保设备涵盖视频会议、多媒体、电话、门禁、监控、UPS等，服务期至2030年10月。",
+      "budget": "-",
+      "deadline": "2026-07-29 09:30",
+      "method": "公开招标",
+      "contact": "马佳、韩远珍、沈蓉 13804588135、15801133056、18513551358、010-87056688",
+      "tags": ["运维服务"],
+      "rec": "★☆☆ 可关注",
+      "url": "https://www.chinapost.com.cn/cn/report/2607/1782-1.htm",
+      "source": "中国邮政官网"
+    }
+  ],
+  "pending_updates": [],
+  "uncertain_projects": [
+    {
+      "company": "广西北部湾银行",
+      "project": "2026年运营监督系统项目",
+      "reason": "报名截止2026-07-08，可能已错过报名；投标截止日期未在已获取信息中明确显示，需人工确认",
+      "url": "https://www.bankofbbg.com/bbgow/2026-07/01/article_2026070119232687620.html"
+    },
+    {
+      "company": "兴业银行",
+      "project": "长春分行吉林省涉诈资金治理系统服务项目",
+      "reason": "2026-07-09发布的供应商征集调研公告，非正式招标，属于前期调研阶段",
+      "url": "https://cg.cib.com.cn/"
+    }
+  ]
+}

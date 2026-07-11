@@ -1,0 +1,138 @@
+{
+  "search_date": "2026-07-04",
+  "date_range": "2026-06-19 至 2026-07-04",
+  "source": "千里马招标网 (qianlima.com)",
+  "search_method": "kimi_search_v2 / kimi_fetch_v2 (WebBridge 不可用)",
+  "total_found": 5,
+  "tenders": [
+    {
+      "id": "QLM-2026-0704-001",
+      "purchaser": "杭州银行",
+      "project_name": "杭州银行2026年家族信托系统采购项目",
+      "publish_date": "2026-06-24",
+      "deadline": "2026-07-06",
+      "budget": 1200000,
+      "budget_currency": "CNY",
+      "budget_note": "120.00万元",
+      "tender_type": "公开招标",
+      "region": "浙江-杭州",
+      "category": "银行-信托系统",
+      "url": "https://zj.qianlima.com/zbcontent-608306591.html",
+      "status": "招标公告",
+      "notes": "家族信托系统建设，属于银行私行/财富管理业务IT系统"
+    },
+    {
+      "id": "QLM-2026-0704-002",
+      "purchaser": "内蒙古农村商业银行股份有限公司",
+      "project_name": "金桥数据中心扩容建设项目（软件采购-国产虚拟化软件）(第二阶段)",
+      "publish_date": "2026-06-25",
+      "deadline": "2026-07-16 09:30",
+      "budget": 3600000,
+      "budget_currency": "CNY",
+      "budget_note": "360.00万元（最高限价）",
+      "tender_type": "公开招标（两阶段招标）",
+      "region": "内蒙古",
+      "category": "银行-数据中心/虚拟化软件",
+      "url": "https://nmg.qianlima.com/zbcontent-608306794.html",
+      "status": "招标公告",
+      "notes": "国产虚拟化软件采购，含12个月实施周期及1人3年驻场维保服务"
+    },
+    {
+      "id": "QLM-2026-0704-003",
+      "purchaser": "光大理财有限责任公司",
+      "project_name": "阳光办公自动化系统2026年维护项目（二次招标）",
+      "publish_date": "2026-06-18",
+      "rebid_date": "2026-06-19",
+      "deadline": "2026-07-09",
+      "budget": 183000,
+      "budget_currency": "CNY",
+      "budget_note": "18.30万元",
+      "tender_type": "重新招标",
+      "region": "云南-大理白族自治州",
+      "category": "理财子公司-OA系统运维",
+      "url": "https://yn.qianlima.com/zbcontent-607031523.html",
+      "status": "重新招标",
+      "notes": "办公自动化系统维护服务，首次招标流标后二次招标"
+    },
+    {
+      "id": "QLM-2026-0704-004",
+      "purchaser": "华宝信托",
+      "project_name": "2026年度集团视频会议系统运维服务合同",
+      "publish_date": "2026-06-23",
+      "deadline": "2026-07-01",
+      "budget": null,
+      "budget_currency": "CNY",
+      "budget_note": "金额未公开",
+      "tender_type": "采购公告",
+      "region": "上海",
+      "category": "信托-视频会议系统运维",
+      "url": "https://industry.qianlima.com/industry/381772-24",
+      "status": "采购公告",
+      "notes": "集团视频会议系统运维服务，IT基础设施类运维采购"
+    },
+    {
+      "id": "QLM-2026-0704-005",
+      "purchaser": "天津银行",
+      "project_name": "大额风险暴露管理系统调整\"买入返售\"、\"e链保理\"业务风险暴露计量逻辑项目",
+      "publish_date": "2026-07-02",
+      "deadline": null,
+      "budget": null,
+      "budget_currency": "CNY",
+      "budget_note": "金额未公开",
+      "tender_type": "公开招标",
+      "region": "天津",
+      "category": "银行-风险管理系统",
+      "url": "https://industry.qianlima.com/industry/506511-26",
+      "status": "招标公告",
+      "notes": "大额风险暴露管理系统功能改造，涉及买入返售和e链保理业务"
+    }
+  ],
+  "excluded": [
+    {
+      "project_name": "浙商金汇信托股份有限公司服务器网络设备维保服务（2026）采购项目",
+      "reason": "中标候选人公示（结果公告），非招标公告",
+      "publish_date": "2026-06-26",
+      "url": "https://zj.qianlima.com/zbcontent-608769916.html"
+    },
+    {
+      "project_name": "天津银行理财资产管理系统新增批复到期提醒及产品收益测算等功能项目（二次）",
+      "reason": "中标结果公示（结果公告），非招标公告",
+      "publish_date": "2026-07-02",
+      "url": "https://industry.qianlima.com/industry/506511-26"
+    },
+    {
+      "project_name": "光大理财有限责任公司另类投资管理系统2026年升级项目",
+      "reason": "中标候选人公示（结果公告），非招标公告",
+      "publish_date": "2026-06-26",
+      "url": "https://industry.qianlima.com/industry/506511-29"
+    },
+    {
+      "project_name": "贵州银行应用软件开发服务采购项目(供应链金融系统XC改造项目)",
+      "reason": "采购结果公示（结果公告），非招标公告",
+      "publish_date": "2026-06-09",
+      "url": "https://gz.qianlima.com/zbcontent-602696617.html"
+    },
+    {
+      "project_name": "五矿信托2026年度信托综合业务协同项目",
+      "reason": "发布日期2026-06-09，超出15天搜索范围（2026-06-19起）",
+      "publish_date": "2026-06-09"
+    },
+    {
+      "project_name": "五矿信托2026数据规范化采集驻场服务外包项目",
+      "reason": "发布日期2026-06-09，超出15天搜索范围（2026-06-19起）",
+      "publish_date": "2026-06-09"
+    },
+    {
+      "project_name": "广发银行IBM软件产品2026-2027年度原厂高级服务采购",
+      "reason": "发布日期2026-06-13，超出15天搜索范围（2026-06-19起）",
+      "publish_date": "2026-06-13",
+      "url": "https://gd.qianlima.com/zbcontent-603246022.html"
+    },
+    {
+      "project_name": "华能贵诚信托2026年数据库运维服务项目",
+      "reason": "发布日期2026-05-26，超出15天搜索范围",
+      "publish_date": "2026-05-26",
+      "url": "https://bj.qianlima.com/zbcontent-599797044.html"
+    }
+  ]
+}

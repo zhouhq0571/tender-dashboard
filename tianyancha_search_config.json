@@ -1,0 +1,46 @@
+{
+  "searches": [
+    {
+      "keyword": "银行",
+      "searchType": "2",
+      "name": "银行-采购人"
+    },
+    {
+      "keyword": "农信社",
+      "searchType": "2",
+      "name": "农信社-采购人"
+    },
+    {
+      "keyword": "农商行",
+      "searchType": "2",
+      "name": "农商行-采购人"
+    },
+    {
+      "keyword": "信托",
+      "searchType": "2",
+      "name": "信托-采购人"
+    },
+    {
+      "keyword": "理财",
+      "searchType": "2",
+      "name": "理财-采购人"
+    },
+    {
+      "keyword": "系统开发",
+      "searchType": "1",
+      "name": "系统开发-标题"
+    },
+    {
+      "keyword": "软件",
+      "searchType": "1",
+      "name": "软件-标题"
+    },
+    {
+      "keyword": "金融科技",
+      "searchType": "1",
+      "name": "金融科技-标题"
+    }
+  ],
+  "publishStartTime": "2026-06-15",
+  "api_name": "经营信息-招投标信息垂搜"
+}

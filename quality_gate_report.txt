@@ -1,0 +1,6 @@
+QUALITY GATE REPORT
+============================================================
+Total projects: 48
+Errors: 0
+Warnings: 0
+

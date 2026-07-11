@@ -1,0 +1,120 @@
+{
+  "check_time": "2026-07-07 12:59:40",
+  "system": "恒生银信招标看板",
+  "version_claimed": "v77",
+  "version_actual": "v77",
+  "projects_claimed": 56,
+  "projects_actual": 56,
+  "total_files": 687,
+  "total_dirs": 244,
+  "total_size_mb": 18.47,
+  "archive_size_mb": 5.96,
+  "backup_dirs": 14,
+  "issues": [
+    {
+      "level": "CRITICAL",
+      "category": "安全事故",
+      "title": "今日发生版本回退事件(v77→v48)",
+      "detail": "2026-07-07 12:00-12:30发生了严重的版本回退事件：手动git push origin gh-pages将本地停留在v48的gh-pages分支推送到远程，覆盖了v77。虽然已恢复，但暴露严重操作风险。",
+      "fix": "1.立即删除本地gh-pages分支(git branch -D gh-pages); 2.确认deploy.sh中已包含分支保护; 3.建立部署操作规范文档"
+    },
+    {
+      "level": "INFO",
+      "category": "文件系统清理",
+      "title": ".DS_Store文件",
+      "detail": "发现4个.DS_Store文件: ./.DS_Store, ./archive/.DS_Store, ./backup/.DS_Store, ./backup/20260612_113746/.DS_Store",
+      "fix": "执行: find . -name '.DS_Store' -delete && echo '.DS_Store' >> .gitignore"
+    },
+    {
+      "level": "INFO",
+      "category": "归档检查",
+      "title": "archive目录存在重复文件",
+      "detail": "发现8组重复文件:\n  tender_data_v5.xlsx == tender_data_v4.xlsx\n  tender_data_v5.xlsx == tender_data_v3.xlsx\n  tender_dashboard_v10.html == 恒生银信招标资讯每日速递（2026年6月9日）-bak.html\n  tender_dashboard_v9.html == 恒生银信招标需求每日速递（2026年6月9日）v9.html\n  tender_dashboard_v11.html == 恒生银信招标资讯每日速递（2026年6月9日）v11.html\n  tender_dashboard_v11.html == 恒生银信招标资讯每日速递（2026年6月9日）.html\n  tender_dashboard_v14.html == 恒生银信招标资讯每日速递（2026年6月10日）v14.html\n  tender_data_v5.xlsx == tender_data_v6.xlsx",
+      "fix": "清理重复归档文件，保留最新版本"
+    },
+    {
+      "level": "WARNING",
+      "category": "备份管理",
+      "title": "最近7天无完整备份目录",
+      "detail": "backup/子目录中无最近7天内的完整备份",
+      "fix": "检查备份机制是否正常执行"
+    },
+    {
+      "level": "WARNING",
+      "category": "文件系统清理",
+      "title": "中间文件过多",
+      "detail": "根目录存在16个中间/临时文件: step0_2_result.json, step1_2_result.json, qianlima_search_result.json, stage_abc_results.json, merged_results.json, stage_abc_results.json, qianlima_search_result.json, updated_data.json, merged_data.json, tianyancha_bank.csv...",
+      "fix": "清理已完成的中间结果文件，或建立统一的temp/目录"
+    },
+    {
+      "level": "WARNING",
+      "category": "版本控制",
+      "title": "未跟踪文件过多",
+      "detail": "git状态显示有44个未跟踪/修改文件",
+      "fix": "清理不需要版本控制的文件，或添加到.gitignore"
+    }
+  ],
+  "checks_passed": [
+    {
+      "category": "数据完整性",
+      "title": "index.html JSON解析",
+      "detail": "版本=v77, 日期=2026年07月07日 中午, 项目数=56"
+    },
+    {
+      "category": "数据一致性",
+      "title": "版本号匹配",
+      "detail": "index.html版本v77与系统声称一致"
+    },
+    {
+      "category": "数据一致性",
+      "title": "项目数量匹配",
+      "detail": "56个项目与声明一致"
+    },
+    {
+      "category": "数据时效性",
+      "title": "日期匹配",
+      "detail": "日期2026年07月07日与当前日期一致"
+    },
+    {
+      "category": "备份管理",
+      "title": "根目录备份数量",
+      "detail": "backup/根目录有7个备份，数量合理"
+    },
+    {
+      "category": "文件完整性",
+      "title": "空文件检查",
+      "detail": "未发现空文件"
+    },
+    {
+      "category": "磁盘使用",
+      "title": "archive大小",
+      "detail": "archive占用6.0MB"
+    },
+    {
+      "category": "部署配置",
+      "title": "CNAME配置",
+      "detail": "CNAME文件内容正确: hstender.cn"
+    },
+    {
+      "category": "部署脚本",
+      "title": "deploy.sh结构",
+      "detail": "脚本包含错误退出和分支配置"
+    },
+    {
+      "category": "部署脚本",
+      "title": "分支保护",
+      "detail": "deploy.sh包含分支保护逻辑"
+    },
+    {
+      "category": "运维工具",
+      "title": "health_check.py",
+      "detail": "健康检查脚本存在"
+    }
+  ],
+  "summary": {
+    "critical": 1,
+    "warning": 3,
+    "info": 2,
+    "passed": 11
+  }
+}

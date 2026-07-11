@@ -13,7 +13,7 @@ HTML_FILE = 'index.html'
 
 # 规范值定义
 VALID_REGIONS = ['东北', '华北', '华东', '华中', '华南', '西南', '西北', '-']
-VALID_RECS = ['🔥 ★★★ 强烈建议投标', '⭐ ★★☆ 建议投标', '👀 ★☆☆ 可关注']
+VALID_RECS = ['🔥 ★★★ 强烈建议投标', '⭐ ★★☆ 建议投标', '👀 ★☆☆ 可关注', '☆☆☆ 已截止', '☆☆☆ 不建议']
 REQUIRED_FIELDS = ['id', 'company', 'project', 'overview', 'budget', 'deadline', 
                    'method', 'contact', 'region', 'province', 'tags', 'rec', 'url', 'source']
 

@@ -90,6 +90,19 @@ elif [ "$HOUR" -ge 12 ] && [ "$HOUR" -lt 14 ]; then
     TIME_PERIOD="中午"
 elif [ "$HOUR" -ge 14 ] && [ "$HOUR" -lt 18 ]; then
     TIME_PERIOD="下午"
+elif [ "$HOUR" -ge 18 ] && [ "$HOUR" -lt 20 ]; then
+    TIME_PERIOD="傍晚"
+else
+    TIME_PERIOD="晚上"
+fi
+if [ "$HOUR" -ge 0 ] && [ "$HOUR" -lt 6 ]; then
+    TIME_PERIOD="凌晨"
+elif [ "$HOUR" -ge 6 ] && [ "$HOUR" -lt 12 ]; then
+    TIME_PERIOD="上午"
+elif [ "$HOUR" -ge 12 ] && [ "$HOUR" -lt 14 ]; then
+    TIME_PERIOD="中午"
+elif [ "$HOUR" -ge 14 ] && [ "$HOUR" -lt 18 ]; then
+    TIME_PERIOD="下午"
 else
     TIME_PERIOD="傍晚"
 fi

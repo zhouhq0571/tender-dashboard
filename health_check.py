@@ -1,51 +1,23 @@
 #!/usr/bin/env python3
 """
-恒生银信招标看板 - 全面健康自检脚本
+招标看板 - 全面健康自检脚本
 运行环境：Daimon 托管 Python 运行时
 建议频率：每周一次（或每月一次）
 触发方式：手动执行，或设为 cron 任务（每周一 9:00）
+
+修改记录：
+  2026-07-11: 统一从 config.py 导入常量，避免分散定义导致不一致
 """
 
-import json, re, os, subprocess, sys
+import json, re, os, sys
 from datetime import datetime, date, timedelta
 
-# ========== 配置 ==========
-REPO_DIR = "/Users/zhouhq/Documents/kimi/workspace/bidding-daily"
-SKILL_PATH = "/Users/zhouhq/.kimi/daimon/skills/tender-daily-dispatch/SKILL.md"
-HTML_PATH = os.path.join(REPO_DIR, "index.html")
-
-# 排序权重定义（必须与 SKILL.md 和 index.html 完全一致）
-REGION_ORDER = {
-    '东北': 1, '华北': 2, '西北': 3, '华东': 4,
-    '华中': 5, '西南': 6, '华南': 7,
-}
-PROVINCE_ORDER = {
-    '黑龙江': 1, '吉林': 2, '辽宁': 3,
-    '内蒙古': 4, '北京': 5, '天津': 6, '河北': 7, '山西': 8,
-    '陕西': 9, '甘肃': 10, '宁夏': 11, '青海': 12, '新疆': 13,
-    '山东': 14, '江苏': 15, '浙江': 16, '安徽': 17, '福建': 18, '江西': 19, '上海': 20,
-    '河南': 21, '湖北': 22, '湖南': 23,
-    '重庆': 24, '四川': 25, '贵州': 26, '云南': 27, '西藏': 28,
-    '广东': 29, '广西': 30, '海南': 31,
-}
-REC_PRIORITY = {
-    '🔥 ★★★ 强烈建议投标': 1,
-    '⭐ ★★☆ 建议投标': 2,
-    '👀 ★☆☆ 可关注': 3,
-    '☆☆☆ 已截止': 4,
-    '☆☆☆ 不建议': 5,
-}
-VALID_TAGS = {
-    '财富管理', '资产管理', '资产托管', '金融市场/资金/同业', '资金业务',
-    '风控合规', '数据平台', '数据服务', '渠道系统', '信创/国产化',
-    '运维服务', '人力外包', '大模型应用'
-}
-VALID_METHODS = {
-    '公开招标', '邀请招标', '竞争性谈判', '竞争性磋商',
-    '单一来源采购', '询价采购', '框架协议', '其他'
-}
-VALID_REGIONS = {'东北', '华北', '西北', '华东', '华中', '西南', '华南'}
-VALID_PROVINCES = set(PROVINCE_ORDER.keys())
+# ========== 从统一配置导入 ==========
+from config import (
+    REC_PRIORITY, REGION_ORDER, PROVINCE_ORDER,
+    VALID_TAGS, VALID_METHODS, VALID_REGIONS, VALID_PROVINCES,
+    HTML_PATH, SKILL_PATH, sort_key
+)
 
 def parse_html():
     with open(HTML_PATH, 'r', encoding='utf-8') as f:
@@ -56,15 +28,8 @@ def parse_html():
     return json.loads(match.group(1)), content
 
 def check_sorting(data):
-    """检查排序是否正确"""
+    """检查排序是否正确（使用 config.py 中的统一排序键）"""
     projects = data['projects']
-    def sort_key(p):
-        return (
-            REGION_ORDER.get(p.get('region', ''), 99),
-            PROVINCE_ORDER.get(p.get('province', ''), 99),
-            REC_PRIORITY.get(p.get('rec', ''), 99),
-            p.get('deadline', '9999-99-99')
-        )
     sorted_projects = sorted(projects, key=sort_key)
     is_sorted = all(sort_key(projects[i]) <= sort_key(projects[i+1]) for i in range(len(projects)-1))
     return {
@@ -220,7 +185,6 @@ def check_title_tag(data, content):
     expected_date = data.get('date', '')
     expected_version = data.get('version', '')
     
-    # 检查 title 中是否包含日期和版本号
     date_ok = expected_date in title
     version_ok = expected_version in title
     
@@ -274,7 +238,6 @@ def check_skill_version_sync():
     with open(HTML_PATH, 'r', encoding='utf-8') as f:
         html_content = f.read()
     
-    # 精确提取 SKILL.md 中 PROVINCE_ORDER 定义区域
     skill_match = re.search(r'PROVINCE_ORDER = \{(.*?)\n\}', skill_content, re.DOTALL)
     html_match = re.search(r'PROVINCE_ORDER = \{(.*?)\n\};', html_content, re.DOTALL)
     
@@ -285,7 +248,6 @@ def check_skill_version_sync():
             'detail': '无法定位 PROVINCE_ORDER 定义'
         }
     
-    # 提取省份:数值对
     skill_pairs = set(re.findall(r"'([^']+)':\s*(\d+)", skill_match.group(1)))
     html_pairs = set(re.findall(r"'([^']+)':\s*(\d+)", html_match.group(1)))
     
@@ -297,8 +259,7 @@ def check_skill_version_sync():
     }
 
 def check_cron_status():
-    """检查 cron 定时任务状态（通过调用外部 cron 工具）"""
-    # 这里无法直接调用 Cron 工具，记录为需要人工检查
+    """检查 cron 定时任务状态"""
     return {
         'check': 'cron 定时任务状态',
         'status': 'INFO',
@@ -312,8 +273,6 @@ def run_all_checks():
         sys.exit(1)
     
     results = []
-    
-    # 数据检查
     results.append(check_sorting(data))
     results.append(check_duplicates(data))
     results.append(check_id_continuity(data))
@@ -328,12 +287,9 @@ def run_all_checks():
     results.append(check_deadline_format(data))
     results.append(check_stale_projects(data))
     results.append(check_title_tag(data, content))
-    
-    # 规则/脚本检查
     results.append(check_skill_version_sync())
     results.append(check_cron_status())
     
-    # 输出报告
     print("=" * 60)
     print(f"恒生银信招标看板 - 全面健康自检报告")
     print(f"检查时间: {datetime.now().strftime('%Y-%m-%d %H:%M')}")

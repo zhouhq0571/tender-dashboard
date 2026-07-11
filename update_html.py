@@ -1,41 +1,46 @@
-import json
-import re
+#!/usr/bin/env python3
+"""
+⚠️  DEPRECATED - 本脚本已废弃 ⚠️
 
-# Read merged data
-with open('/Users/zhouhq/Documents/kimi/workspace/bidding-daily/merged_data.json', 'r') as f:
-    data = json.load(f)
+本脚本 (update_html.py) 已被弃用，不再维护。
 
-projects = data['projects']
+替代方案:
+    请使用 deploy.sh 进行部署。deploy.sh 步骤2会自动处理：
+    - 从系统获取当前时间和时段
+    - 更新 index.html 中的日期、时间、版本信息
+    - 验证封面/封底时间一致性
+    - 推送到 GitHub Pages
 
-# Read existing index.html
-with open('/Users/zhouhq/Documents/kimi/workspace/bidding-daily/index.html', 'r') as f:
-    html = f.read()
+废弃原因:
+    1. 本脚本硬编码版本号 (v52→v53) 和日期，已严重过时
+    2. 功能已被 deploy.sh 中的自动化逻辑完全取代
+    3. deploy.sh 提供更完整的验证和部署流程
 
-# Update version in title
-old_title = '恒生银信招标资讯每日速递 | 2026年06月30日（更新）v52'
-new_title = '恒生银信招标资讯每日速递 | 2026年07月01日（更新）v53'
-html = html.replace(old_title, new_title)
+保留原因:
+    - 历史参考：展示早期手动更新 HTML 的方式
+    - 如需类似功能，请参考 deploy.sh 步骤2的 Python 内联代码
 
-# Also update any other version references
-html = html.replace('v52', 'v53')
-html = html.replace('2026年06月30日', '2026年07月01日')
-html = html.replace('下午', '上午')
+最后更新: 2026-07-11
+废弃版本: v86-fix5 之后
+"""
 
-# Update tender-data JSON
-new_json = json.dumps({"version": "v53", "date": "2026年07月01日", "timePeriod": "上午", "projects": projects}, ensure_ascii=False, indent=2)
+import sys
 
-# Find and replace tender-data content
-pattern = r'(<script type="application/json" id="tender-data">)\{.*?\}(</script>)'
-replacement = r'\1' + new_json + r'\2'
-html = re.sub(pattern, replacement, html, flags=re.DOTALL)
+print("=" * 60)
+print("⚠️  错误: update_html.py 已废弃")
+print("=" * 60)
+print()
+print("本脚本不再可用。请使用以下命令进行部署:")
+print("    bash deploy.sh")
+print()
+print("deploy.sh 会自动:")
+print("  ✓ 获取系统当前时间和时段")
+print("  ✓ 更新 index.html 中的时间信息")
+print("  ✓ 验证数据完整性")
+print("  ✓ 推送到 GitHub Pages")
+print()
+print("如需查看本脚本的历史代码，请查看 git 历史:")
+print("    git show 94d0f59:update_html.py")
+print("=" * 60)
 
-# Write updated index.html
-with open('/Users/zhouhq/Documents/kimi/workspace/bidding-daily/index.html', 'w') as f:
-    f.write(html)
-
-print("Updated index.html:")
-print(f"  Version: v52 → v53")
-print(f"  Date: 2026年06月30日 → 2026年07月01日")
-print(f"  Time period: 下午 → 上午")
-print(f"  Projects: 55 → {len(projects)}")
-print(f"  HTML size: {len(html)} bytes")
+sys.exit(1)

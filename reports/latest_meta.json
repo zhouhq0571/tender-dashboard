@@ -1,0 +1,13 @@
+{
+ "version": "v273",
+ "date": "2026-09-29",
+ "timePeriod": "2026-09-29",
+ "total": 70,
+ "added": 0,
+ "removed_count": 3,
+ "removed_note": "过期清理(截止<=09-27)：宁银理财沧州代销对接/西安代销对接/衍生品系统信创升级3条；另9条截止09-28标已截止(rec整字段规范化)",
+ "candidates": 6,
+ "pending_fill_count": 0,
+ "filled_recent": [],
+ "other_note": "bump_version.py机械递增v272→v273；昨日9候选已由用户确认入板；昆仑银行财富平台/北京银行养老理财截止未核实暂缓；抽检3条正常"
+}

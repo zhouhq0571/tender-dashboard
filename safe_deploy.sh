@@ -136,7 +136,9 @@ html = re.sub(
     html
 )
 
-# 3. 同步JSON中的 timePeriod（JS运行时会读取此值覆盖静态文本，必须同步）
+# 3. 同步JSON中的 date 与 timePeriod（JS运行时会读取此值覆盖静态文本，必须同步；
+# 2026-10-01 修复：此前不同步 date，跨零点部署会导致封面10-01/JSON 09-30 不一致）
+html = re.sub(r'"date":\s*"[^"]*"', f'"date": "{date_str}"', html, count=1)
 html = re.sub(r'"timePeriod":\s*"[^"]*"', f'"timePeriod": "{time_period}"', html)
 
 # 4. 同步 <title> 版本号与日期（根治"JSON已更新但标题版本号过期"问题）

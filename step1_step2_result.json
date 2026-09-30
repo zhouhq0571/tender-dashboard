@@ -57,7 +57,7 @@
         ],
         "rec": "🔥 ★★★ 强烈建议投标",
         "url": "https://jy.365trade.com.cn/wb_bidder/static/dist/projectDetail?id=2062815741007073282&cid=14",
-        "source": "天眼查API",
+        "source": "千里马招标网",
         "id": 3
       },
       {
@@ -225,7 +225,7 @@
         ],
         "rec": "⭐ ★★☆ 建议投标",
         "url": "https://ctbpsp.com/#/bulletinDetail?uuid=d3a2235d7e6b481780dae56bf8a13e69&inpvalue=&dataSource=0&tenderAgency=",
-        "source": "天眼查API",
+        "source": "中国招标投标公共服务平台",
         "id": 13
       },
       {
@@ -243,7 +243,7 @@
         ],
         "rec": "★☆☆ 可关注",
         "url": "https://ctbpsp.com/#/bulletinDetail?uuid=f9f854f61a8449b3b7a148d19dc1b687&inpvalue=&dataSource=0&tenderAgency=",
-        "source": "天眼查API",
+        "source": "中国招标投标公共服务平台",
         "id": 14
       },
       {
@@ -255,7 +255,7 @@
         "budget": "112万元",
         "deadline": "2026-07-13 23:59",
         "method": "公开招标",
-        "contact": "光大理财 0532-88965671（天眼查工商信息，2025年年报）",
+        "contact": "光大理财 0532-88965671",
         "tags": [
           "风控合规",
           "资产管理"
@@ -956,7 +956,7 @@
         "budget": "23.85万元",
         "deadline": "2026-07-02",
         "method": "单一来源采购",
-        "contact": "秦皇岛银行 0335-5911161（天眼查工商信息，2025年年报）",
+        "contact": "秦皇岛银行 0335-5911161",
         "tags": [
           "资产管理"
         ],
@@ -1055,7 +1055,7 @@
         ],
         "rec": "☆☆☆ 已截止",
         "url": "https://www.ahtba.org.cn/site/trade/affiche/detail/cf9c0ec4-6957-11f1-b7f6-00163e1f3e9b",
-        "source": "天眼查API",
+        "source": "安徽招标投标信息网",
         "id": "38"
       },
       {

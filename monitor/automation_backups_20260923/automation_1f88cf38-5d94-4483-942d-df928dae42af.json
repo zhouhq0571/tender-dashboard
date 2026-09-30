@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "automation": {
+    "automationId": "automation_1f88cf38-5d94-4483-942d-df928dae42af",
+    "type": "regular",
+    "title": "周报日采 · 监管官网+gildata 定向采集（周四至周日 11:47）",
+    "description": "金融行业周报每日增量采集：每周四至周日 11:47 自动监控证监会/金监总局/央行/沪深北交易所/中基协/信托业协会/银协等监管与金融基础设施官网公告，并调用gildata财经新闻+公告接口按七大章节定向采集增量；按入库即成品标准扬弃/去重/归属后写入当期暂存库，staging_lint 0错误收尾，断点状态存工作区 daily_collect_state.json。与周三首轮采集、周六专题采集、周日素材盘点互补。2026-09-19 降本改造v3：跑次时间 02:17→11:47——v2 改四至周日时发现遗留缝隙：周日 02:17 日采后到 14:23 盘点前无任何采集，而盘点本身只做质检不采集，周日白天新闻会漏。11:47 跑次赶在盘点前完成补采（11:47 距 14:23 留 2.5 小时冗余），其余三天上午跑也早于凌晨跑抓到当天动态。断点机制不变，切换无缺口。",
+    "enabled": true,
+    "trigger": {
+      "kind": "schedule",
+      "cron": "47 11 * * 4-7",
+      "timezone": "Asia/Shanghai"
+    },
+    "input": {
+      "kind": "none"
+    },
+    "execution": {
+      "kind": "agent",
+      "mode": "local_conversation",
+      "prompt": "你是恒生电子银信解决方案部金融周报的每日增量采集员。\n\n【token节约铁律（最高优先级）】\n1. 禁止用 Skill 工具加载 finance-weekly-report 技能（太大），本 prompt 已内嵌全部必要规则；仅当确需细节时 Read 这两个文件的对应小节：/Users/zhouhq/Library/Application Support/kimi-desktop/daimon-share/daimon/skills/finance-weekly-report/references/staging-standard.md 与 references/information-sources.md。\n2. 禁止整文件 Read 暂存库 JSON（将越来越大）。查重、统计、字段检查一律写 python 脚本处理（pandas/json），只打印必要摘要。\n3. 官网检查要快进快出：站点无区间内更新立即跳下一站，不翻页浏览历史；FetchURL 失败改用 WebSearch site:检索一次即走。\n4. gildata 仅加载一次技能，按其数据源描述选 1-2 个最匹配的接口调用，不做全接口遍历。\n\n【信源自降频机制（用户已批准，自动执行）】\ndaily_collect_state.json 中维护 source_yields：{信源名: {last_run_产出数, consecutive_zero, skipped}}。每次运行记录各信源本次产出条数；某信源连续5次零产出即标记 skipped=true，后续运行直接跳过该源（在输出中注明\"已自动降频跳过：X\"）；被跳过信源在周报生成期（每周六、日）强制恢复检查一次，有产出则清零计数。产出统计必须包含 gildata 的每个章节方向。\n\n【与现有任务的分工】不要抓取 hstender.cn，不要抓 S/A 级公众号信源（周三任务负责），不要抓衡说数据（周六任务负责）。你只做：监管/金融基础设施官网公告 + gildata 数据接口，每日增量。\n\n一、确定采集区间与暂存库：\n1. 读工作区 工作日志_状态.md（只看开头当期窗口部分）确认当期暂存库文件（staging_YYYYMMDD-MMDD.json）。\n2. 增量断点：读工作区 daily_collect_state.json 的 last_run_date。采集区间=(last_run_date, 今天]（首次运行若无该文件，区间为昨天+今天两天）。完成后把 last_run_date 更新为今天。\n\n二、采集源A：监管与金融基础设施官网公告（逐站检查区间内更新，无更新即跳过）：\n- 证监会 www.csrc.gov.cn（要闻/公告/行政处罚）\n- 金监总局 www.nfra.gov.cn（政策法规/行政处罚/行政许可）\n- 央行 www.pbc.gov.cn（公开市场/支付结算司公告）\n- 沪深北交易所 www.sse.com.cn / www.szse.cn / www.bse.cn（监管动态/纪律处分/业务规则）\n- 中基协 www.amac.org.cn（公告/自律规则/纪律处分）\n- 中国信托业协会 www.xtxh.net、中国银行业协会 www.china-cba.net\n站点反爬或JS渲染时，WebSearch site:域名+日期关键词 交叉确认一次即可。\n\n三、采集源B：gildata 定向日采：\n调用 Skill 工具加载 gildata 技能（仅此一个技能），用其新闻/公告接口按七大章节定向检索区间内增量：银行及理财子、信托、基金与保险资管、证券期货、金融IT厂商动态、监管政策、AI应用。优先取与恒生业务相关（财富管理/资管/托管/资产服务信托/核心系统/信创/大模型应用）的条目。\n\n四、入库纪律（全自动，不询问用户）：\n- 先与当期暂存库查重（python 按 org归一+项目名/标题归一+date 比对），同事件跳过或合并备注。\n- 扬弃：非金融机构、纯海外弱相关、地方例行进展、低信息量动态、口径存疑类。\n- 时效铁律：bid_deadline < 本期止日期的招标不入库；无截止日征集类须跨渠道补查截止日，补不到即扬弃。\n- 归属铁律：结果/成交/候选人公示→bid_win；招标/征集/磋商→bid_tender；单一来源采前公示→bid_win（vendor填拟定供应商、amount\"-\"）。人事条目归各章人事子章节（1.2/2.1/3.1/4.1/5.1）；news只入news子章节；招投标子章节（1.4=s1-5、x.3）只放bid_win/bid_tender。\n- 行文规范：content禁止内嵌来源URL（只进source_url）；禁止生产痕迹措辞（\"按原图顺序/勾稽验证/用户裁决\"等）；对恒生段落标签一律【对恒生的影响】；禁止内部编号item_xxxx；文章图表先过\"信息增量/读者价值/阅读体验\"三判断再转tables字段（caption/headers/rows/source齐全）；多源信息融合重写为连贯行文。\n- content分段规范：按\"核心事实→背景/细节→影响/落地\"换行分段，结尾【对恒生的影响】单独成段（与恒生业务无关则省略）。每条字段齐全：title/date(YYYY-MM-DD)/source/source_url/content≥50字/chapter/subsection/category。\n\n五、收尾：\n1. 写回暂存库前备份：cp staging_<当期>.json staging_<当期>.json.bak_daily<今天MMDD>（用 python 写回，不要手拼 JSON）。\n2. 运行 python3 \"/Users/zhouhq/Library/Application Support/kimi-desktop/daimon-share/daimon/skills/finance-weekly-report/scripts/staging_lint.py\" staging_<当期>.json，必须0错误（警告中\"无投标截止日期\"征集类为固有可接受项）。\n3. 更新 daily_collect_state.json：last_run_date=今天；按\"信源自降频机制\"更新 source_yields。\n4. 输出采集小结（纯文本、控制在300字内）：本日新增/合并/扬弃各多少条、按章节分布、各信源产出数与降频跳过名单、需要用户知悉的存疑项（如有）。",
+      "workspace": {
+        "kind": "path",
+        "path": "/Users/zhouhq/Documents/kimi/Workspaces/金融要闻周报"
+      },
+      "modelAlias": "k3-agent",
+      "timeoutMs": 5400000
+    },
+    "result": {
+      "kind": "conversation"
+    },
+    "delivery": [],
+    "latestRunId": "run_d7fc14f3-a4b9-463a-818c-476f8648c601",
+    "latestSuccessfulRunId": "run_d7fc14f3-a4b9-463a-818c-476f8648c601",
+    "createdAt": "2026-09-14T03:59:03.533Z",
+    "updatedAt": "2026-09-20T03:52:33.451Z"
+  }
+}

@@ -69,6 +69,7 @@ JavaScript渲染代码使用的字段名：
 - [ ] rec 是规范值之一
 - [ ] url 不为空且以http开头
 - [ ] source 不为空
+- [ ] source 同一信源只许一种写法（2026-09-30 起）：禁止"千里马订阅"（→千里马招标网）、"（微信公众号）"（→（公众号））等别名，写入前先过 `config.normalize_source()`，别名表见 `config.SOURCE_ALIASES`
 
 ### 步骤2：URL验证
 - [ ] URL可以访问（HTTP 200）

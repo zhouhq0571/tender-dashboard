@@ -10,6 +10,8 @@
 | 2026-07-07 | v77→v48回退 | 手动`git push origin gh-pages`推送了本地旧分支 | 版本回退29个 |
 | 2026-07-11 | 项目数清零 | JSON数据含裸换行符导致解析失败 | 网站显示0项目 |
 | 多次 | 时间未更新 | deploy.sh步骤2时间更新逻辑有bug（重复代码块） | 用户困惑 |
+| 2026-09-28 | v273→v271回退 | 定时任务凭会话记忆推断版本号，未读 index.html 实际版本 | 版本号回退，已三重修复（bump_version.py 机械递增 + safe_deploy 步骤4.5 单调守卫 + prompt 红线） |
+| 2026-09-29 | 误报"Pages构建未触发"(exit 42) | api.github.com 匿名调用被共享出口 IP 限流，轮询拿到空响应被当成"未触发"，实际构建正常 | 虚假告警；已修复：检出限流/空响应时降级为以线上版本（步骤8）为权威判据，仅 API 明确返回非本次 SHA 才判失败 |
 
 ### 根因分类
 
@@ -86,3 +88,16 @@ git push origin <hash>:gh-pages --force
 | 用户 | 发现网站异常立即报告，不自行操作git |
 | deploy.sh | 唯一部署入口，包含完整验证和回退逻辑 |
 | health_check.py | 部署前强制检查，发现问题阻止部署 |
+
+## 2026-07-20 教训：GitHub Pages 构建未触发（外部故障）
+
+**现象**：代码已推送 main + gh-pages，但网站停留在旧版本（v107），deployments API 无新记录。
+
+**根因**：GitHub 官方故障（事件 8vfyvq16hzh9，2026-07-19T23:34Z 起，Actions/Pages/API 全部降级）。Pages 构建走 Actions 基础设施，GitHub 侧故障期间推送不会触发构建，且无排队补偿——恢复后必须重新推送触发。
+
+**排查标准动作**：
+1. `curl "https://api.github.com/repos/zhouhq0571/tender-dashboard/deployments?environment=github-pages&per_page=1"` 看最新部署 SHA 是否等于本地 HEAD
+2. `curl "https://www.githubstatus.com/api/v2/summary.json"` 看 Pages/Actions/API 状态
+3. 推送成功但无新部署 = GitHub 侧问题，恢复后 `git commit --allow-empty -m retrigger && git push origin main:gh-pages --force`
+
+**机制改进（已实施）**：safe_deploy.sh 新增步骤7/8——部署后自动轮询 Pages 部署记录（exit 42=构建未触发）和线上版本号（exit 43=CDN未刷新），未验证通过前禁止汇报"部署成功"。

@@ -53,29 +53,16 @@ def check_duplicates(data):
         'status': 'PASS' if not duplicates else 'WARN',
         'detail': '无重复' if not duplicates else f'发现 {len(duplicates)} 个重复: {duplicates[:3]}'
     }
-    """检查重复项目"""
-    seen = {}
-    duplicates = []
-    for p in data['projects']:
-        key = p.get('company', '') + '|' + p.get('project', '')[:15]
-        if key in seen:
-            duplicates.append(f"{p.get('company', '')} - {p.get('project', '')[:30]} (id {seen[key]} vs {p.get('id', '?')})")
-        seen[key] = p.get('id', '?')
-    return {
-        'check': '重复项目',
-        'status': 'PASS' if not duplicates else 'WARN',
-        'detail': '无重复' if not duplicates else f'发现 {len(duplicates)} 个重复: {duplicates[:3]}'
-    }
 
 def check_id_continuity(data):
-    """检查 ID 连续性"""
+    """检查 ID 连续性（2026-09-03 用户确认：ID 断档为删除过期项目的自然遗留，保持 id 稳定不重排，降级为 INFO）"""
     ids = [int(p['id']) for p in data['projects']]
     expected = list(range(1, len(data['projects']) + 1))
     is_continuous = ids == expected
     return {
         'check': 'ID 连续性',
-        'status': 'PASS' if is_continuous else 'FAIL',
-        'detail': f'1-{len(data["projects"])} 连续' if is_continuous else f'不连续: {ids[:5]}... vs {expected[:5]}...'
+        'status': 'PASS' if is_continuous else 'INFO',
+        'detail': f'1-{len(data["projects"])} 连续' if is_continuous else f'存在断档（历史删除遗留，id 保持稳定不重排）: 当前最大 id={max(ids)}，共 {len(ids)} 个项目'
     }
 
 def check_required_fields(data):

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "automation": {
+    "automationId": "automation_19f5f5e2-f51a-4c1a-9582-521990aecb27",
+    "type": "regular",
+    "title": "招标看板月度复盘+健康自检（每月3日 05:47）",
+    "description": "每月 3 日 05:47（Asia/Shanghai 低峰时段）在 bidding-daily 目录一次性完成招标看板月度工作：①health_check.py 健康自检；②ql_link_spotcheck.py 千里马链接 10% 随机抽检（脚本化慢速校验，模型只读报告摘要，错配只上报不自动改）；③上一自然月自我复盘（信源产出记账、来源构成、采纳率、定时任务台账、否决清单、指纹监测与 S/A/B 分层升降级裁决、上月目标达成判定），生成 月度复盘-YYYYMM.md 并桌面通知。2026-09-15 由原\"月度自我复盘\"与\"月度健康自检\"两任务合并而来，用户钦定去除全量链接校验改 10% 脚本化抽检。",
+    "enabled": true,
+    "trigger": {
+      "kind": "schedule",
+      "cron": "47 5 3 * *",
+      "timezone": "Asia/Shanghai"
+    },
+    "input": {
+      "kind": "none"
+    },
+    "execution": {
+      "kind": "agent",
+      "mode": "local_conversation",
+      "prompt": "执行招标看板月度复盘+健康自检（合并任务，2026-09-15 用户钦定：健康自检并入复盘；千里马链接校验由全量改为脚本化 10% 随机抽检，省 token）。\n\n## 第一步：确定时间锚点\n`date '+%Y-%m-%d'` 获取当前日期，复盘对象为上一个自然月（如 10-03 执行则复盘 9 月，记 YYYYMM）。\n\n## 第二步：脚本化健康自检（全部脚本执行，模型只读输出）\n在 /Users/zhouhq/Documents/kimi/workspace/bidding-daily 下：\n1. `python3 health_check.py` —— 记录各检查项 PASS/FAIL/WARN，FAIL/WARN 给修复建议。\n2. `python3 tools/ql_link_spotcheck.py` —— 千里马链接 10% 随机抽检（种子=当前 YYYYMM，慢速、只读）。完成后只读 `reports/链接抽检-YYYYMM.md` 的摘要与错配清单，**严禁自动修改看板数据**，错配列入复盘文档待用户确认。若脚本报错，记录错误现象并继续后续步骤。\n\n## 第三步：复盘数据采集（数字必须有出处，禁止凭记忆编造）\n1. 阅读 `月度复盘-202608.md` 沿用六段式结构（核心结论/价值贡献统计/问题根因分析/改进方案/下月目标/机制说明），并读上上月复盘对照目标达成。\n2. `python3 tools/source_stats.py <上月YYYY-MM>` 信源产出记账（必做，引用其输出做分层裁决依据）。\n3. 当前看板来源构成：解析 index.html 的 tender-data JSON 按 source 分类计数。\n4. 上月新增按来源：git log 筛上月新增项目（口径：已过期删除的不在统计内，文档注明）。\n5. 定时任务台账：AutomationControl listRuns 拉取主任务 automation_0565c6f6-885b-4c81-9190-5b552a3eb9ab（06:00）、补偿任务 automation_e2e0403b-5f4d-4867-9120-2a7307fcd130（09:30）上月记录，统计应跑/实跑/succeeded/failed 与 durationMs，算\"早晨覆盖率\"（06:00 或 09:30 至少一个成功的天数占比）。**看板定时任务健康度统一由本任务负责，其他月度任务不再重复检查。**\n6. 否决清单变动：rejected_candidates.json 上月新增条数；抽查是否有命中否决清单的项目被重复上报。\n7. 信源清单新鲜度：补充信源清单.md 上月新增来源数。\n8. 信源指纹监测：读 monitor/source_fingerprints.json 排出命中率，结合第 2 步执行 S/A/B 升降级裁决（连续两月零产出降级、高产出 B 级升级、末位信源处置），直接更新补充信源清单.md 第 0 节与 tools/source_monitor.py 的 tier 字段，写变更日志。统计\"已截止候选上报次数\"（目标 0）。\n\n## 第四步：对照上月目标逐项判定达成/未达成/无法计量，未达成给机制层根因。\n\n## 第五步：写复盘文档\n写入 `月度复盘-YYYYMM.md`（上月）。含：健康自检结论、链接抽检结论（错配清单）、信源裁决清单、任务台账、目标达成表。数字标出处，无法计量明确标注，改进措施落到具体文件/prompt/脚本，下月目标可度量（必含：自主搜索有效采纳占比、候选采纳率、已截止候选上报次数目标0、信源监测命中率）。\n\n## 第六步：会话摘要（10 行以内）+ 桌面通知。\n\n权限边界：仅允许修改 月度复盘-YYYYMM.md、补充信源清单.md、tools/source_monitor.py 的 tier 字段、tools/source_stats.py 的分层常量；**不得修改看板 index.html 数据**，不得部署。",
+      "workspace": {
+        "kind": "path",
+        "path": "/Users/zhouhq/Documents/kimi/workspace"
+      },
+      "timeoutMs": 3600000
+    },
+    "result": {
+      "kind": "conversation"
+    },
+    "delivery": [
+      {
+        "kind": "notification",
+        "title": "招标看板月度复盘+健康自检",
+        "desktop": true,
+        "actionContext": {
+          "action": "open_automation",
+          "automationId": "automation_19f5f5e2-f51a-4c1a-9582-521990aecb27"
+        }
+      }
+    ],
+    "createdAt": "2026-09-01T03:16:02.278Z",
+    "updatedAt": "2026-09-15T08:54:52.237Z"
+  }
+}

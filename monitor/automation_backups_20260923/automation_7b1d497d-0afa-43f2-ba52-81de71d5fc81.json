@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "automation": {
+    "automationId": "automation_7b1d497d-0afa-43f2-ba52-81de71d5fc81",
+    "type": "regular",
+    "title": "周报素材盘点与生成预备（每周日 15:23）",
+    "description": "金融要闻周报素材盘点与生成预备：本期为2026-09-19~09-30中秋国庆长假特刊，2026-09-30 20:00 一次性运行（原每周日14:23 cron 本期间暂停）。按V340口径全面质检本期暂存库（时效/查重/归属/行文/占位符），与上期定稿对比，推送待裁决项，等用户回复\"开始生成\"再组装发布；「开始生成」链路含第0步最终补采与交付收尾三步（滚动issue_window.json至下期2026-10-01~10-12、建下期暂存库staging_20261001-1012.json、更新工作日志）。下期盘点由2026-10-12 20:00一次性任务执行，该任务负责把本任务恢复为每周日14:23例行cron。",
+    "enabled": true,
+    "trigger": {
+      "kind": "once",
+      "at": "2026-09-30T20:00:00+08:00"
+    },
+    "input": {
+      "kind": "none"
+    },
+    "execution": {
+      "kind": "agent",
+      "mode": "local_conversation",
+      "prompt": "你是恒生电子银信解决方案部金融周报的素材盘点助手。工作目录：/Users/zhouhq/Documents/Kimi/Workspaces/金融要闻周报（所有产出文件必须放在此目录内）。\n\n【本期口径】先读工作区 issue_window.json 确定本期起止与暂存库（当前：2026-09-19~2026-09-30 / staging_20260919-0930.json，中秋国庆长假特刊，12天）。若该文件不存在则按旧规则：起=上周六=today-8天，止=明天（周一）=today+1天，暂存库 staging_<起YYYYMMDD>-<止MMDD>.json。上期定稿网页在 https://zhouhq0571.github.io/finance-weekly-report/ ，上期暂存库为工作目录中日期早于本期的 staging_*.json。\n\n【任务】按序执行，全程最小化token消耗：\n1. 读技能 /Users/zhouhq/Library/Application Support/kimi-desktop/daimon-share/daimon/skills/finance-weekly-report/SKILL.md 的「中标/招标归属与跨来源去重」「信息暂存预分类」「质量铁律」三节及 references/staging-standard.md（含第0条子章节归属铁律）、references/quality-iron-rules.md。\n2. 全面质检本期暂存库（先备份 cp 暂存库 暂存库.bak_sun）：\n   - 时效性：新闻/中标的 date 须在本期起止范围内；招标的 bid_deadline 须晚于本期结束日期（≤本期止日的一律剔除）；\n   - 查重合并：跨来源同项目（千里马邮件 vs 快查截图 vs 公众号，org归一化+项目名剥离公告类型后缀后比对，注意简称等价）合并，保留信息更全记录，notes/sources 取并集；同项目仅公告类型不同只留结果公告；同一二级章节下相近新闻去重合并；\n   - 归属（V340起铁律）：**子章节映射以当期 build/gen_report_*_lib.py 的 sel/ch_org 为准，禁止凭记忆标注**——sX-1=人事动态（仅任职/获批/被查/换届等\"人\"的事）、sX-2=业务动态（业绩/榜单/改革/市场观察等一切非人事）；ch1 顺序为 1.1人事任免(s1-2)→1.2监管政策/制度与业务动态(s1-1)→1.3监管处罚与风险(s1-3/s1-4)→1.4金融基础设施招投标(s1-5)；**对具体人员的处罚/处分/审查/违纪违法新闻归其机构所在章的人事节（2.1/3.1/4.1/5.1，监管机构人员归1.1）**，机构罚单汇总类留1.3；标题含结果/成交/候选人类词→bid_win，招标/征集/磋商公告类词→bid_tender；单一来源采前公示类→bid_win；机构类型按7+1框架复核（理财子→ch2、证券/期货→ch5、信托→ch3、基金/资管/保险→ch4、财务公司/融资租赁→ch2、清算/交易所/央行分支→ch1 s1-5、地方金控→ch7 s7-2、非银支付→ch1、AI→ch7 s7-1）；news 不得落入招投标子章节；\n   - 行文规范（lint已自动拦截）：content 禁止内嵌来源URL、生产痕迹措辞、【增量补充】补丁段、内部编号 item_xxxx、原始markdown管道表、**\"待编辑/待补充\"等占位符（零容忍）**；对恒生段落唯一标签【对恒生的影响】（与恒生确无相关的省略该段，禁止写空话）；多源信息融合重写为连贯行文；\n   - 重磅条目（国家级政策/巨额注资/重大改革）标题与内容格局化：写全机构清单、金额合计、政策定性；\n   - 简称：org/vendor 用钦定简称（见当期 build/gen_report_*_lib.py 的机构名归一/VENDOR_ALIAS）；\n   - 必跑双脚本：python3 \".../scripts/staging_lint.py\" <暂存库> 0 错误；python3 \".../scripts/pre_report_qc.py\" <暂存库> <起> <止> --fix，F/C 类告警逐条裁决（F=章节-机构一致性按上述规则改，C=疑似重复按\"分包保留/候选vs结果留结果/合并条与拆条留精确者\"裁决），清零后才可生成。\n3. 与上期定稿对比：各章节新闻数、IT中标数、IT招标数、金额合计，列出增减。跨期3天重叠窗口中「上期候选人公示→本期结果公告」的衔接条目属新信息，保留并加衔接备注。\n4. 输出盘点结论：本期有效素材统计表（分章节）、与上期对比、待用户裁决项、「是否建议开始生成」的判断。末尾提示用户：回复「开始生成」即进入组装流程——**第0步 最终补采（封闭日采后到生成时点间的缝隙，必须执行）**：采集区间=(daily_collect_state.json 的 last_run_date, 现在]（先读该文件，没有则以今天为区间），只查 ①gildata 新闻/公告接口按七大章节定向检索 ②S级信源快进快出：智探AI应用、银行科技研究社、券商中国、中国基金报（各自最新2篇，与区间比对，区间外即走）；总量控制≤15分钟，扬弃从紧（与日采同一套入库纪律：查重/归属/行文/三段式）；入库后立即重跑 staging_lint 与 pre_report_qc --fix 并清零 F/C 告警，未清零不得进第1步；补采小结（新增N条）写进交付说明 → gen_report 生成 → quality_check.py <html> <日期范围> <暂存库> 全过 → 桌面+手机截图与PDF关键页目检 → bash build/publish.sh 一键发布 → **金山PDF upload-new-file 传新文件并开 anyone 分享，链接记入 archive/kdocs_links.json（严禁覆盖往期文件）；仅当本期重发修订时才允许 upload-replace-file 覆盖本期文件** → 线上 curl 验证主站/归档/搜索 manifest 三处（超时隔1-2分钟人工复查，不得跳过）→ 交付。\n【本期特例·交付收尾三步（2026-09-22 用户钦定中秋国庆改期，必须执行）】publish 成功且线上验证通过后：①把 issue_window.json 滚动为下期——issue=V343、start=2026-10-01、end=2026-10-12、staging=staging_20261001-1012.json（删除旧 next 对象）；②创建下期暂存库：从本期终版暂存库滚入 bid_deadline≥2026-10-12 的 bid_tender 及 bid_deadline='-' 征集/公示类，存为 staging_20261001-1012.json 并跑 staging_lint 0 错误；③更新 工作日志_状态.md 头部“本期状态”为 V343（2026-10-01~10-12，下期10-12晚20:00由一次性任务盘点生成）。三步完成才算交付结束。\n5. 不要擅自开始生成周报正文。",
+      "workspace": {
+        "kind": "path",
+        "path": "/Users/zhouhq/Documents/kimi/Workspaces/金融要闻周报"
+      },
+      "modelAlias": "k3-agent",
+      "timeoutMs": 5400000
+    },
+    "result": {
+      "kind": "conversation"
+    },
+    "delivery": [
+      {
+        "kind": "notification",
+        "title": "周报素材盘点与生成预备（V342 长假特刊·9/30 晚）",
+        "body": "本期暂存库质检与上期对比已出，请查看待裁决项；回复「开始生成」即进入周报组装。",
+        "severity": "success",
+        "desktop": true,
+        "actionContext": {
+          "action": "open_run"
+        }
+      }
+    ],
+    "latestRunId": "run_1776e140-93b9-4ec6-9a4d-3de8ef8ad078",
+    "latestSuccessfulRunId": "run_1776e140-93b9-4ec6-9a4d-3de8ef8ad078",
+    "createdAt": "2026-08-16T13:34:40.207Z",
+    "updatedAt": "2026-09-22T03:04:30.921Z"
+  }
+}

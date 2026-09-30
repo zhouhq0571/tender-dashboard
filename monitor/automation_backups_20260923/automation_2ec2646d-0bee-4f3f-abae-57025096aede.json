@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "automation": {
+    "automationId": "automation_2ec2646d-0bee-4f3f-abae-57025096aede",
+    "type": "regular",
+    "title": "快查中标导出周入库",
+    "description": "每周日17:23（Asia/Shanghai）检查金融要闻周报工作区inbox_feed文件夹中的快查中标导出Excel，按kuaicha-export-processor技能执行清洗、扬弃、去重、比对并入库到当期staging，产出入库摘要并通知；无新文件则提醒用户投放周日导出文件。",
+    "enabled": true,
+    "trigger": {
+      "kind": "schedule",
+      "cron": "23 17 * * 0",
+      "timezone": "Asia/Shanghai"
+    },
+    "input": {
+      "kind": "none"
+    },
+    "execution": {
+      "kind": "agent",
+      "mode": "local_conversation",
+      "prompt": "你是金融要闻周报的取数管线执行者。执行\"快查中标导出周入库\"任务：\n\n1. 检查工作区 inbox_feed/ 文件夹（/Users/zhouhq/Documents/kimi/Workspaces/金融要闻周报/inbox_feed/）中是否有文件名含\"中标项目清单_快查\"且尚未处理过的 .xlsx 文件（已处理的记录在 inbox_feed/.processed_state.json，无此文件则为首次运行）。\n2. 如果没有新文件：在对话中输出提醒\"本周快查导出文件尚未投放inbox_feed，请周日从快查Agent导出后放入该文件夹\"，任务结束。\n3. 如果有新文件：对每个文件执行 kuaicha-export-processor 技能的完整入库流程（先读该技能的SKILL.md再执行）：复制原件到工作区→跑 scripts/ingest_kuaicha_export.py 干跑审阅→按技能第3节人工扬弃二次审查→按第4节两级查重复核→加 --merge 正式入库→回读验证。\n4. 全部处理完后更新 inbox_feed/.processed_state.json（记录已处理文件名列表）。\n5. 汇报（中文）：每个文件的处理结果——原始行数、扬弃清单及原因、去重数、暂存库跳过数、新增数（分章节分机构类型）、有金额覆盖率、未映射厂商；并在结尾给出一句\"7.3数据已就绪/尚缺什么\"的结论。\n\n注意：原件永不修改；staging写入前脚本自动备份；不设待定环节，口径存疑项按技能规则直接扬弃并在汇报写明。",
+      "workspace": {
+        "kind": "path",
+        "path": "/Users/zhouhq/Documents/kimi/Workspaces/金融要闻周报"
+      },
+      "modelAlias": "k3-agent"
+    },
+    "result": {
+      "kind": "conversation"
+    },
+    "delivery": [
+      {
+        "kind": "notification",
+        "title": "快查中标入库完成",
+        "body": "周入库结果已产出，点击查看摘要",
+        "severity": "info",
+        "desktop": true,
+        "actionContext": {
+          "action": "open_run"
+        }
+      }
+    ],
+    "latestRunId": "run_c43147cb-3fca-4a91-994b-30ed99775205",
+    "latestSuccessfulRunId": "run_c43147cb-3fca-4a91-994b-30ed99775205",
+    "createdAt": "2026-09-19T20:35:33.463Z",
+    "updatedAt": "2026-09-20T09:23:34.722Z"
+  }
+}

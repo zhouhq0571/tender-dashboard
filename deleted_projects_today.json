@@ -1,0 +1,83 @@
+{
+  "execution_date": "2026-08-22",
+  "deleted_count": 9,
+  "deleted_projects": [
+    {
+      "id": 2,
+      "company": "农银理财",
+      "project": "智能交易机器人项目（公开招标）",
+      "deadline": "2026-08-20 17:00"
+    },
+    {
+      "id": 11,
+      "company": "晋商银行",
+      "project": "金融数据平台账号采购项目（供应商征集）",
+      "deadline": "2026-08-20 18:00"
+    },
+    {
+      "id": 15,
+      "company": "莱商银行",
+      "project": "山东省公安厅涉案资金和保证金管理信息服务系统升级项目",
+      "deadline": "2026-08-20"
+    },
+    {
+      "id": 22,
+      "company": "杭州工商信托",
+      "project": "代码安全管理服务采购项目",
+      "deadline": "2026-08-20"
+    },
+    {
+      "id": 23,
+      "company": "杭州工商信托",
+      "project": "反洗钱系统更新建设项目",
+      "deadline": "2026-08-20"
+    },
+    {
+      "id": 25,
+      "company": "浙商银行",
+      "project": "智能体基础软硬件采购",
+      "deadline": "2026-08-20 09:00"
+    },
+    {
+      "id": 27,
+      "company": "上海信托",
+      "project": "财务系统建设项目",
+      "deadline": "2026-08-20 13:30"
+    },
+    {
+      "id": 30,
+      "company": "湖北银行",
+      "project": "2026年身份证联网核查系统信创项目（竞争性磋商）",
+      "deadline": "2026-08-20 09:30"
+    },
+    {
+      "id": 35,
+      "company": "贵阳银行",
+      "project": "大模型智能中台（二期）算力服务器采购项目",
+      "deadline": "2026-08-20 09:30"
+    }
+  ],
+  "marked_expired_count": 3,
+  "marked_expired_projects": [
+    {
+      "id": 6,
+      "company": "天津银行",
+      "project": "理财资产管理系统分级授权审批流程改造项目",
+      "deadline": "2026-08-21 09:30"
+    },
+    {
+      "id": 12,
+      "company": "恒丰理财",
+      "project": "2026年智能投研终端项目（竞争性磋商）",
+      "deadline": "2026-08-21 09:30"
+    },
+    {
+      "id": 33,
+      "company": "重庆农商",
+      "project": "数字化营销平台采购项目",
+      "deadline": "2026-08-21"
+    }
+  ],
+  "remaining_count": 36,
+  "version": "v168"
+}

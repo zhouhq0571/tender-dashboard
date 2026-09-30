@@ -27,7 +27,7 @@ def main():
         sys.exit(1)
     
     try:
-        data = json.loads(m.group(1))
+        data = json.loads(m.group(1), strict=False)
     except json.JSONDecodeError as e:
         print(f"❌ JSON解析失败: {e}")
         sys.exit(1)

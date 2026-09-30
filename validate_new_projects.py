@@ -11,7 +11,7 @@ import json
 import re
 import sys
 
-from config import VALID_REGIONS, VALID_METHODS, VALID_RECS
+from config import VALID_REGIONS, VALID_METHODS, VALID_RECS, BLOCKED_SOURCE_PATTERNS
 
 HTML_FILE = 'index.html'
 
@@ -57,6 +57,18 @@ def check_field_values(project):
     
     if project.get('rec') not in VALID_RECS:
         errors.append(f"rec值不规范: '{project.get('rec')}'，应为: {VALID_RECS}")
+
+    # 2026-09-30 新增：招标方式白名单硬检（根治"征集调研/谈判采购/公开招标（入围）"等非标准值混入，
+    # 映射口径见 SKILL.md 步骤2.7）
+    if project.get('method') not in VALID_METHODS:
+        errors.append(f"method值不规范: '{project.get('method')}'，只能取10种标准值: {sorted(VALID_METHODS)}")
+
+    # 2026-09-30 新增：信息来源归一化硬检（根治"千里马订阅/（微信公众号）"等同一信源多种写法，
+    # 口径见 config.SOURCE_ALIASES；新来源须用规范全名，渠道差异不入 source）
+    src = project.get('source') or ''
+    if any(pat in src for pat in BLOCKED_SOURCE_PATTERNS):
+        errors.append(f"source值不规范: '{src}'，同一信源只许一种写法（如 千里马订阅→千里马招标网、"
+                      f"（微信公众号）→（公众号）），别名表见 config.SOURCE_ALIASES")
     
     if not isinstance(project.get('tags'), list):
         errors.append("tags必须是数组")

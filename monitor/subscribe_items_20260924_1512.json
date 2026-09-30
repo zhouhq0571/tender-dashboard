@@ -1,0 +1,615 @@
+{
+ "run_at": "2026-09-24 15:12",
+ "pages": 3,
+ "total": 60,
+ "keep": 5,
+ "verdict_counts": {
+  "keep": 5,
+  "drop_stage": 36,
+  "drop_org": 5,
+  "drop_noise": 9,
+  "drop_biz": 5
+ },
+ "items": [
+  {
+   "title": "中国银行内蒙古区分行大数据平台（Gbase）信创改造采购项目(第一分包ETL调度平台信创改造)结果公示",
+   "url": "https://www.qianlima.com/bid-634426113.html",
+   "row": "中国银行内蒙古区分行大数据平台（Gbase）信创改造采购项目(第一分包ETL调度平台信创改造)结果公示 收藏 29分钟前 结果-候选人公示内蒙古-呼和浩特服务",
+   "page": 1,
+   "stage": "候选人公示",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "兰州银行数据中心老旧UPS更新改造集成项目成交公告",
+   "url": "https://www.qianlima.com/bid-634437127.html",
+   "row": "兰州银行数据中心老旧UPS更新改造集成项目成交公告 收藏 9分钟前 结果-中标通知甘肃-兰州服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "中信金资汇通资产管理有限公司数据库软件及中间件软件采购成交结果公告",
+   "url": "https://www.qianlima.com/bid-634433673.html",
+   "row": "中信金资汇通资产管理有限公司数据库软件及中间件软件采购成交结果公告 收藏 14分钟前 结果-中标通知北京-北京服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "中山农村商业银行股份有限公司信创计算机终端及信创A4单色打印机采购项目评审结果公示",
+   "url": "https://www.qianlima.com/bid-634277411.html",
+   "row": "中山农村商业银行股份有限公司信创计算机终端及信创A4单色打印机采购项目评审结果公示 收藏 5小时前 结果-候选人公示广东-中山服务",
+   "page": 1,
+   "stage": "候选人公",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "威海银行股份有限公司企业网盘系统信创建设项目中标结果公示",
+   "url": "https://www.qianlima.com/bid-634275264.html",
+   "row": "威海银行股份有限公司企业网盘系统信创建设项目中标结果公示 收藏 5小时前 结果-中标通知山东-威海服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "莱商银行电子商业汇票管理系统信创改造项目（二次）竞争性磋商公告",
+   "url": "https://www.qianlima.com/bid-634335890.html",
+   "row": "莱商银行电子商业汇票管理系统信创改造项目（二次）竞争性磋商公告 收藏 4小时前 公告-重新招标山东-济南服务文件",
+   "page": 1,
+   "stage": "重新招",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "keep"
+  },
+  {
+   "title": "秦农银行2026年信息系统信创改造项目（影像内容管理平台）成交结果公示",
+   "url": "https://www.qianlima.com/bid-634418219.html",
+   "row": "秦农银行2026年信息系统信创改造项目（影像内容管理平台）成交结果公示 收藏 46分钟前 结果-中标通知陕西-西安服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "理财销售等12个系统信创适配改造项目中标（成交）结果公告",
+   "url": "https://www.qianlima.com/bid-634364008.html",
+   "row": "理财销售等12个系统信创适配改造项目中标（成交）结果公告 收藏 3小时前 结果-中标通知四川-乐山服务文件",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "中国邮政储蓄银行浙江省分行全省企业信息查询外部数据账号服务项目公开招标公告",
+   "url": "https://www.qianlima.com/bid-634430065.html",
+   "row": "中国邮政储蓄银行浙江省分行全省企业信息查询外部数据账号服务项目公开招标公告 收藏 21分钟前 公告-招标公告浙江-杭州服务",
+   "page": 1,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "keep"
+  },
+  {
+   "title": "桂林银行采购道琼斯反洗钱物项、机场（港口）类制裁数据 项目（GYJC2026121）采购结果公告-结果公告",
+   "url": "https://www.qianlima.com/bid-634322774.html",
+   "row": "桂林银行采购道琼斯反洗钱物项、机场（港口）类制裁数据 项目（GYJC2026121）采购结果公告-结果公告 收藏 4小时前 结果-中标通知广西-桂林服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "青岛银行债券投资分析资讯终端服务项目（二次采购）公开谈判采购公告",
+   "url": "https://www.qianlima.com/bid-634370746.html",
+   "row": "青岛银行债券投资分析资讯终端服务项目（二次采购）公开谈判采购公告 收藏 3小时前 公告-重新招标山东-青岛服务文件",
+   "page": 1,
+   "stage": "重新招",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_biz"
+  },
+  {
+   "title": "威海城投资产管理有限公司栖霞街特色街区2026-2027年营销服务采购项目自愿公开招标结果公告",
+   "url": "https://www.qianlima.com/bid-634281927.html",
+   "row": "威海城投资产管理有限公司栖霞街特色街区2026-2027年营销服务采购项目自愿公开招标结果公告 收藏 5小时前 结果-中标通知山东-威海服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "桂林银行桂林分行采购2026-2028年食堂托管服务项目（GYJC2026122）采购结果公告-结果公告",
+   "url": "https://www.qianlima.com/bid-634308793.html",
+   "row": "桂林银行桂林分行采购2026-2028年食堂托管服务项目（GYJC2026122）采购结果公告-结果公告 收藏 4小时前 结果-中标通知广西-桂林服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "秦农银行2026年信息系统信创改造项目（金融业开源组件可信中心仓接入服务）成交结果公示",
+   "url": "https://www.qianlima.com/bid-634417109.html",
+   "row": "秦农银行2026年信息系统信创改造项目（金融业开源组件可信中心仓接入服务）成交结果公示 收藏 50分钟前 结果-中标通知陕西-西安服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "中原银行股份有限公司2026年第一期信息系统基础软硬件扩容采购项目-金融数据加密机采购项目二次-结果公告",
+   "url": "https://www.qianlima.com/bid-634373753.html",
+   "row": "中原银行股份有限公司2026年第一期信息系统基础软硬件扩容采购项目-金融数据加密机采购项目二次-结果公告 收藏 3小时前 结果-中标通知河南-郑州服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "湖南有色金属投资有限公司高性能低成本数据中心用浸没式冷却液研发服务采购结果公示",
+   "url": "https://www.qianlima.com/bid-634381939.html",
+   "row": "湖南有色金属投资有限公司高性能低成本数据中心用浸没式冷却液研发服务采购结果公示 收藏 2小时前 结果-中标通知湖南-长沙服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "数据库软件项目",
+   "url": "https://www.qianlima.com/bid-634337173.html",
+   "row": "数据库软件项目 收藏 4小时前 结果-中标通知福建-福州服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "【产权交易】泰兴市襟江投资有限公司转让所持有的江苏云泰大数据有限公司30%股权转让项目交易公告",
+   "url": "https://www.qianlima.com/bid-634439243.html",
+   "row": "【产权交易】泰兴市襟江投资有限公司转让所持有的江苏云泰大数据有限公司30%股权转让项目交易公告 收藏 6分钟前 公告-招标公告江苏-泰州服务文件",
+   "page": 1,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_org"
+  },
+  {
+   "title": "曲靖市商业银行股份有限公司手机银行及网上银行系统2026年新增需求开发项目（一期）成交结果公示",
+   "url": "https://www.qianlima.com/bid-634422591.html",
+   "row": "曲靖市商业银行股份有限公司手机银行及网上银行系统2026年新增需求开发项目（一期）成交结果公示 收藏 36分钟前 结果-中标通知云南-曲靖服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "人保财险新能源汽车专属车型数据和汽车高级辅助驾驶功能(ADAS)数据服务采购项目中标结果公告",
+   "url": "https://www.qianlima.com/bid-634395499.html",
+   "row": "人保财险新能源汽车专属车型数据和汽车高级辅助驾驶功能(ADAS)数据服务采购项目中标结果公告 收藏 2小时前 结果-中标通知北京-北京服务",
+   "page": 1,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "内评系统2026-2027年数据服务事前公示",
+   "url": "https://www.qianlima.com/bid-634398717.html",
+   "row": "内评系统2026-2027年数据服务事前公示 收藏 1小时前 结果-候选人公示北京-北京服务文件",
+   "page": 2,
+   "stage": "候选人公",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "石柱支行网络数据专线租用服务项目采购公告",
+   "url": "https://www.qianlima.com/bid-634289321.html",
+   "row": "石柱支行网络数据专线租用服务项目采购公告 收藏 5小时前 公告-招标公告重庆-重庆服务",
+   "page": 2,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_org"
+  },
+  {
+   "title": "人保财险2026年基础环境运维人力采购项目标包5全量数据平台数据切割与通道运维人力项目（第二次）中标候选人公示",
+   "url": "https://www.qianlima.com/bid-634398511.html",
+   "row": "人保财险2026年基础环境运维人力采购项目标包5全量数据平台数据切割与通道运维人力项目（第二次）中标候选人公示 收藏 1小时前 结果-候选人公示北京-北京服务",
+   "page": 2,
+   "stage": "候选人公",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "2026年采购东方财富证券研报服务采购项目成交结果公告",
+   "url": "https://www.qianlima.com/bid-634406374.html",
+   "row": "2026年采购东方财富证券研报服务采购项目成交结果公告 收藏 1小时前 结果-中标通知浙江-杭州服务文件",
+   "page": 2,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "新华人寿保险股份有限公司资产管理系统建设项目-中标候选人公示",
+   "url": "https://www.qianlima.com/bid-634347754.html",
+   "row": "新华人寿保险股份有限公司资产管理系统建设项目-中标候选人公示 收藏 3小时前 结果-候选人公示北京-北京服务",
+   "page": 2,
+   "stage": "候选人公",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "2026-2029年基础资讯数据服务采购项目成交结果公示",
+   "url": "https://www.qianlima.com/bid-634429108.html",
+   "row": "2026-2029年基础资讯数据服务采购项目成交结果公示 收藏 23分钟前 结果-中标通知北京-北京服务",
+   "page": 2,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "江苏省数据交易所安全驻场服务项目竞争性磋商公告",
+   "url": "https://www.qianlima.com/bid-634388041.html",
+   "row": "江苏省数据交易所安全驻场服务项目竞争性磋商公告 收藏 2小时前 公告-招标公告江苏-南京服务文件",
+   "page": 2,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_org"
+  },
+  {
+   "title": "国泰海通证券2026年道合产业链数据采购项目结果公告",
+   "url": "https://www.qianlima.com/bid-634417213.html",
+   "row": "国泰海通证券2026年道合产业链数据采购项目结果公告 收藏 49分钟前 结果-中标通知上海-上海服务",
+   "page": 2,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "银行尾箱寄库交接信息功能建设项目（第二次）",
+   "url": "https://www.qianlima.com/bid-634295540.html",
+   "row": "银行尾箱寄库交接信息功能建设项目（第二次） 收藏 5小时前 公告-重新招标湖南-长沙服务",
+   "page": 2,
+   "stage": "重新招",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "keep"
+  },
+  {
+   "title": "凯里农商银行资产评估公司入围项目采购公告",
+   "url": "https://www.qianlima.com/bid-634268935.html",
+   "row": "凯里农商银行资产评估公司入围项目采购公告 收藏 6小时前 公告-招标公告贵州-黔东南苗族侗族自治州服务文件",
+   "page": 2,
+   "stage": "",
+   "stage_cat": "",
+   "date": "",
+   "verdict": "drop_noise"
+  },
+  {
+   "title": "广发银行眉山分行押运服务外包项目-结果公示",
+   "url": "https://www.qianlima.com/bid-634303044.html",
+   "row": "广发银行眉山分行押运服务外包项目-结果公示 收藏 5小时前 结果-中标通知四川-眉山服务",
+   "page": 2,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "山西银行2026年等级保护服务项目中标结果公示",
+   "url": "https://www.qianlima.com/bid-634274641.html",
+   "row": "山西银行2026年等级保护服务项目中标结果公示 收藏 5小时前 结果-中标通知山西-太原服务",
+   "page": 2,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "邢台银行2026年度财务报表审计服务项目招标公告",
+   "url": "https://www.qianlima.com/bid-634310935.html",
+   "row": "邢台银行2026年度财务报表审计服务项目招标公告 收藏 4小时前 公告-招标公告河北-邢台服务",
+   "page": 2,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_noise"
+  },
+  {
+   "title": "浙商银行东莞分行食堂服务采购的中标结果公告",
+   "url": "https://www.qianlima.com/bid-634262443.html",
+   "row": "浙商银行东莞分行食堂服务采购的中标结果公告 收藏 6小时前 结果-中标通知广东-东莞服务",
+   "page": 2,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "长城华西银行排队叫号机采购项目（第二次）磋商公告",
+   "url": "https://www.qianlima.com/bid-634315841.html",
+   "row": "长城华西银行排队叫号机采购项目（第二次）磋商公告 收藏 4小时前 公告-重新招标四川-德阳服务文件",
+   "page": 2,
+   "stage": "重新招",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_biz"
+  },
+  {
+   "title": "大连农商银行支付系统优化升级项目单一来源公示",
+   "url": "https://www.qianlima.com/bid-634355514.html",
+   "row": "大连农商银行支付系统优化升级项目单一来源公示 收藏 3小时前 公告-招标公告辽宁-大连服务文件",
+   "page": 2,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_noise"
+  },
+  {
+   "title": "交通银行临汾分行保洁服务外包项目中标结果公告",
+   "url": "https://www.qianlima.com/bid-634364249.html",
+   "row": "交通银行临汾分行保洁服务外包项目中标结果公告 收藏 3小时前 结果-中标通知山西-临汾服务文件",
+   "page": 2,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "国信证券O32系统2026年度聚源资讯数据文件服务采购项目邀请函",
+   "url": "https://www.qianlima.com/bid-634356644.html",
+   "row": "国信证券O32系统2026年度聚源资讯数据文件服务采购项目邀请函 收藏 3小时前 公告-招标公告广东-深圳服务",
+   "page": 2,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_org"
+  },
+  {
+   "title": "运营机构数据集成与应用能力建设项目开发服务采购结果信息公开",
+   "url": "https://www.qianlima.com/bid-634366615.html",
+   "row": "运营机构数据集成与应用能力建设项目开发服务采购结果信息公开 收藏 3小时前 结果-中标通知北京-北京服务",
+   "page": 2,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "恒丰银行武汉江岸支行VI标识采购项目公开招标公告",
+   "url": "https://www.qianlima.com/bid-634431746.html",
+   "row": "恒丰银行武汉江岸支行VI标识采购项目公开招标公告 收藏 18分钟前 公告-招标公告湖北-武汉服务",
+   "page": 2,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_biz"
+  },
+  {
+   "title": "上饶辖内农商银行监控中心整合项目中标候选人公示",
+   "url": "https://www.qianlima.com/bid-634357559.html",
+   "row": "上饶辖内农商银行监控中心整合项目中标候选人公示 收藏 3小时前 结果-候选人公示江西-上饶服务文件",
+   "page": 3,
+   "stage": "候选人公",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "石家庄汇融农村合作银行智慧校园建设项目更正公告",
+   "url": "https://www.qianlima.com/bid-634271827.html",
+   "row": "石家庄汇融农村合作银行智慧校园建设项目更正公告 收藏 6小时前 变更-信息变更河北-石家庄服务",
+   "page": 3,
+   "stage": "",
+   "stage_cat": "",
+   "date": "",
+   "verdict": "drop_noise"
+  },
+  {
+   "title": "交通银行上饶分行2027年至2029年保安服务项目招标公告",
+   "url": "https://www.qianlima.com/bid-634349251.html",
+   "row": "交通银行上饶分行2027年至2029年保安服务项目招标公告 收藏 3小时前 公告-招标公告江西-上饶服务",
+   "page": 3,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_noise"
+  },
+  {
+   "title": "中国农业银行黔西南分行保安服务外包项目招标公告",
+   "url": "https://www.qianlima.com/bid-634329539.html",
+   "row": "中国农业银行黔西南分行保安服务外包项目招标公告 收藏 4小时前 公告-招标公告贵州-黔西南布依族苗族自治州服务文件",
+   "page": 3,
+   "stage": "",
+   "stage_cat": "",
+   "date": "",
+   "verdict": "drop_noise"
+  },
+  {
+   "title": "云南红塔银行养老客户服务品牌发布会项目结果公告",
+   "url": "https://www.qianlima.com/bid-634283327.html",
+   "row": "云南红塔银行养老客户服务品牌发布会项目结果公告 收藏 5小时前 结果-中标通知云南-昆明服务",
+   "page": 3,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "中国邮政储蓄银行西藏分行流动服务车项目招标公告",
+   "url": "https://www.qianlima.com/bid-634342664.html",
+   "row": "中国邮政储蓄银行西藏分行流动服务车项目招标公告 收藏 4小时前 公告-招标公告西藏-拉萨服务",
+   "page": 3,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_biz"
+  },
+  {
+   "title": "上海农商银行重点人事律所库入围项目供应商征集公告",
+   "url": "https://www.qianlima.com/bid-634325710.html",
+   "row": "上海农商银行重点人事律所库入围项目供应商征集公告 收藏 4小时前 公告-招标公告上海-上海服务文件",
+   "page": 3,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_noise"
+  },
+  {
+   "title": "中国银行间市场交易商协会短信服务项目采购信息公告",
+   "url": "https://www.qianlima.com/bid-634358436.html",
+   "row": "中国银行间市场交易商协会短信服务项目采购信息公告 收藏 3小时前 预告-招标预告北京-北京服务文件",
+   "page": 3,
+   "stage": "招标预",
+   "stage_cat": "预告",
+   "date": "",
+   "verdict": "drop_biz"
+  },
+  {
+   "title": "浙江瑞安农村商业银行900000股社会自然人股权转让﹒不带证",
+   "url": "https://www.qianlima.com/bid-634328506.html",
+   "row": "浙江瑞安农村商业银行900000股社会自然人股权转让﹒不带证 收藏 4小时前 结果-中标通知浙江-温州服务文件",
+   "page": 3,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "企业级数据仓库配套业务需求升级改造开发服务项目采购结果信息公开",
+   "url": "https://www.qianlima.com/bid-634399590.html",
+   "row": "企业级数据仓库配套业务需求升级改造开发服务项目采购结果信息公开 收藏 1小时前 结果-中标通知北京-北京服务",
+   "page": 3,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "中国农业银行黔西南分行保安服务外包项目公开招标公告",
+   "url": "https://www.qianlima.com/bid-634297961.html",
+   "row": "中国农业银行黔西南分行保安服务外包项目公开招标公告 收藏 5小时前 公告-招标公告贵州-黔西南布依族苗族自治州服务文件",
+   "page": 3,
+   "stage": "",
+   "stage_cat": "",
+   "date": "",
+   "verdict": "drop_noise"
+  },
+  {
+   "title": "桂林银行采购云文档服务续购项目（重）（GYJC2026124）采购结果公告",
+   "url": "https://www.qianlima.com/bid-634403759.html",
+   "row": "桂林银行采购云文档服务续购项目（重）（GYJC2026124）采购结果公告 收藏 1小时前 结果-中标通知广西-桂林服务",
+   "page": 3,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "淮南通商农村商业银行2026年度体检服务采购项目招标公告",
+   "url": "https://www.qianlima.com/bid-634377087.html",
+   "row": "淮南通商农村商业银行2026年度体检服务采购项目招标公告 收藏 3小时前 公告-招标公告安徽-淮南服务",
+   "page": 3,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_noise"
+  },
+  {
+   "title": "中国光大银行贵阳分行2026-2029年业务外包服务项目 结果公告",
+   "url": "https://www.qianlima.com/bid-634369865.html",
+   "row": "中国光大银行贵阳分行2026-2029年业务外包服务项目 结果公告 收藏 3小时前 结果-中标通知贵州-贵阳服务",
+   "page": 3,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "湖南金阳投资集团有限公司金阳投资集团2026-2028年度财务审计服务采购采购需求公开",
+   "url": "https://www.qianlima.com/bid-634431214.html",
+   "row": "湖南金阳投资集团有限公司金阳投资集团2026-2028年度财务审计服务采购采购需求公开 收藏 20分钟前 公告-招标公告湖南-长沙服务",
+   "page": 3,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "drop_org"
+  },
+  {
+   "title": "【2026年河北银行保定分行及部分支行监控改造项目】中标结果公示",
+   "url": "https://www.qianlima.com/bid-634326242.html",
+   "row": "【2026年河北银行保定分行及部分支行监控改造项目】中标结果公示 收藏 4小时前 结果-中标通知河北-保定服务",
+   "page": 3,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "北京银行2026年非现场监管报送升级及优化项目竞争性磋商公告",
+   "url": "https://www.qianlima.com/bid-634354457.html",
+   "row": "北京银行2026年非现场监管报送升级及优化项目竞争性磋商公告 收藏 3小时前 公告-招标公告北京-北京服务文件",
+   "page": 3,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "keep"
+  },
+  {
+   "title": "中信建投证券信创分布式存储扩容采购项目成交结果公告",
+   "url": "https://www.qianlima.com/bid-634338536.html",
+   "row": "中信建投证券信创分布式存储扩容采购项目成交结果公告 收藏 4小时前 结果-候选人公示北京-北京服务",
+   "page": 3,
+   "stage": "候选人公",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "广发银行茂名分行信息化建设项目（机房等保二级升级改造）-结果公示",
+   "url": "https://www.qianlima.com/bid-634275355.html",
+   "row": "广发银行茂名分行信息化建设项目（机房等保二级升级改造）-结果公示 收藏 5小时前 结果-中标通知广东-茂名服务",
+   "page": 3,
+   "stage": "中标通",
+   "stage_cat": "结果",
+   "date": "",
+   "verdict": "drop_stage"
+  },
+  {
+   "title": "杭州工商信托股份有限公司2026年Microsoft 365商业应用版软件授权采购项目",
+   "url": "https://www.qianlima.com/bid-634372383.html",
+   "row": "杭州工商信托股份有限公司2026年Microsoft 365商业应用版软件授权采购项目 收藏 3小时前 公告-招标公告浙江-杭州服务文件",
+   "page": 3,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "",
+   "verdict": "keep"
+  }
+ ]
+}

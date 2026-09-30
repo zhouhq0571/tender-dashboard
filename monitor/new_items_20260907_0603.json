@@ -1,0 +1,188 @@
+{
+ "run_at": "2026-09-07 06:03:43",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 9,
+   "new_count": 2
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 3,
+   "new_count": 0
+  },
+  {
+   "name": "甘肃经济信息网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 35,
+   "new_count": 0
+  },
+  {
+   "name": "阳光采购服务平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 57,
+   "new_count": 17
+  },
+  {
+   "name": "九江银行招标采购",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "http": 403,
+   "action": "转搜索引擎快照模式（site:https://www.jycbank.com/jjccb/zbcg/ after:昨日）"
+  },
+  {
+   "name": "宁波国际投资咨询",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 0,
+   "new_count": 0,
+   "note": "首次运行，仅建立指纹基线，不输出新增"
+  },
+  {
+   "name": "广西北部湾银行采购公告",
+   "mode": "search",
+   "status": "search_mode",
+   "note": "瑞数WAF 412，直连不可行，仅搜索快照"
+  },
+  {
+   "name": "四川采购网",
+   "mode": "search",
+   "status": "search_mode",
+   "note": "详情页403，仅搜索快照"
+  },
+  {
+   "name": "苏州农商官网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 5,
+   "new_count": 0
+  },
+  {
+   "name": "黄河农商银行官网",
+   "mode": "fetch",
+   "status": "fetch_failed:-1"
+  }
+ ],
+ "new_items": [
+  {
+   "title": "服务 北大荒集团红兴隆医院“银医通”项目—招标公告 发布日期：2026-09-06 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/867215.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 太平供热2026年工程结算审核及2027年工程项目控制价编制-公开招标公告 发布日期：2026-09-06 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/867213.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "山东三丰香油有限公司生产物资采购项目招标公告",
+   "date": "2026-09-07",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001001/20260905/516c50d1-7c61-480d-9e4c-b32fbc169c2b.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "山东黄金物业管理有限公司住宅区域保洁、绿化服务公开招标公告",
+   "date": "2026-09-06",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001001/20260905/152ce698-9b46-4f02-80ac-3b8565597423.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "梁山鲁西黄牛肉联食品深加工基地建设项目-型材、管件采购项目中标结果公示",
+   "date": "2026-09-05",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001004/20260905/9ea9bd13-3b29-4dde-b68a-777012503338.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "乌兹别克斯坦布哈拉-乌尔根奇-希瓦铁路电气化项目劳务分包谈判采购项目项目公告",
+   "date": "2026-09-07",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002001/20260904/095c1378-7069-409b-931a-9610e3efdf19.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "2026-2028年同花顺金融数据软件直接采购项目直接采购公告",
+   "date": "2026-09-07",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002001/20260903/491ea615-5f53-4876-8364-1a2ec3d401b5.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "山东省高速养护集团有限公司JJJT2026FW109014-服务类询比选拔采购公告",
+   "date": "2026-09-06",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002001/20260905/2094615158765715458.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "山东高速物业管理有限公司无影山西路物业服务项目采购谈判采购公告",
+   "date": "2026-09-06",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002001/20260905/fee3619e-8272-49d7-8fbf-d2c88d914222.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "山东港口陆海装备集团海工公司2026-2028年度管附件集中采购项目",
+   "date": "2026-09-06",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002002/20260906/c79dc576-d581-47c1-a6c1-0c3bef814570.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "烟台市市政公用养护建设集团有限公司市区道路护栏采购招标公告[更正公告]",
+   "date": "2026-09-05",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001002/20260905/0038b3d9-5fa1-426c-83ae-fd08b0a0229e.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "（山东黄金集团）山东黄金归来庄矿业有限公司进口品牌活性炭（四）采购开标时间变更通知",
+   "date": "2026-09-05",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001002/20260904/990dcfcfd09847b3a1c0569ab3ee1b27.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "烟台山-朝阳街、奇山所城历史文化街区消防设计优化与防火分隔保护技术研究项目中标候选人公示",
+   "date": "2026-09-05",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001003/20260905/66b4a873-f156-4e54-a251-fb528a807e89.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "中工武大能源建设投资（湖北）有限公司ZGWD2026GC001003-施工分包类公开竞争性选拔（标段/包1）成交结果公示",
+   "date": "2026-09-06",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002003/20260905/2093183207706001409.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "山东高速工程建设集团有限公司GCJS2026GC101026-施工分包类公开竞争性选拔（标段/包1）成交结果公示",
+   "date": "2026-09-06",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002003/20260905/2096125260320538626.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "[山东能源西北矿业物资分公司焊网机、动平衡机、通过式抛丸机、液压折弯机、激光管线切割机、激光切割机、销齿推车机专项招标项目重新招标] 中标结果公告",
+   "date": "2026-09-06",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001004/20260906/139012f9d15d4c2f88ca89abb698f7e7.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "[山东能源西北矿业物资分公司焊网机、动平衡机、通过式抛丸机、液压折弯机、激光管线切割机、激光切割机、销齿推车机专项招标项目] 中标结果公告",
+   "date": "2026-09-06",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001004/20260906/0b3b72ad72f04a93a6dde77032c2e7b8.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "德州银行2026年分支机构UPS电池更换项目废标公告",
+   "date": "2026-09-04",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001005/20260904/f35188ab-d82b-4f47-93e7-7140dda4b165.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "德州银行互联网数据防泄漏设备采购项目流标公告",
+   "date": "2026-09-03",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001005/20260903/106f5af0-8cf3-4344-ae00-d450cc3a63db.html",
+   "source": "阳光采购服务平台"
+  }
+ ]
+}

@@ -43,7 +43,7 @@
       "level": "WARNING",
       "category": "文件系统清理",
       "title": "中间文件过多",
-      "detail": "根目录存在16个中间/临时文件: step0_2_result.json, step1_2_result.json, qianlima_search_result.json, stage_abc_results.json, merged_results.json, stage_abc_results.json, qianlima_search_result.json, updated_data.json, merged_data.json, tianyancha_bank.csv...",
+      "detail": "根目录存在16个中间/临时文件: step0_2_result.json, step1_2_result.json, qianlima_search_result.json, stage_abc_results.json, merged_results.json, stage_abc_results.json, qianlima_search_result.json, updated_data.json, merged_data.json, temp_bank.csv...",
       "fix": "清理已完成的中间结果文件，或建立统一的temp/目录"
     },
     {

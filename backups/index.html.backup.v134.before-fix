@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- build-trigger 2026-07-19-2259 -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0"/>
+<meta content="no-cache" http-equiv="Pragma"/>
+<meta content="0" http-equiv="Expires"/>
+<title>恒生银信招标资讯每日速递 | 2026年08月10日（更新）v134</title>
+<meta content="适合恒生银信LBO关注和参与的银行及理财子公司、信托公司近期公开发布的最新有效招标资讯信息/每日看板，可供行业销售/解决方案/产品售前人员日常工作参考了解。" name="description"/>
+<meta property="og:title" content="恒生银信招标资讯速递"/>
+<meta property="og:description" content="适合恒生银信LBO关注和参与的银行及理财子公司、信托公司近期公开发布的最新有效招标资讯信息/每日看板，可供行业销售/解决方案/产品售前人员日常工作参考了解。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://hstender.cn/"/>
+<meta property="og:image" content="https://hstender.cn/og-image.png"/>
+<meta property="og:locale" content="zh_CN"/>
+<style>
+:root { --primary: #0f2a4a; --primary-light: #1e4a7a; --primary-soft: #e8f0f8; --accent: #c41e3a; --accent-light: #e85d75; --accent-soft: #fef2f2; --gold: #b8860b; --gold-light: #d4a843; --gold-soft: #fffbeb; --bg: #f5f7fa; --card: #ffffff; --text: #1a202c; --text-light: #64748b; --text-muted: #94a3b8; --border: #e2e8f0; --border-light: #f1f5f9; --shadow: 0 4px 16px rgba(15, 42, 74, 0.08); --shadow-lg: 0 8px 30px rgba(15, 42, 74, 0.12); --radius: 10px; --radius-sm: 6px; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.cover{background:linear-gradient(145deg,#0a2540 0%,#1e3a5f 50%,#2c5282 100%);min-height:360px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;padding:40px 40px 56px;position:relative;overflow:hidden}
+.cover::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:40px 40px;opacity:0.5}
+.cover-content{position:relative;z-index:2;max-width:800px}
+.cover-brand{position:relative;z-index:2;display:flex;align-items:center;gap:14px;margin-bottom:24px;justify-content:center}
+.cover-brand div:first-child{font-size:56px !important;margin-bottom:0 !important;filter:drop-shadow(0 4px 16px rgba(212,168,67,0.4));animation:logoFloat 4s ease-in-out infinite}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.cover h1{font-size:42px;font-weight:900;margin-bottom:16px;letter-spacing:2px;line-height:1.2;text-shadow:0 2px 20px rgba(0,0,0,0.3);background:linear-gradient(135deg,#ffffff 0%,#f0e6d3 50%,#d4a843 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;display:inline-block}
+.cover h1::after{content:"";position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);border-radius:2px}
+.cover-subtitle{font-size:16px;opacity:0.9;margin-bottom:8px;font-weight:500;letter-spacing:3px;color:#e8d5b7}
+.cover-meta{font-size:14px;opacity:0.75;margin-bottom:10px;font-weight:400;letter-spacing:1px}
+.cover-author{font-size:14px;margin-top:24px;padding:12px 28px;background:rgba(255,255,255,0.1);border-radius:8px;border-left:3px solid var(--gold);display:inline-block;backdrop-filter:blur(10px);letter-spacing:1px}
+.cover-disclaimer{font-size:11px;opacity:0.5;margin-top:16px;letter-spacing:0.5px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6}
+.stats-bar{display:flex;justify-content:center;gap:14px;padding:24px 20px;flex-wrap:wrap;max-width:1400px;margin:0 auto}
+.stat-card{background:var(--card);border-radius:var(--radius);padding:20px 28px;text-align:center;box-shadow:var(--shadow);min-width:150px;transition:all 0.3s;cursor:pointer;position:relative;overflow:hidden;border-top:3px solid transparent}
+.stat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-top-color:var(--primary-light)}
+.stat-card .number{font-size:32px;font-weight:700;color:var(--primary-light);margin-bottom:4px;transition:color 0.3s}
+.stat-card:hover .number{color:var(--primary)}
+.stat-card .label{font-size:12px;color:var(--text-light);font-weight:500}
+.stat-card.strong{border-top-color:var(--accent)}
+.stat-card.strong .number{color:var(--accent)}
+.stat-card.suggest{border-top-color:var(--gold)}
+.stat-card.suggest .number{color:var(--gold)}
+.filter-panel{background:var(--card);border-radius:var(--radius);padding:24px 24px 20px;margin:0 20px 16px;box-shadow:var(--shadow);max-width:1400px;margin-left:auto;margin-right:auto;border:1px solid var(--border-light)}
+.filter-panel h3{font-size:13px;color:var(--text-light);margin-bottom:10px;font-weight:500;display:flex;align-items:center;gap:6px}
+.filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.filter-row select{padding:7px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:12px;background:white;min-width:130px;cursor:pointer;outline:none;transition:all 0.2s;color:var(--text)}
+.filter-row select:focus{border-color:var(--primary-light);box-shadow:0 0 0 3px var(--primary-soft)}
+.filter-row input{padding:7px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:12px;min-width:180px;outline:none;transition:all 0.2s}
+.filter-row input:focus{border-color:var(--primary-light);box-shadow:0 0 0 3px var(--primary-soft)}
+.reset-btn{padding:7px 16px;background:var(--border-light);color:var(--text-light);border:none;border-radius:var(--radius-sm);font-size:12px;cursor:pointer;transition:all 0.2s;font-weight:500}
+.reset-btn:hover{background:var(--border);color:var(--text)}
+.active-filters{display:none;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.active-filters.show{display:flex}
+.active-filters-label{font-size:12px;color:var(--text-muted);font-weight:500}
+.filter-chip{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:var(--primary-soft);color:var(--primary-light);border-radius:20px;font-size:11px;font-weight:500;cursor:pointer;transition:all 0.2s}
+.filter-chip:hover{background:var(--primary-light);color:white}
+.filter-chip .remove{font-size:14px;line-height:1}
+.biz-tag-filter{display:flex;gap:6px;flex-wrap:wrap}
+.filter-tag-btn{padding:5px 12px;border:1px solid var(--border);border-radius:20px;background:white;font-size:11px;cursor:pointer;transition:all 0.2s;color:var(--text-light);font-weight:500}
+.filter-tag-btn:hover{background:var(--primary-soft);color:var(--primary);border-color:var(--primary-light)}
+.filter-tag-btn.active{background:var(--primary);color:white;border-color:var(--primary);box-shadow:0 2px 8px rgba(15,42,74,0.2)}
+.container{max-width:1400px;margin:0 auto;padding:0 20px 40px}
+.section{background:var(--card);border-radius:var(--radius);margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden}
+.group-tabs{display:flex;gap:0;border-bottom:1px solid var(--border);background:#f8fafc;overflow-x:auto}
+.group-tab{padding:12px 24px;cursor:pointer;border-bottom:3px solid transparent;font-weight:500;font-size:13px;color:var(--text-light);transition:all 0.2s;white-space:nowrap;flex-shrink:0}
+.group-tab.active{border-bottom-color:var(--primary);color:var(--primary);background:white}
+.group-tab:hover{color:var(--primary);background:rgba(15,42,74,0.03)}
+.tab-content{display:none;padding:0;animation:fadeIn 0.3s ease}
+.tab-content.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.table-wrap{overflow:auto;padding:0;background:var(--card);max-height:620px}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px;min-width:1210px;table-layout:fixed}
+th{background:#f8fafc;padding:12px 10px;text-align:center;font-weight:600;color:var(--primary);border-bottom:2px solid var(--primary-light);white-space:nowrap;font-size:12px;position:sticky;top:0;z-index:10;letter-spacing:0.5px;text-transform:uppercase;box-shadow:0 2px 4px rgba(15,42,74,0.06)}
+td{padding:14px 10px;border-bottom:1px solid var(--border-light);vertical-align:middle;text-align:center;font-size:12.5px;transition:background 0.2s ease}
+tr.zebra td{background:#fafbfc}
+tr:hover td{background:var(--primary-soft)}
+tr{position:relative;transition:all 0.2s ease}
+tr::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:transparent;transition:background 0.2s}
+tr:hover::before{background:var(--primary-light)}
+.col-seq{width:36px;min-width:36px;color:var(--text-muted);font-weight:500}
+.col-region{width:48px;min-width:48px}
+.col-province{width:56px;min-width:56px;font-weight:500}
+.col-company{width:110px;min-width:110px}
+.col-project{width:150px;min-width:150px;font-weight:500;color:var(--primary)}
+.col-overview{width:260px;min-width:260px;color:var(--text-light);line-height:1.5}
+.col-budget{width:100px;min-width:100px;font-family:"SF Mono",Monaco,monospace;font-weight:600;color:var(--primary)}
+.col-deadline{width:100px;min-width:100px;font-weight:500}
+.col-method{width:90px;min-width:90px}
+.col-contact{width:185px;min-width:185px;font-size:11px;color:var(--text-light);line-height:1.4;word-wrap:break-word}
+.col-tags{width:130px;min-width:130px}
+.col-rec{width:120px;min-width:120px}
+.col-url{width:110px;min-width:110px}
+td.col-project,td.col-overview,td.col-contact,td.col-tags{text-align:left !important}
+td.col-company{text-align:center !important}
+th.col-seq,td.col-seq{position:sticky;left:0;z-index:11;background:inherit}
+th.col-region,td.col-region{position:sticky;left:36px;z-index:11;background:inherit}
+th.col-province,td.col-province{position:sticky;left:84px;z-index:11;background:inherit}
+th.col-company,td.col-company{position:sticky;left:140px;z-index:11;background:inherit}
+th.col-project,td.col-project{position:sticky;left:250px;z-index:11;background:inherit}
+th.col-seq,th.col-region,th.col-province,th.col-company,th.col-project{z-index:15;background:#f8fafc}
+td.col-seq,td.col-region,td.col-province,td.col-company,td.col-project{background:var(--card)}
+tr.zebra td.col-seq,tr.zebra td.col-region,tr.zebra td.col-province,tr.zebra td.col-company,tr.zebra td.col-project{background:#fafbfc}
+tr:hover td.col-seq,tr:hover td.col-region,tr:hover td.col-province,tr:hover td.col-company,tr:hover td.col-project{background:var(--primary-soft)}
+th.col-project,td.col-project{border-right:2px solid var(--primary-light)}
+.region-badge{display:inline-block;padding:3px 8px;border-radius:4px;font-size:10px;font-weight:600;background:var(--primary-soft);color:var(--primary);letter-spacing:0.5px}
+.method-badge{display:inline-block;padding:3px 8px;border-radius:4px;font-size:10px;font-weight:500;background:#f1f5f9;color:var(--text-light);border:1px solid var(--border)}
+.biz-tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;margin:2px;cursor:pointer;transition:all 0.2s;background:#ebf8ff;color:#2b6cb0;border:1px solid #bee3f8;white-space:nowrap}
+.biz-tag:hover{background:#2b6cb0;color:white;transform:scale(1.05);box-shadow:0 2px 6px rgba(43,108,176,0.3)}
+.rec-strong{color:var(--accent);font-weight:700;background:var(--accent-soft);padding:4px 10px;border-radius:6px;display:inline-block;border:1px solid rgba(196,30,58,0.15);font-size:11.5px;border-left:3px solid var(--accent)}
+.rec-suggest{color:var(--gold);font-weight:700;background:var(--gold-soft);padding:4px 10px;border-radius:6px;display:inline-block;border:1px solid rgba(184,134,11,0.15);font-size:11.5px;border-left:3px solid var(--gold)}
+.rec-watch{color:var(--text-light);font-weight:500;background:#f7fafc;padding:4px 10px;border-radius:6px;display:inline-block;font-size:11.5px}
+.rec-no{color:var(--text-muted);font-weight:500;background:#f7fafc;padding:4px 10px;border-radius:6px;display:inline-block;font-size:11.5px;opacity:0.7}
+.rec-none{color:var(--text-muted);font-weight:500;background:#f0f0f0;padding:4px 10px;border-radius:6px;display:inline-block;font-size:11.5px;opacity:0.6;text-decoration:line-through}
+.url-link-colored{color:var(--primary-light);text-decoration:none;font-size:11px;font-weight:500;transition:all 0.2s;display:inline-block;padding:3px 8px;background:var(--primary-soft);border-radius:4px;line-height:1.4}
+.url-link-colored:hover{background:var(--primary-light);color:white}
+.result-count{padding:14px 20px;font-size:13px;color:var(--text-light);border-bottom:1px solid var(--border);background:#fafbfc;display:flex;align-items:center;gap:8px;font-weight:500}
+.result-count span{font-weight:700;color:var(--primary);font-size:15px;transition:all 0.3s}
+.result-count span.changed{color:var(--accent);transform:scale(1.2)}
+.empty-state{display:none;padding:60px 20px;text-align:center;color:var(--text-muted)}
+.empty-state.show{display:block}
+.empty-state-icon{font-size:48px;margin-bottom:16px;opacity:0.4}
+.empty-state-text{font-size:15px;margin-bottom:8px}
+.empty-state-hint{font-size:13px;opacity:0.7}
+.footer-section{background:linear-gradient(145deg,#0a2540 0%,#1e3a5f 50%,#2c5282 100%);color:white;padding:50px 40px;text-align:center;margin-top:30px;position:relative;overflow:hidden}
+.footer-section::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:40px 40px;opacity:0.5}
+.footer-content{position:relative;z-index:2;max-width:800px;margin:0 auto}
+.footer-brand{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:20px}
+.footer-section h2{font-size:28px;margin-bottom:12px;font-weight:700;letter-spacing:1px}
+.footer-section p{font-size:13px;opacity:0.8;line-height:2}
+.footer-disclaimer{font-size:11px;opacity:0.5;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.15);max-width:700px;margin-left:auto;margin-right:auto;line-height:1.8}
+@media(max-width:1024px){.cover h1{font-size:30px}.stats-bar{gap:10px}.stat-card{min-width:130px;padding:16px 20px}.filter-row{flex-wrap:wrap}}
+@media(max-width:768px){.cover{min-height:280px;padding:30px 20px 40px}.cover h1{font-size:26px}.stats-bar{gap:8px}.stat-card{min-width:100px;padding:14px 16px}.stat-card .number{font-size:24px}.filter-panel{padding:16px}.filter-row{flex-direction:column;align-items:stretch;gap:8px}.filter-row select,.filter-row input{width:100%}.group-tab{padding:10px 14px;font-size:12px}th,td{padding:8px 6px;font-size:11px}.col-overview{max-width:200px}th.col-seq,td.col-seq,th.col-region,td.col-region,th.col-province,td.col-province,th.col-company,td.col-company,th.col-project,td.col-project{position:static;left:auto;z-index:auto}th.col-project,td.col-project{border-right:none}}
+@media(max-width:480px){.cover h1{font-size:20px}.cover-subtitle{font-size:13px}.biz-tag-filter{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}.filter-tag-btn{flex-shrink:0}.table-wrap{max-height:500px}}
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="cover-content">
+<div class="cover-brand">
+<div style="font-size:48px;margin-bottom:8px">🏦</div>
+</div>
+<h1>恒生银信招标资讯每日速递</h1>
+<div class="cover-subtitle">银行信托事业群&nbsp;&nbsp;销售代表/解决方案&amp;售前人员专用</div>
+<div class="cover-meta" id="cover-update-time">数据更新时间：2026年08月10日 早上</div>
+<div class="cover-author">编制单位：恒生电子银信解决方案部</div>
+<div class="cover-disclaimer">免责声明：本看板数据由AI辅助生成，仅供内部参考，具体以招标单位官方文件为准。</div>
+</div>
+</div>
+<div class="stats-bar">
+<div class="stat-card" onclick="showTab('all')"><div class="number" id="stat-all">0</div><div class="label">有效招标总数</div></div>
+<div class="stat-card" onclick="showTab('bank')"><div class="number" id="stat-bank">0</div><div class="label">银行行业</div></div>
+<div class="stat-card" onclick="showTab('trust')"><div class="number" id="stat-trust">0</div><div class="label">信托行业</div></div>
+<div class="stat-card strong" onclick="showTab('strong')"><div class="number" id="stat-strong">0</div><div class="label">强烈建议投标</div></div>
+<div class="stat-card suggest" onclick="showTab('suggest')"><div class="number" id="stat-suggest">0</div><div class="label">建议投标</div></div>
+</div>
+<div class="filter-panel">
+<div class="filter-row">
+<select id="filter-province" onchange="applyFilters()"><option value="">全部省份</option></select>
+<select id="filter-method" onchange="applyFilters()"><option value="">全部招标方式</option></select>
+<select id="filter-rec" onchange="applyFilters()"><option value="">全部投标建议</option></select>
+<select id="filter-company" onchange="applyFilters()"><option value="">全部招标单位</option></select>
+<select id="filter-source" onchange="applyFilters()"><option value="">全部信息来源</option></select>
+<input id="filter-search" oninput="applyFilters()" placeholder="🔍 搜索项目名称..." type="text"/>
+<button class="reset-btn" onclick="resetFilters()">↺ 重置筛选</button>
+</div>
+<div class="active-filters" id="active-filters">
+<span class="active-filters-label">已选条件：</span>
+<span id="active-filters-container"></span>
+</div>
+<h3>💡 点击业务标签快速筛选（支持组合筛选）：</h3>
+<div class="biz-tag-filter">
+<button class="filter-tag-btn active" data-tag="" onclick="filterByTag('')">全部</button>
+<button class="filter-tag-btn" data-tag="财富管理" onclick="filterByTag('财富管理')">财富管理</button>
+<button class="filter-tag-btn" data-tag="资产管理" onclick="filterByTag('资产管理')">资产管理</button>
+<button class="filter-tag-btn" data-tag="资产托管" onclick="filterByTag('资产托管')">资产托管</button>
+<button class="filter-tag-btn" data-tag="金融市场/资金/同业" onclick="filterByTag('金融市场/资金/同业')">金融市场/资金/同业</button>
+<button class="filter-tag-btn" data-tag="资产服务信托" onclick="filterByTag('资产服务信托')">资产服务信托</button>
+<button class="filter-tag-btn" data-tag="风控合规" onclick="filterByTag('风控合规')">风控合规</button>
+<button class="filter-tag-btn" data-tag="信创/国产化" onclick="filterByTag('信创/国产化')">信创/国产化</button>
+<button class="filter-tag-btn" data-tag="大模型应用" onclick="filterByTag('大模型应用')">大模型应用</button>
+<button class="filter-tag-btn" data-tag="渠道系统" onclick="filterByTag('渠道系统')">渠道系统</button>
+<button class="filter-tag-btn" data-tag="数据平台" onclick="filterByTag('数据平台')">数据平台</button>
+<button class="filter-tag-btn" data-tag="数据服务" onclick="filterByTag('数据服务')">数据服务</button>
+<button class="filter-tag-btn" data-tag="运维服务" onclick="filterByTag('运维服务')">运维服务</button>
+<button class="filter-tag-btn" data-tag="人力外包" onclick="filterByTag('人力外包')">人力外包</button>
+<button class="filter-tag-btn" data-tag="咨询服务" onclick="filterByTag('咨询服务')">咨询服务</button>
+<button class="filter-tag-btn" data-tag="其他" onclick="filterByTag('其他')">其他</button>
+</div>
+</div>
+<div class="container">
+<div class="section">
+<div class="group-tabs">
+<div class="group-tab active" onclick="showTab('all')" id="tab-title-all">全部有效招标 (0)</div>
+<div class="group-tab" onclick="showTab('bank')" id="tab-title-bank">银行行业 (0)</div>
+<div class="group-tab" onclick="showTab('trust')" id="tab-title-trust">信托行业 (0)</div>
+<div class="group-tab" onclick="showTab('strong')" id="tab-title-strong">强烈建议投标 (0)</div>
+<div class="group-tab" onclick="showTab('suggest')" id="tab-title-suggest">建议投标 (0)</div>
+</div>
+<div class="tab-content active" id="tab-all">
+<div class="result-count">显示 <span id="count-all">0</span> 条记录</div>
+<div class="empty-state" id="empty-all">
+<div class="empty-state-icon">🔍</div>
+<div class="empty-state-text">未找到符合条件的招标信息</div>
+<div class="empty-state-hint">请尝试调整筛选条件或点击"重置筛选"</div>
+</div>
+<div class="table-wrap"><table><thead><tr><th class="col-seq">序号</th><th class="col-region">大区</th><th class="col-province">省份</th><th class="col-company">招标单位</th><th class="col-project">项目名称</th><th class="col-overview">项目概况和招标范围</th><th class="col-budget">预算金额</th><th class="col-deadline">投标截止日期</th><th class="col-method">招标方式</th><th class="col-contact">项目咨询/联系方式</th><th class="col-tags">业务标签</th><th class="col-rec">投标建议</th><th class="col-url">信息来源</th></tr></thead><tbody id="tbody-all"></tbody></table></div>
+</div>
+<div class="tab-content" id="tab-bank">
+<div class="result-count">显示 <span id="count-bank">0</span> 条记录</div>
+<div class="empty-state" id="empty-bank">
+<div class="empty-state-icon">🔍</div>
+<div class="empty-state-text">未找到符合条件的招标信息</div>
+<div class="empty-state-hint">请尝试调整筛选条件或点击"重置筛选"</div>
+</div>
+<div class="table-wrap"><table><thead><tr><th class="col-seq">序号</th><th class="col-region">大区</th><th class="col-province">省份</th><th class="col-company">招标单位</th><th class="col-project">项目名称</th><th class="col-overview">项目概况和招标范围</th><th class="col-budget">预算金额</th><th class="col-deadline">投标截止日期</th><th class="col-method">招标方式</th><th class="col-contact">项目咨询/联系方式</th><th class="col-tags">业务标签</th><th class="col-rec">投标建议</th><th class="col-url">信息来源</th></tr></thead><tbody id="tbody-bank"></tbody></table></div>
+</div>
+<div class="tab-content" id="tab-trust">
+<div class="result-count">显示 <span id="count-trust">0</span> 条记录</div>
+<div class="empty-state" id="empty-trust">
+<div class="empty-state-icon">🔍</div>
+<div class="empty-state-text">未找到符合条件的招标信息</div>
+<div class="empty-state-hint">请尝试调整筛选条件或点击"重置筛选"</div>
+</div>
+<div class="table-wrap"><table><thead><tr><th class="col-seq">序号</th><th class="col-region">大区</th><th class="col-province">省份</th><th class="col-company">招标单位</th><th class="col-project">项目名称</th><th class="col-overview">项目概况和招标范围</th><th class="col-budget">预算金额</th><th class="col-deadline">投标截止日期</th><th class="col-method">招标方式</th><th class="col-contact">项目咨询/联系方式</th><th class="col-tags">业务标签</th><th class="col-rec">投标建议</th><th class="col-url">信息来源</th></tr></thead><tbody id="tbody-trust"></tbody></table></div>
+</div>
+<div class="tab-content" id="tab-strong">
+<div class="result-count">显示 <span id="count-strong">0</span> 条记录</div>
+<div class="empty-state" id="empty-strong">
+<div class="empty-state-icon">🔍</div>
+<div class="empty-state-text">未找到符合条件的招标信息</div>
+<div class="empty-state-hint">请尝试调整筛选条件或点击"重置筛选"</div>
+</div>
+<div class="table-wrap"><table><thead><tr><th class="col-seq">序号</th><th class="col-region">大区</th><th class="col-province">省份</th><th class="col-company">招标单位</th><th class="col-project">项目名称</th><th class="col-overview">项目概况和招标范围</th><th class="col-budget">预算金额</th><th class="col-deadline">投标截止日期</th><th class="col-method">招标方式</th><th class="col-contact">项目咨询/联系方式</th><th class="col-tags">业务标签</th><th class="col-rec">投标建议</th><th class="col-url">信息来源</th></tr></thead><tbody id="tbody-strong"></tbody></table></div>
+</div>
+<div class="tab-content" id="tab-suggest">
+<div class="result-count">显示 <span id="count-suggest">0</span> 条记录</div>
+<div class="empty-state" id="empty-suggest">
+<div class="empty-state-icon">🔍</div>
+<div class="empty-state-text">未找到符合条件的招标信息</div>
+<div class="empty-state-hint">请尝试调整筛选条件或点击"重置筛选"</div>
+</div>
+<div class="table-wrap"><table><thead><tr><th class="col-seq">序号</th><th class="col-region">大区</th><th class="col-province">省份</th><th class="col-company">招标单位</th><th class="col-project">项目名称</th><th class="col-overview">项目概况和招标范围</th><th class="col-budget">预算金额</th><th class="col-deadline">投标截止日期</th><th class="col-method">招标方式</th><th class="col-contact">项目咨询/联系方式</th><th class="col-tags">业务标签</th><th class="col-rec">投标建议</th><th class="col-url">信息来源</th></tr></thead><tbody id="tbody-suggest"></tbody></table></div>
+</div>
+</div>
+</div>
+<div class="footer-section">
+<div class="footer-content">
+<div class="footer-brand">
+<div style="font-size:36px;margin-bottom:8px">🏦</div>
+<span style="font-size:16px;font-weight:600;opacity:0.9">恒生电子银信解决方案部</span>
+</div>
+<h2>恒生银信招标资讯每日速递</h2>
+<p>编制单位：恒生电子银信解决方案部<br/><span id="footer-update-time">2026年08月10日 早上</span></p>
+<div class="footer-disclaimer">
+<strong>重要声明：</strong>本看板所有数据和信息均由AI辅助生成，来源于公开招投标信息平台。信息可能存在滞后、不完整或偏差，仅供恒生电子内部销售、解决方案、售前团队研究参考使用，不构成任何投标决策依据或法律建议。具体招标信息、投标资格要求、截止日期等关键信息，请务必以各招标单位官方发布的最新招标文件为准。
+</div>
+</div>
+</div>
+
+<script type="application/json" id="tender-data">{
+  "version": "v134",
+  "date": "2026年08月10日",
+  "timePeriod": "早上",
+  "projects": [
+    {
+      "region": "东北",
+      "province": "黑龙江",
+      "company": "哈尔滨银行",
+      "project": "统一支付平台系统建设采购项目",
+      "overview": "哈尔滨银行统一支付平台系统建设，项目编号YGFZB20260284，企业自筹资金，最高投标限价290万元（含税），中标供应商1家，不划分标段。",
+      "budget": "290万元",
+      "deadline": "2026-09-11 09:00",
+      "method": "公开招标",
+      "contact": "翟女士 0451-87792323；0451-84211281",
+      "tags": [
+        "其他"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-616677091.html",
+      "source": "千里马招标网",
+      "id": 1
+    },
+    {
+      "region": "东北",
+      "province": "黑龙江",
+      "company": "龙江银行",
+      "project": "新一代核心系统建设项目--现金管理平台配合改造人力外包服务采购项目（二次）",
+      "overview": "龙江银行新一代核心系统建设项目--现金管理平台配合改造人力外包服务采购项目（二次）-公开招标公告 龙江银行新一代核心系统建设项目--现金管理平台配合改造人力外包服务采购项目（二次）招标公告 （项目编号：HTCL-ZB-261250） 一、招",
+      "budget": "70万元",
+      "deadline": "2026-08-17 09:30",
+      "method": "公开招标",
+      "contact": "孙女士",
+      "tags": [
+        "人力外包"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-617451314.html",
+      "source": "千里马招标网",
+      "id": 2
+    },
+    {
+      "region": "东北",
+      "province": "辽宁",
+      "company": "盛京银行",
+      "project": "2026年外卡收单业务系统建设项目",
+      "overview": "盛京银行2026年外卡收单业务系统建设项目的采购公告 项目概况 盛京银行2026年外卡收单业务系统建设项目 采购项目的潜在供应商应在辽宁天泓工程项目管理有限公司（沈阳市和平区和平南大街20号玉麟世家B座5楼）获取采购文件，并于2026年08",
+      "budget": "130万元",
+      "deadline": "2026-08-10",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": [
+        "渠道系统",
+        "其他"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-617968048.html",
+      "source": "千里马招标网",
+      "id": 3
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "中信信托",
+      "project": "年金受托投资监督系统2026年整体建设项目",
+      "overview": "年金受托投资监督系统2026年整体建设，最高限价320万元，合同生效后12个月完成系统建设，试运行1个月验收，验收后12个月免费技术服务期。",
+      "budget": "320万元",
+      "deadline": "2026-08-18 14:00",
+      "method": "公开招标",
+      "contact": "中信国际招标 袁先生 13021066931",
+      "tags": [
+        "资产管理"
+      ],
+      "rec": "🔥 ★★★ 强烈建议投标",
+      "url": "http://www.china-zbycg.com/agent_4755494.html",
+      "source": "招标与采购网",
+      "id": 4
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "中信信托",
+      "project": "结息计费系统（AIMS）2026年需求开发项目",
+      "overview": "项目所在地区：北京市 一、招标条件 本中信信托有限责任公司结息计费系统（AIMS）2026年需求开发项目已由项目审批/核准/备案机关批准，项目资金来源为自筹资金；招标人为中信信托有限责任公司。本项目已具备招标条件，现以公开招标方式进行采购。",
+      "budget": "79.5万元",
+      "deadline": "2026-08-26",
+      "method": "公开招标",
+      "contact": "张海伦",
+      "tags": [
+        "资产管理"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-619961801.html",
+      "source": "千里马招标网",
+      "id": 5
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "北京农商",
+      "project": "综合理财平台-机构理财对接代销理财项目（供应商征集）",
+      "overview": "北京农商银行综合理财平台-机构理财对接代销理财项目供应商征集公告 一、项目名称：综合理财平台-机构理财对接代销理财项目 二、采购内容简介 为丰富对公客户投资理财产品种类，拟拓展与理财子公司开展对公客户代销理财业务。根据银行业理财登记托管中心。征集期至2026-08-11 16:00",
+      "budget": "-",
+      "deadline": "2026-08-11 16:00",
+      "method": "框架协议",
+      "contact": "程老师 010-89198505 xinxjsh_shangwu@bjrcb.com",
+      "tags": [
+        "财富管理"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-619720120.html",
+      "source": "千里马招标网",
+      "id": 6
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "北京农商",
+      "project": "2026-2029年度信息科技系统运维类外包服务价格入围项目",
+      "overview": "信息科技系统运维类外包服务商价格入围，分数据库/操作系统/中间件/存储/系统安全/云平台6个包，各包入围2-3家、可兼投兼中，资格及价格有效期3年，按人月单价设最高限价。招标编号0733-26163060。",
+      "budget": "-",
+      "deadline": "2026-08-10 09:00",
+      "method": "公开招标",
+      "contact": "董天 13041093518；徐工 18611886439（中信国际招标）",
+      "tags": [
+        "运维服务",
+        "人力外包"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "http://www.qgzbcgjypt.com/zhaobiaocaigou/105388.html",
+      "source": "国信招标",
+      "id": 7
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "北京银行",
+      "project": "机构代销私募优化-理财销售系统项目（竞争性磋商）",
+      "overview": "北京银行机构代销私募优化-理财销售系统项目竞争性磋商公告 招标编号0747-2660SCCZNB60，招标代理中化商务有限公司。",
+      "budget": "21万元",
+      "deadline": "2026-08-10",
+      "method": "竞争性磋商",
+      "contact": "-",
+      "tags": [
+        "财富管理"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-617778621.html",
+      "source": "千里马招标网",
+      "id": 8
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "北京银行",
+      "project": "电子信用证信息交换系统及福费廷子系统报文标准优化项目（第二次磋商）",
+      "overview": "北京银行2026年电子信用证信息交换系统及福费廷子系统报文标准优化项目（第二次） 竞争性磋商公告 北京银行2026年电子信用证信息交换系统及福费廷子系统报文标准优化项目（第二次）（项目编号：BOB-GS-JYYH-20260702006-C",
+      "budget": "-",
+      "deadline": "2026-08-10 14:00",
+      "method": "竞争性磋商",
+      "contact": "联系人信息【及开票信息】；联系人：王宇杰；0260702006；18311130746",
+      "tags": [
+        "金融市场/资金/同业",
+        "其他"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-617202905.html",
+      "source": "千里马招标网",
+      "id": 9
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "北京银行",
+      "project": "理财销售新规与周期T+N产品开放需求（反洗钱改造）-测试项目",
+      "overview": "理财销售新规与周期T+N产品开放需求（反洗钱改造）-测试项目，招标编号0747-2660SCCZNB51，招标代理：中化商务有限公司。",
+      "budget": "2.7万元",
+      "deadline": "2026-08-17",
+      "method": "竞争性磋商",
+      "contact": "代理：中化商务有限公司",
+      "tags": [
+        "财富管理"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-619641600.html",
+      "source": "千里马招标网",
+      "id": 10
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "华鑫信托",
+      "project": "私有云系统技术支持项目（2026-2027）（谈判采购）",
+      "overview": "华鑫国际信托有限公司私有云系统技术支持项目（2026-2027）谈判采购公告 一、采购单编号：GT-202607-000850 二、采购单名称：私有云系统技术支持项目（2026-2027） 三、采购代理机构：华鑫国际信托有限公司 四、采购方 采购单编号GT-202607-000850，参与截止2026-8-7 17:00。",
+      "budget": "-",
+      "deadline": "2026-08-10 17:00",
+      "method": "竞争性谈判",
+      "contact": "周明若",
+      "tags": [
+        "运维服务",
+        "其他"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-618081731.html",
+      "source": "千里马招标网",
+      "id": 11
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "国家开发银行",
+      "project": "2026年短信发送系统整合升级项目",
+      "overview": "对现有短信发送系统进行整合升级，支持信创环境部署，提升短信发送能力和稳定性。",
+      "budget": "155万",
+      "deadline": "2026-08-13 09:00",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": [
+        "信创/国产化"
+      ],
+      "rec": "★☆☆ 可关注",
+      "url": "https://www.mpaypass.com.cn",
+      "source": "移动支付网",
+      "id": 12,
+      "title": "2026年短信发送系统整合升级项目"
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "建信信托",
+      "project": "2026-2028年财务运营辅助等外包服务采购项目",
+      "overview": "建信信托2026-2028年财务运营辅助等外包服务采购项目，属人力外包类服务采购。",
+      "budget": "-",
+      "deadline": "2026-08-17",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": [
+        "人力外包"
+      ],
+      "rec": "★☆☆ 可关注",
+      "url": "https://www.qianlima.com",
+      "source": "千里马招标网",
+      "id": 13
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "进出口银行",
+      "project": "2027-2030年资金管理系统二级运维服务项目（供应商征集）",
+      "overview": "拟采购资金管理系统二级运维服务36人月，服务期3年，中级工程师驻场支持。市场调研有效期至2026-08-09 16:00。",
+      "budget": "-",
+      "deadline": "2026-08-09 16:00",
+      "method": "框架协议",
+      "contact": "辛先生 010-86437167 xinnan@eximbank.gov.cn",
+      "tags": [
+        "金融市场/资金/同业",
+        "运维服务"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-619162963.html",
+      "source": "千里马招标网",
+      "id": 14
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "邮储银行",
+      "project": "全球企业信息数据采购项目",
+      "overview": "拟采购全球企业信息数据，预估查询5000笔、预估单价150元/笔、按实际查得量计费，服务期1年。在跨境结算、贸易融资、投融资等场景下返回境外股东及控股企业信息，用于全球企业身份识别核实、客户风险画像与风险交易监测。",
+      "budget": "-",
+      "deadline": "2026-08-18 09:30",
+      "method": "公开招标",
+      "contact": "16601286788",
+      "tags": [
+        "数据服务"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-616717467.html",
+      "source": "千里马招标网",
+      "id": 15
+    },
+    {
+      "region": "华北",
+      "province": "北京",
+      "company": "邮储银行",
+      "project": "外汇展业外部数据采购项目（包1贸易合规物项数据）",
+      "overview": "拟采购贸易合规物项数据包年服务，服务期1年。为招标人部署贸易合规数据名单，在跨境结算、贸易融资、投融资、代客资金等交易场景下筛查交易物项及物品码合规性。",
+      "budget": "-",
+      "deadline": "2026-08-18 09:30",
+      "method": "公开招标",
+      "contact": "16601286788",
+      "tags": [
+        "数据服务"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-616717461.html",
+      "source": "千里马招标网",
+      "id": 16
+    },
+    {
+      "region": "华北",
+      "province": "天津",
+      "company": "天津银行",
+      "project": "理财资产管理系统信息披露模块升级项目",
+      "overview": "依托系统自动生成、校验及报送功能，统筹管理发行公告、到期公告、净值公告、定期公告及产品历史业绩、业绩比较基准等披露内容。合同签订后6个月完成开测试投产，验收后1年维保。项目编号YT-TB-2026-068。",
+      "budget": "65万元",
+      "deadline": "2026-08-28 15:00",
+      "method": "公开招标",
+      "contact": "招标人：天津银行 郭晴；代理：倚天机构（霍晶、张如春）",
+      "tags": [
+        "资产管理",
+        "风控合规"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-619834043.html",
+      "source": "千里马招标网",
+      "id": 17
+    },
+    {
+      "region": "华北",
+      "province": "天津",
+      "company": "天津银行",
+      "project": "2026—2027年理财系统、银保通系统维护",
+      "overview": "天津银行公开招标2026—2027年理财系统、银保通系统维护服务（招标编号HLZB-F-2026077），自筹资金24.75万元，内容包括理财系统、银保通系统及业务功能维护。",
+      "budget": "24.75万元",
+      "deadline": "2026-08-11 09:30",
+      "method": "公开招标",
+      "contact": "张鹤 13672141368；代理：北京恒乐工程管理有限公司 胡琪/郭婕 15202203085 zhaobiaobu02@hengletj.cn",
+      "tags": [
+        "财富管理",
+        "运维服务"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-615864672.html",
+      "source": "千里马招标网",
+      "id": 18
+    },
+    {
+      "region": "华北",
+      "province": "河北",
+      "company": "承德银行",
+      "project": "AI大模型应用场景服务器采购项目",
+      "overview": "承德银行AI大模型应用场景服务器采购，项目编号BOCDIT20260727001，自筹资金已落实。依托海量业务数据与算力支撑，通过大模型实现智能问答、知识检索、智能研判、自动化处置等能力。最高投标限价280万元，不接受联合体投标。标书发售至2026-8-4 16:30（中国通用招标网）。",
+      "budget": "280万元",
+      "deadline": "2026-08-18 09:30",
+      "method": "公开招标",
+      "contact": "招标人：王先生；代理（中技国际招标）：仲亮/宋佳/曹娜/徐上 16619895116、010-81168555，zhongliang1@cgci.gt.cn",
+      "tags": [
+        "大模型应用",
+        "其他"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://mp.weixin.qq.com/s/V7ouKT_fZ1tjSwLnOGLZIA",
+      "source": "微信公众号（智探AI应用）",
+      "id": 19
+    },
+    {
+      "region": "华北",
+      "province": "河北",
+      "company": "河北银行",
+      "project": "2026年跨行汇兑支付系统升级改造项目",
+      "overview": "我要参与 1.招标条件 本招标项目 河北银行2026年跨行汇兑支付系统升级改造项目 已由 / 以 / 批准建设，项目业主为 河北银行股份有限公司 ，建设资金来自 企业自筹 出资比例为 100.00% ，招标人为 河北银行股份有限公司 。项目",
+      "budget": "-",
+      "deadline": "2026-08-25 09:00",
+      "method": "公开招标",
+      "contact": "田经理",
+      "tags": [
+        "其他"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-618699048.html",
+      "source": "千里马招标网",
+      "id": 20
+    },
+    {
+      "region": "华东",
+      "province": "山东",
+      "company": "临商银行",
+      "project": "票据业务系统接入上海票交所票据综合服务平台、贴现通业务系统改造项目（单一来源公示）",
+      "overview": "票据业务系统接入上海票交所票据综合服务平台、贴现通业务系统改造，单一来源采购公示（公示期未载明，附件含专业人员论证意见）。",
+      "budget": "65万元",
+      "deadline": "-",
+      "method": "单一来源采购",
+      "contact": "汪经理 0539-7877783；代理：宋工 15653926506（金衡盛项目管理）",
+      "tags": [
+        "金融市场/资金/同业"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-619301370.html",
+      "source": "千里马招标网",
+      "id": 21
+    },
+    {
+      "region": "华东",
+      "province": "山东",
+      "company": "光大理财",
+      "project": "营销服务中台建设项目",
+      "overview": "光大理财有限责任公司营销服务中台建设项目，预算153万元，公开招标。",
+      "budget": "153万元",
+      "deadline": "2026-08-11 23:59",
+      "method": "公开招标",
+      "contact": "青岛采购招标中心有限公司",
+      "tags": [
+        "财富管理",
+        "渠道系统"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-615442388.html",
+      "source": "千里马招标网",
+      "id": 22
+    },
+    {
+      "region": "华东",
+      "province": "山东",
+      "company": "光大理财",
+      "project": "销售端资金清算系统深分T05接口改造及划款自动化项目",
+      "overview": "光大理财有限责任公司销售端资金清算系统深分T05接口改造及划款自动化项目，预算137.78万元，公开招标。",
+      "budget": "137.78万元",
+      "deadline": "2026-08-11 23:59",
+      "method": "公开招标",
+      "contact": "青岛采购招标中心有限公司",
+      "tags": [
+        "财富管理",
+        "金融市场/资金/同业"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-615443587.html",
+      "source": "千里马招标网",
+      "id": 23
+    },
+    {
+      "region": "华东",
+      "province": "山东",
+      "company": "光大理财",
+      "project": "操作风险管理系统建设项目",
+      "overview": "操作风险管理系统建设，项目属地山东，招标编号QCZ2026-011238101，招标代理：青岛采购招标中心有限公司。",
+      "budget": "112万元",
+      "deadline": "2026-08-26",
+      "method": "公开招标",
+      "contact": "代理：青岛采购招标中心有限公司",
+      "tags": [
+        "风控合规"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-620009854.html",
+      "source": "千里马招标网",
+      "id": 24
+    },
+    {
+      "region": "华东",
+      "province": "山东",
+      "company": "莱商银行",
+      "project": "山东省公安厅涉案资金和保证金管理信息服务系统升级项目",
+      "overview": "山东省公安厅涉案资金和保证金管理信息服务系统升级，招标编号LSB-LC-202600722，报名截止2026-08-07。",
+      "budget": "18.5万元",
+      "deadline": "2026-08-20",
+      "method": "竞争性磋商",
+      "contact": "招标人：莱商银行；代理：山东省鲁成招标有限公司 0531-83191862",
+      "tags": [
+        "其他"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-619301164.html",
+      "source": "千里马招标网",
+      "id": 25
+    },
+    {
+      "region": "华东",
+      "province": "山东",
+      "company": "青岛农商",
+      "project": "2026-2027年金融数据库数据服务采购项目",
+      "overview": "青岛农商银行2026-2027年金融数据库数据服务采购项目采购公告 青岛农村商业银行股份有限公司采用竞争性磋商方式对青岛农商银行2026-2027年金融数据库数据服务采购项目（编号：FSCG-2026080002）进行采购，欢迎符合条件的潜",
+      "budget": "29.1万元",
+      "deadline": "2026-08-17 08:30",
+      "method": "竞争性磋商",
+      "contact": "徐晓",
+      "tags": [
+        "数据服务",
+        "资产管理"
+      ],
+      "rec": "🔥 ★★★ 强烈建议投标",
+      "url": "https://www.qianlima.com/bid-619719092.html",
+      "source": "千里马招标网",
+      "id": 26
+    },
+    {
+      "region": "华东",
+      "province": "山东",
+      "company": "青岛银行",
+      "project": "新建资产池管理系统项目（二次）（公开谈判）",
+      "overview": "青岛一诺项目咨询管理有限公司受青岛银行股份有限公司的委托，对青岛银行新建资产池管理系统项目（二次）以谈判采购的方式进行组织，本项目通过青岛阳光采购平台（https://www.qdygcg.com，以下简称“平台”）开展全流程电子化采购程序",
+      "budget": "224.4万元",
+      "deadline": "2026-08-13 09:30",
+      "method": "竞争性谈判",
+      "contact": "-",
+      "tags": [
+        "其他"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-618656251.html",
+      "source": "千里马招标网",
+      "id": 27
+    },
+    {
+      "region": "华东",
+      "province": "江苏",
+      "company": "农行江苏分行",
+      "project": "智能资产配置服务项目",
+      "overview": "江苏省招标中心有限公司受中国农业银行股份有限公司江苏省分行委托，现就中国农业银行股份有限公司江苏省分行智能资产配置服务项目进行公开招标（本项目非依法必须招标的项目，为招标人自主招标，根据招标人内部采购管理制度进行公开招标）。 一、项目名称及",
+      "budget": "424.5万元",
+      "deadline": "2026-08-31 09:00",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": [
+        "财富管理"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-620010699.html",
+      "source": "千里马招标网",
+      "id": 28
+    },
+    {
+      "region": "华东",
+      "province": "江苏",
+      "company": "江苏银行",
+      "project": "综合票据系统国产化改造项目",
+      "overview": "江苏省招标中心有限公司（以下简称“招标代理机构”）受江苏银行股份有限公司（以下简称“招标人”）的委托，就综合票据系统国产化改造项目进行公开招标。 一、项目名称及招标编号 项目名称：江苏银行股份有限公司综合票据系统国产化改造项目 招标编号：J",
+      "budget": "115万元",
+      "deadline": "2026-08-18 09:00",
+      "method": "公开招标",
+      "contact": "郭先生",
+      "tags": [
+        "信创/国产化",
+        "其他"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-617396906.html",
+      "source": "千里马招标网",
+      "id": 29
+    },
+    {
+      "region": "华东",
+      "province": "江苏",
+      "company": "江苏银行",
+      "project": "柜台债券交易系统优化改造项目",
+      "overview": "江苏省招标中心有限公司（以下简称“招标代理机构”）受江苏银行股份有限公司（以下简称“招标人”）的委托，就柜台债券交易系统优化改造项目进行公开招标。 一、项目名称及招标编号 项目名称：江苏银行股份有限公司柜台债券交易系统优化改造项目 招标编号",
+      "budget": "90万元",
+      "deadline": "2026-08-18 09:00",
+      "method": "公开招标",
+      "contact": "靳先生",
+      "tags": [
+        "金融市场/资金/同业"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-617396911.html",
+      "source": "千里马招标网",
+      "id": 30
+    },
+    {
+      "region": "华东",
+      "province": "江苏",
+      "company": "江苏银行",
+      "project": "债券分级托管系统国产化改造项目",
+      "overview": "江苏省招标中心有限公司（以下简称“招标代理机构”）受江苏银行股份有限公司（以下简称“招标人”）的委托，就债券分级托管系统国产化改造项目进行公开招标。 一、项目名称及招标编号 项目名称：江苏银行股份有限公司债券分级托管系统国产化改造项目 招标",
+      "budget": "50万元",
+      "deadline": "2026-08-19 09:00",
+      "method": "公开招标",
+      "contact": "李老师",
+      "tags": [
+        "信创/国产化",
+        "资产托管"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-617778279.html",
+      "source": "千里马招标网",
+      "id": 31
+    },
+    {
+      "region": "华东",
+      "province": "江苏",
+      "company": "江苏银行",
+      "project": "2026-2028年ESG数据采购项目",
+      "overview": "采购ESG数据服务，包含环境维度、社会维度、公司治理维度等数据，用于ESG评级模型构建。",
+      "budget": "260万",
+      "deadline": "2026-08-12 09:00",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": [
+        "数据服务"
+      ],
+      "rec": "★★☆ 值得关注",
+      "url": "https://finance.sina.com.cn",
+      "source": "新浪财经",
+      "id": 32,
+      "title": "2026-2028年ESG数据采购项目"
+    },
+    {
+      "region": "华东",
+      "province": "浙江",
+      "company": "宁波银行",
+      "project": "财资前置3.0直联平台扩充测试项目（供应商二次召集）",
+      "overview": "财资前置3.0直联平台扩充测试项目供应商二次召集，公告内容详见宁波银行官网附件。",
+      "budget": "-",
+      "deadline": "2026-08-14",
+      "method": "邀请招标",
+      "contact": "18158210899",
+      "tags": [
+        "金融市场/资金/同业"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-619578543.html",
+      "source": "千里马招标网",
+      "id": 33
+    },
+    {
+      "region": "华东",
+      "province": "浙江",
+      "company": "杭州银行",
+      "project": "2026新一代头寸管理系统建设项目",
+      "overview": "杭州银行公开招标2026新一代头寸管理系统建设项目（根据项目名称推断）。",
+      "budget": "-",
+      "deadline": "2026-08-11 09:00",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": [
+        "金融市场/资金/同业"
+      ],
+      "rec": "🔥 ★★★ 强烈建议投标",
+      "url": "https://www.qianlima.com/bid-615988265.html",
+      "source": "千里马招标网",
+      "id": 34
+    },
+    {
+      "region": "华东",
+      "province": "浙江",
+      "company": "杭州银行",
+      "project": "2026年度金手指策略工作坊系统项目",
+      "overview": "杭州银行金手指策略工作坊系统建设，预算550万元。",
+      "budget": "550万元",
+      "deadline": "2026-08-17",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": [
+        "财富管理"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://zj.qianlima.com/zbcontent-614637525.html",
+      "source": "千里马招标网",
+      "id": 35
+    },
+    {
+      "region": "华东",
+      "province": "浙江",
+      "company": "浙商银行",
+      "project": "智能体基础软硬件采购",
+      "overview": "浙商银行智能体基础软硬件采购（编号ZHJC2026GLJCKGGKb119），中标1家。资格要求近三年至少1个智能体基础软硬件案例（软件含知识库引擎/知识工程/大模型/模型管理平台等，硬件含算力/GPU/超算等）。须预约并通过POC测试（预约截止2026-08-06 17:00）。保证金50万元。",
+      "budget": "-",
+      "deadline": "2026-08-20 09:00",
+      "method": "公开招标",
+      "contact": "季老师 0571-88260758；代理：王秋阳 15868179035、陈天宇 18806711392（公诚管理咨询）",
+      "tags": [
+        "大模型应用"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://ccgp.szcgpt.czbank.com/luban/detail?parentId=700835&articleId=jmnQJm8hFnNI067rdPfhNw==",
+      "source": "浙商银行数智采购平台",
+      "id": 36
+    },
+    {
+      "region": "华东",
+      "province": "浙江",
+      "company": "绍兴银行",
+      "project": "智能风控平台建设项目（第二次）",
+      "overview": "建设智能风控平台，提升银行风险管控能力。需通过POC测试方可参加开标。",
+      "budget": "395万",
+      "deadline": "2026-08-11 14:30",
+      "method": "公开招标",
+      "contact": "张先生 18257564488",
+      "tags": [
+        "风控合规"
+      ],
+      "rec": "★☆☆ 可关注",
+      "url": "https://ygcg.sxjypt.com",
+      "source": "绍兴市阳光采购服务平台",
+      "id": 37,
+      "title": "智能风控平台建设项目（第二次）"
+    },
+    {
+      "region": "华东",
+      "province": "安徽",
+      "company": "徽银理财",
+      "project": "统一估值核算平台建设项目",
+      "overview": "统一估值核算平台建设，招标编号AHZJ-202633100641。领取资料截止2026-08-11（9:00-12:00/13:00-17:00），开标日期详见招标文件（远程直播方式）。",
+      "budget": "-",
+      "deadline": "2026-08-11",
+      "method": "公开招标",
+      "contact": "董经理 0551-65199018；代理：安徽中技工程咨询 18226380158",
+      "tags": [
+        "资产管理"
+      ],
+      "rec": "🔥 ★★★ 强烈建议投标",
+      "url": "https://www.qianlima.com/bid-619577019.html",
+      "source": "千里马招标网",
+      "id": 38
+    },
+    {
+      "region": "华东",
+      "province": "安徽",
+      "company": "徽银理财",
+      "project": "IBOR底座及头寸管理建设项目（二次）",
+      "overview": "徽银理财有限责任公司IBOR底座及头寸管理建设项目（二次）招标，为原项目流标后的二次招标。",
+      "budget": "-",
+      "deadline": "2026-08-11 23:59",
+      "method": "公开招标",
+      "contact": "安徽中技工程咨询有限公司",
+      "tags": [
+        "资产管理",
+        "数据平台"
+      ],
+      "rec": "🔥 ★★★ 强烈建议投标",
+      "url": "https://www.qianlima.com/bid-615983750.html",
+      "source": "千里马招标网",
+      "id": 39
+    },
+    {
+      "region": "华东",
+      "province": "安徽",
+      "company": "徽银理财",
+      "project": "智慧组合管理平台建设项目（二次）",
+      "overview": "徽银理财有限责任公司智慧组合管理平台建设项目（二次）招标，为原项目流标后的二次招标。",
+      "budget": "-",
+      "deadline": "2026-08-11 23:59",
+      "method": "公开招标",
+      "contact": "安徽中技工程咨询有限公司",
+      "tags": [
+        "资产管理"
+      ],
+      "rec": "🔥 ★★★ 强烈建议投标",
+      "url": "https://www.qianlima.com/bid-615984268.html",
+      "source": "千里马招标网",
+      "id": 40
+    },
+    {
+      "region": "华东",
+      "province": "安徽",
+      "company": "新安银行",
+      "project": "SaaS版资金管理系统采购",
+      "overview": "新安银行采购SaaS版资金管理系统服务（项目编号2026HEFRZ600491），拟招一家单位提供SaaS版资金管理系统，SaaS部分主体架构要求信创，项目地点合肥。",
+      "budget": "-",
+      "deadline": "2026-08-11 10:30",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": [
+        "金融市场/资金/同业"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-615673685.html",
+      "source": "千里马招标网",
+      "id": 41
+    },
+    {
+      "id": 42,
+      "region": "华东",
+      "province": "江西",
+      "company": "九江银行",
+      "project": "九江银行2026年AI测试平台采购项目",
+      "overview": "九江银行公开招标AI测试平台采购项目，投标人须近三年至少有一个AI测试平台项目案例（作为单独系统建设），不接受联合体。招标代理：江西省机电设备招标有限公司。",
+      "budget": "-",
+      "deadline": "2026-08-12 09:30",
+      "method": "公开招标",
+      "contact": "董女士 13797072781；代理机构：柳洲 15270576231，邮箱：1059703939@qq.com",
+      "tags": [
+        "大模型应用"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.jycbank.com/jjccb/zbcg/ggaaxmzbgg/2026071616253915007/index.shtml",
+      "source": "九江银行官网"
+    },
+    {
+      "region": "华东",
+      "province": "上海",
+      "company": "上海信托",
+      "project": "2026-2028年普惠金融贷款业务身份核验数据服务框架项目",
+      "overview": "普惠金融贷款业务身份核验数据服务框架，延期开标。",
+      "budget": "-",
+      "deadline": "2026-08-15 09:00",
+      "method": "公开招标",
+      "contact": "江苏省招标中心",
+      "tags": [
+        "数据服务",
+        "风控合规"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.yfbzb.com/inviteBid/detail/20260715_614231778.html",
+      "source": "乙方宝",
+      "id": 43
+    },
+    {
+      "region": "华东",
+      "province": "上海",
+      "company": "上海信托",
+      "project": "财务系统建设项目",
+      "overview": "江苏省招标中心有限公司（招标代理机构）受上海国际信托有限公司（招标人）委托，就财务系统建设项目进行公开招标。 一、项目名称、招标编号： 上海国际信托有限公司财务系统建设项目（招标编号：JSTCC26005203867）。 二、项目简介 本项",
+      "budget": "-",
+      "deadline": "2026-08-20 13:30",
+      "method": "公开招标",
+      "contact": "王胤之",
+      "tags": [
+        "其他"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-618425896.html",
+      "source": "千里马招标网",
+      "id": 44
+    },
+    {
+      "region": "华东",
+      "province": "上海",
+      "company": "上海农商",
+      "project": "养老金融及养老支柱相关资讯服务采购项目（供应商征集）",
+      "overview": "上海农商银行养老金融及养老支柱相关资讯服务采购项目供应商征集公告 上海农商银行养老金融及养老支柱相关资讯服务采购项目供应商征集公告 项目编号：JZCG2026000362 本行现向全社会公开征集养老金融及养老支柱相关资讯服务采购项目供应商，。最高限价35万元，报名截止2026-08-11 15:00",
+      "budget": "35万元（最高限价）",
+      "deadline": "2026-08-11 15:00",
+      "method": "框架协议",
+      "contact": "张颖莹、李晓亮 021-61899383、021-60110521",
+      "tags": [
+        "财富管理",
+        "数据服务"
+      ],
+      "rec": "🔥 ★★★ 强烈建议投标",
+      "url": "https://www.qianlima.com/bid-619835878.html",
+      "source": "千里马招标网",
+      "id": 45
+    },
+    {
+      "region": "华东",
+      "province": "上海",
+      "company": "上海银行",
+      "project": "银保通系统信创改造之银保通系统改造项目（单一来源公示）",
+      "overview": "银保通系统信创改造之银保通系统改造，单一来源，拟邀请供应商：上海天正软件有限公司（现有银保通系统产品及实施供应商）。公示异议期：自2026-08-05公示发出起5个工作日（至2026-08-12）。",
+      "budget": "-",
+      "deadline": "2026-08-12",
+      "method": "单一来源采购",
+      "contact": "朱先生 gyszj@bosc.cn；监督：caigouzhongxin@bosc.cn",
+      "tags": [
+        "信创/国产化",
+        "财富管理"
+      ],
+      "rec": "🔥 ★★★ 强烈建议投标",
+      "url": "https://www.qianlima.com/bid-619808616.html",
+      "source": "千里马招标网",
+      "id": 46
+    },
+    {
+      "region": "华东",
+      "province": "上海",
+      "company": "上海银行",
+      "project": "积存金系统建设项目（竞争性磋商）",
+      "overview": "上海新域工程建设咨询有限公司受上海银行股份有限公司（以下简称采购人）委托，对“上海银行积存金系统建设项目（项目编号ZHCG20260725005）”进行采购，现诚邀合格的供应商参加本项目。 特别声明：鉴于本项目标的并不构成法律规定必须招标之",
+      "budget": "197.5万元",
+      "deadline": "2026-08-14 14:00",
+      "method": "竞争性磋商",
+      "contact": "-",
+      "tags": [
+        "金融市场/资金/同业"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-618440581.html",
+      "source": "千里马招标网",
+      "id": 47
+    },
+    {
+      "region": "华东",
+      "province": "上海",
+      "company": "上海银行",
+      "project": "积存金系统建设项目之外汇贵金属平盘模块配合改造项目（单一来源公示）",
+      "overview": "积存金系统建设项目之外汇贵金属平盘模块配合改造，采购编号N-XX-202607528。单一来源，拟邀请供应商：杭州时代银通软件股份有限公司（上海银行外汇贵金属平盘模块开发厂商）。公示2026-08-05发出，异议期5个工作日（至2026-08-12）。",
+      "budget": "-",
+      "deadline": "2026-08-12",
+      "method": "单一来源采购",
+      "contact": "袁老师 eitbm@bosc.cn；监督：caigouzhongxin@bosc.cn",
+      "tags": [
+        "金融市场/资金/同业"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-619743597.html",
+      "source": "千里马招标网",
+      "id": 48
+    },
+    {
+      "region": "华东",
+      "province": "上海",
+      "company": "上海银行",
+      "project": "积存金系统建设项目之报价引擎配合改造项目（单一来源公示）",
+      "overview": "积存金系统建设项目之报价引擎配合改造，采购编号N-XX-202607527。单一来源，拟邀请供应商：杭州时代银通软件股份有限公司（上海银行报价引擎系统开发厂商）。公示2026-08-05发出，异议期5个工作日（至2026-08-12）。",
+      "budget": "-",
+      "deadline": "2026-08-12",
+      "method": "单一来源采购",
+      "contact": "袁老师 eitbm@bosc.cn；监督：caigouzhongxin@bosc.cn",
+      "tags": [
+        "金融市场/资金/同业"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-619728769.html",
+      "source": "千里马招标网",
+      "id": 49
+    },
+    {
+      "region": "华东",
+      "province": "上海",
+      "company": "交银金科",
+      "project": "资管平台登记过户系统（TA系统）项目市场调研",
+      "overview": "采购一套技术架构先进、安全合规、自主可控且具备良好扩展性的登记过户系统（TA系统），覆盖账户管理、交易处理（认购、申购、赎回、转换等）、份额登记、清算结算及报表管理等核心业务功能，支持基金、保险、理财等多业态适配。本次为市场调研（寻源）公告，报名期2026-08-10 9:00至08-12 17:00（邮件报名），预计2026年9月启动正式采购。",
+      "budget": "-",
+      "deadline": "2026-08-12 17:00",
+      "method": "-",
+      "contact": "交银金科财管部 杜宇宁（电话/邮箱公告内脱敏，报名邮箱见公告）",
+      "tags": [
+        "资产管理"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://m.bidcenter.com.cn/news-1-435113244.html",
+      "source": "采招网",
+      "id": 50
+    },
+    {
+      "region": "华中",
+      "province": "河南",
+      "company": "中原银行",
+      "project": "新一代资金交易管理系统项目（资金业务前台交易系统）（二次）",
+      "overview": "中原银行股份有限公司新一代资金交易管理系统项目（资金业务前台交易系统）（二次）-公开招标公告 1、招标条件 根据业务发展需求，中原银行股份有限公司（下称：“中原银行”或“我行”或“招标人”）拟对中原银行股份有限公司新一代资金交易管理系统项目",
+      "budget": "-",
+      "deadline": "2026-08-25 09:30",
+      "method": "公开招标",
+      "contact": "张先生",
+      "tags": [
+        "金融市场/资金/同业"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-618743483.html",
+      "source": "千里马招标网",
+      "id": 51
+    },
+    {
+      "region": "华中",
+      "province": "河南",
+      "company": "中原银行",
+      "project": "新一代资金交易管理系统项目（资金业务中台风控系统）（二次）",
+      "overview": "中原银行股份有限公司新一代资金交易管理系统项目（资金业务中台风控系统）（二次）招标公告 中原银行股份有限公司新一代资金交易管理系统项目（资金业务中台风控系统）（二次）招标公告 1、招标条件 根据业务发展需求，中原银行股份有限公司（下称：“中",
+      "budget": "-",
+      "deadline": "2026-08-25 14:30",
+      "method": "公开招标",
+      "contact": "张先生",
+      "tags": [
+        "金融市场/资金/同业",
+        "风控合规"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-618794218.html",
+      "source": "千里马招标网",
+      "id": 52
+    },
+    {
+      "region": "西南",
+      "province": "重庆",
+      "company": "重庆农商",
+      "project": "2026年软件开发人力资源外包服务采购项目",
+      "overview": "重庆农村商业银行2026年软件开发人力资源外包服务采购项目，属软件开发人力外包类。",
+      "budget": "-",
+      "deadline": "2026-08-18 09:30",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": [
+        "人力外包"
+      ],
+      "rec": "★☆☆ 可关注",
+      "url": "https://www.qianlima.com",
+      "source": "千里马招标网",
+      "id": 53
+    },
+    {
+      "region": "西南",
+      "province": "重庆",
+      "company": "重庆农商",
+      "project": "2026年软件测试人力资源外包服务采购项目",
+      "overview": "重庆农村商业银行2026年软件测试人力资源外包服务采购项目，属软件测试人力外包类。",
+      "budget": "-",
+      "deadline": "2026-08-19 09:30",
+      "method": "公开招标",
+      "contact": "-",
+      "tags": [
+        "人力外包"
+      ],
+      "rec": "★☆☆ 可关注",
+      "url": "https://www.qianlima.com",
+      "source": "千里马招标网",
+      "id": 54
+    },
+    {
+      "region": "西南",
+      "province": "重庆",
+      "company": "重庆农商",
+      "project": "数字化营销平台采购项目",
+      "overview": "重庆农村商业银行数字化营销平台采购项目招标公告 1.招标条件 重庆国际投资咨询集团有限公司（以下简称“招标机构”）受重庆农村商业银行股份有限公司（以下简称“招标人”、“甲方”、“业主”或“买方”）委托，根据重庆农村商业银行数字化营销平台采购",
+      "budget": "-",
+      "deadline": "2026-08-21",
+      "method": "公开招标",
+      "contact": "傅女士 023-61110532；代理 李先生 023-67706153",
+      "tags": [
+        "渠道系统",
+        "其他"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-618013596.html",
+      "source": "千里马招标网",
+      "id": 55
+    },
+    {
+      "region": "西南",
+      "province": "重庆",
+      "company": "重庆银行",
+      "project": "零售内部评级体系优化项目",
+      "overview": "重庆银行零售内部评级体系优化项目 招标公告 （招标编号：ZBCG-26082343） 1.招标条件 本重庆银行零售内部评级体系优化项目已由项目审批/核准/备案机关批准，项目资金为自筹资金320万元；招标人为重庆银行股份有限公司。本项目已具备",
+      "budget": "320万元",
+      "deadline": "2026-08-27 09:30",
+      "method": "公开招标",
+      "contact": "周老师",
+      "tags": [
+        "风控合规",
+        "其他",
+        "财富管理"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-618627324.html",
+      "source": "千里马招标网",
+      "id": 56
+    },
+    {
+      "region": "西南",
+      "province": "四川",
+      "company": "四川天府银行",
+      "project": "新一代国际业务平台系统建设项目",
+      "overview": "四川天府银行新一代国际业务平台系统建设项目招标公告 四川天府银行股份有限公司（采购人）拟对四川天府银行新一代国际业务平台系统建设项目进行国内公开招标，兹邀请符合本次招标要求的供应商参加投标。 一、招标编号：TFB20260041 二、招标项",
+      "budget": "220万元",
+      "deadline": "2026-08-12 09:30",
+      "method": "公开招标",
+      "contact": "赵老师",
+      "tags": [
+        "其他"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://www.qianlima.com/bid-618342305.html",
+      "source": "千里马招标网",
+      "id": 57
+    },
+    {
+      "region": "西南",
+      "province": "贵州",
+      "company": "贵阳银行",
+      "project": "大模型智能中台（二期）算力服务器采购项目",
+      "overview": "贵阳银行大模型智能中台（二期）算力服务器采购，交易项目序列号P520100202600094Q。采购国产化AI算力服务器及配套管理软件（总显存≥2560GB、总算力≥11200 TFLOPS@FP16），支撑财富知识助手、柜员知识助手、运营知识助手等大模型场景全行推广。预算600万元，不接受联合体及分包转包。招标文件获取至2026-8-6（贵州省公共资源交易中心网）。",
+      "budget": "600万元",
+      "deadline": "2026-08-20 09:30",
+      "method": "公开招标",
+      "contact": "采购人：周建华 0851-86858518；代理（贵州要素商务）：侯菊 13984832232",
+      "tags": [
+        "大模型应用",
+        "财富管理"
+      ],
+      "rec": "👀 ★☆☆ 可关注",
+      "url": "https://mp.weixin.qq.com/s/z1pq2emr80TOlZ1vQFFRFA",
+      "source": "微信公众号（智探AI应用）",
+      "id": 58
+    },
+    {
+      "region": "西南",
+      "province": "西藏",
+      "company": "西藏银行",
+      "project": "反洗钱信息系统管理项目",
+      "overview": "西藏银行反洗钱信息系统管理项目，预算300万元，公开招标。",
+      "budget": "300万元",
+      "deadline": "2026-08-10 10:30",
+      "method": "公开招标",
+      "contact": "周女士 0891-6133182",
+      "tags": [
+        "风控合规"
+      ],
+      "rec": "⭐ ★★☆ 建议投标",
+      "url": "https://www.qianlima.com/bid-615074108.html",
+      "source": "千里马招标网",
+      "id": 59
+    }
+  ]
+}</script>
+
+<script>
+// ==================== 数据驱动渲染引擎 ====================
+// 核心原则：所有统计数字由JS自动计算，不再硬编码在HTML中
+// 增删项目只需修改JSON数据，统计数字自动同步
+
+const REC_PRIORITY = {
+  '🔥 ★★★ 强烈建议投标': 1,
+  '⭐ ★★☆ 建议投标': 2,
+  '★☆☆ 可关注': 3,
+  '☆☆☆ 已截止': 4,
+  '☆☆☆ 不建议': 5,
+};
+
+// 地理区域从北到南排序权重
+const REGION_ORDER = {
+  '东北': 1,
+  '华北': 2,
+  '西北': 3,
+  '华东': 4,
+  '华中': 5,
+  '西南': 6,
+  '华南': 7,
+  '其他': 8,
+};
+
+// 省份从北到南排序权重（同大区内按纬度从高到低）
+const PROVINCE_ORDER = {
+  // 东北
+  '黑龙江': 1, '吉林': 2, '辽宁': 3,
+  // 华北
+  '内蒙古': 4, '北京': 5, '天津': 6, '河北': 7, '山西': 8,
+  // 西北
+  '陕西': 9, '甘肃': 10, '宁夏': 11, '青海': 12, '新疆': 13,
+  // 华东
+  '山东': 14, '江苏': 15, '浙江': 16, '安徽': 17, '福建': 18, '江西': 19, '上海': 20,
+  // 华中
+  '河南': 21, '湖北': 22, '湖南': 23,
+  // 西南
+  '重庆': 24, '四川': 25, '贵州': 26, '云南': 27, '西藏': 28,
+  // 华南
+  '广东': 29, '广西': 30, '海南': 31,
+};
+
+const REC_CLASS = {
+  '🔥 ★★★ 强烈建议投标': 'rec-strong',
+  '⭐ ★★☆ 建议投标': 'rec-suggest',
+  '★☆☆ 可关注': 'rec-watch',
+  '☆☆☆ 已截止': 'rec-none',
+  '☆☆☆ 不建议': 'rec-no',
+};
+
+// 读取JSON数据
+let allProjects = [];
+try {
+  const dataEl = document.getElementById('tender-data');
+  if (dataEl) {
+    allProjects = JSON.parse(dataEl.textContent).projects;
+  }
+} catch (e) {
+  console.error('Failed to parse tender data:', e);
+}
+
+// 解析截止日期
+function parseDeadline(d) {
+  if (!d) return new Date('2099-12-31');
+  try {
+    if (d.includes(' ')) return new Date(d.replace(/-/g, '/'));
+    return new Date(d.replace(/-/g, '/') + ' 23:59');
+  } catch {
+    return new Date('2099-12-31');
+  }
+}
+
+// 排序规则：地理区域从北到南 → 省份从北到南 → 公司名（同公司连续）→ 投标建议从高到低 → 截止日期从早到晚
+function sortProjects(projects) {
+  return [...projects].sort((a, b) => {
+    const ra = REGION_ORDER[a.region] || 99;
+    const rb = REGION_ORDER[b.region] || 99;
+    if (ra !== rb) return ra - rb;
+    const pa = PROVINCE_ORDER[a.province] || 99;
+    const pb = PROVINCE_ORDER[b.province] || 99;
+    if (pa !== pb) return pa - pb;
+    if (a.company !== b.company) return a.company.localeCompare(b.company);
+    const recA = REC_PRIORITY[a.rec] || 99;
+    const recB = REC_PRIORITY[b.rec] || 99;
+    if (recA !== recB) return recA - recB;
+    return parseDeadline(a.deadline) - parseDeadline(b.deadline);
+  });
+}
+
+// 生成单行HTML
+function renderRow(p, seq, tabPrefix) {
+  const zebraClass = (seq % 2 === 0) ? ' zebra' : '';
+  const recClass = REC_CLASS[p.rec] || 'rec-watch';
+  const tagsHtml = p.tags.map(t => 
+    `<span class="biz-tag" data-tag="${t}" onclick="filterByTag('${t}')">${t}</span>`
+  ).join(' ');
+  const budgetDisplay = p.budget || '';
+  
+  return `<tr class="${zebraClass}" data-company="${p.company}" data-method="${p.method}" data-project="${p.project}" data-tags="${p.tags.join(',')}" data-province="${p.province}" data-rec="${p.rec}" id="${tabPrefix}-row-${seq}">
+    <td class="col-seq">${seq}</td>
+    <td class="col-region"><span class="region-badge">${p.region}</span></td>
+    <td class="col-province">${p.province}</td>
+    <td class="col-company"><strong>${p.company}</strong></td>
+    <td class="col-project">${p.project}</td>
+    <td class="col-overview" title="${p.overview}">${p.overview}</td>
+    <td class="col-budget">${budgetDisplay}</td>
+    <td class="col-deadline">${p.deadline}</td>
+    <td class="col-method"><span class="method-badge">${p.method}</span></td>
+    <td class="col-contact">${p.contact}</td>
+    <td class="col-tags">${tagsHtml}</td>
+    <td class="col-rec"><span class="${recClass}">${p.rec}</span></td>
+    <td class="col-url"><a href="${p.url}" target="_blank" class="url-link-colored" title="${p.source}">${p.source}</a></td>
+  </tr>`;
+}
+
+// 渲染指定tab的tbody
+function renderTabBody(tbodyId, projects, tabPrefix) {
+  const tbody = document.getElementById(tbodyId);
+  if (!tbody) return;
+  const sorted = sortProjects(projects);
+  tbody.innerHTML = sorted.map((p, i) => renderRow(p, i + 1, tabPrefix)).join('');
+  return sorted.length;
+}
+
+// 更新统计数字（核心函数：所有数字从此处统一计算）
+function updateStats() {
+  // 按推荐等级分类
+  const strong = allProjects.filter(p => p.rec === '🔥 ★★★ 强烈建议投标');
+  const suggest = allProjects.filter(p => p.rec === '⭐ ★★☆ 建议投标');
+  const trust = allProjects.filter(p => {
+    const c = p.company;
+    return (c.includes('信托') && !c.includes('银行')) || c === '中信登';
+  });
+  const bank = allProjects.filter(p => !trust.includes(p));
+  
+  const total = allProjects.length;
+  const bankCount = bank.length;
+  const trustCount = trust.length;
+  const strongCount = strong.length;
+  const suggestCount = suggest.length;
+  
+  // 更新封面统计卡片
+  document.getElementById('stat-all').textContent = total;
+  document.getElementById('stat-bank').textContent = bankCount;
+  document.getElementById('stat-trust').textContent = trustCount;
+  document.getElementById('stat-strong').textContent = strongCount;
+  document.getElementById('stat-suggest').textContent = suggestCount;
+  
+  // 更新Tab标题
+  document.getElementById('tab-title-all').textContent = `全部有效招标 (${total})`;
+  document.getElementById('tab-title-bank').textContent = `银行行业 (${bankCount})`;
+  document.getElementById('tab-title-trust').textContent = `信托行业 (${trustCount})`;
+  document.getElementById('tab-title-strong').textContent = `强烈建议投标 (${strongCount})`;
+  document.getElementById('tab-title-suggest').textContent = `建议投标 (${suggestCount})`;
+  
+  // 更新result-count（初始值，筛选后会重新计算）
+  document.getElementById('count-all').textContent = total;
+  document.getElementById('count-bank').textContent = bankCount;
+  document.getElementById('count-trust').textContent = trustCount;
+  document.getElementById('count-strong').textContent = strongCount;
+  document.getElementById('count-suggest').textContent = suggestCount;
+  
+  // 渲染各tab tbody
+  renderTabBody('tbody-all', allProjects, 'tab-all');
+  renderTabBody('tbody-bank', bank, 'tab-bank');
+  renderTabBody('tbody-trust', trust, 'tab-trust');
+  renderTabBody('tbody-strong', strong, 'tab-strong');
+  renderTabBody('tbody-suggest', suggest, 'tab-suggest');
+  
+  // 更新空状态显示
+  updateEmptyState('all', total);
+  updateEmptyState('bank', bankCount);
+  updateEmptyState('trust', trustCount);
+  updateEmptyState('strong', strongCount);
+  updateEmptyState('suggest', suggestCount);
+  
+  // 更新封面和封底时间（从JSON数据读取，反映数据实际更新时间）
+  const dataEl = document.getElementById('tender-data');
+  if (dataEl) {
+    try {
+      const data = JSON.parse(dataEl.textContent);
+      const date = data.date || '2026年06月15日';
+      const timePeriod = data.timePeriod || '上午';
+      const timeStr = `${date} ${timePeriod}`;
+      const coverEl = document.getElementById('cover-update-time');
+      if (coverEl) coverEl.textContent = `数据更新时间：${timeStr}`;
+      const footerEl = document.getElementById('footer-update-time');
+      if (footerEl) footerEl.textContent = timeStr;
+    } catch (e) {
+      // 静默失败，保持HTML中的静态时间
+    }
+  }
+
+  // 填充筛选下拉框
+  populateFilters();
+}
+
+function updateEmptyState(tabId, count) {
+  const empty = document.getElementById('empty-' + tabId);
+  if (empty) empty.classList.toggle('show', count === 0);
+}
+
+// 填充筛选下拉框选项
+function populateFilters() {
+  const provinces = [...new Set(allProjects.map(p => p.province))].sort();
+  const methods = [...new Set(allProjects.map(p => p.method))].sort();
+  const recs = [...new Set(allProjects.map(p => p.rec))].sort();
+  const companies = [...new Set(allProjects.map(p => p.company))].sort();
+  const sources = [...new Set(allProjects.map(p => p.source))].sort();
+  
+  fillSelect('filter-province', provinces);
+  fillSelect('filter-method', methods);
+  fillSelect('filter-rec', recs);
+  fillSelect('filter-company', companies);
+  fillSelect('filter-source', sources);
+}
+
+function fillSelect(id, items) {
+  const sel = document.getElementById(id);
+  if (!sel) return;
+  const first = sel.options[0];
+  sel.innerHTML = '';
+  sel.appendChild(first);
+  items.forEach(item => {
+    const opt = document.createElement('option');
+    opt.value = item;
+    opt.textContent = item;
+    sel.appendChild(opt);
+  });
+}
+
+// ==================== Tab切换 ====================
+let currentTab = 'all';
+let activeTags = [];
+
+function showTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.group-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  event.target.classList.add('active');
+  currentTab = tabId;
+  applyFilters();
+}
+
+document.querySelectorAll('.group-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    const text = this.textContent;
+    if (text.includes('全部')) currentTab = 'all';
+    else if (text.includes('银行行业')) currentTab = 'bank';
+    else if (text.includes('信托')) currentTab = 'trust';
+    else if (text.includes('强烈')) currentTab = 'strong';
+    else if (text.includes('建议投标')) currentTab = 'suggest';
+  });
+});
+
+// ==================== 筛选逻辑 ====================
+function filterByTag(tag) {
+  if (tag === '') {
+    activeTags = [];
+    document.querySelectorAll('.filter-tag-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.tag === '');
+    });
+  } else {
+    const index = activeTags.indexOf(tag);
+    if (index > -1) { activeTags.splice(index, 1); }
+    else { activeTags.push(tag); }
+    document.querySelectorAll('.filter-tag-btn').forEach(btn => {
+      const btnTag = btn.dataset.tag;
+      if (btnTag === '') { btn.classList.toggle('active', activeTags.length === 0); }
+      else { btn.classList.toggle('active', activeTags.includes(btnTag)); }
+    });
+  }
+  applyFilters();
+}
+
+function applyFilters() {
+  const province = document.getElementById('filter-province').value;
+  const method = document.getElementById('filter-method').value;
+  const rec = document.getElementById('filter-rec').value;
+  const company = document.getElementById('filter-company').value;
+  const source = document.getElementById('filter-source').value;
+  const search = document.getElementById('filter-search').value.toLowerCase();
+  
+  updateActiveFilters();
+  
+  // 获取当前tab的所有行
+  const tabBodyId = 'tbody-' + currentTab;
+  const tbody = document.getElementById(tabBodyId);
+  if (!tbody) return;
+  
+  const rows = tbody.querySelectorAll('tr');
+  let visibleCount = 0;
+  
+  rows.forEach(row => {
+    const rProvince = row.dataset.province || '';
+    const rMethod = row.dataset.method || '';
+    const rRec = row.dataset.rec || '';
+    const rCompany = row.dataset.company || '';
+    const rTags = row.dataset.tags || '';
+    const rProject = row.dataset.project || '';
+    
+    // 从URL链接的title属性获取source（简化处理）
+    const link = row.querySelector('.url-link-colored');
+    const rSource = link ? link.getAttribute('title') || '' : '';
+    
+    let show = true;
+    if (province && rProvince !== province) show = false;
+    if (method && rMethod !== method) show = false;
+    if (rec && rRec !== rec) show = false;
+    if (company && rCompany !== company) show = false;
+    if (source && rSource !== source) show = false;
+    if (search && !rProject.toLowerCase().includes(search)) show = false;
+    if (activeTags.length > 0) {
+      const rowTags = rTags.split(',');
+      const hasTag = activeTags.some(t => rowTags.includes(t));
+      if (!hasTag) show = false;
+    }
+    
+    row.style.display = show ? '' : 'none';
+    if (show) visibleCount++;
+  });
+  
+  // 重新编号可见行
+  let seq = 1;
+  rows.forEach(row => {
+    if (row.style.display !== 'none') {
+      const seqCell = row.querySelector('.col-seq');
+      if (seqCell) seqCell.textContent = seq;
+      // 更新zebra类
+      row.classList.toggle('zebra', seq % 2 === 0);
+      seq++;
+    }
+  });
+  
+  // 更新result-count
+  const countEl = document.getElementById('count-' + currentTab);
+  if (countEl) {
+    countEl.textContent = visibleCount;
+    countEl.classList.add('changed');
+    setTimeout(() => countEl.classList.remove('changed'), 300);
+  }
+  
+  // 更新空状态
+  updateEmptyState(currentTab, visibleCount);
+}
+
+function updateActiveFilters() {
+  const province = document.getElementById('filter-province').value;
+  const method = document.getElementById('filter-method').value;
+  const rec = document.getElementById('filter-rec').value;
+  const company = document.getElementById('filter-company').value;
+  const source = document.getElementById('filter-source').value;
+  const search = document.getElementById('filter-search').value;
+  const container = document.getElementById('active-filters-container');
+  const panel = document.getElementById('active-filters');
+  let html = ''; let hasFilter = false;
+  if (province) { html += `<span class="filter-chip" onclick="clearFilter('province')">省份: ${province} <span class="remove">×</span></span>`; hasFilter = true; }
+  if (method) { html += `<span class="filter-chip" onclick="clearFilter('method')">方式: ${method} <span class="remove">×</span></span>`; hasFilter = true; }
+  if (rec) { html += `<span class="filter-chip" onclick="clearFilter('rec')">建议: ${rec} <span class="remove">×</span></span>`; hasFilter = true; }
+  if (company) { html += `<span class="filter-chip" onclick="clearFilter('company')">单位: ${company} <span class="remove">×</span></span>`; hasFilter = true; }
+  if (source) { html += `<span class="filter-chip" onclick="clearFilter('source')">来源: ${source} <span class="remove">×</span></span>`; hasFilter = true; }
+  if (search) { html += `<span class="filter-chip" onclick="clearFilter('search')">搜索: ${search} <span class="remove">×</span></span>`; hasFilter = true; }
+  if (activeTags.length > 0) {
+    activeTags.forEach(tag => {
+      html += `<span class="filter-chip" onclick="removeTagFilter('${tag}')">标签: ${tag} <span class="remove">×</span></span>`;
+    });
+    hasFilter = true;
+  }
+  container.innerHTML = html;
+  panel.classList.toggle('show', hasFilter);
+}
+
+function clearFilter(type) {
+  if (type === 'search') document.getElementById('filter-search').value = '';
+  else document.getElementById('filter-' + type).value = '';
+  applyFilters();
+}
+
+function removeTagFilter(tag) {
+  filterByTag(tag);
+}
+
+function resetFilters() {
+  document.getElementById('filter-province').value = '';
+  document.getElementById('filter-method').value = '';
+  document.getElementById('filter-rec').value = '';
+  document.getElementById('filter-company').value = '';
+  document.getElementById('filter-source').value = '';
+  document.getElementById('filter-search').value = '';
+  activeTags = [];
+  document.querySelectorAll('.filter-tag-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tag === '');
+  });
+  applyFilters();
+}
+
+// ==================== 初始化 ====================
+document.addEventListener('DOMContentLoaded', function() {
+  updateStats();
+});
+
+// ==================== 开发者模式 ====================
+let devPanelOpen = false;
+let devFiles = [];
+let devUrls = [];
+
+// 方案A: 在页面任意位置输入 "dev" 序列触发（Konami Code风格）
+let keySequence = [];
+const DEV_CODE = ['d','e','v'];
+document.addEventListener('keydown', function(e) {
+  const key = e.key.toLowerCase();
+  keySequence.push(key);
+  if (keySequence.length > 3) keySequence.shift();
+  if (keySequence.join('') === 'dev') {
+    keySequence = [];
+    toggleDevPanel();
+  }
+});
+
+// 方案B: 连按5次 ~ 键触发（备用）
+let tildeCount = 0;
+let tildeTimer = null;
+document.addEventListener('keydown', function(e) {
+  if (e.key === '~' || e.key === '`') {
+    tildeCount++;
+    clearTimeout(tildeTimer);
+    tildeTimer = setTimeout(() => { tildeCount = 0; }, 1000);
+    if (tildeCount >= 5) {
+      tildeCount = 0;
+      toggleDevPanel();
+    }
+  }
+});
+
+function toggleDevPanel() {
+  const panel = document.getElementById('dev-panel');
+  if (!panel) return;
+  devPanelOpen = !devPanelOpen;
+  panel.style.display = devPanelOpen ? 'flex' : 'none';
+  if (devPanelOpen) {
+    updateDevStatus();
+    document.getElementById('dev-dropzone').classList.remove('dragover');
+  }
+}
+
+function updateDevStatus() {
+  const total = allProjects.length;
+  const today = new Date().toLocaleDateString('zh-CN');
+  const dataEl = document.getElementById('tender-data');
+  let version = 'v24';
+  if (dataEl) {
+    try {
+      const data = JSON.parse(dataEl.textContent);
+      version = data.version || 'v24';
+    } catch (e) {
+      version = 'v24';
+    }
+  }
+  document.getElementById('dev-status-text').textContent = 
+    `${total}个项目 | ${today} | 当前版本: ${version}`;
+}
+
+// 文件拖放处理
+function initDevDropzone() {
+  const dz = document.getElementById('dev-dropzone');
+  if (!dz) return;
+  
+  ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    dz.addEventListener(eventName, preventDefaults, false);
+  });
+  
+  function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  
+  dz.addEventListener('dragenter', () => dz.classList.add('dragover'));
+  dz.addEventListener('dragleave', () => dz.classList.remove('dragover'));
+  
+  dz.addEventListener('drop', function(e) {
+    dz.classList.remove('dragover');
+    const files = Array.from(e.dataTransfer.files);
+    handleDevFiles(files);
+  });
+  
+  // 点击选择文件
+  dz.addEventListener('click', function() {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.multiple = true;
+    input.accept = '.xlsx,.xls,.doc,.docx,.png,.jpg,.jpeg,.gif,.bmp,.webp';
+    input.onchange = function() {
+      handleDevFiles(Array.from(this.files));
+    };
+    input.click();
+  });
+}
+
+function handleDevFiles(files) {
+  const allowed = ['xlsx','xls','doc','docx','png','jpg','jpeg','gif','bmp','webp'];
+  const validFiles = files.filter(f => {
+    const ext = f.name.split('.').pop().toLowerCase();
+    return allowed.includes(ext);
+  });
+  
+  if (validFiles.length === 0) {
+    alert('不支持的文件类型。仅支持: Excel, Word, 图片');
+    return;
+  }
+  
+  // 简单记录文件名和大小
+  const fileObjs = validFiles.map(f => ({
+    name: f.name,
+    size: f.size
+  }));
+  
+  devFiles = devFiles.concat(fileObjs);
+  renderDevFileList();
+}
+
+function renderDevFileList() {
+  const list = document.getElementById('dev-file-list');
+  if (!list) return;
+  
+  if (devFiles.length === 0) {
+    list.innerHTML = '<p style="color:#999; font-size:12px;">暂无文件，请拖放或点击上方区域添加</p>';
+    return;
+  }
+  
+  list.innerHTML = devFiles.map((item, i) => {
+    const icon = item.name.match(/\.(xlsx|xls)$/i) ? '📊' : 
+                 item.name.match(/\.(doc|docx)$/i) ? '📝' : '🖼️';
+    return `<div class="dev-file-item" style="display:flex; justify-content:space-between; align-items:center; padding:6px 10px; background:#f1f5f9; border-radius:6px; margin-bottom:4px; font-size:12px;">
+      <span>${icon} ${item.name} (${(item.size/1024).toFixed(1)}KB)</span>
+      <button onclick="removeDevFile(${i})" title="移除" style="background:#fee2e2; color:#dc2626; border:none; width:22px; height:22px; border-radius:50%; cursor:pointer; font-size:14px; line-height:1; padding:0;">×</button>
+    </div>`;
+  }).join('');
+}
+
+function removeDevFile(index) {
+  devFiles.splice(index, 1);
+  renderDevFileList();
+}
+
+// 添加网址
+function addDevUrl() {
+  const input = document.getElementById('dev-url-input');
+  const url = input.value.trim();
+  if (!url) return;
+  if (!url.match(/^https?:\/\//i)) {
+    alert('网址必须以 http:// 或 https:// 开头');
+    return;
+  }
+  devUrls.push(url);
+  input.value = '';
+  renderDevUrlList();
+}
+
+function renderDevUrlList() {
+  const list = document.getElementById('dev-url-list');
+  if (!list) return;
+  
+  if (devUrls.length === 0) {
+    list.innerHTML = '<p style="color:#999; font-size:12px;">暂无网址</p>';
+    return;
+  }
+  
+  list.innerHTML = devUrls.map((u, i) => 
+    `<div class="dev-url-item">
+      <span>🔗 ${u.substring(0, 60)}${u.length>60?'...':''}</span>
+      <button onclick="removeDevUrl(${i})" title="移除">×</button>
+    </div>`
+  ).join('');
+}
+
+function removeDevUrl(index) {
+  devUrls.splice(index, 1);
+  renderDevUrlList();
+}
+
+// 生成导入指令
+function generateImportCommand() {
+  const textContent = document.getElementById('dev-text-input').value.trim();
+  const operationType = document.getElementById('dev-operation-type')?.value || 'add';
+  
+  if (devFiles.length === 0 && devUrls.length === 0 && !textContent) {
+    alert('请先添加文件、网址或文字内容');
+    return;
+  }
+  
+  const now = new Date().toLocaleString('zh-CN');
+  let cmd = `=== 招标信息处理任务 ===\n生成时间: ${now}\n\n`;
+  
+  // 操作类型说明
+  const opMap = {
+    'add': '【操作】新增招标项目到看板',
+    'remove': '【操作】删除看板中的过期/无效项目',
+    'update': '【操作】修正看板中现有项目的信息',
+    'full': '【操作】全量更新（删除过期 + 新增 + 重新排序）'
+  };
+  cmd += `${opMap[operationType] || opMap['add']}\n\n`;
+  
+  // 文件部分
+  if (devFiles.length > 0) {
+    cmd += `【待上传文件清单】(${devFiles.length}个，请逐一上传)\n`;
+    devFiles.forEach((item, i) => {
+      cmd += `${i+1}. ${item.name}\n`;
+    });
+    cmd += `\n⚠️ 重要：请先在对话中上传以上所有文件，再粘贴此指令\n\n`;
+  }
+  
+  // 网址部分
+  if (devUrls.length > 0) {
+    cmd += `【待抓取网址】(${devUrls.length}个)\n`;
+    devUrls.forEach((u, i) => {
+      cmd += `${i+1}. ${u}\n`;
+    });
+    cmd += `\n`;
+  }
+  
+  // 文字部分
+  if (textContent) {
+    cmd += `【补充说明】\n${textContent}\n\n`;
+  }
+  
+  cmd += `=== 处理要求 ===\n`;
+  cmd += `1. 按 tender-daily-dispatch Skill 规则处理\n`;
+  cmd += `2. 提取有效招标项目（银行/信托/理财子公司，排除信贷/支付/行政/硬件等）\n`;
+  cmd += `3. 删除已过期项目（截止日期早于当天）\n`;
+  cmd += `4. 业务标签归类（14个标准标签）\n`;
+  cmd += `5. 按完整排序规则排序：大区从北到南→省份从北到南→公司名→投标建议→截止日期\n`;
+  cmd += `6. 生成新版本看板并部署到 https://hstender.cn/\n`;
+  cmd += `7. 更新封面数据更新时间\n`;
+  
+  document.getElementById('dev-command-output').value = cmd;
+}
+
+// 复制到剪贴板
+function copyDevCommand() {
+  const textarea = document.getElementById('dev-command-output');
+  if (!textarea.value.trim()) {
+    alert('请先生成导入指令');
+    return;
+  }
+  textarea.select();
+  document.execCommand('copy');
+  
+  const btn = document.getElementById('dev-copy-btn');
+  const original = btn.textContent;
+  btn.textContent = '✅ 已复制!';
+  btn.style.background = '#10b981';
+  setTimeout(() => {
+    btn.textContent = original;
+    btn.style.background = '';
+  }, 2000);
+}
+
+// 导出当前数据为JSON
+function exportCurrentData() {
+  const data = {
+    exportTime: new Date().toISOString(),
+    projectCount: allProjects.length,
+    projects: allProjects
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `tender_data_export_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// 清空所有
+function clearDevAll() {
+  devFiles = [];
+  devUrls = [];
+  document.getElementById('dev-text-input').value = '';
+  document.getElementById('dev-command-output').value = '';
+  renderDevFileList();
+  renderDevUrlList();
+}
+
+// 初始化开发者模式
+document.addEventListener('DOMContentLoaded', function() {
+  initDevDropzone();
+});
+</script>
+
+<!-- ==================== 开发者面板 ==================== -->
+<div id="dev-panel" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:99999; justify-content:center; align-items:center; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <div style="background:#fff; width:850px; max-width:95vw; max-height:92vh; border-radius:16px; box-shadow:0 25px 80px rgba(0,0,0,0.4); display:flex; flex-direction:column; overflow:hidden;">
+    
+    <!-- 头部 -->
+    <div style="background:linear-gradient(135deg,#0a2540 0%,#1e3a5f 100%); color:#fff; padding:18px 24px; display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <h2 style="margin:0; font-size:20px; font-weight:700;">🔧 开发者工具</h2>
+        <p style="margin:4px 0 0; font-size:12px; opacity:0.8;">仅开发者使用 | 页面输入"dev" 或 连按5次~键</p>
+      </div>
+      <button onclick="toggleDevPanel()" style="background:rgba(255,255,255,0.15); border:none; color:#fff; width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:18px; line-height:1;">×</button>
+    </div>
+    
+    <!-- 状态栏 -->
+    <div style="background:#f0f4f8; padding:10px 24px; font-size:13px; color:#475569; border-bottom:1px solid #e2e8f0;">
+      <span id="dev-status-text">加载中...</span>
+    </div>
+    
+    <!-- 内容区 -->
+    <div style="padding:20px 24px; overflow-y:auto; flex:1;">
+      
+      <!-- 操作类型选择 -->
+      <div style="margin-bottom:12px; padding:12px; background:#f0f9ff; border:1px solid #bae6fd; border-radius:8px;">
+        <label style="display:block; font-size:13px; font-weight:600; color:#0369a1; margin-bottom:6px;">🎯 操作类型</label>
+        <select id="dev-operation-type" style="width:100%; padding:10px 12px; border:1px solid #7dd3fc; border-radius:8px; font-size:13px; background:#fff; cursor:pointer;">
+          <option value="add">📥 新增招标项目到看板</option>
+          <option value="remove">🗑️ 删除看板中的过期/无效项目</option>
+          <option value="update">✏️ 修正看板中现有项目的信息</option>
+          <option value="full">🔄 全量更新（删除过期 + 新增 + 重新排序）</option>
+        </select>
+        <p style="margin:6px 0 0; font-size:11px; color:#0ea5e9;">💡 选择操作类型后，生成对应的标准化处理指令</p>
+      </div>
+      
+      <!-- 文件拖放区 -->
+      <div style="margin-bottom:16px;">
+        <label style="display:block; font-size:13px; font-weight:600; color:#334155; margin-bottom:6px;">📁 待上传文件清单（仅记录文件名，生成指令后需在对话中上传）</label>
+        <div id="dev-dropzone" style="border:2px dashed #cbd5e1; border-radius:10px; padding:28px; text-align:center; cursor:pointer; transition:all 0.2s; background:#f8fafc;">
+          <div style="font-size:32px; margin-bottom:8px;">📂</div>
+          <p style="margin:0; font-size:14px; color:#64748b;">拖放 Excel / Word / 图片 到这里</p>
+          <p style="margin:4px 0 0; font-size:12px; color:#94a3b8;">仅用于生成文件清单，实际处理需在对话中上传文件</p>
+        </div>
+        <div id="dev-file-list" style="margin-top:8px; max-height:120px; overflow-y:auto;">
+          <p style="color:#999; font-size:12px;">暂无文件</p>
+        </div>
+      </div>
+      
+      <!-- 网址输入 -->
+      <div style="margin-bottom:16px;">
+        <label style="display:block; font-size:13px; font-weight:600; color:#334155; margin-bottom:6px;">🔗 招标网址</label>
+        <div style="display:flex; gap:8px;">
+          <input type="text" id="dev-url-input" placeholder="https://..." style="flex:1; padding:10px 12px; border:1px solid #cbd5e1; border-radius:8px; font-size:13px;">
+          <button onclick="addDevUrl()" style="padding:10px 16px; background:#0a2540; color:#fff; border:none; border-radius:8px; cursor:pointer; font-size:13px; font-weight:600;">添加</button>
+        </div>
+        <div id="dev-url-list" style="margin-top:8px; max-height:80px; overflow-y:auto;">
+          <p style="color:#999; font-size:12px;">暂无网址</p>
+        </div>
+      </div>
+      
+      <!-- 文字粘贴 -->
+      <div style="margin-bottom:16px;">
+        <label style="display:block; font-size:13px; font-weight:600; color:#334155; margin-bottom:6px;">📝 文字描述 / 招标信息</label>
+        <textarea id="dev-text-input" placeholder="粘贴招标公告文字、项目描述、或任何需要处理的文字内容..." style="width:100%; height:100px; padding:10px 12px; border:1px solid #cbd5e1; border-radius:8px; font-size:13px; resize:vertical; box-sizing:border-box;"></textarea>
+      </div>
+      
+      <!-- 操作按钮 -->
+      <div style="display:flex; gap:10px; margin-bottom:16px;">
+        <button onclick="generateImportCommand()" style="flex:1; padding:12px; background:linear-gradient(135deg,#0a2540,#1e3a5f); color:#fff; border:none; border-radius:8px; cursor:pointer; font-size:14px; font-weight:700;">🚀 生成导入指令</button>
+        <button onclick="exportCurrentData()" style="padding:12px 16px; background:#f1f5f9; color:#334155; border:1px solid #cbd5e1; border-radius:8px; cursor:pointer; font-size:13px; font-weight:600;">📥 导出当前JSON</button>
+        <button onclick="clearDevAll()" style="padding:12px 16px; background:#fee2e2; color:#dc2626; border:1px solid #fecaca; border-radius:8px; cursor:pointer; font-size:13px; font-weight:600;">🗑️ 清空</button>
+      </div>
+      
+      <!-- 输出区 -->
+      <div>
+        <label style="display:block; font-size:13px; font-weight:600; color:#334155; margin-bottom:6px;">📋 生成的指令（复制后，在对话中上传文件并粘贴此指令）</label>
+        <textarea id="dev-command-output" readonly placeholder="点击"生成导入指令"后，这里会显示标准化的处理请求..." style="width:100%; height:180px; padding:10px 12px; border:1px solid #cbd5e1; border-radius:8px; font-size:12px; font-family:'SF Mono', Monaco, monospace; background:#f8fafc; resize:vertical; box-sizing:border-box;"></textarea>
+        <div style="text-align:right; margin-top:8px;">
+          <button id="dev-copy-btn" onclick="copyDevCommand()" style="padding:10px 20px; background:#0a2540; color:#fff; border:none; border-radius:8px; cursor:pointer; font-size:13px; font-weight:600;">📋 复制到剪贴板</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<style>
+#dev-dropzone.dragover {
+  border-color: #0a2540 !important;
+  background: #e0e7ff !important;
+  transform: scale(1.01);
+}
+.dev-file-item, .dev-url-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+.dev-file-item button, .dev-url-item button {
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0;
+}
+.dev-file-item button:hover, .dev-url-item button:hover {
+  background: #dc2626;
+  color: #fff;
+}
+</style>
+
+</body>
+</html>
+
+<!-- Deployed v134 at 2026-08-10 06:04:00 -->
+<!-- rebuild trigger 1784509489 -->

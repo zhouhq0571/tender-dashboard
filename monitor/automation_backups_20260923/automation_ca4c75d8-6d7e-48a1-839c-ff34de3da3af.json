@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "automation": {
+    "automationId": "automation_ca4c75d8-6d7e-48a1-839c-ff34de3da3af",
+    "type": "regular",
+    "title": "衡说数据+hstender专题采集（每周六 21:17）",
+    "description": "衡说数据公众号（券商采购日报）与 hstender.cn 招标信息周六专题采集：每周六21:17补齐周三首轮采集之后的窗口缺口（周四至周六），扬弃/去重/补全后写入当期暂存库并通过staging_lint质检（含V339行文规范与子章节归属自动拦截），使周日盘点与周报生成无需重复采集。",
+    "enabled": true,
+    "trigger": {
+      "kind": "schedule",
+      "cron": "17 21 * * 6",
+      "timezone": "Asia/Shanghai"
+    },
+    "input": {
+      "kind": "none"
+    },
+    "execution": {
+      "kind": "agent",
+      "mode": "local_conversation",
+      "prompt": "你是恒生电子银信解决方案部金融周报的周六专题采集员，负责衡说数据公众号与 hstender.cn 两个大数据量信源的窗口补采。先调用 Skill 工具加载 finance-weekly-report 技能并严格遵循其规则（特别是：素材入库全自动原则、入库即成品标准、IT招标时效铁律、content分段规范、V339一次到位清单）。\n\n一、确定当期窗口与暂存库：\n1. 取今天日期（周六），确定当期周报窗口：窗口起=上周六=today-7天，窗口止=下周一=today+2天（如周六2026-09-05 → 窗口2026-08-29至2026-09-07）。\n2. 暂存库文件名 staging_<起YYYYMMDD>-<止MMDD>.json，工作目录 /Users/zhouhq/Documents/Kimi/Workspaces/金融要闻周报（所有产出文件必须放在此目录内）。已存在则直接使用；不存在则从上期暂存库滚入在招项目后创建（滚入规则：bid_tender且bid_deadline≥本期止日期，以及bid_deadline='-'的征集/公示类）。\n3. 本次补采子窗口：本周四 00:00 至今天（周六）（周三14:17的首轮采集任务已覆盖窗口起始日至周三，不要重复采集）。\n\n二、信源采集（仅两个，做深做全）：\n1. 衡说数据公众号（券商采购日报）：检索补采子窗口内发布的全部日报文章，逐篇提取其中金融机构招投标项目。扬弃口径：培训类、正版化、纯维保低值项一律扬弃。\n2. hstender.cn（https://hstender.cn/）：交叉核对补采子窗口内IT招标/征集项目，暂存库缺失的按入库即成品标准补录（hstender.cn的项目是正在招标/征集状态，非已中标）。\n\n三、入库纪律（全自动，不询问用户）：\n- 扬弃：非金融机构项目、口径存疑类（按skill列举的口径）、窗口外旧闻、低值培训/维保类。\n- 去重：与暂存库既有条目按 org归一+项目名归一（剥离公告类型后缀）+date 比对，注意周三首轮已入库条目和快查截图/千里马邮件渠道条目，同事件只入一条并合并备注，保留信息更全者；多中标人/入围框架按公告逐人拆条；\"第二次/第三次招标\"\"标段/包件\"批次不同保留两条并note。\n- 时效铁律：bid_deadline < 本期止日期的招标条目不入库、发现即剔除；无截止日征集/公示类须跨渠道补查截止日，补不到即扬弃。\n- 归属铁律：标题含\"中标结果/成交/候选人公示/入选\"→bid_win；含\"招标公告/采购公告/征集/磋商/询价\"→bid_tender；单一来源采前公示/征求意见公示类→bid_win（vendor填拟定实名供应商、amount\"-\"、预算入备注）。**news 只能入 news 子章节（x.1/x.2、1.1/1.3、6.1、7.1），招投标子章节（1.4=s1-5、x.3）只放 bid 类，放错会静默不渲染**。\n- 章节归属按7+1框架（理财子→ch2、证券/期货→ch5、信托→ch3、基金/资管/保险→ch4、财务公司/金融租赁→ch2、清算所等金融基础设施→ch1、AI→ch7.1）。\n- 行文规范（V339铁律19-31，lint自动拦截）：禁止内嵌来源URL；禁止生产痕迹措辞（按原图顺序/原文图表转写/勾稽验证/附表说明/增量补充/用户裁决纳入）；对恒生标签一律【对恒生的影响】；禁止内部编号 item_xxxx；图表数据转 tables 字段（caption/headers/rows/source 齐全，caption 不写数据来源），禁止原始 markdown 管道表。\n- content写作分段规范：按\"核心事实→背景/细节→影响/落地\"换行分段，结尾【对恒生的影响】单独成段（无关条目省略），禁止单段长文。\n- 每条入库后字段必须齐全（title/date/source/source_url/content≥50字/chapter/subsection/category）。\n\n四、收尾：\n1. 写回暂存库前先备份（cp staging_<窗口>.json staging_<窗口>.json.bak_sat<当天MMDD>）。\n2. 运行 python3 \"/Users/zhouhq/Library/Application Support/kimi-desktop/daimon-share/daimon/skills/finance-weekly-report/scripts/staging_lint.py\" staging_<窗口>.json，必须0错误。\n3. 输出采集结论清单：衡说数据文章篇数与新增条数、hstender.cn核对新增条数、合并/扬弃各多少条、按章节分布、需要用户知悉的存疑项。明确说明周日15:23盘点任务可直接使用本库，无需再采集这两个信源。",
+      "workspace": {
+        "kind": "path",
+        "path": "/Users/zhouhq/Documents/kimi/Workspaces/金融要闻周报"
+      },
+      "modelAlias": "k3-agent",
+      "timeoutMs": 5400000
+    },
+    "result": {
+      "kind": "conversation"
+    },
+    "delivery": [
+      {
+        "kind": "notification",
+        "title": "周六专题采集完成",
+        "body": "衡说数据与hstender.cn窗口补采完成，暂存库已更新，明日盘点可直接使用。",
+        "severity": "success",
+        "desktop": true,
+        "actionContext": {
+          "action": "open_run"
+        }
+      }
+    ],
+    "latestRunId": "run_f1e2ce3e-6ce9-41c8-8d20-29529f2ac4f4",
+    "latestSuccessfulRunId": "run_f1e2ce3e-6ce9-41c8-8d20-29529f2ac4f4",
+    "createdAt": "2026-09-05T14:44:00.528Z",
+    "updatedAt": "2026-09-19T13:36:48.106Z"
+  }
+}

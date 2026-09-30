@@ -1,0 +1,856 @@
+[
+ {
+  "company": "龙江银行",
+  "project_kw": "反洗钱系统配合改造",
+  "rejected_date": "2026-08-30"
+ },
+ {
+  "company": "龙江银行",
+  "project_kw": "客服中心系统配合改造",
+  "rejected_date": "2026-08-30"
+ },
+ {
+  "company": "龙江银行",
+  "project_kw": "自助制卡设备系统配合改造",
+  "rejected_date": "2026-08-30"
+ },
+ {
+  "company": "四川银行",
+  "project_kw": "互联网系统应用安全开发测试服务",
+  "rejected_date": "2026-08-30"
+ },
+ {
+  "company": "兴业银行济南分行",
+  "project_kw": "国库支付电子化柜面系统信创迁移改造",
+  "rejected_date": "2026-08-30"
+ },
+ {
+  "company": "四川农商",
+  "project_kw": "信贷IT系统建设项目所需外部数据服务",
+  "rejected_date": "2026-08-30"
+ },
+ {
+  "company": "邮储银行",
+  "project_kw": "成都金融房产数据分析平台",
+  "rejected_date": "2026-08-30"
+ },
+ {
+  "company": "九江银行",
+  "project_kw": "智慧客服华为语音平台灾备扩容和信创改造",
+  "rejected_date": "2026-08-31"
+ },
+ {
+  "company": "浙商银行",
+  "project_kw": "反洗钱专项咨询服务",
+  "rejected_date": "2026-08-31"
+ },
+ {
+  "company": "威海银行",
+  "project_kw": "信贷智能识别系统信创建设",
+  "rejected_date": "2026-08-31"
+ },
+ {
+  "company": "中国银行甘肃省分行",
+  "project_kw": "应用开发入围",
+  "rejected_date": "2026-08-31"
+ },
+ {
+  "company": "成都银行",
+  "project_kw": "软件成份分析系统及源代码审计系统",
+  "rejected_date": "2026-08-31"
+ },
+ {
+  "company": "贵州农商",
+  "project_kw": "全面风险管理系统",
+  "rejected_date": "2026-09-01"
+ },
+ {
+  "company": "苏州农商",
+  "project_kw": "金融基础数据报送",
+  "rejected_date": "2026-09-01"
+ },
+ {
+  "company": "河北银行",
+  "project_kw": "影像平台",
+  "rejected_date": "2026-09-01"
+ },
+ {
+  "company": "湖南银行",
+  "project_kw": "IC卡系统功能新增",
+  "rejected_date": "2026-09-01"
+ },
+ {
+  "company": "广西北部湾银行",
+  "project_kw": "数字人民币2.0层核心系统项目(20260708)",
+  "rejected_date": "2026-09-01",
+  "reason": "核实后不纳入：响应文件递交2026-08-28 18:00已截止，2026-08-31官网已发布采购结果公示（成交）"
+ },
+ {
+  "company": "广西北部湾银行",
+  "project_kw": "数字人民币2.0层场景应用生态系统项目(20260709)",
+  "rejected_date": "2026-09-01",
+  "reason": "核实后不纳入：响应递交已截止，2026-08-31官网发布采购结果公示，成交供应商江苏润和软件股份有限公司"
+ },
+ {
+  "company": "广西北部湾银行",
+  "project_kw": "数字人民币2.0层支付前置系统项目(20260707)",
+  "rejected_date": "2026-09-01",
+  "reason": "核实后不纳入：磋商公告2026-08-18发布，响应文件递交截止2026年8月下旬（同批8-28），已过递交期"
+ },
+ {
+  "company": "威海银行",
+  "project_kw": "税务管理系统",
+  "rejected_date": "2026-09-02"
+ },
+ {
+  "company": "恒丰银行",
+  "project_kw": "企业微信管理系统",
+  "rejected_date": "2026-09-02"
+ },
+ {
+  "company": "上海银行",
+  "project_kw": "大数据平台国产化改造",
+  "rejected_date": "2026-09-02"
+ },
+ {
+  "company": "郑州银行",
+  "project_kw": "业务流程管理平台",
+  "rejected_date": "2026-09-02"
+ },
+ {
+  "company": "徽商银行",
+  "project_kw": "手机银行、个人网银及业务处理平台信创改造",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "天津银行",
+  "project_kw": "钓鱼邮件",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "徽银理财",
+  "project_kw": "智能化数据管控",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "青银理财",
+  "project_kw": "数据脱敏",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "齐商银行",
+  "project_kw": "数据安全治理",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "恒丰银行",
+  "project_kw": "预期信用损失",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "盛京银行",
+  "project_kw": "数据库运维管控",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "浙江农商",
+  "project_kw": "云原生核心系统监控平台维保",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "广州农商行",
+  "project_kw": "DCMM",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "潍坊银行",
+  "project_kw": "非现场监管报送",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "湖南银行",
+  "project_kw": "综合收单系统",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "天津银行",
+  "project_kw": "线上渠道实时交易反欺诈",
+  "rejected_date": "2026-09-07"
+ },
+ {
+  "company": "江苏银行",
+  "project_kw": "国产数据库服务器",
+  "rejected_date": "2026-09-08"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "统一管理驾驶舱",
+  "rejected_date": "2026-09-08"
+ },
+ {
+  "company": "徽商银行",
+  "project_kw": "信创交易型数据库",
+  "rejected_date": "2026-09-10"
+ },
+ {
+  "company": "齐鲁银行",
+  "project_kw": "实时数据采集",
+  "rejected_date": "2026-09-10"
+ },
+ {
+  "company": "吉林农商银行",
+  "project_kw": "Oracle数据库",
+  "rejected_date": "2026-09-10"
+ },
+ {
+  "company": "中国银行辽宁分行",
+  "project_kw": "TDSQL数据库维护",
+  "rejected_date": "2026-09-10"
+ },
+ {
+  "company": "嘉兴银行",
+  "project_kw": "科技型企业标识",
+  "rejected_date": "2026-09-10"
+ },
+ {
+  "company": "湖州银行",
+  "project_kw": "货币发行管理",
+  "rejected_date": "2026-09-10"
+ },
+ {
+  "company": "龙江银行",
+  "project_kw": "鸿蒙版蓝牙Key",
+  "rejected_date": "2026-09-10"
+ },
+ {
+  "company": "广东华润银行",
+  "project_kw": "加密平台系统升级单源直接采购",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "新网银行",
+  "project_kw": "新核心银行系统建设及历史数据迁移项目采购",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "新网银行",
+  "project_kw": "新综合柜面系统建设项目采购",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "新网银行",
+  "project_kw": "新中央银行会计核算数据集中系统建设项目采",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "唐山银行",
+  "project_kw": "2026-2027年度监管报送平台维护服",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "唐山银行",
+  "project_kw": "征信查询前置系统转接口查询优化项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "宁波银行",
+  "project_kw": "互金系统群",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "宁波银行",
+  "project_kw": "互金系统群",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "宁波银行",
+  "project_kw": "互金系统群",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "乐山商行",
+  "project_kw": "金融IC卡系统信创适配改造项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "唐山银行",
+  "project_kw": "大数据风险预警系统建设项目—外部数据管理",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "乐山商行",
+  "project_kw": "自助回单系统信创适配改造项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "中行苏州分行",
+  "project_kw": "苏州分行科技生产管理平台功能优化项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "中国银行",
+  "project_kw": "服务器防病毒工具信创化项目-系统安全防护",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "光大银行南昌分行",
+  "project_kw": "江西省金融联盟链节点软件产品信创改造项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "建行河北省分行",
+  "project_kw": "全省代理财政国库集中支付系统维保服务项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "长沙银行",
+  "project_kw": "远程视频银行音视频平台升级项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "东莞银行",
+  "project_kw": "新一代企业网银建设项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "贵州农商联合银行",
+  "project_kw": "需求管理系统技术交流",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "鄂尔多斯银行",
+  "project_kw": "终端数据安全加固项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "廊坊银行",
+  "project_kw": "2026大数据平台扩容项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "厦门银行",
+  "project_kw": "智能OCR识别基础平台采购项目供应商寻源",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "潍坊银行",
+  "project_kw": "信贷管理系统升级改造项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "广东南粤银行",
+  "project_kw": "主机安全防护系统建设项目供应商征集",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "青岛农商银行",
+  "project_kw": "信用卡审批模型系统2026年度优化项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "2026年财务管理平台",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "郑州银行",
+  "project_kw": "用户身份管理系统信创改造项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "齐商银行",
+  "project_kw": "应用系统维保服务采购项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "颍上农商银行",
+  "project_kw": "预付式消费管理平台建设项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "天津银行",
+  "project_kw": "云支付密码系统终端升级改造项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "天津银行",
+  "project_kw": "移动金融客户端应用软件备案认证项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "新一代授信后管理平台3.0建设项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "北京银行信用卡中心",
+  "project_kw": "TMF移动金融开发平台2026至2027",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "北京农商银行",
+  "project_kw": "反洗钱客户尽职调查体系建设咨询项目供应商",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "上海银行",
+  "project_kw": "信贷申请反欺诈",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "莱商银行",
+  "project_kw": "信贷系统配合押品管理系统建设升级改造项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "中行河南省分行",
+  "project_kw": "住房与消费金融部消费金融AI外呼外包项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "建行四川省分行",
+  "project_kw": "四川省融资信用服务平台的创新数据实验室项",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "邮储银行四川省分行",
+  "project_kw": "四川省融资信用基础服务平台及四川省金融场",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "兴业银行",
+  "project_kw": "2026-2028年智能语音处理平台三大",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "安徽省联社",
+  "project_kw": "静态数据脱敏系统采购",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "安徽省联社",
+  "project_kw": "绿色金融管理系统建设项目",
+  "rejected_date": "2026-09-13"
+ },
+ {
+  "company": "昆仑银行",
+  "project_kw": "ACS直连系统",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "浙商银行",
+  "project_kw": "代客外汇交易系统",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "辽沈银行",
+  "project_kw": "企业服务总线（ESB）系统",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "辽沈银行",
+  "project_kw": "国际结算系统及集中申报系统POC测试",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "北银理财",
+  "project_kw": "非标资产管理系统信创升级",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "北银理财",
+  "project_kw": "产品管理平台系统国产化改造",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "民生银行",
+  "project_kw": "资产估值与会计核算（FVOCI",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "保定银行",
+  "project_kw": "交易回溯系统升级改造",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "青银理财",
+  "project_kw": "数据脱敏平台",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "青银理财",
+  "project_kw": "营运人力外包",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "上银理财",
+  "project_kw": "金融数据采购",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "中原银行",
+  "project_kw": "综合理财系统重构",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "云南红塔银行",
+  "project_kw": "债券评级系统数据服务",
+  "rejected_date": "2026-09-14"
+ },
+ {
+  "company": "哈尔滨银行",
+  "project_kw": "国产化实时数据同步软件订阅",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "莱商银行",
+  "project_kw": "反洗钱黑名单全量数据服务",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "四川银行",
+  "project_kw": "数据安全应急处置评估与提升",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "统一数据底座（EDA）数仓迁移二期",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "龙江银行",
+  "project_kw": "个人手机银行和企业银行客户端检测及认证服务",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "重庆三峡银行",
+  "project_kw": "企业微信社交银行系统建设",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "苏州农商银行",
+  "project_kw": "支付系统等国产数据库扩容及维保",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "智能多维分析引擎使用许可采购",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "上海银行",
+  "project_kw": "信用卡历史库信创改造之数据迁移",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "郑州银行",
+  "project_kw": "自助分析平台信创改造",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "广西农商联合银行",
+  "project_kw": "法律法规、司法案例、行政处罚数据采购",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "中国银行湖南省分行",
+  "project_kw": "数据库及中间件现场维护服务",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "泰安银行",
+  "project_kw": "数据安全风险评估",
+  "rejected_date": "2026-09-15"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "2027年国产交易型分布式数据",
+  "rejected_date": "2026-09-16",
+  "note": "已报未确认，按用户规则默认不纳入"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "金融行业数据融合应用基础设施建",
+  "rejected_date": "2026-09-16",
+  "note": "已报未确认，按用户规则默认不纳入"
+ },
+ {
+  "company": "曲靖市商业银行",
+  "project_kw": "远程视频银行建设项目（公开招标",
+  "rejected_date": "2026-09-16",
+  "note": "已报未确认，按用户规则默认不纳入"
+ },
+ {
+  "company": "绍兴银行",
+  "project_kw": "电子银行数字证书服务采购项目（",
+  "rejected_date": "2026-09-16",
+  "note": "已报未确认，按用户规则默认不纳入"
+ },
+ {
+  "company": "嘉兴银行",
+  "project_kw": "科技型企业标识及企业AI大模型",
+  "rejected_date": "2026-09-16",
+  "note": "已报未确认，按用户规则默认不纳入"
+ },
+ {
+  "company": "青岛银行",
+  "project_kw": "信息技术应用创新专项工作支持服",
+  "rejected_date": "2026-09-16",
+  "note": "已报未确认，按用户规则默认不纳入"
+ },
+ {
+  "company": "农信银资金清算中心",
+  "project_kw": "2026年农信银网络系统建设项",
+  "rejected_date": "2026-09-17",
+  "note": "用户确认不纳入（2026-09-17）"
+ },
+ {
+  "company": "湖南银行",
+  "project_kw": "2026年基础设施专业驻场运维",
+  "rejected_date": "2026-09-17",
+  "note": "用户确认不纳入（2026-09-17）"
+ },
+ {
+  "company": "龙江银行",
+  "project_kw": "电子档案系统改造人力外包服务采购（单一来源公示）",
+  "rejected_date": "2026-09-21",
+  "note": "用户确认不纳入（单一来源已拟定银雁科技）"
+ },
+ {
+  "company": "北京农商银行",
+  "project_kw": "EAST5.0报送数据源改造项目供应商征集",
+  "rejected_date": "2026-09-22",
+  "note": "用户确认不纳入（2026-09-22 09:05）"
+ },
+ {
+  "company": "湖南银行",
+  "project_kw": "2026年线上贷款风控平台研发项目",
+  "rejected_date": "2026-09-23",
+  "note": "用户确认不纳入（2026-09-23 11:10）"
+ },
+ {
+  "company": "绍兴银行",
+  "project_kw": "绍兴市产权交易中心采购服务平台业务信息化配套项目",
+  "rejected_date": "2026-09-23",
+  "note": "用户确认不纳入（2026-09-23 11:58）"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "2026年系统运营智能运维项目",
+  "rejected_date": "2026-09-24",
+  "note": "用户当日未确认纳入"
+ },
+ {
+  "company": "金华银行",
+  "project_kw": "2026-2028年测试通用人力外包服务入围项目",
+  "rejected_date": "2026-09-24",
+  "note": "用户当日未确认纳入"
+ },
+ {
+  "company": "广东南粤银行",
+  "project_kw": "2026-2028年测试服务框架项目",
+  "rejected_date": "2026-09-24",
+  "note": "用户当日未确认纳入"
+ },
+ {
+  "company": "上海银行",
+  "project_kw": "数字人民币反电诈业务咨询项目",
+  "rejected_date": "2026-09-24",
+  "note": "用户当日未确认纳入"
+ },
+ {
+  "company": "贵州银行",
+  "project_kw": "2026年黔西南分行监控中心平台系统升级改造",
+  "rejected_date": "2026-09-24",
+  "note": "用户当日未确认纳入"
+ },
+ {
+  "company": "交通银行青海省分行",
+  "project_kw": "2026年11月-2027年10月对公协理业务外包",
+  "rejected_date": "2026-09-25",
+  "note": "用户当日未确认纳入"
+ },
+ {
+  "company": "南京银行",
+  "project_kw": "2026年度大数据数据库（Cloudera）产品许",
+  "rejected_date": "2026-09-25",
+  "note": "用户当日未确认纳入"
+ },
+ {
+  "company": "宁波银行",
+  "project_kw": "2026年安全资产平台、数据库审计及360浏览器维",
+  "rejected_date": "2026-09-25",
+  "note": "用户当日未确认纳入"
+ },
+ {
+  "company": "齐商银行",
+  "project_kw": "信创业务系统升级改造服务采购项目（二次）",
+  "rejected_date": "2026-09-25",
+  "note": "用户当日未确认纳入"
+ },
+ {
+  "company": "邮储银行浙江省分行",
+  "project_kw": "全省企业信息查询外部数据账号服务项目",
+  "rejected_date": "2026-09-25",
+  "note": "用户当日未确认纳入"
+ },
+ {
+  "company": "贵州银行",
+  "project": "2026年核心系统XC改造流量回放软件采购项目",
+  "method": "公开招标",
+  "deadline": "2026-10-08",
+  "budget": "-",
+  "tags": "信创",
+  "rec": "可关注",
+  "url": "https://www.qianlima.com/bid-634765721.html",
+  "source": "千里马订阅",
+  "status": "用户否决",
+  "note": "编号GQQY-ZB2026090074",
+  "decision_date": "2026-09-28",
+  "reason": "2026-09-28 用户决策不纳入"
+ },
+ {
+  "company": "浦发银行总行",
+  "project": "科大讯飞智能语音信创升级软件及服务人力采购项目（供应商征集）",
+  "method": "供应商征集",
+  "deadline": "2026-09-30",
+  "budget": "-",
+  "tags": "信创",
+  "rec": "可关注",
+  "url": "https://www.qianlima.com/bid-634724926.html",
+  "source": "千里马订阅",
+  "status": "用户否决",
+  "note": "报名截止09-30；指定讯飞产品，征集阶段",
+  "decision_date": "2026-09-28",
+  "reason": "2026-09-28 用户决策不纳入"
+ },
+ {
+  "company": "光大银行",
+  "project": "安全防护工具维保服务采购项目",
+  "method": "公开招标",
+  "deadline": "2026-10-10",
+  "budget": "-",
+  "tags": "运维服务",
+  "rec": "可关注",
+  "url": "https://www.qianlima.com/bid-634726413.html",
+  "source": "千里马订阅",
+  "status": "用户否决",
+  "note": "编号THTC-GD26047",
+  "decision_date": "2026-09-28",
+  "reason": "2026-09-28 用户决策不纳入"
+ },
+ {
+  "company": "北京银行",
+  "project": "2026-2029年企业手机银行资讯数据采购项目",
+  "method": "竞争性磋商",
+  "deadline": "2026-10-15",
+  "budget": "49.8万元",
+  "tags": "数据服务",
+  "rec": "可关注",
+  "url": "https://www.qianlima.com/bid-634919293.html",
+  "source": "千里马订阅",
+  "status": "用户否决",
+  "note": "编号0773-2640GNOCFWCS2065",
+  "decision_date": "2026-09-29",
+  "reason": "2026-09-29 用户决策不纳入"
+ },
+ {
+  "company": "北京银行石家庄分行",
+  "project": "数据库授权采购项目",
+  "method": "竞争性磋商",
+  "deadline": "2026-10-13",
+  "budget": "39万元",
+  "tags": "其他",
+  "rec": "可关注",
+  "url": "https://www.qianlima.com/bid-634921957.html",
+  "source": "千里马订阅",
+  "status": "用户否决",
+  "note": "编号CITCC-BJYH2026002；数据库授权产品采购",
+  "decision_date": "2026-09-29",
+  "reason": "2026-09-29 用户决策不纳入"
+ },
+ {
+  "company": "内蒙古农商银行",
+  "project_kw": "反诈风控综合管理平台建设项目",
+  "project": "反诈风控综合管理平台建设项目",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 06:59决策不纳入"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "2026年元数据治理建设项目-",
+  "project": "2026年元数据治理建设项目-数据脱敏系统项目",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 06:59决策不纳入"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "2026年智策系统数据治理与智",
+  "project": "2026年智策系统数据治理与智能化建设项目",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 06:59决策不纳入；原投标建议\"建议投标\"用户改判\"可关注\"后仍否决"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "产品360理财渠道能力输出项目",
+  "project": "产品360理财渠道能力输出项目",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 06:59决策不纳入"
+ },
+ {
+  "company": "中信信托",
+  "project_kw": "年金业务资讯数据及信用数据库服",
+  "project": "年金业务资讯数据及信用数据库服务（2026-2028年）采购项目【三次】",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 06:59决策不纳入"
+ },
+ {
+  "company": "光大银行",
+  "project_kw": "财富管理开放生态运营-手机银行",
+  "project": "财富管理开放生态运营-手机银行体验升级与AI资配助手运营推广项目",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 06:59决策不纳入"
+ },
+ {
+  "company": "光大银行",
+  "project_kw": "财富管理开放生态运营-代理业务",
+  "project": "财富管理开放生态运营-代理业务数字化营销与分行赋能项目",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 06:59决策不纳入"
+ },
+ {
+  "company": "青岛农商银行",
+  "project_kw": "数据平台类系统（一表通）202",
+  "project": "数据平台类系统（一表通）2026年开发服务外包项目",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 06:59决策不纳入"
+ },
+ {
+  "company": "辽沈银行",
+  "project_kw": "新一代科技系统建设数据脱敏平台",
+  "project": "新一代科技系统建设数据脱敏平台项目",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 06:59决策不纳入"
+ },
+ {
+  "company": "蒙商银行",
+  "project_kw": "2026年反洗钱监控名单数据服",
+  "project": "2026年反洗钱监控名单数据服务项目【二次】（第1包）",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 06:59决策不纳入"
+ },
+ {
+  "company": "常熟农商银行",
+  "project_kw": "数据中台数据底座系统维保服务项",
+  "project": "数据中台数据底座系统维保服务项目",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 07:14决策不纳入"
+ },
+ {
+  "company": "贵州银行",
+  "project_kw": "数据处理服务采购项目（企业发票",
+  "project": "数据处理服务采购项目（企业发票数据）供应商征集",
+  "rejected_date": "2026-09-30",
+  "note": "用户9-30 07:14决策不纳入"
+ }
+]

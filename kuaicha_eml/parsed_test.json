@@ -1,0 +1,36 @@
+{
+ "email_subject": "【快查】招投标标讯订阅：2026年09月22日",
+ "feeds": [
+  {
+   "name": "银信财富资管标讯",
+   "total": 1
+  }
+ ],
+ "extracted": 1,
+ "dup_within_email": 0,
+ "keep_new": [],
+ "review": [],
+ "keep_dup": [],
+ "discarded": [
+  {
+   "feed": "银信财富资管标讯",
+   "feed_total": 1,
+   "region": "四川省-成都市-锦江区",
+   "title": "成都交子数字金融投资集团有限公司医疗卫生信息化接口服务项目(第二次)比选公告",
+   "date": "2026-09-21",
+   "link": "https://kuaicha.10jqka.com.cn/yuqingwebapp/yuqingapp/#/companyDetail/bid/mail?sourceFrom=ztbxq&new=1&urlId=ccgp_ygcgw_rjfl_4f5e9b5e7ed777a50a871ef7aa47b5b0",
+   "src": "kuaicha",
+   "inst": "待判",
+   "scope": "border",
+   "stage": "in_progress",
+   "it": true,
+   "keep": false,
+   "review": false,
+   "org": "",
+   "dup": null
+  }
+ ],
+ "stats": {
+  "银信财富资管标讯|border|in_progress|True": 1
+ }
+}

@@ -1,0 +1,568 @@
+{
+ "run_at": "2026-09-22 06:04:04",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 10
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 9,
+   "new_count": 9
+  },
+  {
+   "name": "甘肃经济信息网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 33,
+   "new_count": 32
+  },
+  {
+   "name": "阳光采购服务平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 53,
+   "new_count": 30
+  },
+  {
+   "name": "九江银行招标采购",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "http": 403,
+   "action": "转搜索引擎快照模式（site:https://www.jycbank.com/jjccb/zbcg/ after:昨日）"
+  },
+  {
+   "name": "宁波国际投资咨询",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 0,
+   "new_count": 0,
+   "note": "首次运行，仅建立指纹基线，不输出新增"
+  },
+  {
+   "name": "广西北部湾银行采购公告",
+   "mode": "search",
+   "status": "search_mode",
+   "note": "瑞数WAF 412，直连不可行，仅搜索快照"
+  },
+  {
+   "name": "四川采购网",
+   "mode": "search",
+   "status": "search_mode",
+   "note": "详情页403，仅搜索快照"
+  },
+  {
+   "name": "苏州农商官网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 5,
+   "new_count": 1
+  },
+  {
+   "name": "黄河农商银行官网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 4,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "服务 黑龙江省铁路集团道口智能化安全提升项目可行性研究报告评审-询比采购公告 发布日期：2026-09-21 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/874631.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 南京市浦口人民医院锅炉维保项目-询价采购公告 发布日期：2026-09-21 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/874630.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 四川海同涉核工作区安全保卫服务-谈判采购公告 发布日期：2026-09-21 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/874616.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 时空公司品牌文创品设计与制作-比选公告 发布日期：2026-09-21 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/874604.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 洛阳市机关事务管理局洛阳市市直机关社会化服务用车租赁项目-征集公告 发布日期：2026-09-21 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/874603.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 模型VV&A工具1.0及仿真主控界面开发服务-公开招标公告 发布日期：2026-09-21 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/874588.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 新疆昌源水务集团有限公司文印服务项目-询比采购公告 发布日期：2026-09-21 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/874587.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 分析与评估平台集成开发-公开招标公告 发布日期：2026-09-21 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/874585.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 GBOM子系统开发服务-公开招标公告 发布日期：2026-09-21 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/874583.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 西安市第六十六中学小卖部预包装食品供应商服务-竞争性磋商公告 发布日期：2026-09-21 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/874575.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "海门农商银行2026-2027年度收单业务服务外包项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202609/21222320.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "光大银行人工智能算力网络交换机设备及配件选型入围项目中标结果公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202609/21181802.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "兴业银行泉州分行与合作收单机构开展营销合作采购项目结果公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202609/21180749.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "鹿路通融合支付平台二期建设项目公开招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202609/21180554.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "上饶银行新核心项目群统一支付平台项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202609/21180408.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "兴业银行郑州分行收单非核心业务外包服务商采购项目中标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202609/21180230.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "羊城通穗好办数字人民币支付技术对接服务项目直接采购结果公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202609/21180108.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "广西北部湾银行手机银行大模型革新项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202609/21111619.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "北京农商银行EAST5.0报送数据源改造项目供应商征集",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202609/21111428.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "岷县2026年防灾减灾监测预警能力提升项目公开招标公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1336/2026-09-21/content-703805.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "陇南市武都区2026年度非国有林生态保护修复补偿林业有害生物防治项目 公开招标公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1336/2026-09-21/content-703799.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "渭源县供排水有限责任公司水处理药品年度人围供应商公开招标项目招标公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1336/2026-09-21/content-703795.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃省烟草公司武威市公司物流中心基础设施维修项目招标公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1336/2026-09-21/content-703790.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "天水市麦积区区府路小学校服采购项目公开招标公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1336/2026-09-21/content-703786.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "天水市麦积区龙园中学校服采购项目公开招标公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1336/2026-09-21/content-703785.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃电投大容电力有限责任公司 大立节水电站库区右岸塌岸治理项目中标候选人公示",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1337/2026-09-21/content-703806.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "平凉海关综合实验楼配电线路隐患整改项目成交结果公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1337/2026-09-21/content-703798.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "张掖市分公司冷鲜牛羊肉泡沫箱采购项目成交公示",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1337/2026-09-21/content-703796.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "翠湖公园监控、声控系统及防汛应急指挥室提升改造工程中标候选人公示",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1337/2026-09-21/content-703794.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "康乐县人民医院2026-2027年度一期住院部及内镜介入中心电梯维保及年检服务（二次）成交公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1337/2026-09-21/content-703788.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃消防救援机动总队应急科普体验馆建设项目 中标公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1337/2026-09-21/content-703787.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "黄河财产保险股份有限公司2026年网络安全服务项目 竞争性磋商公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1662/2026-09-21/content-703804.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃基础工程勘察设计研究院有限公司车辆保险服务机构遴选项目竞争性磋商公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1662/2026-09-21/content-703803.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "黄河财产保险股份有限公司2026年信创基础设备采购项目（二次）竞争性磋商公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1662/2026-09-21/content-703802.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃省地质矿产勘查开发局第四地质矿产勘查院及代管企业法律服务机构遴选项目竞争性磋商公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1662/2026-09-21/content-703800.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃省地质矿产勘查开发局第四地质矿产勘查院及代管企业造价咨询业务服务机构遴选项目竞争性磋商公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1662/2026-09-21/content-703789.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃政法大学新区校区2#学生食堂建设项目初步设计审查项目（二次）竞争性磋商公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1662/2026-09-21/content-703783.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃工业职业技术大学无人机专业教师实践能力提升项目竞争性磋商公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1662/2026-09-21/content-703782.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃农业职业技术学院校园身份互联认证平台建设项目更正公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1657/2026-09-21/content-703784.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "兰州大学第一医院（第一临床医学院）妇科多元聚焦二氧化碳激光治疗机采购项目更正公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1657/2026-09-21/content-703780.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "兰州大学第一医院（第一临床医学院）眼科器械一批项目更正公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1657/2026-09-21/content-703728.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃省兰州新桥监狱维修改造项目采购监理单位项目更正公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1657/2026-09-21/content-703718.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "兰州大学第二医院（第二临床医学院）准分子全飞秒手术平台维保项目更正公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1657/2026-09-21/content-703707.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "白银有色集团股份有限公司采购中心六公里炸药库迁建项目水土保持方案中标候选人公示（更正公示）",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1657/2026-09-21/content-703673.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "兰州战役纪念馆纪念中国工农红军长征胜利90周年主题展览项目-更正公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1657/2026-09-21/content-703610.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "2024年肃州区银达镇明沙窝农村公路建设项目支线一机械设备作业计件采购终止公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1656/2026-09-21/content-703793.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "康乐县人民医院更换急诊医学科等科室UPS电源主机及蓄电池项目废标公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1656/2026-09-21/content-703792.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "兰州大学第一医院（第一临床医学院）乳腺活检与旋切系统(带耗材)项目废标公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1656/2026-09-21/content-703727.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃药业集团陇神中药材有限公司甘肃药业集团中药饮片生产提升改扩建项目产地片加工设备采购 流标公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1656/2026-09-21/content-703691.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃省体育工作第二大队医疗器械采购项目废标公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1656/2026-09-21/content-703681.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "甘肃金泰化工有限公司危废处置 一次终止公告",
+   "date": "2026-09-21",
+   "url": "https://www.gsei.com.cn/html/1656/2026-09-21/content-703625.html",
+   "source": "甘肃经济信息网"
+  },
+  {
+   "title": "关于阳光采购服务平台系统更新的通知",
+   "date": "2026-09-21",
+   "url": "https://mp.weixin.qq.com/s/J9G1nuvjzg2VREivOBU1qA",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "外委转入凿岩台车、锚杆台车大修—X-218、X-215锚杆台车大修中标结果公示",
+   "date": "2026-09-22",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001004/20260921/a5f23717-c9af-49d6-82c5-03d332fa6b8b.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "东营港25万吨级原油进口泊位及配套工程增压平台尾项施工中标结果公示",
+   "date": "2026-09-22",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001004/20260921/c9a4dcfa-1358-4b41-b30f-9008ce9fba9b.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "山东省机场管理集团资产卡片基础数据整理第三方服务单位选聘成交结果公示",
+   "date": "2026-09-22",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002003/20260921/370768aa-916e-4cb1-b5b7-b6949453737d.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "东营港25万吨级原油进口泊位及配套工程海底管道海水置换、基线检测及预调试服务中标结果公示",
+   "date": "2026-09-22",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001004/20260921/ec36b1a0-cae3-4e05-93ef-c85201a4aaba.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "恒丰银行2026年数据中心SSL设备购置项目竞争性磋商公告",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002001/20260921/9725b895-08e7-42dd-8ffe-854d9aa8cd19.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "恒丰银行抵押物投保财产保险服务项目[更正公告]",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002002/20260921/2d84b69f-c4b0-4a21-a853-c64c38011e6b.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "新疆展博智谷金属新能源新材料智造园（一期）综合楼商品混凝土材料采购项目项目公告",
+   "date": "2026-09-22",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002001/20260921/e5142d3b-54fb-48a3-980c-80e40db9cc35.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "新疆展博智谷金属新能源新材料智造园（一期）钢结构厂房商品混凝土材料采购项目项目公告",
+   "date": "2026-09-22",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002001/20260921/3f2fdf0d-a8a1-4d04-82f3-d8827dbab2a0.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "齐鲁高速（山东）装配有限公司钦防产业协作园区疏港道路排水提升工程劳务采购直接采购公告",
+   "date": "2026-09-22",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002001/20260921/c50086e7-c621-4d69-8ea7-63d1b3314edb.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "（山东黄金集团）山东黄金矿业（莱州）有限公司焦家金矿3000KW柴油发电机组（九）采购招标公告",
+   "date": "2026-09-22",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001001/20260921/a14807268b79432c8898f3b5e6a84192.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "综合交通管理系统技术开发服务履约采购项目谈判采购公告",
+   "date": "2026-09-22",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002001/20260921/a6ab20be-6ffd-43de-852b-1b233704033e.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "内蒙古先导光电科技有限公司光学材料产业化项目工程+土方、安全文明工程-新变更公告",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002002/20260921/49626830-eb91-439b-8597-8c0643a653c9.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "山东港口日照港岚山港区30万吨级原油码头三期配套罐区工程-新建消防站配套装备器材及个人防护用品采购项目",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001002/20260921/26180cfa-1092-4496-b645-da2ba628493e.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "烟台市市政公用养护建设集团有限公司市区道路护栏采购招标公告[更正公告]",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001002/20260921/59295f1c-1a04-4715-800e-afd541cb86aa.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "内蒙古佰惠生新农业科技股份有限公司甜菜运输服务采购项目询价采购（标准版）公告",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002002/20260921/e3c0682b-f09f-4f3c-876c-778b54a9335f.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "内蒙古佰惠生新农业科技股份有限公司甜菜收购机械作业服务采购项目询价采购（标准版）公告",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002002/20260921/4b26c42c-9f64-4b8f-b36e-8ab5248ec85f.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "牟平港码头及配套提升改造项目全过程咨询（含监理）服务中标候选人公示",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001003/20260921/5866821a-8fc5-4b35-ab80-e64e4e70f190.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "烟台市市政公用养护建设集团有限公司市区道路护栏采购中标候选人公示",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001003/20260921/bf7d1114-a86b-4fa4-b231-4f918436e039.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "威海银行股份有限公司态势感知系统原厂维保项目中标候选人公示",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001003/20260921/d69ba5d4-e043-46c9-8a13-b402ccb2f7a1.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "福山区中心城区管网改造提升工程-福山区排水管网缺陷修复工程（一期）监理中标候选人公示",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001003/20260921/49a9dc4c-f794-45fc-8a28-b5ddea196c18.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "威海银行股份有限公司业务网安全管理系统原厂维保项目.中标候选人公示",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001003/20260921/23ac2142-6dff-4260-94a8-98b85aefb228.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "威海银行股份有限公司超融合和桌面云维保项目中标候选人公示",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001003/20260921/11a6e08d-88ba-4156-9a8f-2cdae6d7bb7d.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "山东港口职教集团青岛港湾学院船舶与海洋工程产教融合实训基地项目建议书与可研报告编制采购项目成交结果公告",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002003/20260921/ebbe9ed8-d81d-4096-945d-5d4227677cc1.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "北京某项目-交换系统系统软件、法人库系统软件和应用软件维保服务采购（INC2026070900010）中标公示",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002003/20260921/3f14c52c-dbff-45e9-9764-23ec18de902d.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "山东鲁银新材料科技有限公司高松比特优氧化铁皮采购项目507竞价采购公告",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002004/20260921/09d73ae6-0426-494c-84cd-d94f7cd2f9df.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "山东鲁银新材料科技有限公司高松比优质氧化铁皮采购项目506竞价采购公告",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001002/001002004/20260921/0a67de71-bf83-4f8d-b011-905390c58bbe.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "威海银行股份有限公司第三方债券投资信用风险管理技术服务（二次）废标公告",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001005/20260921/3da02211-8154-4eb5-ac3f-cc968ace206a.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "新疆伊宁县金山金矿水文地质、岩土工程地质勘察终止公告",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001005/20260921/3b90a4dc-4c3c-4444-8b07-ce0df0540a63.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "烟台业达建工有限公司四平路（滨河南路-八角中心大街）道路工程、华海保险规划路工程施工、文化综合体项目-全域旅游基础设施提升工程-郑州路（开封路-疏港高速）道路工程—沥青上面层材料采购废标公告",
+   "date": "2026-09-21",
+   "url": "http://www.ygcgfw.com/gggs/001001/001001005/20260921/3734a121-7792-4fae-9cd7-de0750c80b60.html",
+   "source": "阳光采购服务平台"
+  },
+  {
+   "title": "▪ 江苏苏州农村商业银行股份有限公司关于全行财产一切险及公众责任险的采购项目招标公告",
+   "date": "2026-09-21",
+   "url": "https://www.szrcb.com/szrcb/2026-09/21/article_2026092109200085850.shtml",
+   "source": "苏州农商官网"
+  }
+ ]
+}

@@ -95,17 +95,6 @@ elif [ "$HOUR" -ge 18 ] && [ "$HOUR" -lt 20 ]; then
 else
     TIME_PERIOD="晚上"
 fi
-if [ "$HOUR" -ge 0 ] && [ "$HOUR" -lt 6 ]; then
-    TIME_PERIOD="凌晨"
-elif [ "$HOUR" -ge 6 ] && [ "$HOUR" -lt 12 ]; then
-    TIME_PERIOD="上午"
-elif [ "$HOUR" -ge 12 ] && [ "$HOUR" -lt 14 ]; then
-    TIME_PERIOD="中午"
-elif [ "$HOUR" -ge 14 ] && [ "$HOUR" -lt 18 ]; then
-    TIME_PERIOD="下午"
-else
-    TIME_PERIOD="傍晚"
-fi
 
 info "  系统时间: ${DATE_STR} ${TIME_PERIOD} (${HOUR}:00)"
 
@@ -117,7 +106,7 @@ with open('index.html', 'r', encoding='utf-8') as f:
 match = re.search(r'<script type=\"application/json\" id=\"tender-data\">(.*?)</script>', html, re.DOTALL)
 if not match:
     sys.exit(1)
-data = json.loads(match.group(1))
+data = json.loads(match.group(1), strict=False)
 old_date = data.get('date', '')
 old_time = data.get('timePeriod', '')
 new_date = '${DATE_STR}'
@@ -139,25 +128,18 @@ python3 -c "
 import re, sys
 with open('index.html', 'r', encoding='utf-8') as f:
     html = f.read()
-old_pattern = r'数据更新时间：[^<]+?'
-# 替换封面
-cover_match = re.search(r'(id=\"cover-update-time\">)([^<]+)', html)
-if cover_match:
-    old_cover = cover_match.group(2)
-    new_cover = '数据更新时间：${DATE_STR} ${TIME_PERIOD}'
-    if old_cover != new_cover:
-        html = html.replace(old_cover, new_cover, 1)
-        print(f'Cover updated: {old_cover} -> {new_cover}')
-# 替换封底
-footer_match = re.search(r'(id=\"footer-update-time\">)([^<]+)', html)
-if footer_match:
-    old_footer = footer_match.group(2)
-    new_footer = '${DATE_STR} ${TIME_PERIOD}'
-    if old_footer != new_footer:
-        html = html.replace(old_footer, new_footer, 1)
-        print(f'Footer updated: {old_footer} -> {new_footer}')
+# ★★★ 修复（2026-07-18）：锚定元素 id 替换，禁止用裸文本 html.replace(old, new, 1)（会误改全文首个匹配，导致封面/封底格式互串）
+new_cover = '数据更新时间：${DATE_STR} ${TIME_PERIOD}'
+new_footer = '${DATE_STR} ${TIME_PERIOD}'
+html, n_cover = re.subn(r'(id=\"cover-update-time\">)[^<]*', lambda m: m.group(1) + new_cover, html, count=1)
+html, n_footer = re.subn(r'(id=\"footer-update-time\">)[^<]*', lambda m: m.group(1) + new_footer, html, count=1)
+if n_cover == 0 or n_footer == 0:
+    print('ERROR: 未找到 cover-update-time 或 footer-update-time 元素', file=sys.stderr)
+    sys.exit(1)
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html)
+print(f'Cover set: {new_cover}')
+print(f'Footer set: {new_footer}')
 " || error "Python 时间替换失败"
 
 ok "时间更新完成: ${DATE_STR} ${TIME_PERIOD}"
@@ -174,7 +156,7 @@ with open('index.html', 'r', encoding='utf-8') as f:
     html = f.read()
 match = re.search(r'<script type=\"application/json\" id=\"tender-data\">(.*?)</script>', html, re.DOTALL)
 if match:
-    data = json.loads(match.group(1))
+    data = json.loads(match.group(1), strict=False)
     print(len(data.get('projects', [])))
 else:
     print(0)
@@ -202,6 +184,53 @@ if [ -z "$TIME_PERIOD" ]; then
 fi
 
 ok "index.html 验证通过: ${PROJECT_COUNT} 个项目, 版本=${VERSION}, 日期=${DATE} ${TIME_PERIOD}"
+
+# ---------- 步骤 3.5：HTML 结构完整性校验（★★★ 2026-07-26 新增，防 V110 缺 </div> 事故） ----------
+info ""
+info "步骤 3.5: 校验 HTML 标签闭合完整性..."
+
+python3 -c "
+import sys
+from html.parser import HTMLParser
+
+VOID = {'br','input','img','meta','link','hr','area','base','col','embed','source','track','wbr'}
+
+class Checker(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack = []
+        self.errors = []
+    def handle_starttag(self, tag, attrs):
+        if tag in VOID: return
+        self.stack.append((tag, self.getpos()))
+    def handle_endtag(self, tag):
+        if tag in VOID: return
+        if self.stack and self.stack[-1][0] == tag:
+            self.stack.pop()
+        else:
+            names = [t for t,_ in self.stack]
+            if tag in names:
+                while self.stack and self.stack[-1][0] != tag:
+                    self.errors.append('unclosed <%s> opened at line %s, implicitly closed by </%s> at line %s' % (self.stack[-1][0], self.stack[-1][1][0], tag, self.getpos()[0]))
+                    self.stack.pop()
+                self.stack.pop()
+            else:
+                self.errors.append('stray </%s> at line %s' % (tag, self.getpos()[0]))
+
+with open('index.html', 'r', encoding='utf-8') as f:
+    html = f.read()
+c = Checker()
+c.feed(html)
+if c.errors or c.stack:
+    for e in c.errors[:5]:
+        print('HTML ERROR: ' + e, file=sys.stderr)
+    for t, pos in c.stack[:5]:
+        print('HTML ERROR: unclosed <%s> opened at line %s' % (t, pos[0]), file=sys.stderr)
+    sys.exit(1)
+print('HTML structure OK: all tags balanced')
+" || error "HTML 结构校验失败（存在未闭合标签），已中止部署。请修复后重新执行 deploy.sh"
+
+ok "HTML 结构校验通过"
 
 # ---------- 步骤 4：检查封面/封底时间一致性 ----------
 info ""

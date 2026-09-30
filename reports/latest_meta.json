@@ -1,9 +1,17 @@
 {
- "version": "v280",
+ "version": "v281",
  "date": "2026年09月30日",
  "timePeriod": "上午",
- "total": 72,
+ "total": 74,
  "added": [
+  {
+   "company": "北京农商银行",
+   "project": "智能体平台建设项目（供应商征集）",
+   "deadline": "2026-10-08",
+   "tags": [
+    "大模型应用"
+   ]
+  },
   {
    "company": "北京银行",
    "project": "2026年智策系统数据治理与智能化建设项目",
@@ -67,5 +75,5 @@
  "candidates": 0,
  "pending_fill_count": 0,
  "filled_recent": [],
- "other_note": "09-30 信息来源归一化（v280）：存量 10 条别名归并（千里马订阅×8→千里马招标网、银行科技研究社（微信公众号）×2→（公众号）），线上 source 取值 8→6 种；config.SOURCE_ALIASES+normalize_source() 落地，validate_new_projects 与 safe_deploy 步骤2 双重硬检（source 含订阅/（微信公众号）/千里马招标网（ 即拦截），实测别名被拦、规范值放行；tools/source_stats.py 口径同步统一；SKILL.md source 强制规则与定时任务 prompt【其他红线】均已补条款并确认持久化。此前：09-30 招标方式归一化：看板存量6条非标准值归并，线上 method 取值 10→7（九种标准值内）；四道硬检（validator/safe_deploy/stage_items/staging_lint）已上线；周报暂存库135条清洗（25→9种）、lint 错误0/警告362 达标、item_0948金额修复；候选14条已两轮闭环（纳入7/否决7）；标已截止5条；v275因JSON日期未刷新已废弃；抽检3条无错配；暂缓2条；公众号主动发现未执行；09-29遗留6条候选已处理无重报"
+ "other_note": "09-30 比选口径调整：看板招标方式枚举 9→10 种新增\"比选采购\"（config/validator/safe_deploy/SKILL.md/定时任务prompt 全量同步，比选采购放行、裸\"比选\"拦截）；周报口径保留\"比选\"原词（stage_items 映射回退、staging_lint 白名单加比选/比选采购、extract_bids/qlm_origin_fill 同口径，lint 错误0警告80达标）；活跃暂存库无比选条目被误改无需回退（唯一历史条目 item_1137 已无截止日期入 discarded）；本次仅规则层变更未部署。此前：11:4x 北京农商银行智能体平台（供应商征集，截止10-08）用户确认纳入，v281 74项；信息来源归一化 v280（千里马订阅×8/微信公众号×2 归并，8→6种，双闸硬检）；招标方式归一化（method 10→7种，四道硬检）；候选14条两轮闭环；09-29遗留6条已处理"
 }

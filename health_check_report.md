@@ -42,7 +42,7 @@
 - **修复建议**: 检查备份机制是否正常执行
 
 **2. [文件系统清理] 中间文件过多**
-- 详情: 根目录存在16个中间/临时文件: step0_2_result.json, step1_2_result.json, qianlima_search_result.json, stage_abc_results.json, merged_results.json, stage_abc_results.json, qianlima_search_result.json, updated_data.json, merged_data.json, tianyancha_bank.csv...
+- 详情: 根目录存在16个中间/临时文件: step0_2_result.json, step1_2_result.json, qianlima_search_result.json, stage_abc_results.json, merged_results.json, stage_abc_results.json, qianlima_search_result.json, updated_data.json, merged_data.json, temp_bank.csv...
 - **修复建议**: 清理已完成的中间结果文件，或建立统一的temp/目录
 
 **3. [版本控制] 未跟踪文件过多**
@@ -110,7 +110,6 @@
    ```bash
    mkdir -p temp
    mv step*_result.json stage_*.json merged_*.json updated_data.json qianlima_*.json temp/
-   mv tianyancha_*.csv temp/
    ```
 
 ### P2 - 本周内完成

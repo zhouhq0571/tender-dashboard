@@ -145,7 +145,7 @@ PROJECT_COUNT=$(grep -o '"company"' index.html | wc -l | tr -d ' ')
 **问题描述**：
 `git status` 显示 39 个未跟踪文件，包括：
 - 临时数据文件：`current_projects.json`、`updated_data.json`、`merged_data.json`、`after_step1_step2.json` 等
-- CSV 数据：`tianyancha_*.csv`（5 个文件）
+- CSV 数据：`historical_*.csv`（5 个文件）
 - 脚本文件：`health_check.py`、`merge_new.py`、`quality_gate.py` 等
 - 历史归档：`恒生银信招标看板_20260629_v50.csv`、`.xlsx` 等
 

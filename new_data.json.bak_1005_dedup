@@ -80,6 +80,26 @@
    "source": "千里马招标网"
   },
   {
+   "id": 4,
+   "region": "华北",
+   "province": "内蒙古",
+   "company": "蒙商银行",
+   "project": "2026年资产托管系统维保服务项目（竞争性磋商）",
+   "overview": "资产托管系统维保服务，竞争性磋商。",
+   "budget": "-",
+   "deadline": "2026-09-29",
+   "method": "竞争性磋商",
+   "contact": "-",
+   "tags": [
+    "资产托管",
+    "运维服务"
+   ],
+   "rec": "☆☆☆ 已截止",
+   "url": "https://www.qianlima.com/bid-631252568.html",
+   "source": "千里马招标网",
+   "date": "2026-09-16"
+  },
+  {
    "id": 5,
    "region": "华北",
    "province": "北京",

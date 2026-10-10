@@ -1,0 +1,76 @@
+{
+ "run_at": "20261010_1141",
+ "sources": [
+  {
+   "name": "龙集采-供应商征集",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 3
+  },
+  {
+   "name": "龙集采-招标专区",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 3
+  },
+  {
+   "name": "龙集采-采购动态",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 2,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国建设银行淄博分行上缴人行现金清分整点外包服务项目供应商征集公告",
+   "deadline": "2026-10-15",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-10"
+  },
+  {
+   "title": "中国建设银行湖北分行黄冈市中心医院“智慧医院”项目医保移动支付改造以及床旁结算开发项目征集公告",
+   "deadline": "2026-10-15",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-10"
+  },
+  {
+   "title": "中国建设银行廊坊分行采购贝壳平台相关数据项目供应商征集公告",
+   "deadline": "2026-10-17",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-10"
+  },
+  {
+   "title": "中国建设银行股份有限公司四川省分行四川省人民医院病案自助缴费系统项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-09"
+  },
+  {
+   "title": "中国建设银行海南省分行万宁、陵水、东方、乐东、保亭、五指山6家支行委托守押服务外包项目公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-09"
+  },
+  {
+   "title": "天津市人民医院医健通项目运维服务及宁河支行业务延伸项目公开招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-09"
+  }
+ ]
+}

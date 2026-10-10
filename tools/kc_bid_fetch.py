@@ -42,12 +42,11 @@ STAGE_DROP = re.compile(r"结果公示|结果公告|中标|成交公告|废标|�
 # 每日查询组（title 关键词 × 机构词由预筛承担，控制 API 调用次数）
 QUERY_GROUPS = [
     {"title": "数据", "tender_names": "银行"},
-    {"title": "系统", "tender_names": "银行"},
     {"title": "大模型", "tender_names": "银行"},
-    {"title": "智能", "tender_names": "信托"},
-    {"title": "数据", "tender_names": "理财"},
     {"title": "信创", "tender_names": "银行"},
 ]
+# 2026-10-10 晚额度止血：账户 MCP 与 Skill 池仅剩 137 次，6组→3组（月耗约66次）。
+# 迁移标准 API（独立额度）后恢复 6 组。
 
 
 def api_call(payload):

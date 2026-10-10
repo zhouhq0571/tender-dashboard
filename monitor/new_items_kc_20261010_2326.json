@@ -1,0 +1,133 @@
+{
+ "run_at": "20261010_2326",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 4
+  },
+  {
+   "name": "快查-系统×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 1
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 7
+  },
+  {
+   "name": "快查-智能×信托",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-数据×理财",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国进出口银行2026-2028年支付结算领域信息技术服务项目-国结电票招标公告",
+   "date": "2026-10-10",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行2026年新租赁准则核算管理系统优化项目竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-15",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "唐山银行云平台生产环境B包网络设备采购（唐山银行股份有限公司）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-15",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "华夏银行股份有限公司内评相关系统改造项目(第二次)竞争性磋商公告",
+   "date": "2026-10-10",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "云南省福利彩票发行中心2026年全国销售统一系统测试服务项目采购的公开招标公告",
+   "date": "2026-10-10",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "招商银行贵安云数据中心产业园项目场地平整工程项目(二次)招标公告（招商银行股份有限公司）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-25",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "遂宁银行关于日志管理平台系统改造项目比选的公告（遂宁银行股份有限公司）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-13",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "广发银行总行\"移动开发平台基础应用维保服务与驻场运维服务采购\"的采购公告（广发银行股份有限公司）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-17",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "浙江省分行本部软硬件技术支持驻场外包服务采购项目公告（交通银行股份有限公司浙江省分行）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-19",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "2026年贵阳银行基础软件平台维保的公开招标公告（贵阳银行股份有限公司）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "宁波银行2026年数据中心CQC认证服务项目招标公告（宁波银行股份有限公司）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中原银行股份有限公司手机银行及企业微信财富资讯项目(二次)竞争性磋商公告",
+   "date": "2026-10-10",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  }
+ ]
+}

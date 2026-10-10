@@ -928,5 +928,90 @@
   "company": "北京农商银行",
   "project_kw": "银行卡黑名单数据服务供应商征集",
   "rejected_date": "2026-10-09"
+ },
+ {
+  "company": "邮储银行",
+  "project": "2027-2030年度反洗钱名单库数据服务采购项目（第2次招标）",
+  "method": "公开招标",
+  "deadline": "2026-10-30",
+  "budget": "-",
+  "tags": "风控合规,数据服务",
+  "rec": "强烈建议投标",
+  "url": "https://www.qianlima.com/bid-636587341.html",
+  "source": "千里马招标网",
+  "status": "已否决",
+  "note": "2026-10-09 用户决策不纳入",
+  "decision_date": "2026-10-09",
+  "reason": "2026-10-09 用户决策不纳入"
+ },
+ {
+  "company": "中原银行",
+  "project": "信贷决策规则数据服务采购入围项目（二次）",
+  "method": "公开招标",
+  "deadline": "2026-10-29",
+  "budget": "-",
+  "tags": "风控合规,数据服务",
+  "rec": "建议投标",
+  "url": "https://www.qianlima.com/bid-636598184.html",
+  "source": "千里马招标网",
+  "status": "已否决",
+  "note": "2026-10-09 用户决策不纳入",
+  "decision_date": "2026-10-09",
+  "reason": "2026-10-09 用户决策不纳入"
+ },
+ {
+  "company": "中国银行河南省分行",
+  "project": "数据库及中间件维保服务项目",
+  "method": "邀请招标",
+  "deadline": "2026-10-22",
+  "budget": "9.2万",
+  "tags": "运维服务",
+  "rec": "可关注",
+  "url": "https://www.qianlima.com/bid-636610771.html",
+  "source": "千里马招标网",
+  "status": "已否决",
+  "note": "2026-10-09 用户决策不纳入",
+  "decision_date": "2026-10-09",
+  "reason": "2026-10-09 用户决策不纳入"
+ },
+ {
+  "company": "吉林农商银行",
+  "project": "邮件系统（广东盈世）软件产品维保项目（二次）",
+  "method": "公开招标",
+  "deadline": "2026-10-16",
+  "budget": "1.4万",
+  "tags": "运维服务",
+  "rec": "可关注",
+  "url": "https://www.qianlima.com/bid-636650994.html",
+  "source": "千里马招标网",
+  "status": "已否决",
+  "note": "2026-10-09 用户决策不纳入",
+  "decision_date": "2026-10-09",
+  "reason": "2026-10-09 用户决策不纳入"
+ },
+ {
+  "company": "北京农商银行",
+  "project": "银行卡黑名单数据服务供应商征集",
+  "method": "供应商征集",
+  "deadline": "2026-10-13",
+  "budget": "-",
+  "tags": "数据服务,风控合规",
+  "rec": "可关注",
+  "url": "https://www.qianlima.com/bid-636396745.html",
+  "source": "千里马招标网",
+  "status": "已否决",
+  "note": "2026-10-09 用户决策不纳入",
+  "decision_date": "2026-10-09",
+  "reason": "2026-10-09 用户决策不纳入"
+ },
+ {
+  "company": "北京银行",
+  "project_kw": "2026年元数据治理建设项目-数据脱敏系统项目（第二次）",
+  "rejected_date": "2026-10-10"
+ },
+ {
+  "company": "张家口银行",
+  "project_kw": "2026年大数据基础平台维保服务采购项目",
+  "rejected_date": "2026-10-10"
  }
 ]

@@ -1013,5 +1013,50 @@
   "company": "张家口银行",
   "project_kw": "2026年大数据基础平台维保服务采购项目",
   "rejected_date": "2026-10-10"
+ },
+ {
+  "company": "北京银行",
+  "project": "2026年元数据治理建设项目-数据脱敏系统项目（第二次）",
+  "method": "竞争性磋商",
+  "deadline": "2026-10-20",
+  "budget": "36.5万",
+  "tags": "风控合规",
+  "rec": "建议投标",
+  "url": "https://www.qianlima.com/bid-636788838.html",
+  "source": "千里马招标网",
+  "status": "已否决",
+  "note": "2026-10-10 用户决策不纳入",
+  "decision_date": "2026-10-11",
+  "reason": "2026-10-10 用户决策不纳入"
+ },
+ {
+  "company": "张家口银行",
+  "project": "2026年大数据基础平台维保服务采购项目",
+  "method": "公开招标",
+  "deadline": "2026-11-02",
+  "budget": "-",
+  "tags": "运维服务",
+  "rec": "可关注",
+  "url": "https://www.qianlima.com/bid-636879364.html",
+  "source": "千里马招标网",
+  "status": "已否决",
+  "note": "2026-10-10 用户决策不纳入",
+  "decision_date": "2026-10-11",
+  "reason": "2026-10-10 用户决策不纳入"
+ },
+ {
+  "company": "中原银行",
+  "project_kw": "手机银行及企业微信财富资讯项目（二次）",
+  "rejected_date": "2026-10-12"
+ },
+ {
+  "company": "江门农商银行",
+  "project_kw": "2026-2028年度信息科技人力外包服务项目",
+  "rejected_date": "2026-10-12"
+ },
+ {
+  "company": "长沙银行",
+  "project_kw": "2026年度安全测试驻场服务项目",
+  "rejected_date": "2026-10-12"
  }
 ]

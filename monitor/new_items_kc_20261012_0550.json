@@ -1,0 +1,91 @@
+{
+ "run_at": "20261012_0550",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 4
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 5
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国银行股份有限公司齐齐哈尔分行与齐齐哈尔医学院信息化校园项目-组织干部考核系统采购邀请公告",
+   "date": "2026-10-11",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "贵州银行应用软件采购项目(贵州银行2026年核心系统XC改造流量回放软件)(二次)招标采购公告（贵州银行股份有限公司）",
+   "date": "2026-10-11",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司齐齐哈尔分行与齐齐哈尔医学院信息化校园项目-研究生管理信息系统采购邀请公告",
+   "date": "2026-10-11",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "贵阳市白云区华师一学校智慧校园项目公开招标公告（中国农业银行股份有限公司贵阳分行）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-19",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国邮政储蓄银行金融数据库采购项目(包2本币相关金融数据库)招标公告（中国邮政储蓄银行股份有限公司）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行2026年新租赁准则核算管理系统优化项目竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-15",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国进出口银行2026-2028年支付结算领域信息技术服务项目-国结电票招标公告",
+   "date": "2026-10-10",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "招商银行贵安云数据中心产业园项目场地平整工程项目(二次)招标公告（招商银行股份有限公司）",
+   "date": "2026-10-10",
+   "deadline": "2026-10-25",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "华夏银行股份有限公司内评相关系统改造项目(第二次)竞争性磋商公告",
+   "date": "2026-10-10",
+   "deadline": "2026-10-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  }
+ ]
+}

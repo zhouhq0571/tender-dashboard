@@ -1,0 +1,84 @@
+{
+ "run_at": "20261013_0550",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 3
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 5
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国工商银行丽水分行现金寄库服务外包项目供应商公开招募公告（中国工商银行股份有限公司丽水分行）",
+   "date": "2026-10-12",
+   "deadline": "2026-10-19",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司黑龙江省分行动环监控系统信创改造项目采购邀请公告",
+   "date": "2026-10-12",
+   "deadline": "2026-10-19",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国邮政储蓄银行黑龙江省分行2026年代理财政国库一体化系统运维服务采购项目(第2次招标)公开招标公告（中国邮政储蓄银行股份有限公司黑龙江省分行）",
+   "date": "2026-10-12",
+   "deadline": "2026-10-19",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "遂宁银行关于OA系统版本升级项目比选的公告（遂宁银行股份有限公司）",
+   "date": "2026-10-12",
+   "deadline": "2026-10-17",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "招商银行南昌分行江西省数字产业集团有限公司司库票据管理平台项目供应商征集公告（招商银行股份有限公司南昌分行）",
+   "date": "2026-10-12",
+   "deadline": "2026-10-21",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "2026年度系统迭代优化、新产品、风险管理、代理人管理系统建设项目-数据类系统部分采购招标公告（中国建设银行集采平台）",
+   "date": "2026-10-12",
+   "deadline": "2026-10-19",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "云南红塔银行股份有限公司网络查控统一管理平台实施项目-公开招标公告",
+   "date": "2026-10-12",
+   "deadline": "2026-10-19",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "国家开发银行2027年网络设备维保服务项目竞争性谈判公告",
+   "date": "2026-10-12",
+   "deadline": "2026-10-19",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  }
+ ]
+}

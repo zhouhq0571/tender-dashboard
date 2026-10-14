@@ -1198,5 +1198,60 @@
   "company": "辽宁农商行",
   "project_kw": "移动营业厅及相关系统运维",
   "rejected_date": "2026-10-13"
+ },
+ {
+  "company": "宁波银行",
+  "project": "2026年安全资产平台、数据库审计及360浏览器维保项目",
+  "method": "公开招标",
+  "deadline": "2026-10-15",
+  "budget": "-",
+  "tags": "运维服务",
+  "rec": "可关注",
+  "url": "https://www.qianlima.com/bid-637579849.html",
+  "source": "千里马招标网",
+  "status": "已否决",
+  "note": "2026-10-13 用户决策不纳入",
+  "decision_date": "2026-10-13",
+  "reason": "2026-10-13 用户决策不纳入"
+ },
+ {
+  "company": "招商银行南昌分行",
+  "project": "江西省数字产业集团司库票据管理平台项目供应商征集",
+  "method": "供应商征集",
+  "deadline": "2026-10-21",
+  "budget": "-",
+  "tags": "公司金融",
+  "rec": "可关注",
+  "url": "https://www.kuaicha365.com/",
+  "source": "快查",
+  "status": "已否决",
+  "note": "2026-10-13 用户决策不纳入",
+  "decision_date": "2026-10-13",
+  "reason": "2026-10-13 用户决策不纳入"
+ },
+ {
+  "company": "云南红塔银行",
+  "project": "网络查控统一管理平台实施项目",
+  "method": "公开招标",
+  "deadline": "2026-10-19",
+  "budget": "-",
+  "tags": "风控合规",
+  "rec": "可关注",
+  "url": "https://www.kuaicha365.com/",
+  "source": "快查",
+  "status": "已否决",
+  "note": "2026-10-13 用户决策不纳入",
+  "decision_date": "2026-10-13",
+  "reason": "2026-10-13 用户决策不纳入"
+ },
+ {
+  "company": "邮储银行重庆分行",
+  "project_kw": "2027-2028年度系统安全测试与保障服务采购",
+  "rejected_date": "2026-10-14"
+ },
+ {
+  "company": "广发银行",
+  "project_kw": "总行日志集中管理及分析应用2026-2027年度运维资源服务采购",
+  "rejected_date": "2026-10-14"
  }
 ]

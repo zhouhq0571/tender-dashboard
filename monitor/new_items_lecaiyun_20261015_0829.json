@@ -1,0 +1,13 @@
+{
+ "run_at": "20261015_0829",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 297,
+   "new_count": 0
+  }
+ ],
+ "new_items": []
+}

@@ -11,7 +11,7 @@ import json
 import re
 import sys
 
-from config import VALID_REGIONS, VALID_METHODS, VALID_RECS, BLOCKED_SOURCE_PATTERNS
+from config import VALID_REGIONS, VALID_METHODS, VALID_RECS, BLOCKED_SOURCE_PATTERNS, normalize_source as _normalize_source
 
 HTML_FILE = 'index.html'
 
@@ -69,6 +69,12 @@ def check_field_values(project):
     if any(pat in src for pat in BLOCKED_SOURCE_PATTERNS):
         errors.append(f"source值不规范: '{src}'，同一信源只许一种写法（如 千里马订阅→千里马招标网、"
                       f"（微信公众号）→（公众号）），别名表见 config.SOURCE_ALIASES")
+
+    # 2026-10-15 新增：规范全名硬检（根治裸写"银行科技研究社"漏（公众号）后缀等；
+    # 口径：normalize_source(src) != src 即非规范写法，别名表见 config.SOURCE_ALIASES）
+    if _normalize_source(src) != src.strip():
+        errors.append(f"source非规范全名: '{src}'，归一后应为 '{_normalize_source(src)}'"
+                      f"（网站类裸名/公众号类带（公众号）后缀），见 config.SOURCE_ALIASES")
     
     if not isinstance(project.get('tags'), list):
         errors.append("tags必须是数组")

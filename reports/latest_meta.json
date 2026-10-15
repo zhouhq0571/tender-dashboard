@@ -1,7 +1,8 @@
 {
-  "version": "v309",
-  "total": 75,
-  "added": 4,
+  "version": "v311",
+  "total": 81,
+  "added": 0,
+  "removed_count": 0,
   "candidates": 0,
-  "other_note": "2026-10-15 早：用户决策候选1/2/6/7纳入（1、7改建议投标，2改可关注），3/4/5否决入台账；晨间例行清理5条过期项；早任务已部署v308。"
+  "other_note": "2026-10-15 晚：source 两类命名规范落地（网站类裸名/公众号类统一（公众号）后缀），存量7条归一，config别名表+validate+safe_deploy双重硬检升级，SKILL/定时任务/清单同步。下午 v310 为其他任务更新（81项）。"
 }

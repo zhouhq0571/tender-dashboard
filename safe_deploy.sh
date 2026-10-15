@@ -80,13 +80,20 @@ print('✅ 招标方式白名单检查通过')
 
 # 2026-09-30 新增：信息来源归一化硬检（同一信源只许一种写法，如 千里马订阅→千里马招标网）
 try:
-    from config import BLOCKED_SOURCE_PATTERNS
+    from config import BLOCKED_SOURCE_PATTERNS, normalize_source as _norm_src
 except Exception:
     BLOCKED_SOURCE_PATTERNS = ('订阅', '（微信公众号）', '微信公众号（', '千里马招标网（')
+    def _norm_src(s): return s
 bad_source = [(p.get('id'), p.get('source')) for p in projects
               if any(pat in (p.get('source') or '') for pat in BLOCKED_SOURCE_PATTERNS)]
 if bad_source:
     print(f'❌ 发现非规范信息来源 {len(bad_source)} 条: {bad_source[:5]}（归一化口径见 config.SOURCE_ALIASES）')
+    sys.exit(1)
+# 2026-10-15 新增：规范全名硬检（normalize_source(src) != src 即裸名漏后缀等非规范写法）
+bad_canon = [(p.get('id'), p.get('source')) for p in projects
+             if _norm_src(p.get('source') or '') != (p.get('source') or '').strip()]
+if bad_canon:
+    print(f'❌ 发现非规范全名来源 {len(bad_canon)} 条: {bad_canon[:5]}（别名表见 config.SOURCE_ALIASES）')
     sys.exit(1)
 print('✅ 信息来源归一化检查通过')
 

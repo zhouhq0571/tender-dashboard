@@ -1,0 +1,105 @@
+{
+ "run_at": "20261016_0550",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 9
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 1
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 1
+  }
+ ],
+ "new_items": [
+  {
+   "title": "2026-2027年运维用户集中管理应用维保与驻场运维服务采购（广发银行股份有限公司(总行)）",
+   "date": "2026-10-15",
+   "deadline": "2026-10-22",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "交通银行2026-2029年度SOC平台安全运营服务框架协议采购项目招标公告（交通银行股份有限公司）",
+   "date": "2026-10-15",
+   "deadline": "2026-10-22",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "[阳光采购服务平台]宁波银行2026年波波快递供应商采购项目采购公告（宁波银行股份有限公司）",
+   "date": "2026-10-15",
+   "deadline": "2026-10-23",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行2026年新租赁准则核算管理系统优化项目(第二次)竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-10-15",
+   "deadline": "2026-10-20",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "宁波银行新鄞州科技中心35kV站运维服务采购项目招标公告（宁波银行股份有限公司）",
+   "date": "2026-10-15",
+   "deadline": "2026-10-22",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行上海分行2026年社区助理人力外包服务采购项目竞争性磋商公告（北京银行股份有限公司上海分行）",
+   "date": "2026-10-15",
+   "deadline": "2026-10-21",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "交通银行宁波分行现金款箱寄库业务外包服务项目[第01次重新采购]公开征集供应商公告（交通银行股份有限公司宁波分行）",
+   "date": "2026-10-15",
+   "deadline": "2026-10-20",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "云南红塔银行股份有限公司互联网收单商户身份大数据核查项目-公开招标公告",
+   "date": "2026-10-15",
+   "deadline": "2026-10-22",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "上海银行信用卡分期业务外呼营销外包服务供应商入围采购项目招标公告（上海银行股份有限公司）",
+   "date": "2026-10-15",
+   "deadline": "2026-10-24",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "交通银行2026年移动端APP兼容性测试服务采购项目招标公告（交通银行股份有限公司）",
+   "date": "2026-10-15",
+   "deadline": "2026-10-22",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "华夏银行互联网安全检测项目竞争性磋商公告（华夏银行股份有限公司）",
+   "date": "2026-10-15",
+   "deadline": "2026-10-22",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  }
+ ]
+}

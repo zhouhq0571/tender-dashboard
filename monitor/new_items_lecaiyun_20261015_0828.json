@@ -1,0 +1,22 @@
+{
+ "run_at": "20261015_0828",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 297,
+   "new_count": 1
+  }
+ ],
+ "new_items": [
+  {
+   "title": "浙江求是招标代理有限公司关于浙江金融职业学院绍兴校区医疗服务外包项目的公开招标公告",
+   "pubdate": "2026-10-14",
+   "deadline": "2026-11-04",
+   "url": "https://sourcing-lcy.lecaiyun.com/luban/announcement/detail?encryptId=L/QFuWYt4ZV1LU27YheRI4TwhJI3yMqKEmeFXDD+K4I=",
+   "source": "乐采云平台",
+   "channel": "非政府采购项目招标公告"
+  }
+ ]
+}

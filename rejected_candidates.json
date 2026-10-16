@@ -1298,5 +1298,60 @@
     "company": "甘肃银行临夏分行",
     "project_kw": "住房公积金代理业务服务外",
     "rejected_date": "2026-10-15"
+  },
+  {
+    "company": "中国邮政储蓄银行盘锦市分行",
+    "project": "辽宁省盘锦市兴盛公证处数据技术支撑场景服务项目",
+    "method": "公开招标",
+    "deadline": "2026-11-05",
+    "budget": "-",
+    "tags": "数据服务",
+    "rec": "可关注",
+    "url": "https://www.qianlima.com/bid-638391640.html",
+    "source": "千里马招标网",
+    "status": "已否决",
+    "note": "报名截止10-19，投标截止11-05；公证处场景，请裁决是否属业务范围",
+    "decision_date": "2026-10-15",
+    "reason": "用户否决（日间会话裁决）"
+  },
+  {
+    "company": "天津银行",
+    "project": "智能反电诈平台(二期)系统项目(第二次)",
+    "method": "公开招标",
+    "deadline": "2026-10-21",
+    "budget": "-",
+    "tags": "IT建设",
+    "rec": "可关注",
+    "url": "https://www.kuaicha365.com/",
+    "source": "快查",
+    "status": "已否决",
+    "note": "反电诈=风控类，10-09红线未明列；参考：上海银行数字人民币反电诈咨询项目9-24未确认已否决，请最终裁决",
+    "decision_date": "2026-10-15",
+    "reason": "用户否决（日间会话裁决）"
+  },
+  {
+    "company": "甘肃银行临夏分行",
+    "project": "住房公积金代理业务服务外包项目",
+    "method": "竞争性磋商",
+    "deadline": "2026-10-20",
+    "budget": "-",
+    "tags": "人力外包",
+    "rec": "可关注",
+    "url": "https://www.kuaicha365.com/",
+    "source": "快查",
+    "status": "已否决",
+    "note": "同一项目存在招标/竞磋两个版本公告，以竞磋为准",
+    "decision_date": "2026-10-15",
+    "reason": "用户否决（日间会话裁决）"
+  },
+  {
+    "company": "广发银行(总行)",
+    "project_kw": "2026-2027年运维",
+    "rejected_date": "2026-10-16"
+  },
+  {
+    "company": "北京银行上海分行",
+    "project_kw": "2026年社区助理人力外",
+    "rejected_date": "2026-10-16"
   }
 ]

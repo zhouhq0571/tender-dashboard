@@ -33,8 +33,10 @@ TENDER_TYPES = ["3012", "3020", "2002", "3003", "3011", "3002", "3001",
                 "200012", "200003", "200026", "200025", "200004", "200002",
                 "200005", "200022", "200001", "200006", "200023", "200000",
                 "20010", "20012", "20009"]
-PAGES = 3          # 每天 3 页 ≈ 297 条，覆盖近 2-3 天新发
-LOOKBACK_DAYS = 4  # 只保留近 N 天 releasedAt 的条目
+# 2026-10-18 根治"发布早、周期长"漏采（湖州银行算力服务器 9-30 发布 4 天窗口翻页漏失）：
+# 零模型脚本，加页只耗运行时间（~1-2 分钟）不耗 token； lobby 约 100-150 条/天，20 页 ≈ 1980 条覆盖 15 天
+PAGES = 20         # 每页 99 条，按日期早停（末条超出回看窗口即停翻）
+LOOKBACK_DAYS = 15 # 只保留近 N 天 releasedAt 的条目（与月度复盘 15 天口径对齐）
 
 # 金融机构（招标主体或项目对象须在范围内）
 FINANCE = re.compile(
@@ -56,23 +58,6 @@ STAGE_DROP = re.compile(
     r'合同公告|验收|预公示')
 
 DETAIL = 'https://sourcing-lcy.lecaiyun.com/luban/announcement/detail?encryptId='
-
-FETCH_JS = """async ({types, pages}) => {
-  const out = [];
-  for (let pn = 1; pn <= pages; pn++) {
-    const r = await fetch('/announcement/lobby/queryPage', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({district: null, districtCodeFProvince: '900099',
-        announcementTypes: types, pageNo: pn, pageSize: 99})
-    });
-    const j = await r.json();
-    const data = (j && j.result && j.result.data) || [];
-    out.push(...data);
-    if (data.length < 99) break;
-  }
-  return out;
-}"""
 
 
 def strip_html(s):
@@ -111,6 +96,16 @@ def prescreen(title):
     return True
 
 
+def _ts_ms(it):
+    ts = it.get('releasedAt') or it.get('createdAt') or 0
+    if isinstance(ts, str):
+        try:
+            ts = datetime.fromisoformat(ts.replace('Z', '+00:00')).timestamp()
+        except ValueError:
+            ts = 0
+    return ts * 1000 if ts and ts < 1e12 else ts
+
+
 def main():
     from playwright.sync_api import sync_playwright
     run_at = datetime.now().strftime('%Y%m%d_%H%M')
@@ -118,25 +113,53 @@ def main():
     result = {"run_at": run_at, "sources": [], "new_items": []}
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        page = browser.new_context(user_agent=UA).new_page()
+        ctx = browser.new_context(user_agent=UA)
+        page = ctx.new_page()
         status, total, kept = "ok", 0, []
         try:
             page.goto('https://sourcing-lcy.lecaiyun.com/luban/xmcg',
                       timeout=60000)
             page.wait_for_timeout(8000)  # 过 WAF +  Lobby 首屏加载
-            items = page.evaluate(FETCH_JS, {"types": TENDER_TYPES,
-                                             "pages": PAGES})
+            cutoff_ms = (datetime.now().timestamp()
+                         - LOOKBACK_DAYS * 86400) * 1000
+            # 2026-10-18 改造：弃用页内 fetch（WAF v2 会无限挂起 XHR），
+            # 改 ctx.request（携带浏览器 cookie、可设硬超时），快速失败不拖死任务
+            items = []
+            for pn in range(1, PAGES + 1):
+                try:
+                    r = ctx.request.post(
+                        'https://sourcing-lcy.lecaiyun.com'
+                        '/announcement/lobby/queryPage',
+                        data={'district': None,
+                              'districtCodeFProvince': '900099',
+                              'announcementTypes': TENDER_TYPES,
+                              'pageNo': pn, 'pageSize': 99},
+                        headers={'Content-Type': 'application/json'},
+                        timeout=20000)
+                    text = r.text()
+                except Exception as e:
+                    status = f"error_page{pn}: {str(e)[:60]}"
+                    break
+                if 'aliyun_waf' in text:
+                    # WAF 挑战页：记录状态快速退出，避免挂死每日任务
+                    status = "waf_blocked"
+                    break
+                try:
+                    j = json.loads(text)
+                except ValueError:
+                    status = f"bad_json_page{pn}"
+                    break
+                data = (j.get('result') or {}).get('data') or []
+                items.extend(data)
+                # 列表按发布时间倒序：整页最旧一条已超出回看窗口即可停翻
+                if len(data) < 99:
+                    break
+                if data and _ts_ms(data[-1]) < cutoff_ms:
+                    break
             total = len(items)
-            cutoff = datetime.now().timestamp() - LOOKBACK_DAYS * 86400
             for it in items:
-                ts = it.get('releasedAt') or it.get('createdAt') or 0
-                if isinstance(ts, str):
-                    try:
-                        ts = datetime.fromisoformat(
-                            ts.replace('Z', '+00:00')).timestamp()
-                    except ValueError:
-                        ts = 0
-                if ts and ts < cutoff:
+                ts = _ts_ms(it)
+                if ts and ts < cutoff_ms:
                     continue
                 title = (it.get('title') or '').strip()
                 if not prescreen(title):
@@ -145,8 +168,7 @@ def main():
                 kept.append({
                     'title': title,
                     'pubdate': datetime.fromtimestamp(
-                        ts / 1000 if ts > 1e12 else ts).strftime('%Y-%m-%d')
-                    if ts else '',
+                        ts / 1000).strftime('%Y-%m-%d') if ts else '',
                     'deadline': extract_deadline(text),
                     'url': DETAIL + it.get('encryptId', ''),
                     'source': '乐采云平台',

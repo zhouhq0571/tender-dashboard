@@ -1,0 +1,29 @@
+{
+ "run_at": "20261019_0926",
+ "sources": [
+  {
+   "name": "乐采云兜底-A-浙江冠名机构",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 150,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云兜底-B-轮转城商行:嘉兴银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 3,
+   "new_count": 1
+  }
+ ],
+ "new_items": [
+  {
+   "title": "嘉兴银行2026年度商户巡检外包服务框架协议采购项目(重新发布)公开招标采购公告（嘉兴银行股份有限公司）",
+   "date": "2026-10-12",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:嘉兴银行"
+  }
+ ]
+}

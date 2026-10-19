@@ -1,0 +1,68 @@
+{
+ "run_at": "20261019_1028",
+ "sources": [
+  {
+   "name": "龙集采-供应商征集",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 4
+  },
+  {
+   "name": "龙集采-招标专区",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 1
+  },
+  {
+   "name": "龙集采-采购动态",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 2,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "建信基金财务系统信创改造及配套迁移适配工作项目供应商征集公告",
+   "deadline": "2026-10-26",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-19"
+  },
+  {
+   "title": "建信基金财务管理系统运维服务项目供应商征集公告",
+   "deadline": "2026-10-26",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-19"
+  },
+  {
+   "title": "建信信托有限责任公司内部信息网站及服务信托等5个系统信创改造采购项目供应商征集公告",
+   "deadline": "2026-10-26",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-19"
+  },
+  {
+   "title": "中国建设银行西藏区分行整合餐补消费平台采购项目供应商征集公告(第二次）",
+   "deadline": "2026-10-21",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-19"
+  },
+  {
+   "title": "绥化分行关于绥化学院一卡通系统平台项目公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-19"
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "run_at": "20261019_1032",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 3
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 4
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 2
+  }
+ ],
+ "new_items": [
+  {
+   "title": "总行\"移动开发平台基础应用维保服务与驻场运维服务采购\"的采购公告(第二次)（广发银行股份有限公司）",
+   "date": "2026-10-19",
+   "deadline": "2026-10-26",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "招商银行济南分行2026年企业财富管理系列活动供应商征集公告",
+   "date": "2026-10-19",
+   "deadline": "2026-10-26",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "渤海银行AI知识工程平台建设采购项目竞争性采购公告（渤海银行股份有限公司）",
+   "date": "2026-10-17",
+   "deadline": "2026-10-23",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "遂宁银行关于日志管理平台系统改造项目比选的公告(第二次)（遂宁银行股份有限公司）",
+   "date": "2026-10-16",
+   "deadline": "2026-10-21",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "威海银行股份有限公司2026年存储等硬件设备及软件许可采购项目招标公告",
+   "date": "2026-10-16",
+   "deadline": "2026-10-23",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "关于浙商银行电话银行系统新增智能座席助手模块采购的公开招标公告（浙商银行股份有限公司）",
+   "date": "2026-10-16",
+   "deadline": "2026-11-22",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "华夏银行2026年个人身份认证数据引入项目身份认证五要素核验数据部分竞争性磋商公告（华夏银行股份有限公司）",
+   "date": "2026-10-16",
+   "deadline": "2026-10-23",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司安徽省分行全辖特色软件开发和技术支持服务选型入围采购项目招标公告",
+   "date": "2026-10-16",
+   "deadline": "2026-10-23",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行南京分行个人客户营销拓展活动合作服务商选型入围采购项目招标公告（中国银行股份有限公司江苏省分行）",
+   "date": "2026-10-16",
+   "deadline": "2026-10-23",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  }
+ ]
+}

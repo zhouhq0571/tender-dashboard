@@ -36,7 +36,7 @@
   "url": "https://www.kuaicha365.com/",
   "source": "快查",
   "status": "不纳入",
-  "note": "用户决策"
+  "note": "用户2026-10-19第一轮候选决策已否决（重复报送），关闭"
  },
  {
   "company": "中国银行安徽省分行",
@@ -63,5 +63,70 @@
   "source": "快查",
   "status": "不纳入",
   "note": "用户决策（2026-10-19）：35kV站运维为动力设施运维，超业务范围，不纳入"
+ },
+ {
+  "date": "2026-10-19",
+  "company": "建信信托",
+  "project": "内部信息网站及服务信托等5个系统信创改造采购项目（供应商征集）",
+  "deadline": "2026-10-26",
+  "tags": [
+   "信创"
+  ],
+  "suggestion": "建议投标",
+  "source_url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+  "status": "待确认",
+  "note": "龙集采供应商征集，信托机构全量放行"
+ },
+ {
+  "date": "2026-10-19",
+  "company": "湖州银行",
+  "project": "AI大模型应用平台建设采购项目（公开招标）",
+  "deadline": "2026-10-30",
+  "tags": [
+   "大模型应用"
+  ],
+  "suggestion": "建议投标",
+  "source_url": "https://www.kuaicha365.com/",
+  "status": "不纳入",
+  "note": "与在板id59同一项目（银行科技研究社渠道，截止11-02），重复命中关闭；乐采云兜底通道跨渠道查重待修"
+ },
+ {
+  "date": "2026-10-19",
+  "company": "北京银行",
+  "project": "2026年支付清算系统功能优化项目运营支撑（竞争性磋商）",
+  "deadline": "2026-10-27",
+  "tags": [
+   "人力外包"
+  ],
+  "suggestion": "可关注",
+  "source_url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261016/1295775823504080896.html",
+  "status": "待确认",
+  "note": "预算73.2万元"
+ },
+ {
+  "date": "2026-10-19",
+  "company": "浙商银行",
+  "project": "电话银行系统新增智能座席助手模块采购（公开招标）",
+  "deadline": "2026-11-22",
+  "tags": [
+   "大模型应用"
+  ],
+  "suggestion": "建议投标",
+  "source_url": "https://ccgp.szcgpt.czbank.com/luban/detail?parentId=700835&articleId=8Lp+nb2pFh1TM3EotPJRag==",
+  "status": "不纳入",
+  "note": "用户2026-10-19第一轮候选决策已否决（重复报送），关闭"
+ },
+ {
+  "date": "2026-10-19",
+  "company": "广发银行(总行)",
+  "project": "移动开发平台基础应用维保服务与驻场运维服务采购（第二次）",
+  "deadline": "2026-10-26",
+  "tags": [
+   "运维服务"
+  ],
+  "suggestion": "可关注",
+  "source_url": "https://www.kuaicha365.com/",
+  "status": "待确认",
+  "note": "提示：用户2026-10-16否决过广发总行\"2026-2027年运维\"另一项目，本条为带具体平台的第二次采购，请一并裁决"
  }
 ]

@@ -23,17 +23,59 @@
 历史库：monitor/seen_hashes.jsonl（一行一个 hash，可安全手工删除某行使对应条目"复活"）
 首次运行自动创建。建议每日任务在所有搜索源之后、进入候选流程之前统一过一遍。
 """
-import sys, os, json, hashlib
+import sys, os, json, hashlib, re
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SEEN = os.path.join(BASE, 'monitor', 'seen_hashes.jsonl')
+
+_CJK_ALNUM = re.compile(r'[^0-9a-z\u4e00-\u9fff]+')
+
+
+def norm_title(s):
+    """标题规范化：只留中文+字母+数字，小写。跨渠道同项目比对用。"""
+    return _CJK_ALNUM.sub('', (s or '').lower())
+
+
+def load_board_titles():
+    """在板项目标题规范化集合（index.html 无则空集）。2026-10-19 新增：
+    跨渠道同项目查重（湖州银行大模型平台经乐采云兜底与在板 id59 重复命中的教训）。"""
+    path = os.path.join(BASE, 'index.html')
+    titles = set()
+    try:
+        with open(path, encoding='utf-8') as f:
+            m = re.search(r'<script type="application/json" id="tender-data">'
+                          r'(.*?)</script>', f.read(), re.S)
+        if m:
+            for p in json.loads(m.group(1)).get('projects', []):
+                t = norm_title(p.get('project', ''))
+                if len(t) >= 8:
+                    titles.add(t)
+    except Exception:
+        pass
+    return titles
+
+
+def is_board_dup(title, board_titles):
+    """保守判定：规范化后相等或互为子串（均≥10字）才算同项目，防误杀。"""
+    t = norm_title(title)
+    if len(t) < 10:
+        return False
+    for bt in board_titles:
+        if t == bt or (len(bt) >= 10 and (t in bt or bt in t)):
+            return True
+    return False
 
 
 def norm_key(item):
     url = (item.get('url') or item.get('link') or '').strip().lower()
     if url:
         url = url.split('#')[0].rstrip('/')
-        return 'u:' + hashlib.md5(url.encode('utf-8')).hexdigest()
+        # 2026-10-19 修复：泛链接（裸域名无路径，如快查 API 返回的 kuaicha365.com 首页）
+        # 对所有条目是同一个 hash，会让第二条起全部被误杀——此类回退用标题哈希
+        parts = url.split('://', 1)[-1].split('/', 1)
+        path = parts[1] if len(parts) > 1 else ''
+        if path:
+            return 'u:' + hashlib.md5(url.encode('utf-8')).hexdigest()
     title = ' '.join((item.get('title') or item.get('name') or '').split())
     return 't:' + hashlib.md5(title.encode('utf-8')).hexdigest()
 
@@ -80,7 +122,8 @@ def main():
             sys.exit(1)
 
     seen = load_seen()
-    fresh, dup = [], 0
+    board = load_board_titles()
+    fresh, dup, board_dup = [], 0, 0
     new_hashes = []
     for it in raw_items:
         if not isinstance(it, dict):
@@ -88,6 +131,9 @@ def main():
         k = norm_key(it)
         if k in seen:
             dup += 1
+            continue
+        if is_board_dup(it.get('title') or it.get('project') or '', board):
+            board_dup += 1
             continue
         seen.add(k)
         new_hashes.append(k)
@@ -102,7 +148,8 @@ def main():
             for k in new_hashes:
                 f.write(k + '\n')
 
-    print(f'#dedup: total={len(raw_items)} fresh={len(fresh)} dup={dup} seen_db={len(seen)}',
+    print(f'#dedup: total={len(raw_items)} fresh={len(fresh)} dup={dup} '
+          f'board_dup={board_dup} seen_db={len(seen)} board={len(board)}',
           file=sys.stderr)
 
 

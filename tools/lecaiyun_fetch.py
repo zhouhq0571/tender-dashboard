@@ -10,11 +10,20 @@
 背景：湖州银行 AI 大模型平台、数智化平台两标均经此平台交易；浙江区域
 城商行/农商（湖州银行、温州银行、泰隆、稠州、杭州银行等）政采类标高频入口。
 
+2026-10-19 WAF 兜底（周老师批准）：阿里云 WAF 自 10-15 起持续拦截直连，
+当且仅当 status == "waf_blocked" 时，自动改用快查官方 API 定向补采
+乐采云 niche（湖州/温州/泰隆/稠州/杭州/宁波银行，≤6 次调用/天，占少量
+快查额度）；url_id 以 ccgp_lecaiyun 开头者即乐采云平台原始公告，可精确
+归因。直连恢复后兜底自动停用（status 不再是 waf_blocked 即不触发）。
+
 L1 失效纪律：连续抓取失败 3 天须在汇报中报失效（降级/维修）。
 """
+import hashlib
 import json
 import re
 import sys
+import time
+import urllib.request
 from datetime import datetime
 from pathlib import Path
 
@@ -59,6 +68,14 @@ STAGE_DROP = re.compile(
 
 DETAIL = 'https://sourcing-lcy.lecaiyun.com/luban/announcement/detail?encryptId='
 
+# 2026-10-19 快查 API 兜底常量（标准 API 独立额度，与 kc_bid_fetch 同 key）
+KC_GATEWAY = "https://bizveris.kuaicha365.com"
+KC_TOOL_ID = "operation_get_yuqing_bidding_search_plus"
+KC_KEY_FILE = BASE / ".kc_apikey"
+# 乐采云 niche：浙江区域城商行/农商政采高频入口（与 l1_bank 7家、主 kc 3组词表互补）
+KC_FALLBACK_GROUPS = ["湖州银行", "温州银行", "泰隆", "稠州", "杭州银行", "宁波银行"]
+KC_WINDOW_DAYS = 4  # 覆盖 WAF 拦截缺口；重复条目由 dedup_filter/标题级去重零成本剔除
+
 
 def strip_html(s):
     return re.sub(r'<[^>]+>', '', s or '')
@@ -96,6 +113,126 @@ def prescreen(title):
     return True
 
 
+def _norm_title(s):
+    return ' '.join((s or '').split())
+
+
+def _load_seen_title_hashes():
+    """加载跨日去重库的标题级 hash（'t:' 前缀），防 WAF 兜底重复上报历史条目。"""
+    seen = set()
+    f = OUT_DIR / 'seen_hashes.jsonl'
+    if f.exists():
+        for line in f.read_text(encoding='utf-8').splitlines():
+            line = line.strip()
+            if line.startswith('t:'):
+                seen.add(line)
+    return seen
+
+
+def _load_rejected_projects():
+    """已否决项目名集合（≥6字才参与匹配），避免兜底重报用户已砍条目。零模型。"""
+    rej, f = set(), BASE / 'rejected_candidates.json'
+    if f.exists():
+        try:
+            data = json.loads(f.read_text(encoding='utf-8'))
+            for it in (data if isinstance(data, list)
+                       else data.get('items') or []):
+                p = _norm_title(it.get('project', ''))
+                if len(p) >= 6:
+                    rej.add(p)
+        except Exception:
+            pass
+    return rej
+
+
+def kc_api(payload):
+    key = KC_KEY_FILE.read_text().strip()
+    req = urllib.request.Request(
+        f"{KC_GATEWAY}/api_route/gateway/{KC_TOOL_ID}",
+        data=json.dumps(payload).encode(),
+        headers={"Content-Type": "application/json",
+                 "open-authorization": f"Bearer {key}"},
+        method="POST")
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return json.loads(r.read().decode())
+
+
+def kc_fallback(window_days=KC_WINDOW_DAYS):
+    """WAF 兜底：快查 API 定向补采乐采云 niche。返回 (kept, total, calls, status)。
+
+    与直连同口径预筛（阶段/后勤噪声、业务正向词、TITLE_EXCLUDE），招标主体由
+    tender_names 组词锁定浙江区域银行；url_id 带 ccgp_lecaiyun 前缀者精确归因
+    乐采云平台。每条给唯一链接（?n=url_id），避免去重库按首页 URL 折叠条目。
+    """
+    now = int(time.time())
+    start = now - window_days * 86400
+    em = re.compile(r'<[^>]+>')
+    seen_t = _load_seen_title_hashes()
+    rejected = _load_rejected_projects()
+    kept, total, calls, status = [], 0, 0, "ok"
+    for name in KC_FALLBACK_GROUPS:
+        payload = {"type": "招标", "pub_time": start, "pub_time_1": now,
+                   "registration_deadline_time": now,
+                   "tender_names": name, "page": 1, "page_size": 50,
+                   "orders": "pub_time desc"}
+        try:
+            r = kc_api(payload)
+            calls += 1
+        except Exception as e:
+            status = f"error: {str(e)[:60]}"
+            break
+        items = (r.get('data') or {}).get('list') or r.get('list') or []
+        if isinstance(items, dict):
+            items = items.get('list') or []
+        total += len(items)
+        for it in items:
+            title = em.sub('', str(it.get('title')
+                                    or it.get('notice_title') or '')).strip()
+            hl = it.get('highlight') or {}
+            buyer = ''
+            if isinstance(hl.get('tender_names'), list) and hl['tender_names']:
+                buyer = em.sub('', str(hl['tender_names'][0]))
+            if not buyer:
+                buyer = str(it.get('tender_names') or it.get('tender_name')
+                            or '')
+            if not title:
+                continue
+            # 与直连同口径的标题预筛（FINANCE 由 tender_names 组词承担）
+            if STAGE_DROP.search(title) or LCY_NOISE.search(title):
+                continue
+            if not FINANCE.search(buyer) or not POSITIVE.search(title):
+                continue
+            if any(kw in title for kw in TITLE_EXCLUDE):
+                continue
+            t_norm = _norm_title(title)
+            th = 't:' + hashlib.md5(t_norm.encode('utf-8')).hexdigest()
+            if th in seen_t:
+                continue
+            if any(rp in t_norm for rp in rejected):
+                continue
+            url_id = str(it.get('url_id') or '')
+            pub = it.get('pub_time') or it.get('index_time') or now
+            dl = it.get('registration_deadline_time')
+            kept.append({
+                'title': (f"{title}（{buyer}）"
+                          if buyer and buyer not in title else title),
+                'pubdate': datetime.fromtimestamp(pub).strftime('%Y-%m-%d'),
+                'deadline': (datetime.fromtimestamp(dl).strftime('%Y-%m-%d')
+                             if dl else ''),
+                'url': (f"https://www.kuaicha365.com/?n={url_id}"
+                        if url_id else "https://www.kuaicha365.com/"),
+                'source': '快查',
+                'channel': ('乐采云WAF兜底补采'
+                            if url_id.startswith('ccgp_lecaiyun')
+                            else '乐采云WAF兜底补采-他源'),
+                'method': str(it.get('pubnote_type') or ''),
+                'budget': it.get('deal_budget_money') or '',
+                'url_id': url_id,
+            })
+        time.sleep(1)
+    return kept, total, calls, status
+
+
 def _ts_ms(it):
     ts = it.get('releasedAt') or it.get('createdAt') or 0
     if isinstance(ts, str):
@@ -106,7 +243,7 @@ def _ts_ms(it):
     return ts * 1000 if ts and ts < 1e12 else ts
 
 
-def main():
+def main(kc_window=KC_WINDOW_DAYS):
     from playwright.sync_api import sync_playwright
     run_at = datetime.now().strftime('%Y%m%d_%H%M')
     out_path = OUT_DIR / f"new_items_lecaiyun_{run_at}.json"
@@ -182,6 +319,21 @@ def main():
                                   "mode": "fetch", "status": status,
                                   "total_items": total,
                                   "new_count": len(kept)})
+        if status == "waf_blocked":
+            # 2026-10-19 周老师批准：WAF 持续拦截期间由快查 API 定向补采（≤6 次/天）
+            try:
+                fb, fb_total, fb_calls, fb_status = kc_fallback(kc_window)
+                result["new_items"].extend(fb)
+                result["sources"].append({
+                    "name": "乐采云WAF兜底-快查API定向补",
+                    "mode": "api", "status": fb_status,
+                    "total_items": fb_total, "new_count": len(fb),
+                    "quota_calls": fb_calls, "window_days": kc_window})
+            except Exception as e:
+                result["sources"].append({
+                    "name": "乐采云WAF兜底-快查API定向补",
+                    "mode": "api", "status": f"error: {str(e)[:60]}",
+                    "total_items": 0, "new_count": 0, "quota_calls": 0})
         browser.close()
     out_path.write_text(json.dumps(result, ensure_ascii=False, indent=1),
                         encoding='utf-8')

@@ -1,0 +1,112 @@
+{
+ "run_at": "20261019_0551",
+ "sources": [
+  {
+   "name": "邮储邮银易采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 44,
+   "new_count": 0
+  },
+  {
+   "name": "中信金控共享",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 30,
+   "new_count": 1
+  },
+  {
+   "name": "北京银行集采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 20,
+   "new_count": 3
+  },
+  {
+   "name": "浙商数智采购",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 29,
+   "new_count": 1
+  },
+  {
+   "name": "工银集采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 0
+  },
+  {
+   "name": "民生银行",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 8,
+   "new_count": 0
+  },
+  {
+   "name": "交行智采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 6,
+   "new_count": 2
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中信银行深圳分行汽车金融部分业务环节外包服务项目招标公告",
+   "pubdate": "2026-10-16",
+   "deadline": "",
+   "url": "https://ebid.cfhc.citic/cms/default/webfile/ywgg1/20261016/1295795453945708544.html",
+   "source": "中信金控采购共享平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "北京银行2026年普惠金融电子渠道线上服务升级（前端及测试）项目竞争性磋商公告",
+   "pubdate": "2026-10-16",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261016/1295896959004966912.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2026年新开户智能外呼风险防控项目-功能通讯费竞争性磋商公告",
+   "pubdate": "2026-10-16",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261016/1295874482728075264.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2026年支付清算系统功能优化项目运营支撑竞争性磋商公告",
+   "pubdate": "2026-10-16",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261016/1295775823504080896.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "关于浙商银行电话银行系统新增智能座席助手模块采购的公开招标公告",
+   "pubdate": "2026-10-16",
+   "deadline": "",
+   "url": "https://ccgp.szcgpt.czbank.com/luban/detail?parentId=700835&articleId=8Lp+nb2pFh1TM3EotPJRag==",
+   "source": "浙商银行数智采购平台",
+   "channel": "集中采购公告"
+  },
+  {
+   "title": "医保电子凭证软硬件部署实施及驻场运维服务采购项目市场调研公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://bocom-gys.bankcomm.com/espuser/register/noticeDetail",
+   "source": "交通银行智采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "交通银行2026年移动端APP兼容性测试服务采购项目招标公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://bocom-gys.bankcomm.com/espuser/register/noticeDetail",
+   "source": "交通银行智采平台",
+   "channel": "采购公告"
+  }
+ ]
+}

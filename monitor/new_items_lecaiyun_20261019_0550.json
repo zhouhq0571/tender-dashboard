@@ -1,0 +1,13 @@
+{
+ "run_at": "20261019_0550",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "total_items": 0,
+   "new_count": 0
+  }
+ ],
+ "new_items": []
+}

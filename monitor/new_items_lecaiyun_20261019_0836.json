@@ -1,0 +1,111 @@
+{
+ "run_at": "20261019_0836",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "total_items": 0,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云WAF兜底-快查API定向补",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 70,
+   "new_count": 8,
+   "quota_calls": 6,
+   "window_days": 15
+  }
+ ],
+ "new_items": [
+  {
+   "title": "浙江金业管理咨询有限公司关于湖州银行AI大模型应用平台建设采购项目的公开招标公告（湖州银行股份有限公司）",
+   "pubdate": "2026-10-10",
+   "deadline": "2026-10-30",
+   "url": "https://www.kuaicha365.com/?n=ccgp_lecaiyun_2051000015471123",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采",
+   "method": "公开招标",
+   "budget": 170.0,
+   "url_id": "ccgp_lecaiyun_2051000015471123"
+  },
+  {
+   "title": "宁波银行新鄞州科技中心35kV站运维服务采购项目招标公告（宁波银行股份有限公司）",
+   "pubdate": "2026-10-15",
+   "deadline": "2026-10-22",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jincaiwang_b09b0afb349d482dbb03c496941b0dc5",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": "",
+   "url_id": "ccgp_jincaiwang_b09b0afb349d482dbb03c496941b0dc5"
+  },
+  {
+   "title": "宁波银行新鄞州科技中心35kV站运维服务采购项目招标公告（宁波银行股份有限公司）",
+   "pubdate": "2026-10-15",
+   "deadline": "2026-10-22",
+   "url": "https://www.kuaicha365.com/?n=ccgp_daqih_8181_80ab8a921fd188ac08e1582f1201505c",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 50.0,
+   "url_id": "ccgp_daqih_8181_80ab8a921fd188ac08e1582f1201505c"
+  },
+  {
+   "title": "宁波银行新鄞州科技中心35kV站运维服务采购项目招标公告（宁波银行股份有限公司）",
+   "pubdate": "2026-10-15",
+   "deadline": "2026-10-22",
+   "url": "https://www.kuaicha365.com/?n=cbbidding_55285",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": "",
+   "url_id": "cbbidding_55285"
+  },
+  {
+   "title": "宁波银行新鄞州科技中心35kV站运维服务采购项目招标公告（宁波银行股份有限公司）",
+   "pubdate": "2026-10-15",
+   "deadline": "2026-10-22",
+   "url": "https://www.kuaicha365.com/?n=ccgp_daqih_8181_b3bc1fe621a7b109417efcef7b8839af",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 120.0,
+   "url_id": "ccgp_daqih_8181_b3bc1fe621a7b109417efcef7b8839af"
+  },
+  {
+   "title": "宁波银行数据中心景观改造(二区)施工项目采购公告（宁波银行股份有限公司）",
+   "pubdate": "2026-10-14",
+   "deadline": "2026-10-20",
+   "url": "https://www.kuaicha365.com/?n=ygcg_nbcqjy_8a9dc125-8c36-4f41-90b6-ecad2c7243c0",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 767.0378,
+   "url_id": "ygcg_nbcqjy_8a9dc125-8c36-4f41-90b6-ecad2c7243c0"
+  },
+  {
+   "title": "宁波银行数据中心景观改造(二区)施工项目采购公告（宁波银行股份有限公司）",
+   "pubdate": "2026-10-14",
+   "deadline": "2026-10-20",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jyxtzwbningbo_uini_bb81fba3e99163fe39480b6828e19ca7",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 767.0378,
+   "url_id": "ccgp_jyxtzwbningbo_uini_bb81fba3e99163fe39480b6828e19ca7"
+  },
+  {
+   "title": "宁波银行数据中心景观改造(二区)施工项目招标公告（宁波银行股份有限公司）",
+   "pubdate": "2026-10-14",
+   "deadline": "2026-10-20",
+   "url": "https://www.kuaicha365.com/?n=ccgp_gzqgczx_8a5cf0af588fa496e9a69effafc279ab",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 767.0378,
+   "url_id": "ccgp_gzqgczx_8a5cf0af588fa496e9a69effafc279ab"
+  }
+ ]
+}

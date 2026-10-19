@@ -1,0 +1,45 @@
+{
+ "run_at": "20261019_0834",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "total_items": 0,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云WAF兜底-快查API定向补",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 24,
+   "new_count": 2,
+   "quota_calls": 6,
+   "window_days": 4
+  }
+ ],
+ "new_items": [
+  {
+   "title": "湖南银行郴州分行2027年客户维护活动物料采购项目招标公告（湖南银行股份有限公司郴州分行）",
+   "pubdate": "2026-10-16",
+   "deadline": "2026-10-23",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jincaiwang_22fb924442f74fd6831e1707c13f048a",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 393.806,
+   "url_id": "ccgp_jincaiwang_22fb924442f74fd6831e1707c13f048a"
+  },
+  {
+   "title": "[阳光采购服务平台]宁波银行2026-2027年运营机具年度定点供货招标项目(品目六、十一、十二重发)采购公告（宁波银行股份有限公司）",
+   "pubdate": "2026-10-16",
+   "deadline": "2026-10-23",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jyxtzwbningbo_uini_d8bcde8a447f4860899893b9d11d8c28",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": "",
+   "url_id": "ccgp_jyxtzwbningbo_uini_d8bcde8a447f4860899893b9d11d8c28"
+  }
+ ]
+}

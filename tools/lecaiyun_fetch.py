@@ -59,7 +59,7 @@ POSITIVE = re.compile(
 LCY_NOISE = re.compile(
     r'体检|物业|餐饮|年金|开户银行|资金专户|存款账户|恒温恒湿|金库|守押|押运|'
     r'清分|宣传|广告|装修|租赁|绿化|车辆|充电桩|停车|搬迁|食材|苗木|'
-    r'电梯|空调|办公用品|家具|印刷|监控设备|门禁|档案|洗衣|票务|'
+    r'电梯|空调|办公用品|家具|印刷|监控设备|门禁|档案|洗衣|票务|物料|景观|'
     r'医疗|医院|学院|学校|课时|教材|实训|病房|器械|药品')
 # 阶段词：已过阶段直接丢
 STAGE_DROP = re.compile(
@@ -74,7 +74,8 @@ KC_TOOL_ID = "operation_get_yuqing_bidding_search_plus"
 KC_KEY_FILE = BASE / ".kc_apikey"
 # 乐采云 niche：浙江区域城商行/农商政采高频入口（与 l1_bank 7家、主 kc 3组词表互补）
 KC_FALLBACK_GROUPS = ["湖州银行", "温州银行", "泰隆", "稠州", "杭州银行", "宁波银行"]
-KC_WINDOW_DAYS = 4  # 覆盖 WAF 拦截缺口；重复条目由 dedup_filter/标题级去重零成本剔除
+KC_WINDOW_DAYS = 15  # 与直连 LOOKBACK_DAYS 同口径：API 日期过滤不耗额外额度，
+                     # 补的是同一覆盖窗；重复条目由 dedup_filter/标题级去重零成本剔除
 
 
 def strip_html(s):
@@ -137,7 +138,8 @@ def _load_rejected_projects():
             data = json.loads(f.read_text(encoding='utf-8'))
             for it in (data if isinstance(data, list)
                        else data.get('items') or []):
-                p = _norm_title(it.get('project', ''))
+                # rejected_candidates.json 用 project_kw 关键词式立项
+                p = _norm_title(it.get('project_kw') or it.get('project', ''))
                 if len(p) >= 6:
                     rej.add(p)
         except Exception:
@@ -170,6 +172,7 @@ def kc_fallback(window_days=KC_WINDOW_DAYS):
     seen_t = _load_seen_title_hashes()
     rejected = _load_rejected_projects()
     kept, total, calls, status = [], 0, 0, "ok"
+    run_keys = set()   # 当次运行内按 (招标主体, 去公告类型后缀的题名) 去重
     for name in KC_FALLBACK_GROUPS:
         payload = {"type": "招标", "pub_time": start, "pub_time_1": now,
                    "registration_deadline_time": now,
@@ -188,6 +191,8 @@ def kc_fallback(window_days=KC_WINDOW_DAYS):
         for it in items:
             title = em.sub('', str(it.get('title')
                                     or it.get('notice_title') or '')).strip()
+            # 剥离 [阳光采购服务平台] 等渠道括注：其中"平台"会误命中业务正向词
+            title = re.sub(r'^\[[^\]]*\]\s*', '', title)
             hl = it.get('highlight') or {}
             buyer = ''
             if isinstance(hl.get('tender_names'), list) and hl['tender_names']:
@@ -197,10 +202,14 @@ def kc_fallback(window_days=KC_WINDOW_DAYS):
                             or '')
             if not title:
                 continue
-            # 与直连同口径的标题预筛（FINANCE 由 tender_names 组词承担）
+            # tender_names 为宽松模糊匹配（"湖州银行"会召回"湖南银行"），
+            # 招标主体须含本组词本身才算数
+            if name not in buyer:
+                continue
+            # 与直连同口径的标题预筛（FINANCE 由组词+buyer 校验承担）
             if STAGE_DROP.search(title) or LCY_NOISE.search(title):
                 continue
-            if not FINANCE.search(buyer) or not POSITIVE.search(title):
+            if not POSITIVE.search(title):
                 continue
             if any(kw in title for kw in TITLE_EXCLUDE):
                 continue
@@ -210,6 +219,13 @@ def kc_fallback(window_days=KC_WINDOW_DAYS):
                 continue
             if any(rp in t_norm for rp in rejected):
                 continue
+            # 当次运行项目级去重：同一项目"采购公告/招标公告/多标段"多行只留首条
+            core = re.sub(r'(公开招标|邀请招标|竞争性磋商|竞争性谈判|询价|单一来源)?'
+                          r'(公告|公示)$', '', t_norm)
+            rk = (buyer, core)
+            if rk in run_keys:
+                continue
+            run_keys.add(rk)
             url_id = str(it.get('url_id') or '')
             pub = it.get('pub_time') or it.get('index_time') or now
             dl = it.get('registration_deadline_time')
@@ -347,4 +363,5 @@ def main(kc_window=KC_WINDOW_DAYS):
 
 
 if __name__ == '__main__':
-    main()
+    wd = int(sys.argv[1]) if len(sys.argv) > 1 else KC_WINDOW_DAYS
+    main(wd)

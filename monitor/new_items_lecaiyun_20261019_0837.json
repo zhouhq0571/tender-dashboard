@@ -1,0 +1,45 @@
+{
+ "run_at": "20261019_0837",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "total_items": 0,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云WAF兜底-快查API定向补",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 70,
+   "new_count": 2,
+   "quota_calls": 6,
+   "window_days": 15
+  }
+ ],
+ "new_items": [
+  {
+   "title": "浙江金业管理咨询有限公司关于湖州银行AI大模型应用平台建设采购项目的公开招标公告（湖州银行股份有限公司）",
+   "pubdate": "2026-10-10",
+   "deadline": "2026-10-30",
+   "url": "https://www.kuaicha365.com/?n=ccgp_lecaiyun_2051000015471123",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采",
+   "method": "公开招标",
+   "budget": 170.0,
+   "url_id": "ccgp_lecaiyun_2051000015471123"
+  },
+  {
+   "title": "宁波银行新鄞州科技中心35kV站运维服务采购项目招标公告（宁波银行股份有限公司）",
+   "pubdate": "2026-10-15",
+   "deadline": "2026-10-22",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jincaiwang_b09b0afb349d482dbb03c496941b0dc5",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": "",
+   "url_id": "ccgp_jincaiwang_b09b0afb349d482dbb03c496941b0dc5"
+  }
+ ]
+}

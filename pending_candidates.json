@@ -50,5 +50,18 @@
   "source": "快查",
   "status": "纳入",
   "note": "业务标签改为人力外包（用户决策）"
+ },
+ {
+  "company": "宁波银行",
+  "project": "新鄞州科技中心35kV站运维服务采购项目",
+  "method": "公开招标",
+  "deadline": "2026-10-22",
+  "budget": "-",
+  "tags": "其他",
+  "rec": "可关注",
+  "url": "https://www.kuaicha365.com/?n=ccgp_jincaiwang_b09b0afb349d482dbb03c496941b0dc5",
+  "source": "快查",
+  "status": "不纳入",
+  "note": "用户决策（2026-10-19）：35kV站运维为动力设施运维，超业务范围，不纳入"
  }
 ]

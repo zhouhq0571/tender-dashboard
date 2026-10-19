@@ -74,8 +74,8 @@
   ],
   "suggestion": "建议投标",
   "source_url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
-  "status": "待确认",
-  "note": "龙集采供应商征集，信托机构全量放行"
+  "status": "纳入",
+  "note": "用户决策2026-10-19：纳入（标签信创，保留）"
  },
  {
   "date": "2026-10-19",
@@ -100,8 +100,8 @@
   ],
   "suggestion": "可关注",
   "source_url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261016/1295775823504080896.html",
-  "status": "待确认",
-  "note": "预算73.2万元"
+  "status": "纳入",
+  "note": "用户决策2026-10-19：纳入，业务标签改为公司金融，投标建议改为建议投标"
  },
  {
   "date": "2026-10-19",
@@ -126,7 +126,7 @@
   ],
   "suggestion": "可关注",
   "source_url": "https://www.kuaicha365.com/",
-  "status": "待确认",
-  "note": "提示：用户2026-10-16否决过广发总行\"2026-2027年运维\"另一项目，本条为带具体平台的第二次采购，请一并裁决"
+  "status": "不纳入",
+  "note": "用户决策2026-10-19：不纳入"
  }
 ]

@@ -7,7 +7,7 @@
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0"/>
 <meta content="no-cache" http-equiv="Pragma"/>
 <meta content="0" http-equiv="Expires"/>
-<title>恒生银信招标资讯每日速递 | 2026年10月20日（更新）v327</title>
+<title>恒生银信招标资讯每日速递 | 2026年10月20日（更新）v328</title>
 <meta content="适合恒生银信LBO关注和参与的银行及理财子公司、信托公司近期公开发布的最新有效招标资讯信息/每日看板，可供行业销售/解决方案/产品售前人员日常工作参考了解。" name="description"/>
 <meta property="og:title" content="恒生银信招标资讯速递"/>
 <meta property="og:description" content="适合恒生银信LBO关注和参与的银行及理财子公司、信托公司近期公开发布的最新有效招标资讯信息/每日看板，可供行业销售/解决方案/产品售前人员日常工作参考了解。"/>
@@ -267,7 +267,7 @@ th.col-project,td.col-project{border-right:2px solid var(--primary-light)}
 </div>
 
 <script type="application/json" id="tender-data">{
-  "version": "v327",
+  "version": "v328",
   "date": "2026年10月20日",
   "timePeriod": "上午",
   "projects": [
@@ -3414,6 +3414,34 @@ document.addEventListener('DOMContentLoaded', function() {
   color: #fff;
 }
 </style>
+
+<script>
+/* 版本看门狗：绕过 max-age=600 边缘/浏览器缓存，发现新版本自动刷新（2026-10-20 根治"看板不刷新"问题） */
+(function () {
+  var localMatch = document.getElementById('tender-data') ? document.getElementById('tender-data').textContent.match(/"version"\s*:\s*"(v\d+)"/) : null;
+  var localVer = localMatch ? parseInt(localMatch[1].slice(1), 10) : 0;
+  var lastReload = 0;
+  function checkVersion() {
+    if (document.hidden) return;
+    fetch(location.pathname + '?_v=' + Date.now(), { cache: 'no-store', credentials: 'omit' })
+      .then(function (r) { return r.text(); })
+      .then(function (t) {
+        var m = t.match(/"version"\s*:\s*"(v\d+)"/);
+        if (!m) return;
+        var remoteVer = parseInt(m[1].slice(1), 10);
+        var now = Date.now();
+        if (remoteVer > localVer && now - lastReload > 60000) {
+          lastReload = now;
+          location.reload();
+        }
+      })
+      .catch(function () {});
+  }
+  setTimeout(checkVersion, 3000);
+  setInterval(checkVersion, 120000);
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) checkVersion(); });
+})();
+</script>
 
 </body>
 </html>

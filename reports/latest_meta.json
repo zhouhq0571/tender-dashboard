@@ -1,7 +1,7 @@
 {
  "version": "v338",
- "date": "2026-10-24",
- "timePeriod": "周六·节假日跳过",
+ "date": "2026-10-25",
+ "timePeriod": "周日·节假日跳过",
  "total": 106,
  "added": [],
  "removed_count": 0,
@@ -9,5 +9,5 @@
  "candidates": [],
  "pending_fill_count": 0,
  "filled_recent": [],
- "other_note": "2026-10-24 周六休息日，按总则直接结束，未部署未采集；线上维持 v338（10-23 下午）"
+ "other_note": "2026-10-25 周日休息日，按总则直接结束，未部署未采集；线上维持 v338（10-23 下午）"
 }

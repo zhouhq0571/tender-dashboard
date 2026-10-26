@@ -1,13 +1,22 @@
 {
- "version": "v338",
- "date": "2026-10-25",
- "timePeriod": "周日·节假日跳过",
- "total": 106,
+ "version": "v340",
+ "date": "2026-10-26",
+ "timePeriod": "凌晨",
+ "total": 80,
  "added": [],
- "removed_count": 0,
- "removed_note": "非工作日，未执行任何变更",
- "candidates": [],
- "pending_fill_count": 0,
+ "removed_count": 27,
+ "removed_note": "10-22/10-23截止已满2天（含10-23已标已截止7项）",
+ "candidates": [
+  "建行浙江前端IT外包",
+  "温州银行攻防演练",
+  "邮储宁波反诈监测",
+  "北京银行支付清算运营支撑(二次)",
+  "北京银行事后监督平台功能",
+  "民生银行船舶数据账号",
+  "宁波银行阅信采购",
+  "河北银行反欺诈平台升级(二次)"
+ ],
+ "pending_fill_count": 8,
  "filled_recent": [],
- "other_note": "2026-10-25 周日休息日，按总则直接结束，未部署未采集；线上维持 v338（10-23 下午）"
+ "other_note": "curl核验全过；Widget联动succeeded；抽检3正常指针35；乐采云waf_blocked走快查兜底(已批准)；邮银易采SPA致4条硬门槛排除；无降级无失效；8候选待用户确认"
 }

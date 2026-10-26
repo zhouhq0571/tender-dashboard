@@ -1,22 +1,22 @@
 {
- "version": "v340",
- "date": "2026-10-26",
- "timePeriod": "凌晨",
- "total": 80,
- "added": [],
+ "version": "v341",
+ "date": "2026年10月26日",
+ "timePeriod": "早上",
+ "total": 81,
+ "added": [
+  {
+   "company": "北京银行",
+   "project": "2026年支付清算系统功能优化项目运营支撑（二次）",
+   "deadline": "2026-11-03",
+   "tags": [
+    "公司金融"
+   ]
+  }
+ ],
  "removed_count": 27,
  "removed_note": "10-22/10-23截止已满2天（含10-23已标已截止7项）",
- "candidates": [
-  "建行浙江前端IT外包",
-  "温州银行攻防演练",
-  "邮储宁波反诈监测",
-  "北京银行支付清算运营支撑(二次)",
-  "北京银行事后监督平台功能",
-  "民生银行船舶数据账号",
-  "宁波银行阅信采购",
-  "河北银行反欺诈平台升级(二次)"
- ],
+ "candidates": 0,
  "pending_fill_count": 8,
  "filled_recent": [],
- "other_note": "curl核验全过；Widget联动succeeded；抽检3正常指针35；乐采云waf_blocked走快查兜底(已批准)；邮银易采SPA致4条硬门槛排除；无降级无失效；8候选待用户确认"
+ "other_note": "curl核验全过；Widget联动succeeded；抽检3正常指针35；乐采云waf_blocked走快查兜底(已批准)；邮银易采SPA致4条硬门槛排除；无降级无失效；8候选待用户确认；[meta自纠 2026-10-26 08:30] 版本/项目数/今日纳入已按看板 v341 回写"
 }

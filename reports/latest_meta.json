@@ -1,30 +1,28 @@
 {
- "version": "v360",
- "date": "2026年10月30日",
+ "version": "v361",
+ "date": "2026-10-31",
  "timePeriod": "下午",
- "total": 85,
+ "total": 86,
  "added": [
   {
-   "company": "重庆三峡银行",
-   "project": "磐石系统建设项目（第二次）（标段1：报告智能撰写）",
-   "deadline": "2026-11-13",
-   "tags": [
-    "大模型应用"
-   ]
+   "id": 173,
+   "company": "常熟农商银行",
+   "project": "桌面智能体办公平台采购项目",
+   "channel": "user_url"
   }
  ],
- "removed_count": 11,
+ "removed_count": 0,
  "removed_note": "到期删除deadline≤2026-10-28共11条（华夏发票数据系列7条id11-17、华夏资产托管系统、北银理财法务/HR国产化、富滇银行理财资产管理系统升级）；另标8条已截止（19,20,42,66,72,82,86,99，deadline 10-29/10-30）",
  "candidates": 0,
  "pending_fill_count": 0,
  "filled_recent": 0,
- "other_note": "2026-10-31 周六非工作日，节假日跳过；看板维持 v356 不变；10-30批次3条候选待裁决",
+ "other_note": "2026-11-01 周日非工作日，节假日跳过；看板维持 v356 不变；10-30批次3条候选待裁决",
  "channel_stats": {
-  "date": "2026年10月30日",
+  "date": "2026-10-31",
   "added_total": 1,
   "by_channel": {
-   "search": 1,
-   "user_url": 0,
+   "search": 0,
+   "user_url": 1,
    "user_excel": 0,
    "user_screenshot": 0
   }

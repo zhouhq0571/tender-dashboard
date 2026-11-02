@@ -1,0 +1,176 @@
+{
+ "automation_id": "automation_0565c6f6-885b-4c81-9190-5b552a3eb9ab",
+ "schedule": "47 5 * * * (每日 05:47 本地; UTC 21:47Z 前一日)",
+ "retention_note": "listRuns 仅保留最近 20 条；本文件为 2026-11-03 复盘时拉取的落盘存证",
+ "pulled_at": "2026-11-03 06:0x CST",
+ "runs": [
+  {
+   "runId": "run_67a489d2-0dc7-4ec4-b935-dea8388d108f",
+   "status": "running",
+   "startedAt": "2026-11-02T21:47:16.770Z",
+   "local_date": "2026-11-03"
+  },
+  {
+   "runId": "run_5c21001a-7d63-4114-91d3-c6125d486dd0",
+   "status": "succeeded",
+   "startedAt": "2026-11-01T21:47:12.279Z",
+   "completedAt": "2026-11-01T21:59:42.022Z",
+   "durationMs": 749620,
+   "local_date": "2026-11-02"
+  },
+  {
+   "runId": "run_726d7a6f-7411-4345-981e-f7b73fecad11",
+   "status": "succeeded",
+   "startedAt": "2026-10-31T21:47:01.121Z",
+   "completedAt": "2026-10-31T21:47:35.851Z",
+   "durationMs": 34599,
+   "local_date": "2026-11-01"
+  },
+  {
+   "runId": "run_390873b4-ce4f-4eb7-b615-fa102164ed0c",
+   "status": "succeeded",
+   "startedAt": "2026-10-30T21:47:01.149Z",
+   "completedAt": "2026-10-30T21:47:38.138Z",
+   "durationMs": 36883,
+   "local_date": "2026-10-31"
+  },
+  {
+   "runId": "run_19fff626-1b92-4c83-9c13-e6e86a7bff02",
+   "status": "succeeded",
+   "startedAt": "2026-10-29T21:47:27.174Z",
+   "completedAt": "2026-10-29T21:57:23.035Z",
+   "durationMs": 595809,
+   "local_date": "2026-10-30"
+  },
+  {
+   "runId": "run_409385db-6618-4993-a6a6-af5d15a1ac96",
+   "status": "succeeded",
+   "startedAt": "2026-10-28T21:47:16.404Z",
+   "completedAt": "2026-10-28T22:02:55.267Z",
+   "durationMs": 938814,
+   "local_date": "2026-10-29"
+  },
+  {
+   "runId": "run_49c071cd-12ec-45be-a2b8-398850c863b2",
+   "status": "succeeded",
+   "startedAt": "2026-10-27T21:47:19.098Z",
+   "completedAt": "2026-10-27T21:56:16.971Z",
+   "durationMs": 537830,
+   "local_date": "2026-10-28"
+  },
+  {
+   "runId": "run_0a09a417-6de9-4ce8-a06b-fe55bc344db4",
+   "status": "succeeded",
+   "startedAt": "2026-10-26T21:47:21.793Z",
+   "completedAt": "2026-10-26T21:58:45.831Z",
+   "durationMs": 683987,
+   "local_date": "2026-10-27"
+  },
+  {
+   "runId": "run_35b0e51e-4860-45c9-82fb-44ed3e2aaa31",
+   "status": "succeeded",
+   "startedAt": "2026-10-25T21:47:08.041Z",
+   "completedAt": "2026-10-25T22:01:48.101Z",
+   "durationMs": 880040,
+   "local_date": "2026-10-26"
+  },
+  {
+   "runId": "run_e4e8252d-54d5-4b47-be0d-bb65e5b9ff63",
+   "status": "succeeded",
+   "startedAt": "2026-10-24T21:47:13.067Z",
+   "completedAt": "2026-10-24T21:47:39.952Z",
+   "durationMs": 26866,
+   "local_date": "2026-10-25"
+  },
+  {
+   "runId": "run_7f494050-bd92-4bb8-aa02-64c94cd11aa6",
+   "status": "succeeded",
+   "startedAt": "2026-10-23T21:47:26.928Z",
+   "completedAt": "2026-10-23T21:49:16.771Z",
+   "durationMs": 109824,
+   "local_date": "2026-10-24"
+  },
+  {
+   "runId": "run_12444c6c-2890-4a29-bfee-853f8ba40147",
+   "status": "succeeded",
+   "startedAt": "2026-10-22T21:47:22.438Z",
+   "completedAt": "2026-10-22T21:59:43.911Z",
+   "durationMs": 741454,
+   "local_date": "2026-10-23"
+  },
+  {
+   "runId": "run_933934f0-f959-40e2-8328-9b4f3804a7e3",
+   "status": "succeeded",
+   "startedAt": "2026-10-21T21:47:04.492Z",
+   "completedAt": "2026-10-21T21:57:58.792Z",
+   "durationMs": 654279,
+   "local_date": "2026-10-22"
+  },
+  {
+   "runId": "run_c56e494b-9e85-45de-8610-3908d6ab7062",
+   "status": "succeeded",
+   "startedAt": "2026-10-20T21:47:07.266Z",
+   "completedAt": "2026-10-20T21:58:15.413Z",
+   "durationMs": 668127,
+   "local_date": "2026-10-21"
+  },
+  {
+   "runId": "run_aa2a7a95-3708-4e4c-879b-284dc1e7b061",
+   "status": "succeeded",
+   "startedAt": "2026-10-19T21:47:04.850Z",
+   "completedAt": "2026-10-19T21:58:00.664Z",
+   "durationMs": 655791,
+   "local_date": "2026-10-20"
+  },
+  {
+   "runId": "run_c3228879-9db3-47d3-aaeb-369f1c05d64b",
+   "status": "succeeded",
+   "startedAt": "2026-10-19T02:24:46.973Z",
+   "completedAt": "2026-10-19T02:39:10.443Z",
+   "durationMs": 863443,
+   "local_date": "2026-10-19",
+   "note": "日间补跑 10:24"
+  },
+  {
+   "runId": "run_6e5e0281-05a2-4114-9808-734c833cae04",
+   "status": "succeeded",
+   "startedAt": "2026-10-18T21:47:08.956Z",
+   "completedAt": "2026-10-18T21:55:06.454Z",
+   "durationMs": 477477,
+   "local_date": "2026-10-19"
+  },
+  {
+   "runId": "run_8e07d251-1949-4822-b1a9-a6e08cbedeeb",
+   "status": "succeeded",
+   "startedAt": "2026-10-17T21:47:20.209Z",
+   "completedAt": "2026-10-17T21:47:42.074Z",
+   "durationMs": 21842,
+   "local_date": "2026-10-18"
+  },
+  {
+   "runId": "run_6180f979-e862-462f-bc06-c87a3c311729",
+   "status": "succeeded",
+   "startedAt": "2026-10-16T21:47:06.056Z",
+   "completedAt": "2026-10-16T21:47:37.228Z",
+   "durationMs": 31143,
+   "local_date": "2026-10-17"
+  },
+  {
+   "runId": "run_aae4109f-daf2-4204-9934-0c4e19970e06",
+   "status": "succeeded",
+   "startedAt": "2026-10-15T21:47:26.510Z",
+   "completedAt": "2026-10-15T21:55:54.043Z",
+   "durationMs": 507513,
+   "local_date": "2026-10-16"
+  }
+ ],
+ "summary": {
+  "succeeded": 19,
+  "failed": 0,
+  "cancelled": 0,
+  "running": 1,
+  "measurable_window_local": "2026-10-16 ~ 2026-10-31",
+  "morning_coverage_workdays": "12/12 = 100%",
+  "total_duration_ms_succeeded": 9215341
+ }
+}

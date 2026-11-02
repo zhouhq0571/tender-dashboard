@@ -119,3 +119,44 @@ def parse_deadline(d):
     if m:
         return m.group(1)
     return '9999-99-99'
+
+# 2026-10-30 规则 O-联系方式：联系方式硬检起始 id（含）——id >= 该值的新上板项目
+# 必须带真实"项目咨询/联系方式"内容（联系人/电话/邮箱/代理机构至少一项），禁止 '-'；
+# 在板历史项（id < 该值）不在硬检范围（已批量补全过一遍）。
+CONTACT_HARD_CHECK_MIN_ID = 173
+
+# ========== 2026-11-02 规则 P-预算纯金额（全场景唯一口径）==========
+# 2026-08-24 立规"预算金额字段只写金额"，但直至 11-02 未固化为硬检，
+# validate/safe_deploy 只查存在性不查格式，致"未披露/1500万元（预估）/954万元（最高限价，含税）"
+# 混入在板数据（用户 11-02 10:13 质检查获）。本模块为唯一口径，消费方：
+#   validate_new_projects.py（上板前校验）、safe_deploy.sh（部署兜底闸）、晨报候选产出（pending 落盘前）。
+import re as _re
+
+BUDGET_OK_RE = _re.compile(r'-|\d+(\.\d+)?(万)?元')
+
+# 预算中的修饰字样（需剥离挪去 overview/note，不得留在 budget 字段）
+BUDGET_MODIFIER_WORDS = ('未披露', '未公布', '不详', '未知', '预估', '预计', '参考价', '最高限价', '限价',
+                         '含税', '不含税', '暂估', '约')
+
+def normalize_budget(b, note_sink=None):
+    """按规则 P 归一预算字段，返回纯金额（如 '60万元'、'500元'）或 '-'。
+
+    b: 原始预算字符串（任意脏格式）。
+    note_sink: 可选 list；剥离出的修饰字样（如 '（预估）'、'最高限价，含税'）追加进去，
+               供调用方写入 overview/note，保证信息不丢。
+    未知/空/未披露类一律 '-'
+    """
+    s = str(b or '').strip()
+    if s in ('', '-', '/', '无', '暂无') or any(w in s for w in ('未披露', '未公布', '不详', '未知')):
+        return '-'
+    m = _re.fullmatch(r'(\d+(?:\.\d+)?(?:万)?元)(.*)', s)
+    if m:
+        rest = m.group(2).strip().strip('（）() ').strip('，, ')
+        if note_sink is not None and rest:
+            note_sink.append(rest)
+        return m.group(1)
+    # 非金额格式（纯修饰字样等）：整体挪入 note_sink
+    if note_sink is not None:
+        note_sink.append(s.strip('（）() '))
+        return '-'
+    return s if BUDGET_OK_RE.fullmatch(s) else '-'

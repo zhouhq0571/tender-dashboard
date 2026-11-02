@@ -78,15 +78,40 @@ def check_field_values(project):
     
     if not isinstance(project.get('tags'), list):
         errors.append("tags必须是数组")
+
+    # 2026-10-30 规则 O-联系方式：增量硬检（id >= CONTACT_HARD_CHECK_MIN_ID 的项目禁止空联系方式）
+    try:
+        from config import CONTACT_HARD_CHECK_MIN_ID as _cmin
+    except Exception:
+        _cmin = 10**9
+    _c = str(project.get('contact') or '').strip()
+    if isinstance(project.get('id'), int) and project.get('id') >= _cmin and _c in ('', '-', '/', '无', '暂无'):
+        errors.append("contact为空（规则 O-联系方式：新上板必须带真实项目咨询/联系方式，"
+                      "用 tools/ql_vip_fetch.py extract_contact 从公告提取；快查来源至少填代理机构名）")
     
     url = project.get('url', '')
     if not url.startswith('http'):
         errors.append(f"URL格式错误: {url}")
+    # 2026-10-30：平台首页占位 URL 硬检（新增项目）
+    _u = url.strip().rstrip('/')
+    if isinstance(project.get('id'), int) and project.get('id') >= _cmin and \
+            _u in ('https://www.kuaicha365.com', 'http://www.kuaicha365.com'):
+        errors.append("url为快查首页占位（快查来源应用 url_id 拼 /outer/tender-bid/project-process 详情链接）")
     
     overview = project.get('overview', '')
     if len(overview) < 10:
         errors.append(f"overview太短（{len(overview)}字），应至少10字")
-    
+
+    # 2026-11-02 规则 P-预算纯金额：全场景硬检（2026-08-24 立规"预算金额字段只写金额"此前未固化，
+    # 致"未披露/1500万元（预估）/954万元（最高限价，含税）"等修饰字样混入，用户 11-02 质检查获）。
+    # 只允许：纯金额（如 60万元 / 500元）或 '-'；未知金额一律 '-'，备注性字样只能写进 overview。
+    # 口径唯一来源 config.BUDGET_OK_RE / normalize_budget。
+    from config import BUDGET_OK_RE as _BUDGET_OK_RE
+    _b = str(project.get('budget') or '').strip()
+    if not _BUDGET_OK_RE.fullmatch(_b):
+        errors.append(f"budget含修饰字样: '{_b}'，只许纯金额（如 60万元）或 '-'，"
+                      f"未披露/预估/最高限价/含税等备注写入 overview")
+
     return errors
 
 def check_url_uniqueness(project, all_projects):

@@ -97,6 +97,71 @@ if bad_canon:
     sys.exit(1)
 print('✅ 信息来源归一化检查通过')
 
+# 2026-10-30 规则 O-联系方式：增量硬检——id >= CONTACT_HARD_CHECK_MIN_ID 的项目必须带真实
+# 联系方式（联系人/电话/邮箱/代理机构至少一项），禁止 '-' / 空（用户 14:20 指令全场景立规）
+try:
+    from config import CONTACT_HARD_CHECK_MIN_ID as _contact_min
+except Exception:
+    _contact_min = 10**9
+def _contact_empty(c):
+    c = str(c or '').strip()
+    return c in ('', '-', '/', '无', '暂无')
+bad_contact = [(p.get('id'), p.get('company')) for p in projects
+               if isinstance(p.get('id'), int) and p.get('id') >= _contact_min and _contact_empty(p.get('contact'))]
+if bad_contact:
+    print(f'❌ 新增项目缺"项目咨询/联系方式" {len(bad_contact)} 条: {bad_contact[:5]}（规则 O-联系方式：上板前须从公告原文/千里马详情提取，工具 tools/ql_vip_fetch.py extract_contact）')
+    sys.exit(1)
+if any(isinstance(p.get('id'), int) and p.get('id') >= _contact_min for p in projects):
+    print('✅ 联系方式增量硬检通过')
+
+# 2026-10-30 新增：平台首页占位 URL 硬检——新增项目（id >= CONTACT_HARD_CHECK_MIN_ID）的
+# url 不允许为信源平台首页根路径（曾致快查 8 条 url 全同、validate 重复告警且链接不可点）
+_PLACEHOLDER_HOSTS = ('kuaicha365.com',)
+def _is_home_url(u):
+    u = str(u or '').strip().rstrip('/')
+    for h in _PLACEHOLDER_HOSTS:
+        if u in (f'https://www.{h}', f'http://www.{h}', f'https://{h}', f'http://{h}'):
+            return True
+    return False
+bad_url = [(p.get('id'), p.get('source')) for p in projects
+           if isinstance(p.get('id'), int) and p.get('id') >= _contact_min and _is_home_url(p.get('url'))]
+if bad_url:
+    print(f'❌ 新增项目 URL 为平台首页占位 {len(bad_url)} 条: {bad_url[:5]}（快查来源用 url_id 拼 /outer/tender-bid/project-process 详情链接，见 tools/kc_bid_fetch.py）')
+    sys.exit(1)
+
+# 2026-10-30 新增：封面 DOM 结构硬检（10-30 事故：晨报任务改封面文本时弄丢 cover-meta 的 </div>，
+# 正则未匹配静默放过，整个看板嵌套进 .cover 导致白字/标签不可点，持续约7小时才被发现）
+import re as _re
+if not _re.search(r'<div class="cover-meta" id="cover-update-time">[^<]*</div>', html):
+    print('❌ 封面 cover-meta 未闭合或结构异常（数据更新时间 div 缺少 </div>），中止部署')
+    sys.exit(1)
+# 2026-11-02 规则 P-预算纯金额：全场景硬检（口径唯一来源 config.BUDGET_OK_RE；2026-08-24 立规未固化致污染混入）
+try:
+    from config import BUDGET_OK_RE as _BUDGET_RE
+except Exception:
+    _BUDGET_RE = re.compile(r'-|\d+(\.\d+)?(万)?元')
+_bad_budget = [(p.get('id'), p.get('budget')) for p in projects
+               if not _BUDGET_RE.fullmatch(str(p.get('budget') or '').strip())]
+if _bad_budget:
+    print(f'❌ 预算字段含修饰字样 {len(_bad_budget)} 条: {_bad_budget[:5]}（只许纯金额如 60万元 或 -，备注写 overview）')
+    sys.exit(1)
+print('✅ 预算纯金额检查通过')
+from html.parser import HTMLParser
+class _DivCheck(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.stack=[]; self.errors=[]
+    def handle_starttag(self, tag, attrs):
+        if tag == 'div': self.stack.append(self.getpos())
+    def handle_endtag(self, tag):
+        if tag == 'div':
+            if self.stack: self.stack.pop()
+            else: self.errors.append(f'多余 </div> at {self.getpos()}')
+_dc = _DivCheck(); _dc.feed(html)
+if _dc.stack or _dc.errors:
+    print(f'❌ div 标签不平衡: 未闭合 {len(_dc.stack)} 处（首个行号 {_dc.stack[0][0] if _dc.stack else "-" }）, 多余闭合 {len(_dc.errors)} 处')
+    sys.exit(1)
+print('✅ 封面/DOM 结构检查通过')
+
 print('✅ 所有字段检查通过')
 PYTHON_EOF
 

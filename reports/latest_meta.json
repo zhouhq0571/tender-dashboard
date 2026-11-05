@@ -1,34 +1,26 @@
 {
- "version": "v377",
- "date": "2026年11月04日",
+ "version": "v379",
+ "date": "2026年11月05日",
  "timePeriod": "上午",
- "total": 84,
+ "total": 65,
  "added": [
   {
-   "company": "北京农商银行",
-   "project": "智能体平台建设项目供应商征集（二次）",
-   "deadline": "2026-11-09",
+   "company": "中国邮政储蓄银行",
+   "project": "企业法人相关信息核验数据采购项目",
+   "deadline": "2026-11-26 09:30",
    "tags": [
-    "大模型应用"
-   ]
-  },
-  {
-   "company": "中信银行",
-   "project": "金融市场初始保证金系统采购项目",
-   "deadline": "2026-11-25 09:00",
-   "tags": [
-    "金市/资金/同业"
+    "数据服务"
    ]
   }
  ],
- "removed_count": 19,
- "removed_note": "删除deadline 2026-11-02及以前共19条；9条新标已截止",
+ "removed_count": 20,
+ "removed_note": "删除deadline 2026-11-03共20条；4条新标已截止",
  "candidates": 0,
  "pending_fill_count": 0,
  "filled_recent": [],
- "other_note": "11-03批次5条纳入均已由用户会话上板，pending清空；部署前修复id88预算字段美元单位违例（金额并入overview）；乐采云waf_blocked第2天；厦门银行id64 contact='-' 公告未披露联系方式待补采；抽检3条无错配，指针53→56；[meta自纠 2026-11-04 08:14] 版本/项目数/今日纳入已按看板 v377 回写",
+ "other_note": "11-04批次2条纳入已由用户会话上板（id102/103），pending清空；乐采云waf_blocked连续第3天报失效，快查兜底代偿；温州银行大数据平台信创按北银大数据云平台先例作纯基础设施排除；抽检3条无错配，指针56→59；[meta自纠 2026-11-05 08:29] 版本/项目数/今日纳入已按看板 v379 回写",
  "channel_stats": {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "added_total": 0,
   "by_channel": {
    "search": 0,

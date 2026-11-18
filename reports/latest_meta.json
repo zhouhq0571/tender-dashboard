@@ -1,65 +1,23 @@
 {
- "version": "v409",
- "date": "2026年11月17日",
- "timePeriod": "上午",
- "total": 96,
- "added": [
-  {
-   "company": "中信信托",
-   "project": "估值系统2026年需求建设项目",
-   "deadline": "2026-12-08",
-   "tags": [
-    "资产管理"
-   ]
-  },
-  {
-   "company": "北京银行",
-   "project": "数字人民币运营机构筹建项目-头寸管理系统2.0",
-   "deadline": "2026-11-30 14:00",
-   "tags": [
-    "公司金融"
-   ]
-  },
-  {
-   "company": "青岛农商银行",
-   "project": "扫码收单系统架构优化及信创升级建设项目",
-   "deadline": "2026-11-25 14:00",
-   "tags": [
-    "公司金融"
-   ]
-  },
-  {
-   "company": "苏州银行",
-   "project": "2026年供应链服务平台二期服务采购项目",
-   "deadline": "2026-11-27",
-   "tags": [
-    "公司金融"
-   ]
-  },
-  {
-   "company": "交银理财",
-   "project": "2026年应用系统延续实施外部服务（综合事务管理、需求分析设计、基础资源）",
-   "deadline": "2026-11-19",
-   "tags": [
-    "人力外包",
-    "资产管理"
-   ]
+  "version": "v410",
+  "date": "2026年11月18日",
+  "timePeriod": "凌晨",
+  "total": 79,
+  "added": [],
+  "removed_count": 17,
+  "removed_note": "删除17条（deadline≤11-16，delta≥2，含11-16标记的今日过期项）；13条今日（11-18）截止标记「☆☆☆ 已截止」保留",
+  "candidates": 13,
+  "pending_fill_count": 0,
+  "filled_recent": [],
+  "other_note": "sweep 后台一次完成（fresh 37）；中银理财估值核算系统经VIP核实已于10-22截止排除；候选13条达标未触发升级/补跑；昨日9条候选已全部裁决并于v409上板5条（91→96），本批push_no自1起",
+  "channel_stats": {
+    "date": "2026-11-18",
+    "added_total": 0,
+    "by_channel": {
+      "search": 0,
+      "user_url": 0,
+      "user_excel": 0,
+      "user_screenshot": 0
+    }
   }
- ],
- "removed_count": 0,
- "removed_note": "无删除（deadline≤11-15 条目已于昨日清理）；9 条今日（11-17）截止标记「☆☆☆ 已截止」保留",
- "candidates": 0,
- "pending_fill_count": 0,
- "filled_recent": [],
- "other_note": "sweep 后台一次完成（fresh 36）；L1 升级（ql_vip_search 估值/投顾/清算/核算/TA/直销）去重后 0 新增，L2 WebSearch 命中均为窗口外旧公告；候选 9 条差 KPI 目标 1 条，缺口如实上报；浙商银行运维监控工具维保（JS渲染取不到真实截止时间）未送审；中信信托估值系统为 vip_tb 与快查双通道命中（取快查口径）；昨日 11 条候选已全部裁决（9纳入/2不纳入），本批次与旧批 push_no 各自从 1 起，旧批均已带决策注记不受理；[meta自纠 2026-11-17 09:30] 版本/项目数/今日纳入已按看板 v409 回写",
- "channel_stats": {
-  "date": "2026-11-17",
-  "added_total": 0,
-  "by_channel": {
-   "search": 0,
-   "user_url": 0,
-   "user_excel": 0,
-   "user_screenshot": 0
-  }
- }
 }

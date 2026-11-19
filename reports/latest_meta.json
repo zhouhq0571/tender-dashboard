@@ -1,99 +1,23 @@
 {
- "version": "v426",
- "date": "2026年11月20日",
- "timePeriod": "凌晨",
- "total": 99,
- "added": [
-  {
-   "company": "北京银行",
-   "project": "北京银行2026年财富管理数字赋能系统业务测试需求项目（第二次）",
-   "budget": "15.91万元",
-   "deadline": "2026-12-01",
-   "tags": [
-    "财富管理"
-   ]
-  },
-  {
-   "company": "青岛农商银行",
-   "project": "青岛农商银行贵金属代销系统黄金积存兑换功能优化项目",
-   "budget": "16万元",
-   "deadline": "2026-12-01",
-   "tags": [
-    "财富管理"
-   ]
-  },
-  {
-   "company": "青岛农商银行",
-   "project": "青岛农商银行社保资金代收付系统信创改造项目",
-   "budget": "18.7万元",
-   "deadline": "2026-12-01",
-   "tags": [
-    "公司金融",
-    "信创"
-   ]
-  },
-  {
-   "company": "杭州工商信托",
-   "project": "杭州工商信托股份有限公司债券投资信用评级模型采购项目",
-   "budget": "50万元",
-   "deadline": "2026-11-25",
-   "tags": [
-    "风控合规",
-    "资产管理"
-   ]
-  },
-  {
-   "company": "兴业银行",
-   "project": "兴业银行关于境外投资理财保费融资及结构性票据升级项目",
-   "budget": "-",
-   "deadline": "2026-11-25",
-   "tags": [
-    "财富管理"
-   ]
-  },
-  {
-   "company": "中铁信托",
-   "project": "中铁信托有限责任公司资管系统进行反洗钱、信息披露改造线上询价采购",
-   "budget": "-",
-   "deadline": "2026-11-20",
-   "tags": [
-    "资产管理"
-   ]
-  },
-  {
-   "company": "中铁信托",
-   "project": "中铁信托有限责任公司投资者APP电子签名改造等需求线上询价采购",
-   "budget": "-",
-   "deadline": "2026-11-20",
-   "tags": [
-    "渠道系统"
-   ]
-  },
-  {
-   "company": "华润深国投信托",
-   "project": "华润深国投信托有限公司华润信托二代征信报数系统信创改造项目",
-   "budget": "-",
-   "deadline": "2026-11-23",
-   "tags": [
-    "风控合规",
-    "资产管理"
-   ]
+  "version": "v429",
+  "date": "2026年11月20日",
+  "timePeriod": "凌晨",
+  "total": 86,
+  "added": [],
+  "removed_count": 13,
+  "removed_note": "删除13条（deadline≤11-18）；5条今日（11-20）截止标记「☆☆☆ 已截止」保留",
+  "candidates": 6,
+  "pending_fill_count": 0,
+  "filled_recent": [],
+  "other_note": "sweep 后台一次完成（fresh 30，新增 sdicc 通道 11、_scope_gate 30）；KPI 缺口 4 条如实上报：兴银理财文件传输/兴业托管传真征集（VIP 无真实截止）、邮储宿州外包（页面无明确截止）未送审；L1 补词（估值/TA/直销/清算/核算/投顾）去重后 0 新增，L2 WebSearch 命中均为窗口外旧公告；昨日 15 条候选已全部裁决（v412-v428 陆续上板至 99）",
+  "channel_stats": {
+    "date": "2026-11-20",
+    "added_total": 0,
+    "by_channel": {
+      "search": 0,
+      "user_url": 0,
+      "user_excel": 0,
+      "user_screenshot": 0
+    }
   }
- ],
- "removed_count": 9,
- "removed_note": "删除9条（deadline≤11-17）；9条今日（11-19）截止标记「☆☆☆ 已截止」保留",
- "candidates": 0,
- "pending_fill_count": 0,
- "filled_recent": [],
- "other_note": "sweep 后台一次完成（fresh 38）；兴业银行境外理财票据升级项目VIP核实无真实截止日期未送审；光大理财反洗钱变更公告、招银理财直销事前公示等按红线排除；⑦组件刷新改 Bash 直跑，三判据验收全过（v412入晨报、待确认15=pending 15、两组件mtime当次）；[meta自纠 2026-11-19 10:59] 版本/项目数/今日纳入已按看板 v415 回写；[meta自纠 2026-11-19 12:13] 版本/项目数/今日纳入已按看板 v422 回写；[meta自纠 2026-11-20 00:34] 版本/项目数/今日纳入已按看板 v426 回写",
- "channel_stats": {
-  "date": "2026-11-19",
-  "added_total": 0,
-  "by_channel": {
-   "search": 0,
-   "user_url": 0,
-   "user_excel": 0,
-   "user_screenshot": 0
-  }
- }
 }

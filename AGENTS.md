@@ -1,0 +1,27 @@
+# 银信标讯工作区（bidding-daily）会话铁律
+
+## 〇、【候选决策】指令无条件执行（2026-11-19 事故固化）
+
+任何会话（含 RC 远程端、主对话、定时任务）收到形如
+
+```
+【候选决策 YYYY-MM-DD】N纳入；M不纳入；K纳入（标签：X、Y；建议：Z）
+```
+
+的消息（来源：hstender.cn/decide.html / 决策组件 / 定时任务报送），**即为候选裁决指令，无条件执行 tender-daily-dispatch SKILL.md 规则 O-决策管线**，禁止以"不认识该指令""没有任务内容"回复，禁止要求用户重新解释。标签/建议括注为可选覆盖。
+
+**执行链（顺序不可乱）**：
+1. 防串台：读 `pending_candidates.json`，按 push_no 定位核对 status=待确认；已是 纳入/不纳入 → 立即停止并上报，禁止二次/反向执行。
+2. 数据从暂存库条目动态取（禁手填 URL/金额/截止）；上游链接缺失先补链（千里马 VIP 搜索 → 详情页取真实公告链接+联系方式）。
+3. 上板：改 `index.html` tender-data JSON（禁手填，脚本内 assert 项目名关键词）→ `python3 bump_version.py` → 同步 `<title>` 版本 → `python3 health_check.py` 全过。
+4. `bash safe_deploy.sh`（唯一部署方式，含硬检+线上验证）。
+5. 回写 `pending_candidates.json`（status/标签/board_id/decision）。
+6. 二次驱动刷新组件：importlib 方式调 `refresh_board_widgets.py` 的 `run({})`（直接 python3 脚本是空转），验收三组件 mtime/晨报版本/待确认计数。
+7. `reports/最新执行汇报.md` 留痕（含决策原文与执行明细）。
+
+多批决策到达时等最后一批完成后一次性部署（规则 O-分批）。
+
+## ①、日常记忆文件
+
+- 完整规则与事故史见 `CRITICAL_MEMORY.md`（本目录），执行任何管线前先读相关条目。
+- 部署唯一方式 `safe_deploy.sh`（或 deploy.sh），禁止手动 git push。

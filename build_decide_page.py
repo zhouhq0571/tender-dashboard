@@ -90,6 +90,7 @@ TEMPLATE = r'''<!DOCTYPE html>
   .terr { font-size:11px; color:#d5483f; margin-top:4px; }
   .foot { position:sticky; bottom:0; background:#f6f7f9; padding:10px 0 16px; }
   .gen { width:100%; padding:14px 0; font-size:16px; font-weight:600; border:none; border-radius:10px; background:#2f6fed; color:#fff; cursor:pointer; }
+  .copybtn { width:100%; margin-top:8px; padding:10px 0; font-size:14px; font-weight:600; border:1px solid #2f6fed; border-radius:10px; background:#fff; color:#2f6fed; cursor:pointer; }
   .gen:disabled { opacity:.5; }
   .stat { text-align:center; font-size:12px; color:#888; margin-top:8px; }
   .msg { font-size:13px; margin-top:8px; line-height:1.6; }
@@ -108,6 +109,7 @@ TEMPLATE = r'''<!DOCTYPE html>
   <div class="stat" id="stat"></div>
   <div class="msg" id="msg"></div>
   <textarea id="out" readonly style="display:none" placeholder="决策指令将出现在这里"></textarea>
+  <button class="copybtn" id="copybtn" style="display:none">📋 复制指令</button>
 </div>
 <script type="application/json" id="cand-data">__DATA__</script>
 <script>
@@ -174,12 +176,22 @@ TEMPLATE = r'''<!DOCTYPE html>
     if(errs.length){$('msg').className='msg err';$('msg').innerHTML=errs.join('<br/>');return}
     if(!parts.length){$('msg').className='msg err';$('msg').textContent='请先点选至少一条';return}
     var txt='【候选决策 '+DATA.batch+'】'+parts.join('；');
-    $('out').style.display='block';$('out').value=txt;
+    $('out').style.display='block';$('out').value=txt;$('copybtn').style.display='block';
     if(navigator.clipboard&&navigator.clipboard.writeText){
       navigator.clipboard.writeText(txt).then(function(){
         $('msg').className='msg ok';$('msg').textContent='已复制 '+parts.length+' 条决策指令，请到 Kimi「银信标讯」项目对话粘贴发送';
       },function(){$('msg').className='msg ok';$('msg').textContent='复制失败，请长按上方文本框手动复制'});
     }else{$('msg').className='msg ok';$('msg').textContent='请长按上方文本框手动复制后发送到 Kimi 对话'}
+  });
+  $('copybtn').addEventListener('click',function(){
+    var txt=$('out').value;
+    if(!txt){$('msg').className='msg err';$('msg').textContent='请先生成决策指令';return}
+    function okMsg(m){$('msg').className='msg ok';$('msg').textContent=m}
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){okMsg('已复制，请到 Kimi「银信标讯」项目对话粘贴发送')},function(){
+        $('out').select();document.execCommand&&document.execCommand('copy');okMsg('已复制（兼容模式），请到 Kimi 对话粘贴发送');
+      });
+    }else{$('out').select();document.execCommand&&document.execCommand('copy');okMsg('已复制（兼容模式），请到 Kimi 对话粘贴发送')}
   });
   restore();render();
 })();
@@ -243,6 +255,7 @@ GATED_TEMPLATE = r'''<!DOCTYPE html>
   .terr { font-size:11px; color:#d5483f; margin-top:4px; }
   .foot { position:sticky; bottom:0; background:#f6f7f9; padding:10px 0 16px; }
   .gen { width:100%; padding:14px 0; font-size:16px; font-weight:600; border:none; border-radius:10px; background:#2f6fed; color:#fff; cursor:pointer; }
+  .copybtn { width:100%; margin-top:8px; padding:10px 0; font-size:14px; font-weight:600; border:1px solid #2f6fed; border-radius:10px; background:#fff; color:#2f6fed; cursor:pointer; }
   .stat { text-align:center; font-size:12px; color:#888; margin-top:8px; }
   .msg { font-size:13px; margin-top:8px; line-height:1.6; }
   .msg.ok { color:#2e9e5b; } .msg.err { color:#d5483f; }
@@ -262,6 +275,7 @@ GATED_TEMPLATE = r'''<!DOCTYPE html>
   <div class="stat" id="stat"></div>
   <div class="msg" id="msg"></div>
   <textarea id="out" readonly style="display:none"></textarea>
+  <button class="copybtn" id="copybtn" style="display:none">📋 复制指令</button>
 </div>
 </div>
 <script type="application/json" id="blob">__BLOB__</script>
@@ -434,12 +448,22 @@ function start(DATA){
     if(errs.length){$('msg').className='msg err';$('msg').innerHTML=errs.join('<br/>');return}
     if(!parts.length){$('msg').className='msg err';$('msg').textContent='请先点选至少一条';return}
     var txt='【候选决策 '+DATA.batch+'】'+parts.join('；');
-    $('out').style.display='block';$('out').value=txt;
+    $('out').style.display='block';$('out').value=txt;$('copybtn').style.display='block';
     if(navigator.clipboard&&navigator.clipboard.writeText){
       navigator.clipboard.writeText(txt).then(function(){
         $('msg').className='msg ok';$('msg').textContent='已复制 '+parts.length+' 条决策指令，请到 Kimi「银信标讯」项目对话粘贴发送';
       },function(){$('msg').className='msg ok';$('msg').textContent='复制失败，请长按上方文本框手动复制'});
     }else{$('msg').className='msg ok';$('msg').textContent='请长按上方文本框手动复制后发送到 Kimi 对话'}
+  });
+  $('copybtn').addEventListener('click',function(){
+    var txt=$('out').value;
+    if(!txt){$('msg').className='msg err';$('msg').textContent='请先生成决策指令';return}
+    function okMsg(m){$('msg').className='msg ok';$('msg').textContent=m}
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){okMsg('已复制，请到 Kimi「银信标讯」项目对话粘贴发送')},function(){
+        $('out').select();document.execCommand&&document.execCommand('copy');okMsg('已复制（兼容模式），请到 Kimi 对话粘贴发送');
+      });
+    }else{$('out').select();document.execCommand&&document.execCommand('copy');okMsg('已复制（兼容模式），请到 Kimi 对话粘贴发送')}
   });
   restore();render();
 }

@@ -110,6 +110,23 @@ if bad_co:
     sys.exit(1)
 print('✅ 招标单位简称归一化检查通过')
 
+# 2026-11-20 新增：机构范围硬检（步骤2.5条件1代码化，根治 JSONL 批次直接信上游 is_fin_inst
+# 宽口径致保险/证券/基金条目混入送审，用户 00:09 抓包；口径见 config.company_board_scope）
+try:
+    from config import company_board_scope as _scope
+    bad_scope = [(p.get('id'), p.get('company'), _scope(p.get('company') or '')[1]) for p in projects
+                 if _scope(p.get('company') or '')[0] == 'block']
+    if bad_scope:
+        print(f'❌ 机构范围越界 {len(bad_scope)} 条（看板只纳银行/理财子/信托/银行系金科）:')
+        for _b in bad_scope[:8]:
+            print(f'   - id {_b[0]} {_b[1]}（{_b[2]}）')
+        sys.exit(1)
+    print('✅ 机构范围硬检通过（步骤2.5条件1）')
+except SystemExit:
+    raise
+except Exception as _e:
+    print(f'⚠️ 机构范围闸导入失败（{_e}），跳过（高风险，须人工复核）')
+
 # 2026-11-19 全字段代码闸自查补齐：投标建议四档 + 业务标签白名单两道闸
 # （validate_new_projects.py 本已有，此处为部署兜底双保险，防绕过 validate 的手改直发）
 try:

@@ -18,6 +18,7 @@ import json, os, sys, glob, subprocess, time, argparse
 from datetime import datetime
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # bidding-daily/
+REPO = BASE
 TOOLS = os.path.join(BASE, 'tools')
 MON = os.path.join(BASE, 'monitor')
 
@@ -142,6 +143,19 @@ def main():
                        input=json.dumps(uniq, ensure_ascii=False),
                        capture_output=True, text=True, timeout=180, cwd=TOOLS)
     fresh = json.loads(r.stdout) if r.returncode == 0 and r.stdout.strip() else []
+
+    # 2026-11-20 机构范围硬检接入采集管线（步骤2.5条件1代码化，00:09 事故固化）：
+    # 上游各通道含保险/证券/基金等非银信机构公告，送审前先按 config.company_board_scope 剔除，
+    # 剔除数计入 channels 摘要便于每日核对；宽口径需求走周报通道。
+    sys.path.insert(0, REPO)
+    from config import company_board_scope
+    in_scope, scope_out = [], []
+    for it in fresh:
+        v, why = company_board_scope(it.get('title', ''))
+        (in_scope if v != 'block' else scope_out).append(it)
+    summary["_scope_gate"] = {"status": "ok", "kept": len(in_scope),
+                              "blocked": len(scope_out)}
+    fresh = in_scope
 
     out_path = os.path.join(MON, f'sweep_shortlist_{run_at}.json')
     json.dump({"run_at": run_at, "window": window, "channels": summary,

@@ -65,7 +65,7 @@ APP_CSS = r'''
 
 APP_HTML = r'''
 <div class="head"><h1 class="a">标讯候选决策</h1><span class="meta" id="batch"></span></div>
-<div class="tip">点选「纳入 / 不纳入」（本机自动保存，刷新不丢）→ 底部生成决策指令 → 一键复制 → 粘贴到 Kimi「银信标讯」项目对话发送即执行。</div>
+<div class="tip">编号为台账全局递增编号（非本批序号），历史上已闭环的编号不再显示。点选「纳入 / 不纳入」（本机自动保存，刷新不丢）→ 底部生成决策指令 → 一键复制 → 粘贴到 Kimi「银信标讯」项目对话发送即执行。</div>
 <div class="tbl-wrap"><table class="dl"><thead><tr>
   <th style="width:44px">编号</th><th>招标单位 / 项目</th><th style="width:76px">预算</th>
   <th style="width:96px">投标截止</th><th style="width:150px">业务标签</th>

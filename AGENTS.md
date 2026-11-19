@@ -36,3 +36,20 @@
 
 - 完整规则与事故史见 `CRITICAL_MEMORY.md`（本目录），执行任何管线前先读相关条目。
 - 部署唯一方式 `safe_deploy.sh`（或 deploy.sh），禁止手动 git push。
+
+## ②、事故年鉴（2026-11-19~20 复盘沉淀，周老师"低级问题超出预期"批评后建）
+
+| # | 事故 | 根因 | 固化位置 |
+|---|---|---|---|
+| 1 | 11-19 23:50 千里马 JSONL 批次漏跑银信标讯送审通道 | 技能层从未定义"收到结构化 JSONL 批次"的双通道触发链 | 本文件 〇.5 节 + SKILL.md 触发条件 |
+| 2 | 11-20 00:01 用 Markdown 表代送审 | 前晚修复写入"生成候选表发送"被机械执行，忘了 decide.html 组件已是钦定交互 | 本文件 〇.5 节（禁 Markdown 代送审） |
+| 3 | 11-20 00:09 保险/证券/基金/期货条目混入送审 | 直接信上游 is_fin_inst（周报宽口径），未逐步骤2.5；机构范围规则只写在文档无代码消费 | `config.company_board_scope` + validate/safe_deploy/sweep/wb_board_candidates 四线挂载 |
+| 4 | 11-20 00:09 纯数据库采购/DNS设备/存储硬件/云平台授权混入送审 | 同上：业务排除表未代码化消费 | 同上（业务排除词表后续 likewise 代码化，见 SKILL 步骤2.5） |
+| 5 | 11-20 00:31 网页版 decide 与侧栏组件交互不一致 | 两份 UI 各自演进，无同源契约 | decide.html 已重写为组件同款表格（build_decide_page.py 与 refresh_board_widgets.py 决策表列序一致：编号/单位·项目/预算/截止/标签/建议/决策） |
+| 6 | 11-20 00:31 免密 30 分钟从未生效 | dek 存 base64、恢复按 hex 解析，必然失败 | build_decide_page.py GATE_JS hexE 修复 + Playwright 回归 |
+| 7 | 11-20 序号 16 起引困惑 | push_no 全局递增无说明 | decide 页 tip 已注明"编号为台账全局递增编号" |
+
+**教训通则（全工作区生效）**：
+- **规则必须代码化**：凡"每次都要判"的口径，只写文档=没写。新增口径同日建消费函数（config.py）并挂 validate/safe_deploy 兜底双保险（本工作区已有先例：简称映射 11-19 失守→normalize_company 代码化）。
+- **门禁/看板页改动必须 Playwright 无头浏览器真实验证**（登录→免密→点选→生成指令四步全过）后才准汇报，curl/hash 只是部署层证据，不等于用户可见终态（11-16 厂商看板白屏事故同教训，CRITICAL_MEMORY 有档）。
+- **上游字段语义不可跨通道混用**：is_fin_inst 是周报宽口径；本看板一切送审/上板以 company_board_scope 为唯一代码真源。

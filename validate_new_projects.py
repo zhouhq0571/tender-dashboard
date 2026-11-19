@@ -11,9 +11,12 @@ import json
 import re
 import sys
 
-from config import VALID_REGIONS, VALID_METHODS, VALID_RECS, VALID_TAGS, BLOCKED_SOURCE_PATTERNS, normalize_source as _normalize_source, normalize_company as _normalize_company
+from config import VALID_REGIONS, VALID_METHODS, VALID_RECS, VALID_TAGS, BLOCKED_SOURCE_PATTERNS, normalize_source as _normalize_source, normalize_company as _normalize_company, company_board_scope
 
 HTML_FILE = 'index.html'
+
+# 2026-11-20 机构范围硬检的待确认收集（warn 不拦截但报告必须可见）
+SCOPE_WARNINGS = []
 
 REQUIRED_FIELDS = ['id', 'company', 'project', 'overview', 'budget', 'deadline', 
                    'method', 'contact', 'region', 'province', 'tags', 'rec', 'url', 'source']
@@ -83,6 +86,15 @@ def check_field_values(project):
     if _normalize_company(comp) != comp.strip():
         errors.append(f"company非规范简称: '{comp}'，归一后应为 '{_normalize_company(comp)}'"
                       f"（映射表见 config.COMPANY_SHORT_MAP）")
+
+    # 2026-11-20 新增：机构范围硬检（步骤2.5条件1代码化，根治 JSONL 批次直接信上游 is_fin_inst
+    # 宽口径致保险/证券/基金条目混入送审，用户 00:09 抓包；口径见 config.company_board_scope）
+    _verdict, _scope_reason = company_board_scope(comp)
+    if _verdict == 'block':
+        errors.append(f"company机构范围越界: '{comp}'（{_scope_reason}）；银信标讯看板只纳银行/理财子/信托/银行系金科，"
+                      f"保险/证券/基金/期货/AIC/集团财务公司请在周报通道使用")
+    elif _verdict == 'warn':
+        SCOPE_WARNINGS.append(f"ID {project.get('id')} company机构类型待确认: '{comp}'（{_scope_reason}）")
 
     if not isinstance(project.get('tags'), list):
         errors.append("tags必须是数组")
@@ -180,6 +192,11 @@ def validate_all():
             print()
     
     print("=" * 60)
+    if SCOPE_WARNINGS:
+        print(f"⚠️ 机构类型待确认 {len(SCOPE_WARNINGS)} 条（不拦截，须人工确认）:")
+        for w in SCOPE_WARNINGS:
+            print(f"   - {w}")
+        print()
     if total_errors == 0:
         print("✅ 验证通过！所有项目检查无误。")
         return 0

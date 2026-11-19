@@ -880,11 +880,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648130053.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 高仲国；电话 0313-2135962；代理 河北嘉桉工程咨询有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "业务范围排除-纯数据库软件采购(步骤2.5排除表)"
  },
  {
   "push_no": 17,
@@ -897,11 +898,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648127214.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 高仲国；电话 0313-2135962；代理 祥安招标代理有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "业务范围排除-纯数据库软件采购(步骤2.5排除表)"
  },
  {
   "push_no": 18,
@@ -914,11 +916,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648046965.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 王皓东 李宇博 薛弘宇 徐悦；电话 4000580203；邮箱 yefc@jitc.cn；代理 江苏省招标中心有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "业务范围排除-域名解析(DNS)设备购置纯硬件(步骤2.5排除表)"
  },
  {
   "push_no": 19,
@@ -931,11 +934,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648019407.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 高仲国；电话 0313-2135962；代理 中睿智工程管理有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "业务范围排除-云管理平台节点授权=纯基础设施平台采购无应用开发(步骤2.5排除表)"
  },
  {
   "push_no": 20,
@@ -965,11 +969,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648297558.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 薛工；电话 022-24867833；邮箱 ytzb2015@126.com；代理 天津倚天工程咨询有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "业务范围排除-存储设备采购纯硬件(步骤2.5排除表)"
  },
  {
   "push_no": 22,
@@ -1016,11 +1021,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648710761.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 张老师；电话 0512-69868888-89406；邮箱 zhangxm003@suzhoubank.com",
-  "board_id": null
+  "board_id": null,
+  "decision": "业务范围排除-数据库许可采购(步骤2.5排除表)"
  },
  {
   "push_no": 25,
@@ -1050,11 +1056,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-649003299.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 吴菲；电话 4006663999；邮箱 lsjtzbzx01@163.com；代理 山东省鲁商正沅招标咨询有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-集团财务公司非技能步骤2.5条件1四类机构"
  },
  {
   "push_no": 27,
@@ -1237,11 +1244,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648513517.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 曹君妍；电话 400-918-1908；邮箱 weizhaoying@ccbfi.com",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-金融资产投资公司(AIC)非步骤2.5条件1四类机构"
  },
  {
   "push_no": 38,
@@ -1373,11 +1381,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648944717.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 刘老师 0531-623068；电话 0531-62306845；邮箱 xiuyuyan@taishanpic.com",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-保险公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 46,
@@ -1390,11 +1399,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648910812.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 孟明媚；电话 4009033175；邮箱 chusg@ck.citic.com；代理 中信国际招标有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-保险公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 47,
@@ -1407,11 +1417,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648623788.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 贾先生；电话 0371-56563795；邮箱 531671882@qq.com；代理 汇龙工程咨询有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-保险公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 48,
@@ -1424,11 +1435,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648588200.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 樊哲；电话 0371-56563828",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-保险公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 49,
@@ -1441,11 +1453,12 @@
   "rec": "强烈建议投标",
   "url": "https://www.qianlima.com/bid-648212671.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 倪老师；电话 400-058-0203；邮箱 tianxiao_jstcc@163.com；代理 江苏省招标中心有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-保险公司(银行系)非步骤2.5条件1四类机构"
  },
  {
   "push_no": 50,
@@ -1458,11 +1471,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-649035422.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 郎先生；电话 0451-55195701；代理 北大荒招标有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-保险公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 51,
@@ -1475,11 +1489,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-649035421.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 郎先生；电话 0451-55195701；代理 北大荒招标有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-保险公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 52,
@@ -1492,11 +1507,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648829891.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 韩繁超）；电话 010-51813597；邮箱 hanfanchao@cfcpn.com；代理 金采联合（北京）招标有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-保险公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 53,
@@ -1509,11 +1525,12 @@
   "rec": "强烈建议投标",
   "url": "https://www.qianlima.com/bid-648828585.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 王晓航；电话 010-63467587；邮箱 JYZXBJZB26@163.com；代理 建银工程咨询有限责任公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-基金管理公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 54,
@@ -1526,11 +1543,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648023833.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "邮箱 pub_xxkjcg@clamc.com",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-保险资管非步骤2.5条件1四类机构"
  },
  {
   "push_no": 55,
@@ -1543,11 +1561,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648148106.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 赵立亚；电话 400-058-0203；邮箱 Office@bocichina.com；代理 江苏省招标中心有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-证券公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 56,
@@ -1560,11 +1579,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648446606.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 付冲；电话 14100023101；邮箱 zzkt05@163.com；代理 中招康泰项目管理有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-证券公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 57,
@@ -1577,11 +1597,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648446657.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 付冲；电话 14100023101；邮箱 zzkt05@163.com；代理 中招康泰项目管理有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-证券公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 58,
@@ -1594,11 +1615,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648918696.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 赖老师；电话 021-22169012",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-证券公司(银行系)非步骤2.5条件1四类机构"
  },
  {
   "push_no": 59,
@@ -1611,11 +1633,12 @@
   "rec": "强烈建议投标",
   "url": "https://www.qianlima.com/bid-648306301.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 孙雨卉；电话 15168212966；邮箱 543648570@qq.com；代理 浙江中通通信有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-期货公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 60,
@@ -1628,11 +1651,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648825026.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 周丹；电话 0574-27680508；邮箱 zhoud@zjseaport.com",
-  "board_id": null
+  "board_id": null,
+  "decision": "机构类型不符-期货公司非步骤2.5条件1四类机构"
  },
  {
   "push_no": 61,

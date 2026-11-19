@@ -53,6 +53,7 @@
   .terr { font-size:11px; color:#d5483f; margin-top:4px; }
   .foot { position:sticky; bottom:0; background:#f6f7f9; padding:10px 0 16px; }
   .gen { width:100%; padding:14px 0; font-size:16px; font-weight:600; border:none; border-radius:10px; background:#2f6fed; color:#fff; cursor:pointer; }
+  .copybtn { width:100%; margin-top:8px; padding:10px 0; font-size:14px; font-weight:600; border:1px solid #2f6fed; border-radius:10px; background:#fff; color:#2f6fed; cursor:pointer; }
   .stat { text-align:center; font-size:12px; color:#888; margin-top:8px; }
   .msg { font-size:13px; margin-top:8px; line-height:1.6; }
   .msg.ok { color:#2e9e5b; } .msg.err { color:#d5483f; }
@@ -72,9 +73,10 @@
   <div class="stat" id="stat"></div>
   <div class="msg" id="msg"></div>
   <textarea id="out" readonly style="display:none"></textarea>
+  <button class="copybtn" id="copybtn" style="display:none">📋 复制指令</button>
 </div>
 </div>
-<script type="application/json" id="blob">{"v": 1, "iter": 310000, "salt": "9a80bd3c16db8d3214597665a85bfbdc", "iv": "17512ac7077ce235b026733d", "ct": "045f6c97e839e3f89a5696d164e82425fd240636ed85259ef06bfc662b8f4f5956023744df098a23a378b30e7ef37b5971b80187e35995f088c07ac631012c438bbe241a01bc80ccfe919ff364403d69f932cab7a978a5af6761ff1a1c0517db4b7b91c24217ad476771cfb08c6409d94505a40af558ce6b5bb336aafa55a3460481ba5b94fcf004e7fa7a13a8890ce32329631d2a69f874f2c25aef6c05dd5c22d94bf5f931e54e8bdba299a97aa636534b830f4aaf1d3ccaf2724d0f16a92213a7717fc0b3f814d4725a4b9a81d26bc0c4671687546b50d89dabf4b60cd7f36ea38527965855989680632706774c818d6941aa3b9c06d84cd14cd130142992e9e74974862c923c2d6064bb2680ab8f673f69f77e2f4cc53eaa9c008638085360100c5ecbdb4556f896d6f233b2d705ebe85989838c1bc75b416672d1cabda2926a8c836bc581162ff519b5a5f3aad1cc370ac9caae0e8e46deee27f5219b2ce14506ddfc371277c0f25217f480ca9d0e5f73a5b187e1ca063af59592859c915ef6fe1da72266fefa9e5546a8258da266e4e3c3708ca719e3912df35c1db451021ac58a41deaf6c9bd88903eb722637342f79cd262fa6757a7aac4b265c7a699fc6fb10375705ece298564246d000752c8a939767894a8151fc1f26aef79422570ce250859019bd2ea21f23b95055f230cc73017109d5edf36cced5e1de32cd258967b51b78018fa2763b77c29ae0f2d9f868beb88587f605245427a1748b", "wiv": "b7a11ec5cd254d90e3313389", "wct": "c696f519fb41f43ba8aebfb8bb25cbd7a37ca4d234573d2e08871fa9214826010b332482912da38a2706d009dc3691d8"}</script>
+<script type="application/json" id="blob">{"v": 1, "iter": 310000, "salt": "8f5d692f57de889fb318d6dec3c1a0e1", "iv": "60a0e3fe98ae4624aa90664d", "ct": "f9d3d45c861f10b0da9b60b718db6d221933f60cb3cb62ba4d394046920adfc5eb0fd499b7e91b602bb7acc10df37e67073277a19c8a35891bda0baaa6f3630337f32d297765f5c6694a202440d8489a2b8204b653ca60f2dd2e8dcf069ce6269a9a9e497395ed16d4d4067951fe4e243f0cb5e5f234c39280ea417c081fbe844ac709659da9d2c01e85b6fb2912693fcb38e94fc5ee6dcdd497d2b87ed57046e3fc7922e9e69fa156142fd86ce9e825a5184838afb876e4209bbaadfa235ffe15faf08600e269f6fef34182608b5491a6df2c27d1d5c2e4ad55852bff73fb06fa3bb27b7dcb53a8269030ebcddb2acbe1d93ec253d56d0d24b1d44db7ef0224340ad016bcc46abde0dd74acee1888fbd9ac795866e50dd67014c1b6d158d4790021383b2dbf5f234bf14a109ce179161231766a849dbe7985", "wiv": "e645e7f0a4607c8eeb4ea93f", "wct": "d898d586e628d67ccb5d33c5524f16f60993ce6ef5cd3f7f5123e215c91fc18de2fa9003dad6c4348cef164b77ac5b32"}</script>
 <script>
 (function(){
   var BLOB=JSON.parse(document.getElementById('blob').textContent);
@@ -244,12 +246,22 @@ function start(DATA){
     if(errs.length){$('msg').className='msg err';$('msg').innerHTML=errs.join('<br/>');return}
     if(!parts.length){$('msg').className='msg err';$('msg').textContent='请先点选至少一条';return}
     var txt='【候选决策 '+DATA.batch+'】'+parts.join('；');
-    $('out').style.display='block';$('out').value=txt;
+    $('out').style.display='block';$('out').value=txt;$('copybtn').style.display='block';
     if(navigator.clipboard&&navigator.clipboard.writeText){
       navigator.clipboard.writeText(txt).then(function(){
         $('msg').className='msg ok';$('msg').textContent='已复制 '+parts.length+' 条决策指令，请到 Kimi「银信标讯」项目对话粘贴发送';
       },function(){$('msg').className='msg ok';$('msg').textContent='复制失败，请长按上方文本框手动复制'});
     }else{$('msg').className='msg ok';$('msg').textContent='请长按上方文本框手动复制后发送到 Kimi 对话'}
+  });
+  $('copybtn').addEventListener('click',function(){
+    var txt=$('out').value;
+    if(!txt){$('msg').className='msg err';$('msg').textContent='请先生成决策指令';return}
+    function okMsg(m){$('msg').className='msg ok';$('msg').textContent=m}
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){okMsg('已复制，请到 Kimi「银信标讯」项目对话粘贴发送')},function(){
+        $('out').select();document.execCommand&&document.execCommand('copy');okMsg('已复制（兼容模式），请到 Kimi 对话粘贴发送');
+      });
+    }else{$('out').select();document.execCommand&&document.execCommand('copy');okMsg('已复制（兼容模式），请到 Kimi 对话粘贴发送')}
   });
   restore();render();
 }

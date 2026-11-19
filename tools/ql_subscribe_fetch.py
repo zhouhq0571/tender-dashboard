@@ -13,6 +13,12 @@
 import sys, os, time, json, re
 from datetime import datetime, date
 from playwright.sync_api import sync_playwright
+try:
+    from ql_vip_fetch import new_logged_in_context
+except ImportError:
+    import os as _os, sys as _sys
+    _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+    from ql_vip_fetch import new_logged_in_context
 
 USER = 'chaxun032322'
 PASS = 'Chaxun!2026'
@@ -103,16 +109,25 @@ def main():
     pages = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     all_items = []
     with sync_playwright() as p:
-        b = p.chromium.launch(headless=True)
-        page = b.new_context(user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36').new_page()
-        login(page)
+        ctx, _fresh = new_logged_in_context(p)
+        page = ctx.new_page()
+        page.goto('https://vip.qianlima.com/', timeout=60000)
+        time.sleep(4)
+        if page.locator('div.Captcha').count() > 0 or '向右滑动' in page.inner_text('body')[:3000]:
+            print('VIP_CAPTCHA_BLOCKED 滑块风控未解，本通道今日跳过（冷却期勿反复探测）')
+            ctx.browser.close()
+            sys.exit(2)
         page.goto('https://vip.qianlima.com/subscribe-center/subscribe-info', timeout=60000)
         time.sleep(6)
         # 进入"银信标讯"订阅器详情（nth(1)=div.subscribe-name；nth(0)是列表文本span）
         # 注意：不在页面侧勾选阶段复选框（勾选"公告"会导致列表清空，原因未查明），
         # 阶段过滤全部由代码 classify() 的 drop_stage 兜底，已实测可靠。
         try:
-            page.locator('text=银信标讯').nth(1).click(timeout=8000)
+            # 2026-11-11 修复：元素结构变化（原 nth(1) 双匹配假设失效，现文本仅单匹配），
+            # 改 first+scroll_into_view；选不中则默认全文视图（实测为 0 条，等同失败须上报）。
+            el = page.locator('text=银信标讯').first
+            el.scroll_into_view_if_needed(timeout=8000)
+            el.click(timeout=8000)
             time.sleep(5)
         except Exception as e:
             print('  订阅器选择失败(用默认全文):', str(e)[:80])
@@ -134,7 +149,7 @@ def main():
                 except Exception as e:
                     print('  翻页失败:', str(e)[:80])
                     break
-        b.close()
+        ctx.browser.close()
     # 去重
     seen = set(); uniq = []
     for it in all_items:

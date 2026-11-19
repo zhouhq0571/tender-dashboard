@@ -1,0 +1,136 @@
+{
+ "run_at": "20261116_0640",
+ "sources": [
+  {
+   "name": "邮储邮银易采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 46,
+   "new_count": 2
+  },
+  {
+   "name": "中信金控共享",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 30,
+   "new_count": 0
+  },
+  {
+   "name": "北京银行集采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 19,
+   "new_count": 5
+  },
+  {
+   "name": "浙商数智采购",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 29,
+   "new_count": 0
+  },
+  {
+   "name": "工银集采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 0
+  },
+  {
+   "name": "民生银行",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 8,
+   "new_count": 0
+  },
+  {
+   "name": "交行智采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 6,
+   "new_count": 3
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国邮政储蓄银行贵州省分行2027年联网监控中心值守外包服务项目（二次）竞争性磋商公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://cg.psbc.com/cms/default/webfile/2ywgg1/20261111/1305201651430195200.html",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "中国邮政储蓄银行股份有限公司宿州市分行2027年信息科技支撑外包服务项目竞争性磋商公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://cg.psbc.com/cms/default/webfile/2ywgg1/20261111/1305197746600280064.html",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "北京银行京智党建系统对接服务2026年运维保障项目竞争性磋商公告",
+   "pubdate": "2026-11-13",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261113/1306000608473382912.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2027年数据备份存储维保服务采购项目招标公告",
+   "pubdate": "2026-11-13",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261113/1305992567279583232.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2027年代理贵金属交易系统、竞价做市商交易管理系统、积存金业务管理系统维保项目竞争性磋商公告",
+   "pubdate": "2026-11-13",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261113/1305986788522721280.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2026年综合数字运营平台项目竞争性磋商公告",
+   "pubdate": "2026-11-13",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261113/1305984988121923584.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行新个贷系统企业级押品改造项目竞争性磋商公告",
+   "pubdate": "2026-11-13",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261113/1305906363104231424.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "交通银行股份有限公司同业金融系统证券要素市场清算服务平台容灾能力提升加密硬件设备采购招标公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://bocom-gys.bankcomm.com/espuser/register/noticeDetail",
+   "source": "交通银行智采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "交通银行股份有限公司同业金融系统证券要素市场清算服务平台容灾能力提升加密硬件设备采购失败公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://bocom-gys.bankcomm.com/espuser/register/noticeDetail",
+   "source": "交通银行智采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "单位客户银企账单制作项目市场调研公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://bocom-gys.bankcomm.com/espuser/register/noticeDetail",
+   "source": "交通银行智采平台",
+   "channel": "采购公告"
+  }
+ ]
+}

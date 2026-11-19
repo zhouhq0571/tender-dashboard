@@ -1,0 +1,51 @@
+{
+ "run_at": "2026-11-17 05:51:53",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 0,
+   "new_count": 0
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 5,
+   "new_count": 5
+  }
+ ],
+ "new_items": [
+  {
+   "title": "青岛农商银行扫码收单系统架构优化及信创升级建设项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/16180410.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "腾讯牵手三大卡组、又有支付牌照成交、银联发严正声明11-09",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09094524.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "1交通银行2026-2029年安全管理与技术支持驻场服务采购项目中标结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/10165303.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "4河南农商银行7400万布局新一代系统，去年1200万采购的新一代个人电子银行系统或近期落地",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/11110456.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "8央行公示297个金融科技发展奖名单，一等奖19项、微创新奖20项",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/12181847.html",
+   "source": "移动支付网"
+  }
+ ]
+}

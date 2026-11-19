@@ -1,0 +1,136 @@
+{
+ "run_at": "20261103_0556",
+ "sources": [
+  {
+   "name": "邮储邮银易采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 44,
+   "new_count": 4
+  },
+  {
+   "name": "中信金控共享",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 30,
+   "new_count": 2
+  },
+  {
+   "name": "北京银行集采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 19,
+   "new_count": 3
+  },
+  {
+   "name": "浙商数智采购",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 29,
+   "new_count": 0
+  },
+  {
+   "name": "工银集采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 1
+  },
+  {
+   "name": "民生银行",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 8,
+   "new_count": 0
+  },
+  {
+   "name": "交行智采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 6,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国邮政储蓄银行科技金融深度数据服务采购项目（第2次招标）招标公告",
+   "pubdate": "2026-11-02",
+   "deadline": "",
+   "url": "https://cg.psbc.com/cms/default/webfile/1ywgg2/20261102/1301961334694346752.html",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "channel": "招标公告"
+  },
+  {
+   "title": "中国邮政储蓄银行2026年终端安全加固工程终端威胁检测与响应产品采购项目（第2次招标）招标公告",
+   "pubdate": "2026-11-02",
+   "deadline": "",
+   "url": "https://cg.psbc.com/cms/default/webfile/1ywgg2/20261102/1301958582903767040.html",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "channel": "招标公告"
+  },
+  {
+   "title": "中国邮政储蓄银行股份有限公司亳州市分行2027年档案托管服务采购项目竞争性磋商公告",
+   "pubdate": "2026-11-02",
+   "deadline": "",
+   "url": "https://cg.psbc.com/cms/default/webfile/2ywgg1/20261102/1301846405018550272.html",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "中国邮政储蓄银行股份有限公司宁波分行宁波市融资信用服务平台联合实验室技术服务采购项目竞争性磋商公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://cg.psbc.com/cms/default/webfile/2ywgg1/20261030/1300846796360122368.html",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "2026-NB-0016 中信银行宁波分行财政国库集中支付系统信创改造采购项目招标公告",
+   "pubdate": "2026-11-02",
+   "deadline": "",
+   "url": "https://ebid.cfhc.citic/cms/default/webfile/ywgg1/20261102/1301985692036890624.html",
+   "source": "中信金控采购共享平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "2026-ZH-0116 中信银行股份有限公司面客服务平台外部数据采购项目招标公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://ebid.cfhc.citic/cms/default/webfile/ywgg1/20261030/1300870399097044992.html",
+   "source": "中信金控采购共享平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "北京银行2026年数据中心锐捷网络设备维保项目招标公告",
+   "pubdate": "2026-11-02",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261102/1301995385111183360.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行大数据云平台（五期）项目竞争性磋商公告",
+   "pubdate": "2026-11-02",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261102/1301971218718523392.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2026年外汇监管报送系统迁移项目竞争性磋商公告",
+   "pubdate": "2026-11-02",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261102/1301953961556705280.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "中国工商银行股份有限公司软件开发中心工业级数字园区四足机器人应用项目",
+   "pubdate": "2026-11-02",
+   "deadline": "",
+   "url": "https://jc.icbc.com.cn/#/announcementList/2",
+   "source": "工银集采平台",
+   "channel": "招标公告"
+  }
+ ]
+}

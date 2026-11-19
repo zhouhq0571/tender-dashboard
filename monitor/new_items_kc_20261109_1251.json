@@ -1,0 +1,105 @@
+{
+ "run_at": "20261109_1251",
+ "sources": [
+  {
+   "name": "快查-智能体×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 6
+  },
+  {
+   "name": "快查-财富×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 1
+  },
+  {
+   "name": "快查-托管×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-系统×信托",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-数据×信托",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-平台×理财",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "[省本级]江西合胜合招标咨询有限公司关于上饶银行新一代呼叫中心系统建设项目(项目编号:HSH2026ZG084)公开招标公告(网)（上饶银行股份有限公司）",
+   "date": "2026-11-07",
+   "deadline": "2026-12-03",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_ygcgj_7kcq_db339413c048af0ae486d9295be66bb8&type=AllBeacon",
+   "contact": "代理 江西合胜合招标咨询有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "贵州银行应用软件采购项目(贵州银行数据中心带外监控系统软件)项目公告（贵州银行股份有限公司）",
+   "date": "2026-11-07",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_pms_bgzchina_1290012168&type=AllBeacon",
+   "contact": "代理 贵州卫虹招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "网络安全感知应用安全防护与数据共享功能优化需求包干实施服务采购（广发银行股份有限公司(总行)）",
+   "date": "2026-11-06",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_dab9df109bac48cbbf0041f1caf95310&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司广西壮族自治区分行广西广播电视台财资金融一体化管理平台项目采购邀请公告",
+   "date": "2026-11-06",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_zhongguozbfwpt_code_41386c4b4bb85ff46e3b257bb9c93023&type=AllBeacon",
+   "contact": "代理 广西机电设备招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "宁波银行2026年数据中心CQC认证服务项目(重发)招标公告（宁波银行股份有限公司）",
+   "date": "2026-11-06",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_0e234f60708e4efe8264061a85097206&type=AllBeacon",
+   "contact": "代理 宁波中基国际招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行2026年智能柜员机3.0系统功能完善四期项目竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-11-06",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_daqih_8181_87e9a078ad280d7c50d2f5a441c074bf&type=AllBeacon",
+   "contact": "代理 建银工程咨询有限责任公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国建设银行股份有限公司衡水市哈励逊国际和平医院系统升级项目公开招标公告（中国建设银行股份有限公司河北省分行）",
+   "date": "2026-11-06",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=jianhangcj_2118673894573240320&type=AllBeacon",
+   "contact": "代理 河北筑城工程招标咨询有限公司",
+   "source": "快查"
+  }
+ ]
+}

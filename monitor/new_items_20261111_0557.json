@@ -1,0 +1,93 @@
+{
+ "run_at": "2026-11-11 05:57:08",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 8,
+   "new_count": 8
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 4,
+   "new_count": 4
+  }
+ ],
+ "new_items": [
+  {
+   "title": "服务 广州白云国际机场航空配餐大楼升级扩建项目造价咨询服务-公开招标公告 发布日期：2026-11-10 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/895659.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 2026年中央储备粮邵武直属库有限公司食堂食品生鲜供应商采购采购邀请书 发布日期：2026-11-10 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/895657.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 江苏移动信息系统集成有限公司某服务项目-94-公开招标公告 发布日期：2026-11-10 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/895655.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 太平人寿深圳分公司银保条线2026-2028年会务布展服务采购项目-招标公告 发布日期：2026-11-10 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/895648.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 26QYM010-01-公开招标公告 发布日期：2026-11-10 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/895647.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 恒丰银行数据中心科技人力外包服务入围项目招标公告 发布日期：2026-11-10 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/895629.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 中国原子能科学研究院堆本体三维热工水力快速计算方法开发-询比公告 发布日期：2026-11-10 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/895620.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 2026年度西安市总工会西安工会劳动和技能竞赛平台运维项目单一来源采购前公示 发布日期：2026-11-10 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/895614.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "兴业银行2026-2028年度（两年期）智能收款设备选型项目结果公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/10192523.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "中储粮粮油交易中心支付即开票系统项目成交结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/10192250.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "临商银行信息科技通用测试人力服务框架协议采购项目征集公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/10165755.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "交通银行2026-2029年安全管理与技术支持驻场服务采购项目中标结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/10165303.html",
+   "source": "移动支付网"
+  }
+ ]
+}

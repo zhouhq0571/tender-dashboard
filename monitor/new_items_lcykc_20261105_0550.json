@@ -1,0 +1,53 @@
+{
+ "run_at": "20261105_0550",
+ "sources": [
+  {
+   "name": "乐采云兜底-A-浙江冠名机构",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 150,
+   "new_count": 2
+  },
+  {
+   "name": "乐采云兜底-B-轮转城商行:绍兴银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 4,
+   "new_count": 2
+  }
+ ],
+ "new_items": [
+  {
+   "title": "网络金融部关于2026年数字人民币营销活动服务的采购项目公告（中国建设银行股份有限公司浙江省分行）",
+   "date": "2026-11-04",
+   "deadline": "2026-11-12",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-A-浙江冠名机构"
+  },
+  {
+   "title": "交通银行浙江省分行人民币回笼券智能点捆卡把管理设备采购项目市场调研公告(第二次)",
+   "date": "2026-11-04",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-A-浙江冠名机构"
+  },
+  {
+   "title": "宁波银行股份有限公司绍兴分行易付通对接智慧资管系统采购招标公告",
+   "date": "2026-10-30",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:绍兴银行"
+  },
+  {
+   "title": "宁波银行股份有限公司绍兴分行易付通对接智慧资管系统采购项目招标公告",
+   "date": "2026-10-30",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:绍兴银行"
+  }
+ ]
+}

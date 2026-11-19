@@ -1,0 +1,60 @@
+{
+ "run_at": "20261027_0550",
+ "sources": [
+  {
+   "name": "龙集采-供应商征集",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 1
+  },
+  {
+   "name": "龙集采-招标专区",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 3
+  },
+  {
+   "name": "龙集采-采购动态",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 2,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "建信信托有限责任公司2026至2027恒生电子系统维护服务采购项目供应商征集公告",
+   "deadline": "2026-11-02",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-26"
+  },
+  {
+   "title": "中国建设银行江苏省分行常州工程职业技术学院“智慧校园”二期项目一卡通安全可信与建融数字化平台等软件项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-26"
+  },
+  {
+   "title": "关于机构业务部2026-2031年国产信创智慧校园（LG202609-A）一卡通智能平台项目的集中采购方案公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-26"
+  },
+  {
+   "title": "新阳支行关于黑龙江交通发展股份有限公司“司库”客户端项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-26"
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "run_at": "20261113_0917",
+ "keywords": [
+  "运维",
+  "监管报送",
+  "投顾",
+  "直销",
+  "清算",
+  "渠道"
+ ],
+ "summary": {
+  "运维": {
+   "count": 20,
+   "kept": 0
+  },
+  "监管报送": {
+   "count": 20,
+   "kept": 3
+  },
+  "投顾": {
+   "count": 20,
+   "kept": 2
+  },
+  "直销": {
+   "count": 20,
+   "kept": 0
+  },
+  "清算": {
+   "count": 20,
+   "kept": 1
+  },
+  "渠道": {
+   "count": 20,
+   "kept": 0
+  }
+ },
+ "new_items": [
+  {
+   "title": "单一来源采购方式公示表-理财运营平台信创改造( 监管报送 在正文中 )",
+   "url": "https://www.qianlima.com/bid-647278134.html",
+   "keyword": "监管报送"
+  },
+  {
+   "title": "金华银行国际结算系统及境内外币系统国产化改造项目单一来源采购公示( 监管报送 在正文或附件中 )",
+   "url": "https://www.qianlima.com/bid-647194577.html",
+   "keyword": "监管报送"
+  },
+  {
+   "title": "中国农业发展银行数据治理咨询服务项目招标公告( 监管报送 在正文中 )",
+   "url": "https://www.qianlima.com/bid-646498847.html",
+   "keyword": "监管报送"
+  },
+  {
+   "title": "中信建投证券AI蜻蜓翼答二期建设项目供应商征集公告( 投顾 在正文中 )",
+   "url": "https://www.qianlima.com/bid-645976815.html",
+   "keyword": "投顾"
+  },
+  {
+   "title": "【建行自采】关于2026年度金融社保卡即时制卡设备硬件维护的采购申请采购结果信息公开( 投顾 在正文中 )",
+   "url": "https://www.qianlima.com/bid-644896119.html",
+   "keyword": "投顾"
+  },
+  {
+   "title": "漳州招商局码头有限公司方仓气体检测采购项目-询比采购公告( 清算 在正文中 )",
+   "url": "https://www.qianlima.com/bid-647386690.html",
+   "keyword": "清算"
+  }
+ ]
+}

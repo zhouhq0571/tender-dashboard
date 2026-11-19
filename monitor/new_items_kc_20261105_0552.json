@@ -1,0 +1,76 @@
+{
+ "run_at": "20261105_0552",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 1
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 5
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "关于浙商银行2026年托管区域网络模块设备采购项目的竞争性磋商公告（浙商银行股份有限公司）",
+   "date": "2026-11-04",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_510757fbe58440c5a503708d54ed7e52&type=AllBeacon",
+   "contact": "代理 华信咨询设计研究院有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国工商银行内蒙古自治区分行巴彦淖尔市医共体软件配套功能及维保服务集中采购项目招标公告（中国工商银行股份有限公司内蒙古自治区分行）",
+   "date": "2026-11-04",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_dc1f3e9dc54f4dbd82ebf18a66cb5cf9&type=AllBeacon",
+   "contact": "代理 中国远东国际招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "渤海银行2026年统信集中域管平台客户端授权采购项目竞争性谈判公告（渤海银行股份有限公司）",
+   "date": "2026-11-04",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_7a289b5a82cb4882a402ee716b9f9bf1&type=AllBeacon",
+   "contact": "代理 国信招标集团股份有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "四川银行二代征信报送系统子机构吸收合并及功能迭代采购项目磋商公告（四川银行股份有限公司）",
+   "date": "2026-11-04",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=xnlianhecqjys_3bb71632-afd2-487c-80ab-74cf6ddf76d0&type=AllBeacon",
+   "contact": "代理 西南联合产权交易所有限责任公司",
+   "source": "快查"
+  },
+  {
+   "title": "广发银行太原分行2027年寄库服务外包项目采购公告（广发银行股份有限公司太原分行）",
+   "date": "2026-11-04",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_e351b1f3fad04f35820fbe93638a3081&type=AllBeacon",
+   "contact": "代理 山西同昇昌项目管理咨询有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "交通银行股份有限公司东莞分行东莞市社会保障卡居民服务\"一卡通\"社保卡管理平台应用系统改造项目公开征集供应商公告（交通银行股份有限公司广东省分行）",
+   "date": "2026-11-04",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_5e6c2f46fae9487c8e24c0fceb28a4e0&type=AllBeacon",
+   "contact": "代理 中捷通信有限公司",
+   "source": "快查"
+  }
+ ]
+}

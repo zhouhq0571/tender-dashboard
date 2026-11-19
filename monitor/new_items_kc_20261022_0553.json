@@ -1,0 +1,91 @@
+{
+ "run_at": "20261022_0553",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 4
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 5
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "2026年苏州银行新区支行营销品货物采购框架招标公告（苏州银行股份有限公司）",
+   "date": "2026-10-21",
+   "deadline": "2026-10-26",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "招商银行郑州分行关于房地产市场数据服务采购项目供应商征集公告",
+   "date": "2026-10-21",
+   "deadline": "2026-10-27",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行湖南省分行数据管理类项目数据技术支持服务项目采购邀请文件",
+   "date": "2026-10-21",
+   "deadline": "2026-11-03",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "上海银行手机银行多云异构人脸核身安全升级项目-上海银行手机银行多云异构人脸核身安全升级项目采购公告（上海银行股份有限公司）",
+   "date": "2026-10-21",
+   "deadline": "2026-10-28",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "招商银行西安分行2026年E餐通线下运维项目供应商征集公告",
+   "date": "2026-10-21",
+   "deadline": "2026-10-28",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "永信恒昌工程管理有限公司关于湖州银行2026年度数据中心业务区网络设备采购项目的公开招标公告（湖州银行股份有限公司）",
+   "date": "2026-10-21",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "云南红塔银行曲靖分行烟商营销活动项目询比公告（云南红塔银行股份有限公司曲靖分行）",
+   "date": "2026-10-21",
+   "deadline": "2026-10-23",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行连云港分行工商驻点服务外包项目竞争性磋商公告（中国银行股份有限公司连云港分行）",
+   "date": "2026-10-21",
+   "deadline": "2026-10-28",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "国家开发银行2026-2029年境内发行绿色债券聘请第三方认证机构项目...",
+   "date": "2026-10-21",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  }
+ ]
+}

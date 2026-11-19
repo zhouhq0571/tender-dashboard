@@ -1,0 +1,112 @@
+{
+ "run_at": "20261021_0553",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 5
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 7
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "上海银行智能化基础能力建设采购项目采购公告（上海银行股份有限公司）",
+   "date": "2026-10-20",
+   "deadline": "2026-10-27",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行2026年易点办公平台完善项目(浏览器优化)项目(二次)采购公告（北京银行股份有限公司）",
+   "date": "2026-10-20",
+   "deadline": "2026-10-26",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国邮政储蓄银行金融数据库采购项目(包2本币相关金融数据库)(第2次招标)招标公告（中国邮政储蓄银行股份有限公司）",
+   "date": "2026-10-20",
+   "deadline": "2026-10-27",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国邮政储蓄银行股份有限公司辽宁省分行社会保障卡系统运维服务项目(二次)招标公告",
+   "date": "2026-10-20",
+   "deadline": "2026-10-27",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "青岛银行银医便捷支付项目采购公告（青岛银行股份有限公司）",
+   "date": "2026-10-20",
+   "deadline": "2026-10-24",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司安阳分行安阳市公积金驻点对私服务外包项目竞争性磋商公告",
+   "date": "2026-10-20",
+   "deadline": "2026-10-26",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "国家开发银行2026年开发测试环境运营项目征集公告",
+   "date": "2026-10-20",
+   "deadline": "2026-11-03",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "总行\"广州分行全辖网点尾箱押运及寄库外包服务采购项目\"的采购公告（广发银行股份有限公司(总行)）",
+   "date": "2026-10-20",
+   "deadline": "2026-10-27",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "国家开发银行财务指标数据标准化咨询项目二次征集公告",
+   "date": "2026-10-20",
+   "deadline": "2026-11-04",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "恒丰银行智算管理平台项目采购公告（恒丰银行股份有限公司）",
+   "date": "2026-10-20",
+   "deadline": "2026-10-27",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "CGB-KM-2026-017、R53A00626001703广发银行股份有限公司昆明分行2026年至2027年档案保管外包服务项目招标公告",
+   "date": "2026-10-20",
+   "deadline": "2026-10-27",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国邮政储蓄银行金融数据库采购项目(包3金融风险、债券信用评级及交易异动数据)(第2次招标)招标公告（中国邮政储蓄银行股份有限公司）",
+   "date": "2026-10-20",
+   "deadline": "2026-10-27",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  }
+ ]
+}

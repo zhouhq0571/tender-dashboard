@@ -1,0 +1,68 @@
+{
+ "run_at": "20261116_0647",
+ "sources": [
+  {
+   "name": "龙集采-供应商征集",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 3
+  },
+  {
+   "name": "龙集采-招标专区",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 2
+  },
+  {
+   "name": "龙集采-采购动态",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 2,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国建设银行股份有限公司河北省邯郸分行尾箱寄库业务外包服务项目供应商征集公告",
+   "deadline": "2026-11-20",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-13"
+  },
+  {
+   "title": "2026-2027年度甘肃分行重点对公客户ETC设备项目供应商二次征集公告",
+   "deadline": "2026-11-16",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-13"
+  },
+  {
+   "title": "中国建设银行陕西省分行“不动产查询数据服务”采购项目供应商征集公告",
+   "deadline": "2026-11-18",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-13"
+  },
+  {
+   "title": "齐齐哈尔分行一重集团财务有限公司“司库”系统软、硬件合作招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-13"
+  },
+  {
+   "title": "关于舟山分行监控指挥中心值班业务外包项目的公开招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-13"
+  }
+ ]
+}

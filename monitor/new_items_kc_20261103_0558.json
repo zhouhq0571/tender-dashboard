@@ -1,0 +1,108 @@
+{
+ "run_at": "20261103_0558",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 5
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 5
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国建设银行股份有限公司2026年手机端侧营销服务采购项目招标公告（中国建设银行集采平台）",
+   "date": "2026-11-02",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=jianhangcj_2117197721524019200&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "苏州银行股份有限公司关于2026年苏州银行网站安全监控服务采购项目的竞争性磋商公告",
+   "date": "2026-11-02",
+   "deadline": "2026-11-06",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_55b44f4130964fe2871a7e2f9710bd37&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "建行武汉生产园区2027-2029年高低压变配电系统维保服务采购项目公开招标公告（中国建设银行股份有限公司湖北省分行）",
+   "date": "2026-11-02",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=jianhangcj_2117111038173159424&type=AllBeacon",
+   "contact": "代理 湖北省招标股份有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "贵州银行遵义分行其他人力服务采购项目(2027年3月-2029年3月驾驶员外包服务)供应商询价征集公告（贵州银行股份有限公司遵义分行）",
+   "date": "2026-11-02",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_030ea0cd73c04af29299f4035c071709&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "中国邮政储蓄银行科技金融深度数据服务采购项目(第2次招标)招标公告（中国邮政储蓄银行股份有限公司）",
+   "date": "2026-11-02",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_f6b44c824fbe4f5492f1dd17b3afe62c&type=AllBeacon",
+   "contact": "代理 江苏省招标中心有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "广东省分行线下特约商户促销活动营销执行服务商采购项目招标公告（中国建设银行股份有限公司广东省分行）",
+   "date": "2026-11-02",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_51aca439ad864190b9fe89413dcc50e3&type=AllBeacon",
+   "contact": "代理 采联国际招标采购集团有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行信用卡中心公积金系统流程完善项目竞争性磋商公告（北京银行股份有限公司信用卡中心）",
+   "date": "2026-11-02",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_5b553066e8f442c4967428d3e2c20c6f&type=AllBeacon",
+   "contact": "代理 中技国际招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行2026年非现场监管人行大集中报送系统客户端升级项目(第二次)竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-11-02",
+   "deadline": "2026-11-07",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_3938b007333144489f47905e4afb0dbc&type=AllBeacon",
+   "contact": "代理 中国通信建设集团有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "遂宁银行财资管理平台POC测试交流公告（遂宁银行股份有限公司）",
+   "date": "2026-11-02",
+   "deadline": "2026-11-08",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_919dad473df24a4388512265aa6b9da6&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "湖南银行2026年国产云平台运维服务项目招标公告（湖南银行股份有限公司）",
+   "date": "2026-11-02",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_48669cddf0ba4ac18b555d23205fa01a&type=AllBeacon",
+   "contact": "代理 中科高盛咨询集团有限公司",
+   "source": "快查"
+  }
+ ]
+}

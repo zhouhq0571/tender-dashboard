@@ -1,0 +1,60 @@
+{
+ "run_at": "20261022_0549",
+ "sources": [
+  {
+   "name": "龙集采-供应商征集",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 3
+  },
+  {
+   "name": "龙集采-招标专区",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 1
+  },
+  {
+   "name": "龙集采-采购动态",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 2,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国建设银行广东省分行云浮市分行搬运各类物资、大型机具设备服务项目供应商公开征集公告（第二次）",
+   "deadline": "2026-10-28",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-21"
+  },
+  {
+   "title": "财汇金融数据信息服务项目供应商征集",
+   "deadline": "2026-10-26",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-21"
+  },
+  {
+   "title": "2026-2027年度甘肃分行重点对公客户ETC设备项目供应商征集公告",
+   "deadline": "2026-10-26",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-21"
+  },
+  {
+   "title": "惠州市住房公积金管理中心“数智公积金”平台建设采购项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-21"
+  }
+ ]
+}

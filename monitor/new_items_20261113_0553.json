@@ -1,0 +1,105 @@
+{
+ "run_at": "2026-11-13 05:53:50",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 10
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 4,
+   "new_count": 4
+  }
+ ],
+ "new_items": [
+  {
+   "title": "服务 辽宁锦城利安德巴赛尔石化有限公司2027年度乙苯运输服务项目-公开招标公告（二次公告） 发布日期：2026-11-13 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896869.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 西开有限凤城十二路食堂消费系统改造采购项目-谈判采购公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896861.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 中国石油天然气股份有限公司内蒙古销售分公司2026年智慧场站软件集成服务采购项目-... 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896842.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 丹凤县棣花北塬葡萄小流域生态保护治理与生态价值实现试点项目设计-竞争性磋商公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896840.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 和平里办公区信息化建设监理项目-资格预审公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896839.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 西安银行股份有限公司2026年度等级保护测评服务采购项目招标公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896827.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 广州白云国际机场股份有限公司铂尔曼大酒店服务采购项目（第二次）-公开招标公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896811.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 永外项目保安服务-公开招标公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896802.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 红星、朝外、春秀路物业站保安服务-公开招标公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896800.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 丰台分公司保安服务-公开招标公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896799.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "河南农商银行收单业务商户收款软硬件采购项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/12182339.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "央行公示297个金融科技发展奖名单，一等奖19项、微创新奖20项",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/12181847.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "上海银行商业综合体收单管理系统建设项目磋商公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/12160233.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "重庆三峡银行数字货币支付系统2026年度信创及优化项目成交结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/12143831.html",
+   "source": "移动支付网"
+  }
+ ]
+}

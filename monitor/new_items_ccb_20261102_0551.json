@@ -1,0 +1,36 @@
+{
+ "run_at": "20261102_0551",
+ "sources": [
+  {
+   "name": "龙集采-供应商征集",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 0
+  },
+  {
+   "name": "龙集采-招标专区",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 1
+  },
+  {
+   "name": "龙集采-采购动态",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 2,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国建设银行股份有限公司南京分行自助柜员机现金集中运维外包招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-30"
+  }
+ ]
+}

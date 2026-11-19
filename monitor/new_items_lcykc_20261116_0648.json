@@ -1,0 +1,37 @@
+{
+ "run_at": "20261116_0648",
+ "sources": [
+  {
+   "name": "乐采云兜底-A-浙江冠名机构",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 150,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云兜底-B-轮转城商行:湖州银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 5,
+   "new_count": 2
+  }
+ ],
+ "new_items": [
+  {
+   "title": "浙江金业管理咨询有限公司关于湖州银行股份有限公司业务支持类外包服务采购项目的公开招标公告",
+   "date": "2026-11-12",
+   "deadline": "2026-12-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:湖州银行"
+  },
+  {
+   "title": "永信恒昌工程管理有限公司关于湖州银行2026年度分布式数据库同步工具采购项目的公开招标公告（湖州银行股份有限公司）",
+   "date": "2026-11-10",
+   "deadline": "2026-11-30",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:湖州银行"
+  }
+ ]
+}

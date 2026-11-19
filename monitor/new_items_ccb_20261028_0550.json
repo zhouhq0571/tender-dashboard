@@ -1,0 +1,76 @@
+{
+ "run_at": "20261028_0550",
+ "sources": [
+  {
+   "name": "龙集采-供应商征集",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 3
+  },
+  {
+   "name": "龙集采-招标专区",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 3
+  },
+  {
+   "name": "龙集采-采购动态",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 2,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "建信信托有限责任公司财富管理业务运营外包服务采购项目市场调研公告",
+   "deadline": "2026-11-03",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-27"
+  },
+  {
+   "title": "建信信托有限责任公司债务重组等服务信托运营外包服务采购项目市场调研公告",
+   "deadline": "2026-11-03",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-27"
+  },
+  {
+   "title": "建信基金估值系统销售费用新规及外汇期货与数据拆分工具改造项目供应商征集公告",
+   "deadline": "2026-11-03",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-27"
+  },
+  {
+   "title": "中国建设银行江苏省分行2027年业务辅助外包事项采购项目（标包三：商户专业化服务）招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-27"
+  },
+  {
+   "title": "中国建设银行江苏省分行2027年业务辅助外包事项采购项目（标包二：信用卡分期业务辅助服务）招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-27"
+  },
+  {
+   "title": "中国建设银行江苏省分行2027年业务辅助外包事项采购项目（标包一：网络金融业务辅助服务）招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-27"
+  }
+ ]
+}

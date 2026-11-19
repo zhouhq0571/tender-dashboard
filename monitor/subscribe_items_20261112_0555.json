@@ -1,0 +1,14 @@
+{
+ "run_at": "2026-11-12 05:55",
+ "pages": 3,
+ "total": 0,
+ "keep": 0,
+ "verdict_counts": {
+  "keep": 0,
+  "drop_stage": 0,
+  "drop_org": 0,
+  "drop_noise": 0,
+  "drop_biz": 0
+ },
+ "items": []
+}

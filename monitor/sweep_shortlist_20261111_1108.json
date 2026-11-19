@@ -1,0 +1,50 @@
+{
+ "run_at": "20261111_1108",
+ "window": 3,
+ "channels": {
+  "vip_tb": {
+   "status": "ok",
+   "files": 1,
+   "kept": 2,
+   "tail": "OK 2/40 -> subscribe_items_tabbit_20261111_1108.json"
+  },
+  "kc": {
+   "status": "skipped(--only)"
+  },
+  "qlsub": {
+   "status": "skipped(--only)"
+  },
+  "l1bank": {
+   "status": "skipped(--only)"
+  },
+  "ccb": {
+   "status": "skipped(--only)"
+  },
+  "lcy": {
+   "status": "skipped(--only)"
+  },
+  "lecaiyun": {
+   "status": "skipped(--only)"
+  },
+  "sm": {
+   "status": "skipped(--only)"
+  },
+  "qlsearch": {
+   "status": "skipped(--only)"
+  }
+ },
+ "merged": 2,
+ "pre_dedup": 2,
+ "fresh": 1,
+ "items": [
+  {
+   "title": "西城区政府投资引导基金及西城区产业创投引导基金托管银行选定招标采购项目公开招标公告",
+   "url": "https://www.qianlima.com/bid-646329967.html",
+   "date": "2026-11-10",
+   "deadline": "",
+   "contact": "",
+   "source": "vip_tb",
+   "origin": "vip_tb"
+  }
+ ]
+}

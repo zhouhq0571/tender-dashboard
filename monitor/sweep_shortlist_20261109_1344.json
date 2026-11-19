@@ -1,0 +1,56 @@
+{
+ "run_at": "20261109_1344",
+ "window": 4,
+ "channels": {
+  "kc": {
+   "status": "skipped(--only)"
+  },
+  "qlsub": {
+   "status": "ok",
+   "files": 1,
+   "kept": 0,
+   "tail": "明细: /Users/zhouhq/Documents/kimi/workspace/bidding-daily/monitor/subscribe_items_20261109_1345.json"
+  },
+  "l1bank": {
+   "status": "skipped(--only)"
+  },
+  "ccb": {
+   "status": "ok",
+   "files": 1,
+   "kept": 6,
+   "tail": " KEEP: 李沧支行中国海洋大学智慧教室一体化平台采购项目公告 | 截止"
+  },
+  "lcy": {
+   "status": "ok",
+   "files": 1,
+   "kept": 0,
+   "tail": "  乐采云兜底-B-轮转城商行:杭州银行: ok 共11条 keep0"
+  },
+  "lecaiyun": {
+   "status": "ok",
+   "files": 1,
+   "kept": 3,
+   "tail": " KEEP: 宁波银行股份有限公司绍兴分行易付通对接智慧资管系统采购项目招标公告 | 截止 2026-11-13 | 2026-10-30"
+  },
+  "sm": {
+   "status": "skipped(--only)"
+  },
+  "qlsearch": {
+   "status": "skipped(--only)"
+  }
+ },
+ "merged": 9,
+ "pre_dedup": 4,
+ "fresh": 1,
+ "items": [
+  {
+   "title": "宁波银行2026年数据中心CQC认证服务项目(重发)招标公告（宁波银行股份有限公司）",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jincaiwang_0e234f60708e4efe8264061a85097206",
+   "date": "2026-11-06",
+   "deadline": "2026-11-13",
+   "contact": "",
+   "source": "快查",
+   "origin": "lecaiyun"
+  }
+ ]
+}

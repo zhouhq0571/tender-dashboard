@@ -1,0 +1,29 @@
+{
+ "run_at": "20261112_0953",
+ "sources": [
+  {
+   "name": "乐采云兜底-A-浙江冠名机构",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 150,
+   "new_count": 1
+  },
+  {
+   "name": "乐采云兜底-B-轮转城商行:嘉兴银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 4,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "浙江省机关事务管理局科技金融及数字金融合作项目省直中心维修资金系统采购软件产品采购项目招标公告（中国建设银行股份有限公司浙江省分行）",
+   "date": "2026-11-11",
+   "deadline": "2026-11-19",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-A-浙江冠名机构"
+  }
+ ]
+}

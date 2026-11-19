@@ -1,0 +1,37 @@
+{
+ "run_at": "20261106_0551",
+ "sources": [
+  {
+   "name": "乐采云兜底-A-浙江冠名机构",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 150,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云兜底-B-轮转城商行:金华银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 6,
+   "new_count": 2
+  }
+ ],
+ "new_items": [
+  {
+   "title": "金华银行核心网络设备、安全设备维保项目(2027年度)招标公告（金华银行股份有限公司）",
+   "date": "2026-11-02",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:金华银行"
+  },
+  {
+   "title": "金华银行核心网络设备、安全设备维保项目(2027年度)公开招标公告（金华银行股份有限公司）",
+   "date": "2026-11-02",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:金华银行"
+  }
+ ]
+}

@@ -31,7 +31,7 @@ UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
 # 监测目标配置：mode=fetch（直连列表页）/ search（WAF 拦截，走搜索快照）
 # tier=S 每日必监测；tier=A 抽查（默认也每日跑，直连零token）；B 级不进监测器，仅定向核查
 SOURCES = [
-    {"name": "中招联合招标采购平台", "mode": "fetch", "tier": "B",
+    {"name": "中招联合招标采购平台", "mode": "fetch", "tier": "A",  # 2026-11-10 A级升级：信托招标主渠道（中信信托综资系统11-30截止等实证），免登录直连
      "urls": ["https://www.365trade.com.cn/zfwzb/index.jhtml",
               "https://www.365trade.com.cn/"],
      "note": "公告全文免登录，龙江银行ECIF/中信信托职业年金来源；2026-11-03 复盘 A→B（9-10月连续零产出）"},

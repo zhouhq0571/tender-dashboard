@@ -1,0 +1,100 @@
+{
+ "run_at": "20261112_0552",
+ "sources": [
+  {
+   "name": "龙集采-供应商征集",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 7
+  },
+  {
+   "name": "龙集采-招标专区",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 4
+  },
+  {
+   "name": "龙集采-采购动态",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 2,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "某县教体系统“建融慧学”企业级平台特色化改造调研征集",
+   "deadline": "2026-11-17",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-11"
+  },
+  {
+   "title": "零钱包及捆钞带项目征集公告",
+   "deadline": "2026-11-17",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-11"
+  },
+  {
+   "title": "湖南省分行2027-2028年业务辅助外包(项目二：分期业务辅助外包）项目调研征集公告",
+   "deadline": "2026-11-17",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-11"
+  },
+  {
+   "title": "湖南省分行2027-2028年业务辅助外包(项目一：商户专业化服务、网络金融业务辅助外包）调研征集公告",
+   "deadline": "2026-11-17",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-11"
+  },
+  {
+   "title": "中国建设银行梅州市分行档案服务外包采购项目供应商征集公告",
+   "deadline": "2026-11-18",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-11"
+  },
+  {
+   "title": "浙江省机关事务管理局科技金融及数字金融合作项目省直中心维修资金系统采购软件产品采购项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-11"
+  },
+  {
+   "title": "中国建设银行无锡分行自助柜员机现金集中运维外包服务项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-11"
+  },
+  {
+   "title": "南京机电职业技术学院“智慧校园”项目—AI智慧校园信息化系统项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-11"
+  },
+  {
+   "title": "中国建设银行大连市分行机构业务部2026-2031年国产信创智慧校园（DW202610-B）校园一卡通平台项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-11"
+  }
+ ]
+}

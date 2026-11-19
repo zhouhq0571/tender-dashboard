@@ -1,0 +1,62 @@
+{
+ "run_at": "2026-11-09 12:47:48",
+ "sources": [
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 8,
+   "new_count": 8
+  }
+ ],
+ "new_items": [
+  {
+   "title": "【这一周】腾讯牵手三大卡组、又有支付牌照成交、银联发严正声明",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09094524.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "昆山农商银行AI驱动、人机协同的长尾客群运营项目中标候选人结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09093621.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "广东华兴银行AI一体机服务租赁项目招标预审",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09093411.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "宁波银行AIFP知识采集加工与保鲜项目采购结果公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09092714.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "重庆农村商业银行2026年财富智能体配套数据采购项目竞争性谈判公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09092515.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "云南红塔银行互联网收单商户身份大数据核查项目中标结果公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09091833.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "河南农商银行“三重一大”智慧监督平台项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09091703.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "北京银行2026年人工智能平台智能办公协作工具建设项目成交公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09091700.html",
+   "source": "移动支付网"
+  }
+ ]
+}

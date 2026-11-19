@@ -1,0 +1,56 @@
+{
+ "run_at": "20261106_0551",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "total_items": 0,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云WAF兜底-快查API定向补",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 63,
+   "new_count": 3,
+   "quota_calls": 6,
+   "window_days": 15
+  }
+ ],
+ "new_items": [
+  {
+   "title": "温州银行股份有限公司关于温银大厦数据中心运维管理区网络系统升级项目公开招标公告",
+   "pubdate": "2026-11-02",
+   "deadline": "2026-11-10",
+   "url": "https://www.kuaicha365.com/?n=ccgp_wzban_airw_dda1c75c97da25354af115e00df6be31",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": "",
+   "url_id": "ccgp_wzban_airw_dda1c75c97da25354af115e00df6be31"
+  },
+  {
+   "title": "宁波银行股份有限公司绍兴分行易付通对接智慧资管系统采购招标公告",
+   "pubdate": "2026-10-30",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jincaiwang_0e844fc1bb3b47eb95a625bd54cf7977",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 60.0,
+   "url_id": "ccgp_jincaiwang_0e844fc1bb3b47eb95a625bd54cf7977"
+  },
+  {
+   "title": "宁波银行股份有限公司绍兴分行易付通对接智慧资管系统采购项目招标公告",
+   "pubdate": "2026-10-30",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/?n=ccgp_nbgodo_1703711",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 60.0,
+   "url_id": "ccgp_nbgodo_1703711"
+  }
+ ]
+}

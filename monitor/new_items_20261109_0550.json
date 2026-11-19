@@ -1,0 +1,74 @@
+{
+ "run_at": "2026-11-09 05:50:36",
+ "sources": [
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 10
+  }
+ ],
+ "new_items": [
+  {
+   "title": "武汉农村商业银行远程银行系统人力外包服务项目公开招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/08111304.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "桂林银行2026年互联网应用可信安全众测安全服务项目采购结果公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/08111202.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "徽商银行EAST5.0数据质量提升采购项目评标结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/08110725.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "上饶银行新一代呼叫中心系统建设项目公开招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/08110618.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "兴业银行泉州分行企金合作收单营销采购项目采购公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/06195751.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "青岛银行银医便捷支付结算终端项目成交公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/06195350.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "蚂蚁状告“易小满”和百度，涉及将“花呗”作为竞价关键词",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/06184227.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "长沙农商银行收单业务辅助巡检外包服务交流公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/06152730.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "广州农商银行2026年直联POS收单外包服务项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/06152519.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "建设银行雄安分行收银设备采购项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/06151202.html",
+   "source": "移动支付网"
+  }
+ ]
+}

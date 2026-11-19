@@ -336,4 +336,41 @@ ok "日期: ${DATE} ${TIME_PERIOD}"
 ok "访问地址: https://${DOMAIN}/"
 info ""
 
+# ---------- 步骤 10: 联动刷新「标讯晨报」Widget（2026-10-20 根治"部署后晨报不刷新"） ----------
+# 该脚本以自动化运行时方式调用 run(ctx)，直接 python3 执行是空转，必须驱动调用。
+REFRESH_SCRIPT="/Users/zhouhq/Library/Application Support/kimi-desktop/daimon-share/daimon/agents/main/blueprint/automations/automation_6c03852c-7281-42c9-8fc5-ee1013b199ce/assets/refresh_board_widgets.py"
+if [ -f "$REFRESH_SCRIPT" ]; then
+    info "步骤 10: 联动刷新「标讯晨报」Widget..."
+    # 2026-11-07 根治"尾部厂商链 hanging 拖死 deploy"：刷新脚本尾部会调周报工作区厂商链
+    # （子进程各自 180s 超时，网络抖动时整体可拖 5 分钟以上）。组件本体在脚本前段即写入，
+    # 故此处加 150s 看门狗：超时就截断，不阻断部署。
+    REFRESH_LOG=$(mktemp)
+    python3 - "$REFRESH_SCRIPT" >"$REFRESH_LOG" 2>&1 <<'PYEOF' &
+import importlib.util as ilu, sys
+spec = ilu.spec_from_file_location("rbw", sys.argv[1])
+mod = ilu.module_from_spec(spec)
+spec.loader.exec_module(mod)
+mod.run({})
+PYEOF
+    REFRESH_PID=$!
+    for _i in $(seq 1 150); do
+        kill -0 "$REFRESH_PID" 2>/dev/null || break
+        sleep 1
+    done
+    if kill -0 "$REFRESH_PID" 2>/dev/null; then
+        kill -9 "$REFRESH_PID" 2>/dev/null
+        warn "Widget 联动刷新超时被截断（>150s；组件本体通常已在前段写入，尾部厂商链慢所致）"
+    else
+        wait "$REFRESH_PID" 2>/dev/null
+        if [ $? -eq 0 ]; then
+            ok "标讯晨报 Widget 已联动刷新"
+        else
+            warn "Widget 联动刷新失败（不影响部署本身），可手动重跑"
+        fi
+    fi
+    rm -f "$REFRESH_LOG"
+else
+    warn "未找到 Widget 刷新脚本，跳过联动"
+fi
+
 exit 0

@@ -1,0 +1,76 @@
+{
+ "run_at": "2026-11-18 05:51:45",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 0,
+   "new_count": 0,
+   "note": "首次运行，仅建立指纹基线，不输出新增"
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 9
+  }
+ ],
+ "new_items": [
+  {
+   "title": "北京银行信用卡中心数字化收单业务合规功能升级改造项目竞争性磋商公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/17190148.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "北京银行数字人民币运营机构筹建项目-数据集中处理系统竞争性磋商公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/17181441.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "光大银行数据领域科技人力外包服务选型入围项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/17164527.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "秦农银行信息科技外包服务供应商入围项目（应用类系统开发运维服务）-中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/17160734.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "中国银行安徽省分行数字人民币营销活动服务项目采购邀请公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/17154003.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "央行同日公示吉林两批金融科技创新应用，中行、吉林银行关注数字金融等领域",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/17145707.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "3河南农商银行7400万布局新一代系统，去年1200万采购的新一代个人电子银行系统或近期落地",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/11110456.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "7央行公示297个金融科技发展奖名单，一等奖19项、微创新奖20项",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/12181847.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "9建行无锡分行江阴小黑人商户聚合支付项目采购结果公布",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13144355.html",
+   "source": "移动支付网"
+  }
+ ]
+}

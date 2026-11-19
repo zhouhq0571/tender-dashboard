@@ -1,0 +1,71 @@
+{
+ "run_at": "20261109_1343",
+ "window": 4,
+ "channels": {
+  "kc": {
+   "status": "ok",
+   "files": 1,
+   "kept": 7,
+   "tail": " KEEP: 中国建设银行股份有限公司衡水市哈励逊国际和平医院系统升级项目公开招标公告（中国建设银行股份有限公司河北省分行） | 2026-11-13"
+  },
+  "qlsub": {
+   "status": "skipped(--only)"
+  },
+  "l1bank": {
+   "status": "skipped(--only)"
+  },
+  "ccb": {
+   "status": "skipped(--only)"
+  },
+  "lcy": {
+   "status": "skipped(--only)"
+  },
+  "lecaiyun": {
+   "status": "skipped(--only)"
+  },
+  "sm": {
+   "status": "ok",
+   "files": 1,
+   "kept": 0,
+   "tail": "明细: /Users/zhouhq/Documents/kimi/workspace/bidding-daily/monitor/new_items_20261109_1343.json"
+  },
+  "qlsearch": {
+   "status": "ok",
+   "files": 1,
+   "kept": 2,
+   "tail": "qlsearch: 关键词1组 原始20 预筛保留2 -> /Users/zhouhq/Documents/kimi/workspace/bidding-daily/monitor/new_items_qlsearch_20261109_1"
+  }
+ },
+ "merged": 9,
+ "pre_dedup": 9,
+ "fresh": 3,
+ "items": [
+  {
+   "title": "中国建设银行股份有限公司衡水市哈励逊国际和平医院系统升级项目公开招标公告（中国建设银行股份有限公司河北省分行）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=jianhangcj_2118673894573240320&type=AllBeacon",
+   "date": "2026-11-06",
+   "deadline": "2026-11-13",
+   "contact": "代理 河北筑城工程招标咨询有限公司",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "泉州客运中心汽车站综合楼西侧6号店招租项目( 银行系统 在正文中 )",
+   "url": "https://www.qianlima.com/bid-645935091.html",
+   "date": "",
+   "deadline": "",
+   "contact": "",
+   "source": "qlsearch",
+   "origin": "qlsearch"
+  },
+  {
+   "title": "泉州汽车站短途区1层1-09室招租项目( 银行系统 在正文或附件中 )",
+   "url": "https://www.qianlima.com/bid-645935089.html",
+   "date": "",
+   "deadline": "",
+   "contact": "",
+   "source": "qlsearch",
+   "origin": "qlsearch"
+  }
+ ]
+}

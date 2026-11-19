@@ -1,0 +1,12 @@
+{
+ "run_at": "20261113_0819",
+ "via": "tabbit",
+ "steps": [
+  "会话过期,自动重登",
+  "重登表单:no-login-form(可能未展开):false/true",
+  "重登失败"
+ ],
+ "total": 0,
+ "keep": [],
+ "dropped": []
+}

@@ -1,0 +1,117 @@
+{
+ "run_at": "2026-11-12 05:56:15",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 11,
+   "new_count": 11
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 5,
+   "new_count": 5
+  }
+ ],
+ "new_items": [
+  {
+   "title": "服务 26-F-0044-TX-公开招标公告 发布日期：2026-11-11 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896284.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 沈阳市社会福利院养老楼新建项目地质灾害危险性评估报告-采购公告（二次） 发布日期：2026-11-11 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896280.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 西开有限离世离退休职工丧葬用车租赁服务采购项目谈判采购公告 发布日期：2026-11-11 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896273.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 C929飞机舱门国产复材EH919结构设计值研发试验【重新招标】-公开招标公告 发布日期：2026-11-11 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896270.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 西安市综合短信发布平台短信及外呼服务项目-单一来源采购前意向公示 发布日期：2026-11-11 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896267.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 中国光大银行佛山分行大楼物业管理服务项目招标公告 发布日期：2026-11-11 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896264.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 首都医科大学右安门校区超市经营服务项目-公开招标公告 发布日期：2026-11-11 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896260.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 郑州市第七人民医院药品配送服务商遴选项目征集公告 发布日期：2026-11-11 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896259.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 中国烟草总公司行业卷烟二维码验证防伪系统项目-公开招标公告 发布日期：2026-11-11 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896258.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 首开社区地下空间清理维修项目-2026年126处地址劳务分包项目-公开招标公告 发布日期：2026-11-11 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896254.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 郑州枢纽国际贸易有限公司选聘律师事务所开展案件法律服务项目招标公告 发布日期：2026-11-11 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896252.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "西安银行收单业务外包服务项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/11180024.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "江门农商银行2026-2028年度信息科技人力外包服务项目中标公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/11174522.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "央行公示辽宁第四批金融科技创新应用，邮储、中信、盛京银行参与",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/11160750.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "河南农商银行7400万布局新一代系统，去年1200万采购的新一代个人电子银行系统或近期落地",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/11110456.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "徽商银行2026年昇腾或真武芯片智能算力服务器设备资源采购项目评标结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/11085727.html",
+   "source": "移动支付网"
+  }
+ ]
+}

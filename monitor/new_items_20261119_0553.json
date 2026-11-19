@@ -1,0 +1,40 @@
+{
+ "run_at": "2026-11-19 05:53:22",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 0,
+   "new_count": 0,
+   "note": "首次运行，仅建立指纹基线，不输出新增"
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 4,
+   "new_count": 3
+  }
+ ],
+ "new_items": [
+  {
+   "title": "银联商务2026年非银行支付机构支付业务设施技术认证服务采购项目公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/18175627.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "5央行公示297个金融科技发展奖名单，一等奖19项、微创新奖20项",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/12181847.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "7建行无锡分行江阴小黑人商户聚合支付项目采购结果公布",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13144355.html",
+   "source": "移动支付网"
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>标讯晨报</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: var(--kimi-font-family, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif); background: var(--kimi-bg-primary, #fff); color: var(--kimi-text-primary, #1a1a1a); padding: 16px; }
+  .head { text-align:center; margin-bottom:10px; padding: 0 96px 0 8px; }
+  h2 { font-size: 15px; font-weight: 600; }
+  .meta { display:block; margin-top:2px; font-size: 11px; color: var(--kimi-text-secondary, #888); }
+  .stats { display:grid; grid-template-columns: repeat(3, 1fr); gap:8px; margin-bottom:12px; }
+  .stat { border:1px solid var(--kimi-border-color, #eee); border-radius:8px; padding:8px 10px; }
+  .stat .v { font-size:18px; font-weight:700; line-height:1.2; }
+  .stat .k { font-size:10.5px; color: var(--kimi-text-secondary, #999); margin-top:2px; }
+  .badge { display:inline-block; font-size:11px; padding:2px 8px; border-radius:999px; }
+  .badge.ok { background: var(--kimi-success-bg, #EDF7ED); color: var(--kimi-success, #1E7B34); border:1px solid var(--kimi-success-border, #BDE5C5); }
+  .badge.warn { background: var(--kimi-warning-bg, #FFF4E5); color: var(--kimi-warning, #B25E09); border:1px solid var(--kimi-warning-border, #F5D4A8); }
+  h3 { font-size:12px; font-weight:600; margin:12px 0 6px; }
+  table { width:100%; border-collapse: collapse; font-size:12px; }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--kimi-border-color, #eee); vertical-align:top; }
+  th { font-size:11px; color: var(--kimi-text-secondary, #888); font-weight:500; }
+  table.added { table-layout: fixed; }
+  table.added th, table.added td { overflow-wrap: anywhere; word-break: break-word; line-height:1.5; }
+  table.added th:nth-child(1), table.added td:nth-child(1) { width:5%; text-align:center; color: var(--kimi-text-secondary, #888); }
+  table.added th:nth-child(2), table.added td:nth-child(2) { width:12%; }
+  table.added th:nth-child(3), table.added td:nth-child(3) { width:35%; }
+  table.added th:nth-child(4), table.added td:nth-child(4) { width:12%; }
+  table.added th:nth-child(5), table.added td:nth-child(5) { width:19%; }
+  table.added th:nth-child(6), table.added td:nth-child(6) { width:17%; }
+  .muted { color: var(--kimi-text-secondary, #999); }
+  .line { font-size:12px; line-height:1.8; }
+  .foot { display:flex; align-items:center; justify-content:space-between; margin-top:14px; gap:8px; flex-wrap:wrap; }
+  a.open, button.open { display:inline-block; font-size:12px; color: var(--kimi-text-primary, #1a1a1a); text-decoration:none; border:1px solid var(--kimi-border-color, #ddd); padding:5px 12px; border-radius:6px; background: var(--kimi-bg-primary, #fff); cursor:pointer; font-family:inherit; }
+  .action-box { margin-top:10px; padding:10px 12px; border:1px solid var(--kimi-warning-border, #F5D4A8); background: var(--kimi-warning-bg, #FFF9F0); border-radius:8px; }
+  a.open.action, button.open.action { font-weight:600; border-color: var(--kimi-warning, #B25E09); }
+  .action-box .note { margin-top:6px; }
+  .note { font-size:10.5px; color: var(--kimi-text-secondary, #aaa); }
+</style>
+</head>
+<body>
+  <div class="head">
+    <h2>标讯晨报</h2>
+    <span class="meta">看板 v333 · 2026年10月21日 中午 · 共 121 项</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="v">+0</div><div class="k">新上板</div></div>
+    <div class="stat"><div class="v">2</div><div class="k">候选待确认</div></div>
+    <div class="stat"><div class="v">-0</div><div class="k">过期删除</div></div>
+  </div>
+
+  <div class="line"><span class="badge warn">需确认 2 项</span></div>
+
+  <h3>候选待确认（2 项）</h3>
+  <table>
+    <thead><tr><th>编号</th><th>机构</th><th>项目</th><th>投标截止</th><th>业务标签</th><th>投标建议</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>示例银行</td><td>示例项目A（预览用）</td><td>2026-11-30</td><td>大模型、渠道</td><td>🔥 ★★★ 强烈建议投标</td></tr><tr><td>2</td><td>示例信托</td><td>示例项目B（预览用）</td><td>2026-12-15</td><td>数据</td><td>⭐ ★★☆ 建议投标</td></tr>
+    </tbody>
+  </table>
+  <div class="action-box">  <div class="line"><b>去决策：</b>点下方按钮复制指令，<b>只粘贴到「标讯看板」专题会话</b>（bidding-daily 工作区）发送，<b>切勿发到其他对话</b>（10-21 串台事故：他会话把"除6外纳入"倒置执行，删错项目）。没有该会话时，在 Kimi Work 的 bidding-daily 项目里新建对话，首句发「读 CRITICAL_MEMORY.md 与晨报深链改造_交接.md」即可承接。</div>
+  <button class="open action" id="copyDecisionBtn" data-text="【标讯看板·候选决策】防串台铁律：执行前先核 bidding-daily/pending_candidates.json 中本批编号的 status，已是「纳入/不纳入」说明已有会话执行过，立即停止并上报周老师，禁止二次或反向执行；执行后在 reports/最新执行汇报.md 留痕（含决策原文与执行明细）。
+候选决策：纳入 ；不纳入 （编号见上表，支持区间如 2-3、6-9；可注明调整如 3改可关注）">复制决策指令（去标讯看板专题会话）</button>
+  <div class="note" id="copyDecisionTip">指令已自带防串台校验：执行助理会先核 pending 台账再动手，不会误删误补。也可直接手写，如「2-3、6-9纳入，3改可关注，其他不纳入」。</div>
+  <script>
+  (function(){
+    var btn = document.getElementById('copyDecisionBtn');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      var text = btn.getAttribute('data-text') || '';
+      var tip = document.getElementById('copyDecisionTip');
+      function done() { btn.textContent = '已复制 ✓'; if (tip) tip.textContent = '已复制 → 请到「标讯看板」专题会话粘贴发送，勿发其他对话。'; }
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); done(); }
+        catch (e) { if (tip) tip.textContent = '自动复制失败，请手动输入：' + text; }
+        document.body.removeChild(ta);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+    });
+  })();
+  </script>
+</div>
+  <div class="foot">
+    <a class="open" href="https://hstender.cn/" target="_blank">打开看板 ↗</a>
+    <span class="note">主任务 05:47 执行后自动联动刷新（07:21 兜底）· 候选决策只在「标讯看板」专题会话执行（防串台）</span>
+  </div>
+</body>
+</html>

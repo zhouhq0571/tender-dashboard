@@ -1,0 +1,56 @@
+{
+ "run_at": "20261028_0554",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 2
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 2
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "衡水分行路北、枣强、大陆裕丰档案库气体灭火系统检测项目二次采购邀请公告（中国银行股份有限公司衡水分行）",
+   "date": "2026-10-27",
+   "deadline": "2026-11-03",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国建设银行江苏省分行2027年业务辅助外包事项采购项目(标包三:商户专业化服务)招标公告（中国建设银行股份有限公司江苏省分行）",
+   "date": "2026-10-27",
+   "deadline": "2026-11-03",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国建设银行江苏省分行2027年业务辅助外包事项采购项目招标公告（中国建设银行股份有限公司江苏省分行）",
+   "date": "2026-10-27",
+   "deadline": "2026-11-03",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行2026年SUMMITSTP系统功能升级项目竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-10-27",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  }
+ ]
+}

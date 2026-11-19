@@ -1,0 +1,76 @@
+{
+ "run_at": "20261109_1345",
+ "sources": [
+  {
+   "name": "龙集采-供应商征集",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 2
+  },
+  {
+   "name": "龙集采-招标专区",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 4
+  },
+  {
+   "name": "龙集采-采购动态",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 2,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国建设银行青岛分行李沧支行中国海洋大学计量认证管理系统智能化和信息化建设计算机软件采购项目",
+   "deadline": "2026-11-14",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-09"
+  },
+  {
+   "title": "建信人寿中保登数据校验服务采购项目第二轮供应商征集公告",
+   "deadline": "2026-11-13",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-09"
+  },
+  {
+   "title": "中国建设银行天津市分行数据通讯线路租赁服务项目公开招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-09"
+  },
+  {
+   "title": "中国建设银行股份有限公司浙江省分行绍兴分行诸暨市妇幼保健院数字金融合作项目采购招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-06"
+  },
+  {
+   "title": "浙江富春山谷园区运营管理有限公司数字金融合作项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-06"
+  },
+  {
+   "title": "李沧支行中国海洋大学智慧教室一体化平台采购项目公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-06"
+  }
+ ]
+}

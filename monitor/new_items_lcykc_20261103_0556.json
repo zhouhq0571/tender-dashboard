@@ -1,0 +1,37 @@
+{
+ "run_at": "20261103_0556",
+ "sources": [
+  {
+   "name": "乐采云兜底-A-浙江冠名机构",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 150,
+   "new_count": 1
+  },
+  {
+   "name": "乐采云兜底-B-轮转城商行:温州银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 4,
+   "new_count": 1
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国银行浙江省分行全辖IP语音系统维保服务采购项目采购邀请公告",
+   "date": "2026-11-02",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-A-浙江冠名机构"
+  },
+  {
+   "title": "关于兴业银行温州分行零贷集中作业中心外包服务项目的公开招标公告（兴业银行股份有限公司温州分行）",
+   "date": "2026-10-22",
+   "deadline": "2026-11-06",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:温州银行"
+  }
+ ]
+}

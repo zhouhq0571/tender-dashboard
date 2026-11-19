@@ -1,0 +1,159 @@
+{
+ "run_at": "2026-11-16 06:49:20",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 9,
+   "new_count": 9
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 14,
+   "new_count": 14
+  }
+ ],
+ "new_items": [
+  {
+   "title": "服务 黑龙江省民政职业技术学校校园网络专线服务项目-询比采购公告 发布日期：2026-11-15 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/897637.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 中原银行漯河分行人事档案资料整理咨询服务项目竞争性磋商公告 发布日期：2026-11-15 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/897633.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 村庄基础设施补短板项目检查推动项目竞争性磋商公告 发布日期：2026-11-14 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/897614.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 电子检查单软件红标件一阶段测试-公开招标公告 发布日期：2026-11-14 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/897610.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 黑龙江省龙江化工有限公司 双酚A产品运输服务【重新招标】【变更采购方式】-谈判采... 发布日期：2026-11-13 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/897589.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 大型铸锻件产业能级提升项目（生产设备类）二期工程项目管理招标-公开招标公告 发布日期：2026-11-13 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/897588.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 大型铸锻件产业能级提升项目（生产设备类）二期工程设计招标-公开招标公告 发布日期：2026-11-13 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/897587.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 2026年法律服务库框架协议采购-知识产权业务-招标公告 发布日期：2026-11-13 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/897584.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 2026年法律服务库框架协议采购-公司与合规业务-招标公告 发布日期：2026-11-13 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/897583.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "徽商银行AI意图管理平台采购项目评标结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/14100440.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "上海农商银行智能投研服务采购项目供应商征集公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/14100330.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "建行江苏省分行2027年至2028年信息技术外部开发资源池采购项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/14100205.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "北京农商银行企业级反欺诈平台信贷反欺诈应用项目供应商征集",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/14100000.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "广州农商银行综合支付系统项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13185211.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "兴业银行数字人民币运营系统信创二期项目供应商征集调研公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13185009.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "甘肃农商银行快捷支付数字化运营项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13184353.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "上海银行支付系统重构建设采购项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13184003.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "建行深圳市分行数字人民币统一支付监管分行特色应用产品创新采购项目供应商征集公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13183809.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "建行厦门市分行基于数币达平台的跨境电商领域创新应用研究方案项目中标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13183459.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "邮储银行江苏省分行2027-2029年全省收单业务外包服务集中采购项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13182303.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "湖南银行2026年数据服务系统研发服务项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13182053.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "湖南银行综合收单系统国产化改造项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13181922.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "四川银行跨境业务系统采购项目磋商公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13172814.html",
+   "source": "移动支付网"
+  }
+ ]
+}

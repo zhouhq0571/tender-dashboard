@@ -1,0 +1,160 @@
+{
+ "run_at": "20261109_0552",
+ "sources": [
+  {
+   "name": "邮储邮银易采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 46,
+   "new_count": 2
+  },
+  {
+   "name": "中信金控共享",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 30,
+   "new_count": 3
+  },
+  {
+   "name": "北京银行集采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 19,
+   "new_count": 6
+  },
+  {
+   "name": "浙商数智采购",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 29,
+   "new_count": 0
+  },
+  {
+   "name": "工银集采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 2
+  },
+  {
+   "name": "民生银行",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 8,
+   "new_count": 0
+  },
+  {
+   "name": "交行智采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 6,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国邮政储蓄银行股份有限公司福建省分行“创投八闽 邮融未来”2026年邮储银行投行客户活动福建站对接服务采购项目公开竞争性磋商公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://cg.psbc.com/cms/default/webfile/2ywgg1/20261106/1303382382958608384.html",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "中国邮政储蓄银行股份有限公司亳州市分行2027年档案托管服务采购项目（二次）竞争性磋商公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://cg.psbc.com/cms/default/webfile/2ywgg1/20261106/1303324742450675712.html",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "中信银行郑州分行交易结算科技运维服务采购项目招标公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://ebid.cfhc.citic/cms/default/webfile/ywgg1/20261106/1303415061846425600.html",
+   "source": "中信金控采购共享平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "中信银行大连分行个人贷款业务支持类外包服务采购项目招标公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://ebid.cfhc.citic/cms/default/webfile/ywgg1/20261106/1303302185597009920.html",
+   "source": "中信金控采购共享平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "中信银行信用卡中心天镜系统升级服务采购项目招标公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://ebid.cfhc.citic/cms/default/webfile/ywgg1/20261105/1303070922290233344.html",
+   "source": "中信金控采购共享平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "北京银行2026年智能柜员机3.0系统功能完善四期项目竞争性磋商公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261106/1303452308536819712.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2026年数币业务网络基础设施建设项目（一）公开招标公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261106/1303414893466091520.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2026年数币业务网络基础设施建设项目公开招标公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261106/1303414856967258112.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2026年操作风险管理系统重构项目招标公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261106/1303398275377790976.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2026年财富中台监管改造项目竞争性磋商公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261106/1303397502245928960.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行智慧税务管理平台五期建设项目 竞争性磋商公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261106/1303307966857871360.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "中国工商银行安徽宣城分行守护服务外包项目招标公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://jc.icbc.com.cn/#/announcementList/2",
+   "source": "工银集采平台",
+   "channel": "招标公告"
+  },
+  {
+   "title": "中国工商银行安徽宣城分行驻点服务外包项目招标公告",
+   "pubdate": "2026-11-06",
+   "deadline": "",
+   "url": "https://jc.icbc.com.cn/#/main",
+   "source": "工银集采平台",
+   "channel": "招标公告"
+  }
+ ]
+}

@@ -1,0 +1,231 @@
+{
+ "run_at": "20261117_0548",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 11
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 3
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-智能体×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-财富×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 2
+  },
+  {
+   "name": "快查-托管×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-×理财有限责任公司",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 7,
+   "new_count": 4
+  },
+  {
+   "name": "快查-×信托公司",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 1,
+   "new_count": 1
+  }
+ ],
+ "new_items": [
+  {
+   "title": "北京银行双反中台监控体系建设项目(客户尽职调查系统改造)(二次)竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_af2d65bf2790414995af18f3b861906d&type=AllBeacon",
+   "contact": "代理 中金招标有限责任公司",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行数字人民币运营机构筹建项目-头寸管理系统2.0竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_9497546acc184d3aaaf628186e3e696c&type=AllBeacon",
+   "contact": "代理 中金招标有限责任公司",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行中关村分行智能押品管理密集架采购项目(第二次)竞争性磋商公告（北京银行股份有限公司中关村分行）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=quanguoggzy_00673ab6c451ef114592aa1eabfb83e71ab5&type=AllBeacon",
+   "contact": "代理 中化商务有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "国家开发银行伊犁分行2027-2029年内网专线(主线)、内网专线(备线)、互联网专线租用项目招标公告（国家开发银行新疆维吾尔自治区分行）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=quanguoggzy_00673af80949bbb84e19a7ee6285b25ba0e8&type=AllBeacon",
+   "contact": "代理 建银工程咨询有限责任公司",
+   "source": "快查"
+  },
+  {
+   "title": "桌管系统迁移及信创改造服务项目(二次)竞价采购公告（贵州农村商业联合银行股份有限公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-20",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=guizhouzb_974940&type=AllBeacon",
+   "contact": "代理 贵州公明建设投资咨询有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "招商银行信用卡中心平台引流获客采购项目供应商征集公告",
+   "date": "2026-11-16",
+   "deadline": "2026-11-18",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_db68abb1213340dfbbf596cdfb7e3773&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "中国邮政储蓄银行股份有限公司安徽省分行系统运营服务项目(二次)公开竞争性磋商公告",
+   "date": "2026-11-16",
+   "deadline": "2026-11-20",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_8fb08d01fbc243c28667ba8cfdd71e72&type=AllBeacon",
+   "contact": "代理 公诚管理咨询有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "青银理财有限责任公司2026年-2027年银行理财数据接入项目直接采购公示",
+   "date": "2026-11-16",
+   "deadline": "2026-11-25",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_qdygcg_2eee26ba0a0cc478d07f2aba55a7c352&type=AllBeacon",
+   "contact": "代理 青岛鸿翔招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司青岛市分行2026年软网控平台采购项目招标公告（中国银行股份有限公司(以下简称\"中国银行\")青岛市分行）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ctpch_fmscop_4bbc2639d99625a4dbf14b8085e68cf5&type=AllBeacon",
+   "contact": "代理 山东东成建设咨询有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "2026年第一批基础软件资源信创报表工具(数据可视化分析工具)采购项目(第二次)招标公告（中国银行保险信息技术管理有限公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=quanguoggzy_0067ec326aee5dc841cc8f542d8df8d078ca&type=AllBeacon",
+   "contact": "代理 中化商务有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "佛山分行采购个贷操作性服务外包项目（兴业银行佛山分行）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-19",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_cgcib_wmx0_0fb25dd1dd6a1778f5cd66cbb5cf9ffa&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "2026年苏州银行供应链服务平台二期服务采购项目竞争性磋商采购公告（苏州银行股份有限公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_429f968b31074f68a768ca55868a8501&type=AllBeacon",
+   "contact": "代理 金采联合(北京)招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中原银行洛阳分行2027年旺季营销厅堂氛围打造项目竞争性磋商公告（中原银行股份有限公司洛阳分行）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_zhongguozbfwpt_code_42cc49d53ae4593c9af50266d4d30e77&type=AllBeacon",
+   "contact": "代理 中招国际招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "招商银行许昌分行押运寄库服务外包供应商征集公告",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_c63f9427649849f4ad6bcaac7625327e&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "华夏银行基础软硬件采购项目第十五包:网络系统硬件扩容招标公告（华夏银行股份有限公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_1c59e90d37fa4bcf9d8d40270534a4b3&type=AllBeacon",
+   "contact": "代理 中信国际招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "华夏银行基础软硬件采购项目第十三包:SSL安全网关及签名设备招标公告（华夏银行股份有限公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_1791d6b3bb94469d82aad21fe96d8640&type=AllBeacon",
+   "contact": "代理 中信国际招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "北银理财科技管理系统国产化改造与功能优化项目(二次)竞争性磋商公告（北银理财有限责任公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_9a4649848c0a4ab0af75c751b631b535&type=AllBeacon",
+   "contact": "代理 中金招标有限责任公司",
+   "source": "快查"
+  },
+  {
+   "title": "北银理财2026年监管报送平台国产化及新增功能改造项目(二次)竞争性磋商公告（北银理财有限责任公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_48c7a8fb1e1440a99697e25fedf6f76f&type=AllBeacon",
+   "contact": "代理 中金招标有限责任公司",
+   "source": "快查"
+  },
+  {
+   "title": "北银理财2026年代销相关改造项目(阶段三)(二次)竞争性磋商公告（北银理财有限责任公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-11-23",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_9167cc00a52a43acb51f9559d648d8a7&type=AllBeacon",
+   "contact": "代理 中金招标有限责任公司",
+   "source": "快查"
+  },
+  {
+   "title": "交银理财有限责任公司2026年应用系统延续实施外部服务(综合事务管理、需求分析设计、基础资源管理)采购项目市场调研公告",
+   "date": "2026-11-16",
+   "deadline": "2026-11-19",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_044f30ba5d724819947d3c70a3aedd69&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "中信信托估值系统2026年需求建设项目-公开招标公告（中信信托有限责任公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-12-03",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_d83a462c54db44dfa012d53e07c558b7&type=AllBeacon",
+   "contact": "代理 中信国际招标有限公司",
+   "source": "快查"
+  }
+ ]
+}

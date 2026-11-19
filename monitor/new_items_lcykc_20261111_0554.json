@@ -1,0 +1,45 @@
+{
+ "run_at": "20261111_0554",
+ "sources": [
+  {
+   "name": "乐采云兜底-A-浙江冠名机构",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 150,
+   "new_count": 1
+  },
+  {
+   "name": "乐采云兜底-B-轮转城商行:温州银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 5,
+   "new_count": 2
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国建设银行浙江省分行警银合作反诈系统软件服务项目招标公告（中国建设银行股份有限公司浙江省分行）",
+   "date": "2026-11-10",
+   "deadline": "2026-11-17",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-A-浙江冠名机构"
+  },
+  {
+   "title": "关于温州市龙湾区财政局财政预算一体化系统建设项目(重新招标)的公开招标公告（兴业银行股份有限公司温州分行）",
+   "date": "2026-11-10",
+   "deadline": "2026-11-17",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:温州银行"
+  },
+  {
+   "title": "关于复点业务劳务外包服务的招标公告（中国人民银行温州市分行）",
+   "date": "2026-11-10",
+   "deadline": "2026-12-01",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:温州银行"
+  }
+ ]
+}

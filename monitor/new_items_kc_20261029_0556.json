@@ -1,0 +1,112 @@
+{
+ "run_at": "20261029_0556",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 7
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 5
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "驻马店市中心医院\"建融智医\"一体化就医结算平台外延项目招标公告（中国建设银行股份有限公司河南省分行）",
+   "date": "2026-10-28",
+   "deadline": "2026-11-04",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国建设银行连云港分行江苏恒瑞医药股份有限公司司库系统建设项目招标公告（中国建设银行股份有限公司连云港分行）",
+   "date": "2026-10-28",
+   "deadline": "2026-11-04",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "华夏银行2026年运营商手机号码二次发放外部数据引入项目竞争性磋商公告（华夏银行股份有限公司）",
+   "date": "2026-10-28",
+   "deadline": "2026-11-05",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司黑龙江省分行黑龙江省纪律检查委员会涉案账户资金网络查询冻结管理系统升级项目招标公告",
+   "date": "2026-10-28",
+   "deadline": "2026-11-04",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "招商银行海口分行征集自助设备运营外包供应商征集公告",
+   "date": "2026-10-28",
+   "deadline": "2026-11-06",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "广银理财2026年员工司服洗理项目的采购公告（广发银行股份有限公司）",
+   "date": "2026-10-28",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行2026年对公网贷平台对接企业级押品系统改造项目竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-10-28",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中原银行股份有限公司零售智能经营助手项目招标公告",
+   "date": "2026-10-28",
+   "deadline": "2026-11-04",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "上海浦东发展银行股份有限公司乌鲁木齐分行资料档案辅助业务外包项目(二次)招标公告",
+   "date": "2026-10-28",
+   "deadline": "2026-11-04",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国工商银行大连市分行现金清分业务驻场外包集中采购项目招标公告（中国工商银行股份有限公司大连市分行）",
+   "date": "2026-10-28",
+   "deadline": "2026-11-04",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "绍兴银行2026年度移动APP安全加固服务采购项目招标公告（绍兴银行股份有限公司）",
+   "date": "2026-10-28",
+   "deadline": "2026-11-05",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "湖南银行2026年信息系统需求分析服务项目招标公告（湖南银行股份有限公司）",
+   "date": "2026-10-28",
+   "deadline": "2026-11-04",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  }
+ ]
+}

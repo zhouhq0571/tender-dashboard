@@ -1,0 +1,100 @@
+{
+ "run_at": "20261104_0553",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 6
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 3
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "国家开发银行反洗钱智能助手子系统建设及反洗钱监测分析系统智能化适配项目供应商征集公告",
+   "date": "2026-11-03",
+   "deadline": "2026-11-12",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_60b79b72ef614bdd9594f313a13cf116&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "国家开发银行反洗钱智能助手子系统建设及反洗钱监测分析系统智能化适配项目...",
+   "date": "2026-11-03",
+   "deadline": "2026-11-12",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=pocdb_c5eac1b3fdc5dc05881f48f3ec2dd7b4&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "交通银行总部园区(张江园区、浦江数据中心)绿色电力采购项目招标公告(第二次)（交通银行股份有限公司）",
+   "date": "2026-11-03",
+   "deadline": "2026-11-10",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_ea11fd7222654382a2162178b99c70f8&type=AllBeacon",
+   "contact": "代理 江苏省招标中心有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司延安分行自助设备清机维护外包项目竞争性磋商公告",
+   "date": "2026-11-03",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_zhongguozbfwpt_code_d001cd0cb8a0424bb98873f2076c9db6&type=AllBeacon",
+   "contact": "代理 陕西鸿信泰鼎建设项目管理有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国建设银行四川省分行华西医院财务结算数据应用系统等项目招标公告（中国建设银行股份有限公司四川省分行）",
+   "date": "2026-11-03",
+   "deadline": "2026-11-10",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=jianhangcj_2117458513301381120&type=AllBeacon",
+   "contact": "代理 四川公众项目咨询管理有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "上海浦东发展银行股份有限公司长沙分行2026年度零售信贷业务零售客户经理营销辅助外包项目(第二次)招标公告",
+   "date": "2026-11-03",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_8810cbd0f41e43768e21a2420b737683&type=AllBeacon",
+   "contact": "代理 龙武国际工程咨询有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "佛山分行\"广发银行佛山分行线上平台电子券项目\"的采购公告（广发银行股份有限公司佛山分行）",
+   "date": "2026-11-03",
+   "deadline": "2026-11-17",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=guuangfayinghang_1RySTfLPF1loAO1g4hUZgj&type=AllBeacon",
+   "contact": "代理 广东志正招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "金融科技部全省IT防雷器更新项目招标公告（中国建设银行股份有限公司吉林省分行）",
+   "date": "2026-11-03",
+   "deadline": "2026-11-10",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=jianhangcj_2117452830382923776&type=AllBeacon",
+   "contact": "代理 中招国际招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "特丰制药有限公司供应链管理系统采购项目招标公告（中信银行股份有限公司乌鲁木齐分行）",
+   "date": "2026-11-03",
+   "deadline": "2026-11-10",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_7c6db11d54204abab7f9276f78569081&type=AllBeacon",
+   "contact": "代理 中国远东国际招标有限公司",
+   "source": "快查"
+  }
+ ]
+}

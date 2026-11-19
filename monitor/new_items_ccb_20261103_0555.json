@@ -1,0 +1,68 @@
+{
+ "run_at": "20261103_0555",
+ "sources": [
+  {
+   "name": "龙集采-供应商征集",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 3
+  },
+  {
+   "name": "龙集采-招标专区",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 2
+  },
+  {
+   "name": "龙集采-采购动态",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 2,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "清远市分行零售条线2027-2028年个人客户增值服务及私行品质服务活动采购项目供应商征集公告",
+   "deadline": "2026-11-09",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-02"
+  },
+  {
+   "title": "常规版本安全测试服务采购项目供应商征集公告（第二次征集）",
+   "deadline": "2026-11-06",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-02"
+  },
+  {
+   "title": "建行宁波市分行关于余姚市民办学校财务综合管理平台接口联调及软件使用采购项目供应商征集公告",
+   "deadline": "2026-11-08",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-11-02"
+  },
+  {
+   "title": "中国建设银行股份有限公司2026年手机端侧营销服务采购项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-02"
+  },
+  {
+   "title": "2026-2027年个人客户实物权益回馈项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-11-02"
+  }
+ ]
+}

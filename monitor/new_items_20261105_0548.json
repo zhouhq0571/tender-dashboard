@@ -1,0 +1,14 @@
+{
+ "run_at": "2026-11-05 05:48:56",
+ "sources": [
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 11,
+   "new_count": 0,
+   "note": "首次运行，仅建立指纹基线，不输出新增"
+  }
+ ],
+ "new_items": []
+}

@@ -1,0 +1,98 @@
+{
+ "run_at": "20261027_0554",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 7
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 3
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国光大银行家族财富业务管理系统开发服务选型入围项目(二次招标)招标公告（中国光大银行股份有限公司）",
+   "date": "2026-10-26",
+   "deadline": "2026-11-16",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行2026年国际业务处理系统SWIFT报文标准优化项目竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-10-26",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "湖南银行2026年IP与物理地址映射数据服务项目磋商公告（湖南银行股份有限公司）",
+   "date": "2026-10-26",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中信银行总行办公楼环境安全技术检测项目",
+   "date": "2026-10-26",
+   "deadline": "2026-10-28",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "渤海银行数据中心环境设施2027年硬件维保采购项目竞争性采购公告（渤海银行股份有限公司）",
+   "date": "2026-10-26",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中信银行武汉分行桌面运维服务集中采购项目招标公告（中信银行股份有限公司武汉分行）",
+   "date": "2026-10-26",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国建设银行江苏省分行常州工程职业技术学院\"智慧校园\"二期项目一卡通安全可信与建融数字化平台等软件项目招标公告（中国建设银行股份有限公司江苏省分行）",
+   "date": "2026-10-26",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "青岛银行数据中心基础软件原厂维护服务采购项目采购公告（青岛银行股份有限公司）",
+   "date": "2026-10-26",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行中山支行社保驻点服务外包采购项目(二次)招标公告",
+   "date": "2026-10-26",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司厦门市分行-华厦眼科医院集团股份有限公司智慧医院建设项目—烟台康爱眼科医院智慧医疗线上支付平台项目-招标公告",
+   "date": "2026-10-26",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查"
+  }
+ ]
+}

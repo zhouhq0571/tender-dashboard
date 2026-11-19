@@ -1,0 +1,56 @@
+{
+ "run_at": "20261103_0556",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "total_items": 0,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云WAF兜底-快查API定向补",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 66,
+   "new_count": 3,
+   "quota_calls": 6,
+   "window_days": 15
+  }
+ ],
+ "new_items": [
+  {
+   "title": "浙江中明工程咨询有限公司关于湖州银行股份有限公司AI平板设备项目的公开招标公告",
+   "pubdate": "2026-10-26",
+   "deadline": "2026-11-16",
+   "url": "https://www.kuaicha365.com/?n=ccgp_lecaiyun_2051000015493741",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采",
+   "method": "公开招标",
+   "budget": 40.0,
+   "url_id": "ccgp_lecaiyun_2051000015493741"
+  },
+  {
+   "title": "宁波银行股份有限公司绍兴分行易付通对接智慧资管系统采购项目招标公告",
+   "pubdate": "2026-10-30",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/?n=ccgp_nbgodo_1703711",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 60.0,
+   "url_id": "ccgp_nbgodo_1703711"
+  },
+  {
+   "title": "宁波银行股份有限公司绍兴分行易付通对接智慧资管系统采购招标公告",
+   "pubdate": "2026-10-30",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jincaiwang_0e844fc1bb3b47eb95a625bd54cf7977",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 60.0,
+   "url_id": "ccgp_jincaiwang_0e844fc1bb3b47eb95a625bd54cf7977"
+  }
+ ]
+}

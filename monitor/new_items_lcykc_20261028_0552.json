@@ -1,0 +1,53 @@
+{
+ "run_at": "20261028_0552",
+ "sources": [
+  {
+   "name": "乐采云兜底-A-浙江冠名机构",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 150,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云兜底-B-轮转城商行:绍兴银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 5,
+   "new_count": 4
+  }
+ ],
+ "new_items": [
+  {
+   "title": "绍兴银行大模型信贷数智报告平台单一来源采购公告（绍兴银行股份有限公司）",
+   "date": "2026-10-27",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:绍兴银行"
+  },
+  {
+   "title": "绍兴银行互联网数据泄漏监测及反钓鱼服务项目招标公告（绍兴银行股份有限公司）",
+   "date": "2026-10-27",
+   "deadline": "2026-11-05",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:绍兴银行"
+  },
+  {
+   "title": "绍兴银行2026年度全行网络安全攻防演练服务项目招标公告（绍兴银行股份有限公司）",
+   "date": "2026-10-27",
+   "deadline": "2026-11-04",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:绍兴银行"
+  },
+  {
+   "title": "绍兴银行群贤路数据中心普通数据库等区域网络设备采购项目(第二次)招标公告（绍兴银行股份有限公司）",
+   "date": "2026-10-23",
+   "deadline": "2026-11-02",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:绍兴银行"
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "run_at": "20261023_0551",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "total_items": 0,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云WAF兜底-快查API定向补",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 72,
+   "new_count": 3,
+   "quota_calls": 6,
+   "window_days": 15
+  }
+ ],
+ "new_items": [
+  {
+   "title": "永信恒昌工程管理有限公司关于湖州银行2026年度数据中心业务区网络设备采购项目的公开招标公告（湖州银行股份有限公司）",
+   "pubdate": "2026-10-21",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/?n=ccgp_lecaiyun_2051000015486079",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采",
+   "method": "公开招标",
+   "budget": 380.64,
+   "url_id": "ccgp_lecaiyun_2051000015486079"
+  },
+  {
+   "title": "浙江金业管理咨询有限公司关于湖州银行AI大模型应用平台建设采购项目的公开招标公告（湖州银行股份有限公司）",
+   "pubdate": "2026-10-10",
+   "deadline": "2026-10-30",
+   "url": "https://www.kuaicha365.com/?n=ccgp_lecaiyun_2051000015471123",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采",
+   "method": "公开招标",
+   "budget": 170.0,
+   "url_id": "ccgp_lecaiyun_2051000015471123"
+  },
+  {
+   "title": "宁波银行2026年资金营运中心系统硬件改造网络设备采购项目(重发)招标公告（宁波银行股份有限公司）",
+   "pubdate": "2026-10-20",
+   "deadline": "2026-10-27",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jincaiwang_3214db0a1ed84df78a929fa929d9f680",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": "",
+   "url_id": "ccgp_jincaiwang_3214db0a1ed84df78a929fa929d9f680"
+  }
+ ]
+}

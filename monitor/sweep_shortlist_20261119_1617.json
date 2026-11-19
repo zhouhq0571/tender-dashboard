@@ -1,0 +1,152 @@
+{
+ "run_at": "20261119_1617",
+ "window": 3,
+ "channels": {
+  "vip_tb": {
+   "status": "skipped(--only)"
+  },
+  "kc": {
+   "status": "skipped(--only)"
+  },
+  "qlsub": {
+   "status": "skipped(--only)"
+  },
+  "l1bank": {
+   "status": "skipped(--only)"
+  },
+  "ccb": {
+   "status": "skipped(--only)"
+  },
+  "lcy": {
+   "status": "skipped(--only)"
+  },
+  "lecaiyun": {
+   "status": "skipped(--only)"
+  },
+  "sdicc": {
+   "status": "ok",
+   "files": 1,
+   "kept": 12,
+   "tail": " KEEP: 2026-11-04 [候选人公示] 数字化项目管理平台—敏捷研发协作模块(三次)候选人公示"
+  },
+  "sm": {
+   "status": "skipped(--only)"
+  },
+  "qlsearch": {
+   "status": "skipped(--only)"
+  }
+ },
+ "merged": 12,
+ "pre_dedup": 12,
+ "fresh": 12,
+ "items": [
+  {
+   "title": "2026-2027年度电子签章系统运维服务事前公示",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=fabee6f3-b321-4519-a886-93f4e7d82071&fromType=10",
+   "date": "2026-11-19",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "AI智能双录信创升级建设项目事前公示",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=5d8b3be0-4dd6-4df3-a917-cfa326d723f7&fromType=10",
+   "date": "2026-11-19",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "2026-2029年内网网站维保服务事前公示",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=aa237523-e6c0-4901-8eed-401e924dab6c&fromType=10",
+   "date": "2026-11-17",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "积分商城管理系统2027年维保服务事前公示",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=f70f5d06-2e74-469a-aed5-2f31d2cd4b36&fromType=10",
+   "date": "2026-11-17",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "衡泰投资交易管理系统交易所风控限额优化改造项目事前公示",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=0d9245e6-9f73-4fcd-b42a-2ae35acef0cf&fromType=10",
+   "date": "2026-11-10",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "业务运营自动化机器人中心系统2027年度维护事前公示",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=9fd7b704-f0ae-4f07-b5a9-de82edde023e&fromType=10",
+   "date": "2026-11-10",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "2026年智能双录系统维护服务事前公示",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=1a64a2cd-6b00-4328-869d-2534120957fc&fromType=10",
+   "date": "2026-11-10",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "估值系统迭代优化改造项目（2026年度）候选人公示",
+   "url": "https://www.sdicc.com.cn/cgxx/zbhxrDetail?bdGuid=f7487eca-8743-4756-9ae6-8da4b84ad95c&guid=d22d627d-cd2e-4275-a1e8-697219812ea1-0",
+   "date": "2026-11-12",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "TA迭代优化改造项目（2026年第四期）候选人公示",
+   "url": "https://www.sdicc.com.cn/cgxx/zbhxrDetail?bdGuid=88843cc8-7749-4f53-aec6-fe23df9982a4&guid=47b82cf8-821a-4e37-b6a1-07c597698e30-0",
+   "date": "2026-11-12",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "某集合资金信托计划专项项目研判服务候选人公示",
+   "url": "https://www.sdicc.com.cn/cgxx/zbhxrDetail?bdGuid=07b12608-155b-45c0-a8cd-7bd8e057de1d&guid=7b836135-06bd-4624-90a5-d04c14a4d51d-0",
+   "date": "2026-11-09",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "TA迭代优化改造项目（2026年第三期）候选人公示",
+   "url": "https://www.sdicc.com.cn/cgxx/zbhxrDetail?bdGuid=402146ca-26fa-410a-af94-5ba35bc22f72&guid=38afaf61-7e5e-4442-af74-ee34b5a150c1-0",
+   "date": "2026-11-06",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "数字化项目管理平台—敏捷研发协作模块(三次)候选人公示",
+   "url": "https://www.sdicc.com.cn/cgxx/zbhxrDetail?bdGuid=15498838-4534-4a2a-85c4-f626c2d6d432&guid=237815ef-c7db-4758-86e7-33e01ff6047c-0",
+   "date": "2026-11-04",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  }
+ ]
+}

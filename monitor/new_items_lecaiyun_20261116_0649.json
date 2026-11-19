@@ -1,0 +1,34 @@
+{
+ "run_at": "20261116_0649",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "total_items": 0,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云WAF兜底-快查API定向补",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 75,
+   "new_count": 1,
+   "quota_calls": 6,
+   "window_days": 15
+  }
+ ],
+ "new_items": [
+  {
+   "title": "宁波银行股份有限公司北京分行线下营销物品采购供应商入围-综合商超类项目供应商召集公告(第三次)",
+   "pubdate": "2026-11-13",
+   "deadline": "2026-11-20",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jincaiwang_636b18bb468945b7bffe63051a558f23",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": "",
+   "url_id": "ccgp_jincaiwang_636b18bb468945b7bffe63051a558f23"
+  }
+ ]
+}

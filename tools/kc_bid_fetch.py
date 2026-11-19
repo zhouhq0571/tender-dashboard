@@ -44,9 +44,21 @@ QUERY_GROUPS = [
     {"title": "数据", "tender_names": "银行"},
     {"title": "大模型", "tender_names": "银行"},
     {"title": "信创", "tender_names": "银行"},
+    # 2026-11-09 恢复至6组（周老师立规：每日候选≥10条；标准API独立额度）。
+    # 智能体/财富两组经 11-09 全面搜集实证有效（智能体×银行 keep6、财富×银行 keep1）；
+    # 托管组补资产托管线召回。
+    {"title": "智能体", "tender_names": "银行"},
+    {"title": "财富", "tender_names": "银行"},
+    {"title": "托管", "tender_names": "银行"},
+    # 2026-11-10 递归迭代实证新增：title 置空（API 对 title 是 AND 过滤，置空即只按机构词召回；
+    # 快查对"理财有限责任公司/信托公司"机构词匹配良好——11-10 实测空title×理财子命中8条全为理财子
+    # 高价值标讯，覆盖原盲区）。这两组是理财子/信托零召回缺口的结构性补网。
+    {"title": "", "tender_names": "理财有限责任公司"},
+    {"title": "", "tender_names": "信托公司"},
 ]
 # 2026-10-10 晚额度止血：账户 MCP 与 Skill 池仅剩 137 次，6组→3组（月耗约66次）。
 # 迁移标准 API（独立额度）后恢复 6 组。
+# 2026-11-09：已由周老师立规恢复 6 组（见上注释）。
 
 
 def api_call(payload):
@@ -117,14 +129,29 @@ def main(window_days=3):
                     continue
                 seen.add(title)
                 kept += 1
+                # 2026-10-30 规则：快查 API 无 url 字段，用 url_id 拼真实详情页链接
+                # （/outer/tender-bid/project-process?urlId=xxx，已验证未登录可渲染项目信息），
+                # 禁止再落首页占位（曾致看板 8 条 URL 重复且不可点）。
+                url_id = it.get('url_id') or it.get('key') or ''
+                detail_url = (it.get('url') or it.get('notice_url') or
+                              (f"https://www.kuaicha365.com/outer/tender-bid/project-process"
+                               f"?urlId={url_id}&type=AllBeacon" if url_id else ""))
+                # 代理机构兜底（规则 O-联系方式：快查来源至少填 enterprise_info 代理机构名）
+                contact = ''
+                ei = it.get('enterprise_info') or []
+                if isinstance(ei, list):
+                    for ent in ei:
+                        if ent.get('subject_identity') == '代理机构' and ent.get('org_name'):
+                            contact = '代理 ' + str(ent['org_name'])[:40]
+                            break
                 result["new_items"].append({
                     "title": f"{title}（{buyer}）" if buyer and buyer not in title else title,
                     "date": datetime.fromtimestamp(
                         it.get('pub_time') or it.get('index_time') or now
                     ).strftime('%Y-%m-%d'),
                     "deadline": datetime.fromtimestamp(it.get('registration_deadline_time') or now).strftime('%Y-%m-%d') if it.get('registration_deadline_time') else "",
-                    "url": it.get('url') or it.get('notice_url') or
-                           f"https://www.kuaicha365.com/",
+                    "url": detail_url,
+                    "contact": contact,
                     "source": "快查",
                 })
         except Exception as e:

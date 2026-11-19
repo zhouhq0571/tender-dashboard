@@ -1,0 +1,52 @@
+{
+ "run_at": "20261111_1021",
+ "via": "tabbit",
+ "steps": [
+  "click订阅器失败:TypeError: el.scrollIntoViewIfNeeded is not a function",
+  "page1:13",
+  "翻页失败"
+ ],
+ "total": 13,
+ "keep": [
+  {
+   "row": "北银理财标的中心国产化改造项目(第二次）竞争性磋商公告 收藏 2026-11-10 公告-重新招标北京-北京服务",
+   "title": "北银理财标的中心国产化改造项目(第二次）竞争性磋商公告",
+   "url": "https://www.qianlima.com/bid-646445153.html",
+   "page": 1,
+   "stage": "重新招",
+   "stage_cat": "公告",
+   "date": "2026-11-10",
+   "verdict": "keep"
+  },
+  {
+   "row": "北银理财非标审批系统国产化改造项目（第二次）竞争性磋商公告 收藏 2026-11-10 公告-重新招标北京-北京服务",
+   "title": "北银理财非标审批系统国产化改造项目（第二次）竞争性磋商公告",
+   "url": "https://www.qianlima.com/bid-646444867.html",
+   "page": 1,
+   "stage": "重新招",
+   "stage_cat": "公告",
+   "date": "2026-11-10",
+   "verdict": "keep"
+  },
+  {
+   "row": "渤海银行反假币数据报送系统国产化改造采购项目单一来源采购公示 收藏 2026-11-10 公告-招标公告天津-天津服务",
+   "title": "渤海银行反假币数据报送系统国产化改造采购项目单一来源采购公示",
+   "url": "https://www.qianlima.com/bid-646482640.html",
+   "page": 1,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "2026-11-10",
+   "verdict": "keep"
+  },
+  {
+   "row": "光大理财有限责任公司反洗钱系统信创改造项目招标公告 收藏 2026-11-10 公告-招标公告山东-青岛服务文件",
+   "title": "光大理财有限责任公司反洗钱系统信创改造项目招标公告",
+   "url": "https://www.qianlima.com/bid-646541904.html",
+   "page": 1,
+   "stage": "招标公",
+   "stage_cat": "公告",
+   "date": "2026-11-10",
+   "verdict": "keep"
+  }
+ ]
+}

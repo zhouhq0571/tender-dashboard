@@ -18,11 +18,69 @@
 用法：python3 ql_vip_fetch.py bid1 bid2 ...
 输出：打印并保存 /tmp/ql_vip_result.json
 """
-import sys, time, json, re
+import sys, time, json, re, os
 from playwright.sync_api import sync_playwright
 
 USER = 'chaxun032322'
 PASS = 'Chaxun!2026'
+
+# 2026-11-10：VIP 会话复用（storage_state 落盘 36h 内复用，超期或探针失败才重新登录）。
+# 根因：主任务 sweep 内 subscribe+search 两次独立登录 + 详情补抓多次登录，
+# 同一账号短时多次 headless 登录触发千里马滑块风控（"向右滑动完成验证"），
+# 导致 11-10 晨 VIP 全通道异常（订阅0/搜索0）。三脚本共用本助手的单点修复。
+VIP_STATE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                         'monitor', '.vip_state.json')
+UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
+      '(KHTML, like Gecko) Chrome/126.0 Safari/537.36')
+
+
+def _state_fresh(path):
+    return os.path.exists(path) and (time.time() - os.path.getmtime(path) < 36 * 3600)
+
+
+def _probe_ok(ctx):
+    """探针：state 能否免登访问 VIP 区且未触发滑块风控。
+    2026-11-12 修复：探针从 vip.qianlima.com 首页改为 search.vip.qianlima.com——
+    首页宽容度高会造成"探针通过但搜索子域登录态超时"的假阳性（今晨 qlsearch 因此全 0）。"""
+    try:
+        page = ctx.new_page()
+        page.goto('https://search.qianlima.com/', timeout=30000)
+        time.sleep(4)
+        t = page.inner_text('body')[:3000]
+        page.close()
+        if '向右滑动' in t or '安全验证' in t:
+            return False
+        if '登录状态超时' in t or '重新登录' in t:
+            return False
+        return True
+    except Exception:
+        return False
+
+
+def new_logged_in_context(p, state_path=None):
+    """返回 (context, fresh_login: bool)。优先复用 storage_state，失败回退交互登录并落盘。"""
+    sp = state_path or VIP_STATE
+    if _state_fresh(sp):
+        try:
+            browser = p.chromium.launch(headless=True)
+            ctx = browser.new_context(storage_state=sp, user_agent=UA)
+            if _probe_ok(ctx):
+                return ctx, False
+            browser.close()
+        except Exception:
+            try:
+                browser.close()
+            except Exception:
+                pass
+    browser = p.chromium.launch(headless=True)
+    ctx = browser.new_context(user_agent=UA)
+    login(ctx.new_page())
+    try:
+        os.makedirs(os.path.dirname(sp), exist_ok=True)
+        ctx.storage_state(path=sp)
+    except Exception:
+        pass
+    return ctx, True
 
 CLOSE_OVERLAY_JS = """(()=>{
   document.querySelectorAll('.btn-image-bg').forEach(e=>e.style.display='none');
@@ -70,7 +128,41 @@ def fetch_bid(page, bid):
     m3 = re.search(r'信息来源：\s*(https?://[^\s]+)', txt)
     if m3:
         info['原始来源'] = m3.group(1).strip()
+    info['联系方式'] = extract_contact(txt)
     return info
+
+def extract_contact(txt):
+    """从公告全文中提取项目咨询/联系方式（2026-10-30 新增，上板硬规字段）
+    只取公告正文，剔除千里马页面 chrome（招标联系人/代理联系人 脱敏模块、
+    企业信息链接尾巴）。返回 '代理 X；联系人 Y；电话 Z；邮箱 W'，截断 120 字。"""
+    parts = []
+    def add(s):
+        s = (s or '').strip(' ：:，,。;；\t\n ')
+        if s and s not in parts and len(s) >= 2:
+            parts.append(s)
+    # 1) 招标代理机构（行首标签型与正文型通用）
+    m = re.search(r'招标代理机构[：:\t\s]*([^\n\t，。；]{4,40})', txt)
+    if m:
+        raw = m.group(1)
+        if '...' not in raw:  # 名称被截断（企业信息链接尾巴）则弃用
+            name = re.sub(r'企业信息.*$', '', raw).strip(' .。')
+            if len(name) >= 4 and '联系人' not in name and re.search(r'(公司|中心|院|事务所|集团)$', name):
+                add('代理 ' + name)
+    # 2) 联系人（正文型，值不得为 - / 空 / junk；分隔符不许跨行）
+    m = re.search(r'联系[ \t]*人[：:\t ]*([^\n，。；电话邮箱\-]{2,15})', txt)
+    if m and m.group(1).strip():
+        v = m.group(1).strip()
+        if v not in ('-', '查看更多') and not any(w in v for w in ['预约', '详见', '原文', '更多']):
+            add('联系人 ' + v)
+    # 3) 电话
+    m = re.search(r'(?:联系电话|咨询电话|电[ \t]*话|手机)[ \t]*[：:]?[ \t]*([0-9][0-9\-+ ]{6,20})', txt)
+    if m:
+        add('电话 ' + m.group(1).strip())
+    # 4) 邮箱
+    m = re.search(r'([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})', txt)
+    if m:
+        add('邮箱 ' + m.group(1))
+    return '；'.join(parts)[:120]
 
 def main():
     bids = sys.argv[1:]
@@ -79,11 +171,8 @@ def main():
         return
     results = []
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_context(
-            user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36'
-        ).new_page()
-        login(page)
+        ctx, fresh = new_logged_in_context(p)
+        page = ctx.new_page()
         for bid in bids:
             try:
                 info = fetch_bid(page, bid)
@@ -92,7 +181,7 @@ def main():
             results.append(info)
             print(json.dumps(info, ensure_ascii=False))
             time.sleep(3)
-        browser.close()
+        ctx.browser.close()
     json.dump(results, open('/tmp/ql_vip_result.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print('saved /tmp/ql_vip_result.json')
 

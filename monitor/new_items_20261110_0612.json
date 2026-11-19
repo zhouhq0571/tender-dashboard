@@ -1,0 +1,38 @@
+{
+ "run_at": "2026-11-10 06:12:48",
+ "sources": [
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 4,
+   "new_count": 4
+  }
+ ],
+ "new_items": [
+  {
+   "title": "江南农村商业银行收单码牌采购项目选型公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09205607.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "建行江苏省分行关于商户收单用扫码终端采购项目市场调研公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09182224.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "工商银行黑龙江省分行第三方支付营销技术支持项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09163353.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "嘉兴银行2026年度商户巡检外包服务框架协议采购项目中标结果公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/09163146.html",
+   "source": "移动支付网"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "run_at": "20261113_0821",
+ "via": "tabbit",
+ "steps": [
+  "会话过期,自动重登",
+  "登录触发器:loginBottomLink",
+  "二级触发:#log",
+  "重登表单:form-not-visible:pwd=false,user=false",
+  "重登失败"
+ ],
+ "total": 0,
+ "keep": [],
+ "dropped": []
+}

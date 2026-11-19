@@ -1,0 +1,93 @@
+{
+ "run_at": "2026-11-12 09:49:06",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 10
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 6,
+   "new_count": 2
+  }
+ ],
+ "new_items": [
+  {
+   "title": "服务 广元市老年人助浴服务项目-竞争性磋商公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896335.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 纪念林公司食堂成品餐配送服务项目-公开招标公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896331.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 苍穹云数智融合提升技术服务项目-招标公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896327.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 翠北湿地国家级自然保护区保护管理设施建设项目工程设计-公开招标公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896325.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 羊安大街（浑南片区）土方清运项目监理竞争性磋商公告（第二次） 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896321.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 售后服务指挥中心技术服务项目-招标公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896320.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 矸石、岩泥填沟造地综合利用项目拦渣墙安全稳定性监测服务项目【二次】(第1包)公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896317.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 救护队车库工程及水池工程委托设计服务项目【二次】(第1包)公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896310.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 企业财税咨询代理服务项目-公开招标公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896309.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "服务 安康市中级人民法院智能审务督察应用系统建设（二次）招标公告 发布日期：2026-11-12 详情",
+   "date": "",
+   "url": "https://www.365trade.com.cn/zfwzb/896299.jhtml",
+   "source": "中招联合招标采购平台"
+  },
+  {
+   "title": "交通银行上海市分行科创资产AI金融智控系统建设项目中标结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/12090329.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "广西北部湾银行大模型应用场景项目竞争性磋商公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/12090115.html",
+   "source": "移动支付网"
+  }
+ ]
+}

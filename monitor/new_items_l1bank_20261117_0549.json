@@ -1,0 +1,144 @@
+{
+ "run_at": "20261117_0549",
+ "sources": [
+  {
+   "name": "邮储邮银易采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 46,
+   "new_count": 3
+  },
+  {
+   "name": "中信金控共享",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 30,
+   "new_count": 0
+  },
+  {
+   "name": "北京银行集采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 19,
+   "new_count": 4
+  },
+  {
+   "name": "浙商数智采购",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 29,
+   "new_count": 2
+  },
+  {
+   "name": "工银集采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 0
+  },
+  {
+   "name": "民生银行",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 8,
+   "new_count": 0
+  },
+  {
+   "name": "交行智采",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 6,
+   "new_count": 2
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国邮政储蓄银行互联网网络扩容改造工程软件定义互联网应用软件采购项目公开招标公告",
+   "pubdate": "2026-11-16",
+   "deadline": "",
+   "url": "https://cg.psbc.com/cms/default/webfile/1ywgg2/20261116/1307017420803670016.html",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "channel": "招标公告"
+  },
+  {
+   "title": "中国邮政储蓄银行股份有限公司安徽省分行系统运营服务项目（二次）公开竞争性磋商公告",
+   "pubdate": "2026-11-16",
+   "deadline": "",
+   "url": "https://cg.psbc.com/cms/default/webfile/2ywgg1/20261116/1307067893397061632.html",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "中国邮政储蓄银行股份有限公司许昌市分行维修资金管理信息系统维护服务采购项目竞争性磋商公告",
+   "pubdate": "2026-11-16",
+   "deadline": "",
+   "url": "https://cg.psbc.com/cms/default/webfile/2ywgg1/20261116/1307033964736675840.html",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "北京银行数字人民币运营机构筹建项目-头寸管理系统2.0 竞争性磋商公告",
+   "pubdate": "2026-11-16",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261116/1307105618544295936.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2026年数币业务网络基础设施建设项目（二）公开招标公告",
+   "pubdate": "2026-11-16",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261116/1307061478993428480.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2026年终端数据安全防护软件采购项目竞争性磋商公告",
+   "pubdate": "2026-11-16",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261116/1307027690687037440.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "北京银行2026年终端行为分析系统建设项目竞争性磋商公告",
+   "pubdate": "2026-11-16",
+   "deadline": "",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261116/1307022566107381760.html",
+   "source": "北京银行集中采购管理平台",
+   "channel": "采购动态"
+  },
+  {
+   "title": "关于浙商银行数据安全能力提升及成熟度认证服务采购的竞争性磋商公告",
+   "pubdate": "2026-11-16",
+   "deadline": "",
+   "url": "https://ccgp.szcgpt.czbank.com/luban/detail?parentId=700835&articleId=NbARLulk1RJl9NLE8YcYyw==",
+   "source": "浙商银行数智采购平台",
+   "channel": "集中采购公告"
+  },
+  {
+   "title": "关于浙商银行2027年运维基础资源监控工具维保服务采购项目供应商寻源公示",
+   "pubdate": "2026-11-16",
+   "deadline": "",
+   "url": "https://ccgp.szcgpt.czbank.com/luban/detail?parentId=700836&articleId=ZQakfrjpHmueykS4gWt2/A==",
+   "source": "浙商银行数智采购平台",
+   "channel": "非集中采购公告"
+  },
+  {
+   "title": "交通银行2026-2029年华为ELA软件和服务采购项目公开征集供应商公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://bocom-gys.bankcomm.com/espuser/register/noticeDetail",
+   "source": "交通银行智采平台",
+   "channel": "采购公告"
+  },
+  {
+   "title": "交通银行2026-2029年IT硬件框架选型项目-智能小母线项目招标公告",
+   "pubdate": "",
+   "deadline": "",
+   "url": "https://bocom-gys.bankcomm.com/espuser/register/noticeDetail",
+   "source": "交通银行智采平台",
+   "channel": "采购公告"
+  }
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "run_at": "2026-11-06 05:49:59",
+ "sources": [
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 6,
+   "new_count": 6
+  }
+ ],
+ "new_items": [
+  {
+   "title": "鲲鹏支付公告承认“延迟到账”！",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/05161239.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "央行公示长三角首批金融科技创新应用，浦发、浙商、南京、徽商银行参与",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/05153853.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "广州农村商业银行新核心项目群第三方测试服务项目中标结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/05092240.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "河南农商银行非现场监管报表系统采购项目技术磋商公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/05091911.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "哈尔滨银行OCR统一智能识别平台建设项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/05091456.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "光大银行AI防护盾引擎产品采购项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/05091301.html",
+   "source": "移动支付网"
+  }
+ ]
+}

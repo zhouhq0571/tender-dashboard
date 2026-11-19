@@ -1,0 +1,108 @@
+{
+ "run_at": "20261102_0554",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 4
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 6
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "西藏分行2027-2028年涉税咨询服务外包项目公开招标公告（中国农业银行股份有限公司(西藏自治区分行)）",
+   "date": "2026-11-01",
+   "deadline": "2026-11-08",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_89ad456bd6ba4792acebdf67226625d8&type=AllBeacon",
+   "contact": "代理 元亨工程咨询集团有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行深圳市分行2026年企业非公开年报数据服务项目（中国银行股份有限公司深圳市分行）",
+   "date": "2026-10-31",
+   "deadline": "2026-11-13",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_zhongguozbfwpt_code_8ec94f37c4208177885c7e0cb2853295&type=AllBeacon",
+   "contact": "代理 深圳国际招标咨询有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司云浮新兴支行建筑结构检测鉴定项目采购邀请公告（中国银行股份有限公司云浮分行）",
+   "date": "2026-10-31",
+   "deadline": "2026-11-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_zhongguozbfwpt_code_2cd003746b29ed73dc71d663e9bd951f&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司海南省分行2026年中间业务辅助平台项目采购项目采购邀请公告",
+   "date": "2026-10-31",
+   "deadline": "2026-11-06",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_zhongguozbfwpt_code_6646e9b27019950c405ec263dbd1d029&type=AllBeacon",
+   "contact": "代理 国信国际工程咨询集团股份有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "上海浦东发展银行股份有限公司乌鲁木齐分行厅堂辅助业务服务外包入围项目公开招标公告(二次)",
+   "date": "2026-10-31",
+   "deadline": "2026-11-06",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_193d2679b3034e4c9802a3f35fb80751&type=AllBeacon",
+   "contact": "代理 建银工程咨询有限责任公司",
+   "source": "快查"
+  },
+  {
+   "title": "威海银行股份有限公司新一代国际业务系统线上化升级改造项目(二次招标)招标公告",
+   "date": "2026-10-31",
+   "deadline": "2026-11-06",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_zhongguozbfwpt_code_249892dcf4a7ea53e3e377680665efea&type=AllBeacon",
+   "contact": "代理 山东德勤招标评估造价咨询有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "齐商银行企业年金基金受托管理服务采购项目竞争性磋商公告（齐商银行股份有限公司）",
+   "date": "2026-10-30",
+   "deadline": "2026-11-06",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_zhongguozbfwpt_code_5e0264bcaaff8f129ed02d509f21b85c&type=AllBeacon",
+   "contact": "代理 山东齐鲁工程审计监理有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "国家开发银行广西壮族自治区分行2026-2029年文印室全包服务项目交流通知",
+   "date": "2026-10-30",
+   "deadline": "2026-11-10",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_ed08783204744a1db48bc82b36fec772&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "中国工商银行股份有限公司宁夏分行现金运营中心现金清分整点业务外包项目招标公告（中国工商银行股份有限公司宁夏回族自治区分行）",
+   "date": "2026-10-30",
+   "deadline": "2026-11-06",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_abac214b18f64577a39660c84583c0a9&type=AllBeacon",
+   "contact": "代理 北京建智达工程管理股份有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "湖南银行2026年智能安全运营中心建设项目(分项2网络资产攻击面管理工具项目)招标公告（湖南银行股份有限公司）",
+   "date": "2026-10-30",
+   "deadline": "2026-11-06",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_c5df14cc6f4b453c82d414d437d10b9e&type=AllBeacon",
+   "contact": "代理 智埔国际建设集团有限公司",
+   "source": "快查"
+  }
+ ]
+}

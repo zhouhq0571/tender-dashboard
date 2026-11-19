@@ -1,0 +1,132 @@
+{
+ "run_at": "20261106_0553",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 9
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 4
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国进出口银行河北省分行公务用车驾驶服务驻场外包项目竞争性磋商公告",
+   "date": "2026-11-05",
+   "deadline": "2026-11-12",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_9990b17710e849bd9e1616d14719c0b0&type=AllBeacon",
+   "contact": "代理 中化商务有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "招商银行六盘水分行现金尾箱寄库及代理同业人民币现金调缴款服务外包项目供应商征集公告",
+   "date": "2026-11-05",
+   "deadline": "2026-11-16",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_9e7a66a4ad1c4fa4b1beea1e97c74847&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "云南红塔银行股份有限公司主体信用评级项目-公开招标公告",
+   "date": "2026-11-05",
+   "deadline": "2026-11-12",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_zgyczgscgjypt_ba3ac5f6a53cb950251e6e70aa88738b&type=AllBeacon",
+   "contact": "代理 云南中招招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国邮政储蓄银行股份有限公司广东省分行账户行营销合作项目(第2次招标)招标公告",
+   "date": "2026-11-05",
+   "deadline": "2026-11-12",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_d3940302bb1540f9ab7bbbb904046eba&type=AllBeacon",
+   "contact": "代理 中捷通信有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司广东省分行南方医科大学银校项目二期项目(校园卡场景应用平台)招标公告",
+   "date": "2026-11-05",
+   "deadline": "2026-11-16",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ctpch_fmscop_7f19feb1456bd05bbf17671ff56e2f5f&type=AllBeacon",
+   "contact": "代理 中捷通信有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "蒙商银行巴彦淖尔分行营销活动策划及执行服务项目招标公告（蒙商银行股份有限公司巴彦淖尔分行）",
+   "date": "2026-11-05",
+   "deadline": "2026-11-10",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_a499f14a769943a3a79037c4bbef6f52&type=AllBeacon",
+   "contact": "代理 公诚管理咨询有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "国家开发银行财务指标数据标准化咨询项目(二次)补充征集公告",
+   "date": "2026-11-05",
+   "deadline": "2026-11-11",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_f78fd0a6683648e9bc66a83bfa960422&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  },
+  {
+   "title": "数据湖和数据仓信创升级项目的公开招标公告（贵阳银行股份有限公司）",
+   "date": "2026-11-05",
+   "deadline": "2026-11-12",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=guizhouzb_968781&type=AllBeacon",
+   "contact": "代理 贵州省招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国银行股份有限公司江苏省分行跨境数盈外汇客群管理平台3.0升级项目竞争性磋商公告",
+   "date": "2026-11-05",
+   "deadline": "2026-11-12",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ctpch_fmscop_db7a1aa69cb56f3b8e25b65fa4bea65e&type=AllBeacon",
+   "contact": "代理 江苏省招标中心有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行2026年经营预算报送系统优化项目(第二次)竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-11-05",
+   "deadline": "2026-11-10",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_00503068093546d29f85ce7de389b6a9&type=AllBeacon",
+   "contact": "代理 中国通信建设集团有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "北京银行2026年公司客户信息管理相关系统优化项目业务测试服务采购(第二次)竞争性磋商公告（北京银行股份有限公司）",
+   "date": "2026-11-05",
+   "deadline": "2026-11-10",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_9f25f025bd5d4661ab3da5117a9990c2&type=AllBeacon",
+   "contact": "代理 中国通信建设集团有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "广西北部湾银行贺州数据中心信创互联网区网络和安全设备项目招标公告（广西北部湾银行股份有限公司）",
+   "date": "2026-11-05",
+   "deadline": "2026-11-12",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_bssyg_ldwh_156791919170392883411567923404509331457&type=AllBeacon",
+   "contact": "代理 广西卓联工程管理有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "广发银行合肥分行2027-2029年采购宽带及数据专线项目采购公告（广发银行股份有限公司(合肥分行)）",
+   "date": "2026-11-05",
+   "deadline": "2026-11-12",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_f89932773e384414be38c522601bee2f&type=AllBeacon",
+   "contact": "",
+   "source": "快查"
+  }
+ ]
+}

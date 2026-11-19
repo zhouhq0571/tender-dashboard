@@ -1,0 +1,100 @@
+{
+ "run_at": "20261030_0549",
+ "sources": [
+  {
+   "name": "龙集采-供应商征集",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 5
+  },
+  {
+   "name": "龙集采-招标专区",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 4
+  },
+  {
+   "name": "龙集采-采购动态",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 2,
+   "new_count": 0
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国建设银行福建省分行关于 福建省工业控股集团有限公司 司库管理系统建设项目的供应商征集公告",
+   "deadline": "2026-11-03",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-29"
+  },
+  {
+   "title": "中国建设银行股份有限公司江西省分行关于南昌大学校园一码通支付系统应用开发与保障项目（一期）采购供应商征集公告",
+   "deadline": "2026-11-03",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-29"
+  },
+  {
+   "title": "金融数据服务项目供应商征集",
+   "deadline": "2026-11-03",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-29"
+  },
+  {
+   "title": "建设银行四川省分行关于成都市商品房预售资金监管预警平台运维服务项目供应商征集公告",
+   "deadline": "2026-11-03",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-29"
+  },
+  {
+   "title": "中国建设银行湖北省分行2027-2028年数字化营销权益（支付立减金类）框架采购项目市场调研公告",
+   "deadline": "2026-11-05",
+   "channel": "供应商征集",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbgyszj",
+   "source": "建设银行集采平台",
+   "date": "2026-10-29"
+  },
+  {
+   "title": "中国建设银行股份有限公司湖南省分行湖南某大学智慧校园软件开发服务采购项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-29"
+  },
+  {
+   "title": "建行江西省分行档案中心二期北3楼西库区智能库房建设项目采购方案公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-29"
+  },
+  {
+   "title": "广州分行2026-2028年客户增值活动项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-29"
+  },
+  {
+   "title": "机构业务部2026-2031年国产信创智慧校园（LG202609-C）一卡通数据应用服务平台的集中采购项目招标公告",
+   "deadline": "",
+   "channel": "招标专区",
+   "url": "https://ibuy.ccb.com/cms/index.html#/ccbbidzbzq",
+   "source": "建设银行集采平台",
+   "date": "2026-10-29"
+  }
+ ]
+}

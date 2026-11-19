@@ -16,7 +16,7 @@
 3. 上板：改 `index.html` tender-data JSON（禁手填，脚本内 assert 项目名关键词）→ `python3 bump_version.py` → 同步 `<title>` 版本 → `python3 health_check.py` 全过。
 4. `bash safe_deploy.sh`（唯一部署方式，含硬检+线上验证）。
 5. 回写 `pending_candidates.json`（status/标签/board_id/decision）。
-6. 二次驱动刷新组件：importlib 方式调 `refresh_board_widgets.py` 的 `run({})`（直接 python3 脚本是空转），验收三组件 mtime/晨报版本/待确认计数。
+6. 二次驱动刷新决策组件：`python3 build_decide_page.py` 重建 decide.html（待确认清零）→ 随 safe_deploy 部署 → curl 比对线上 hash 与本地一致（2026-11-20 修订：原引用的 `refresh_board_widgets.py` 已不存在，以 decide.html 重建为组件刷新标准动作）。
 7. `reports/最新执行汇报.md` 留痕（含决策原文与执行明细）。
 
 多批决策到达时等最后一批完成后一次性部署（规则 O-分批）。

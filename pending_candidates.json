@@ -952,11 +952,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-647977221.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 苏经理；电话 0931-2906792",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 21,
@@ -987,11 +988,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648532121.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "电话 0833-2112056；代理 中技国际招标有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 23,
@@ -1004,11 +1006,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648162860.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "电话 0833-2112056；代理 中技国际招标有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 24,
@@ -1039,11 +1042,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-647956316.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 田壮壮 0574-818924；电话 0574-81892465",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 26,
@@ -1074,11 +1078,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648586956.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 潘先生；电话 020-28302006；邮箱 baoming87651688@163.com；代理 采联国际招标采购集团有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 28,
@@ -1091,11 +1096,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648022705.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 魏瑶；电话 0539-7111130；邮箱 zhongchengxin@163.com；代理 山东中成信建设项目管理有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 29,
@@ -1108,11 +1114,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-647919313.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 郭先生；电话 18438158538；邮箱 ctzbzh@163.com；代理 河北省成套招标有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 30,
@@ -1125,11 +1132,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-649002762.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 魏先生；电话 18057588586；代理 浙江泛亚工程咨询有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 31,
@@ -1138,15 +1146,19 @@
   "method": "公开招标",
   "deadline": "2026-12-01",
   "budget": 18.7,
-  "tags": "公司金融",
+  "tags": [
+   "公司金融",
+   "信创"
+  ],
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648575109.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 陈倩；电话 0532-66957097；邮箱 hongxiangzhaobiao@126.com；代理 青岛鸿翔招标有限公司",
-  "board_id": null
+  "board_id": 211,
+  "decision": "2026-11-20 decide.html 决策纳入"
  },
  {
   "push_no": 32,
@@ -1159,11 +1171,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648314746.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 白星晖；电话 0931-8770435；邮箱 1562413530@qq.com；代理 华鼎工程咨询集团有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 33,
@@ -1176,11 +1189,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648825109.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 陶工；电话 0851-88115177",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 34,
@@ -1193,11 +1207,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648158662.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 朱先生；电话 0573-82813680；代理 富昱项目管理咨询（嘉兴）有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 35,
@@ -1210,11 +1225,12 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648374281.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 陈老师；电话 13810853885；邮箱 jhcw_gyszj@bjrcb.com",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 36,
@@ -1227,11 +1243,12 @@
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648157896.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 张经理；电话 022-58086847；邮箱 jzcgbgs@sgb.cn",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  },
  {
   "push_no": 37,
@@ -1258,15 +1275,19 @@
   "method": "公开招标",
   "deadline": "2026-11-25",
   "budget": 50.0,
-  "tags": "风控合规",
-  "rec": "建议投标",
+  "tags": [
+   "风控合规",
+   "资产管理"
+  ],
+  "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648749418.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 蒋帅；电话 0571-87228017",
-  "board_id": null
+  "board_id": 212,
+  "decision": "2026-11-20 decide.html 决策纳入"
  },
  {
   "push_no": 39,
@@ -1275,15 +1296,18 @@
   "method": "询价采购",
   "deadline": "2026-11-20",
   "budget": "-",
-  "tags": "资产管理",
+  "tags": [
+   "资产管理"
+  ],
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648590069.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 羌女士；电话 15882132060",
-  "board_id": null
+  "board_id": 213,
+  "decision": "2026-11-20 decide.html 决策纳入"
  },
  {
   "push_no": 40,
@@ -1292,15 +1316,18 @@
   "method": "询价采购",
   "deadline": "2026-11-20",
   "budget": "-",
-  "tags": "渠道系统",
-  "rec": "建议投标",
+  "tags": [
+   "渠道系统"
+  ],
+  "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648075955.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 张先生；电话 028-82570568",
-  "board_id": null
+  "board_id": 214,
+  "decision": "2026-11-20 decide.html 决策纳入"
  },
  {
   "push_no": 41,
@@ -1309,15 +1336,19 @@
   "method": "竞争性谈判",
   "deadline": "2026-11-23",
   "budget": "-",
-  "tags": "风控合规",
+  "tags": [
+   "风控合规",
+   "资产管理"
+  ],
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-647990611.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 吕启芳；电话 13689561200；邮箱 lvqf@crctrust.com",
-  "board_id": null
+  "board_id": 215,
+  "decision": "2026-11-20 decide.html 决策纳入"
  },
  {
   "push_no": 42,
@@ -1326,15 +1357,18 @@
   "method": "公开招标",
   "deadline": "2026-12-01",
   "budget": 15.91,
-  "tags": "财富管理",
+  "tags": [
+   "财富管理"
+  ],
   "rec": "可关注",
   "url": "https://www.qianlima.com/bid-648428666.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "公告未披露",
-  "board_id": null
+  "board_id": 6,
+  "decision": "2026-11-20 decide.html 决策纳入"
  },
  {
   "push_no": 43,
@@ -1343,15 +1377,18 @@
   "method": "公开招标",
   "deadline": "2026-11-25",
   "budget": "-",
-  "tags": "资产管理",
+  "tags": [
+   "财富管理"
+  ],
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648984994.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "电话 38308999-665021；邮箱 wush@cib.com.cn",
-  "board_id": null
+  "board_id": 216,
+  "decision": "2026-11-20 decide.html 决策纳入"
  },
  {
   "push_no": 44,
@@ -1360,15 +1397,18 @@
   "method": "公开招标",
   "deadline": "2026-12-01",
   "budget": 16.0,
-  "tags": "财富管理",
-  "rec": "建议投标",
+  "tags": [
+   "财富管理"
+  ],
+  "rec": "强烈建议投标",
   "url": "https://www.qianlima.com/bid-648573616.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 陈倩；电话 0532-66957097；邮箱 hongxiangzhaobiao@126.com；代理 青岛鸿翔招标有限公司",
-  "board_id": null
+  "board_id": 217,
+  "decision": "2026-11-20 decide.html 决策纳入"
  },
  {
   "push_no": 45,
@@ -1671,10 +1711,11 @@
   "rec": "建议投标",
   "url": "https://www.qianlima.com/bid-648982564.html",
   "source": "千里马招标网",
-  "status": "待确认",
+  "status": "不纳入",
   "source_channel": "user_excel",
   "note": "千里马JSONL批次20261119（workbuddy加工，94行）判别入候选",
   "contact": "联系人 李经理；电话 0531-82380658；邮箱 sddqzb2018@163.com；代理 山东德勤招标评估造价咨询有限公司",
-  "board_id": null
+  "board_id": null,
+  "decision": "2026-11-20 decide.html 决策不纳入"
  }
 ]

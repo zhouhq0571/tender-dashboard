@@ -3,12 +3,21 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="robots" content="noindex,nofollow,noarchive"/>
 <title>标讯候选决策 · 银信标讯看板</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f6f7f9; color:#1a1a1a; padding:12px; max-width:720px; margin:0 auto; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f6f7f9; color:#1a1a1a; }
+  #gate { max-width:400px; margin:15vh auto 0; background:#fff; border-radius:14px; padding:28px 22px; box-shadow:0 2px 12px rgba(0,0,0,.08); text-align:center; }
+  #gate h1 { font-size:17px; margin-bottom:6px; }
+  #gate p { font-size:12px; color:#888; margin-bottom:18px; line-height:1.6; }
+  #gate input { width:100%; padding:12px; font-size:16px; border:1px solid #ddd; border-radius:10px; text-align:center; letter-spacing:2px; }
+  #gate button { width:100%; margin-top:12px; padding:12px; font-size:15px; font-weight:600; border:none; border-radius:10px; background:#2f6fed; color:#fff; cursor:pointer; }
+  #gate button:disabled { opacity:.5; }
+  #gate .err { color:#d5483f; font-size:12px; margin-top:10px; min-height:16px; }
+  #app { display:none; padding:12px; max-width:720px; margin:0 auto; }
   .head { display:flex; justify-content:space-between; align-items:baseline; margin:4px 2px 12px; }
-  h1 { font-size:17px; }
+  h1.a { font-size:17px; }
   .meta { font-size:12px; color:#888; }
   .card { background:#fff; border-radius:12px; padding:12px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
   .co { font-weight:600; font-size:14px; }
@@ -25,7 +34,6 @@
   .terr { font-size:11px; color:#d5483f; margin-top:4px; }
   .foot { position:sticky; bottom:0; background:#f6f7f9; padding:10px 0 16px; }
   .gen { width:100%; padding:14px 0; font-size:16px; font-weight:600; border:none; border-radius:10px; background:#2f6fed; color:#fff; cursor:pointer; }
-  .gen:disabled { opacity:.5; }
   .stat { text-align:center; font-size:12px; color:#888; margin-top:8px; }
   .msg { font-size:13px; margin-top:8px; line-height:1.6; }
   .msg.ok { color:#2e9e5b; } .msg.err { color:#d5483f; }
@@ -35,24 +43,62 @@
 </style>
 </head>
 <body>
-<div class="head"><h1>标讯候选决策</h1><span class="meta" id="batch"></span></div>
-<div class="tip">点选「纳入 / 不纳入」（自动保存，刷新不丢）→ 底部生成决策指令 → 一键复制 → 粘贴到 Kimi「银信标讯」项目对话发送即执行上板。</div>
+<div id="gate">
+  <h1>标讯候选决策</h1>
+  <p>仅授权用户可访问<br/>请输入访问密码</p>
+  <input id="pwd" type="password" placeholder="密码" autocomplete="current-password"/>
+  <button id="unlock">解 锁</button>
+  <div class="err" id="gerr"></div>
+</div>
+<div id="app">
+<div class="head"><h1 class="a">标讯候选决策</h1><span class="meta" id="batch"></span></div>
+<div class="tip">点选「纳入 / 不纳入」（自动保存）→ 底部生成决策指令 → 一键复制 → 粘贴到 Kimi「银信标讯」项目对话发送即执行。</div>
 <div id="list"></div>
 <div class="foot">
   <button class="gen" id="gen">生成决策指令并复制</button>
   <div class="stat" id="stat"></div>
   <div class="msg" id="msg"></div>
-  <textarea id="out" readonly style="display:none" placeholder="决策指令将出现在这里"></textarea>
+  <textarea id="out" readonly style="display:none"></textarea>
 </div>
-<script type="application/json" id="cand-data">{"batch": "2026-11-19", "items": [{"push_no": 1, "company": "兴业银行", "project": "兴业银行2027年理财数据服务项目", "budget": "33.25万元", "deadline": "2026-12-09", "tags": "数据服务", "rec": "可关注"}, {"push_no": 2, "company": "中银理财", "project": "中银理财2026年网络安全等级保护测评及信创技术支持服务采购项目", "budget": "-", "deadline": "2026-11-30", "tags": "信创", "rec": "可关注"}, {"push_no": 3, "company": "兴银理财", "project": "兴银理财投资风控项目五期供应商征集调研", "budget": "-", "deadline": "2026-11-25", "tags": "风控合规", "rec": "建议投标"}, {"push_no": 4, "company": "兴业银行", "project": "企业年金受托管理项目三期（企业年金转移接续）供应商征集调研", "budget": "-", "deadline": "2026-11-25", "tags": "资产服务信托", "rec": "建议投标"}, {"push_no": 5, "company": "兴业银行", "project": "意图平台工程项目供应商征集调研", "budget": "-", "deadline": "2026-11-25", "tags": "大模型应用", "rec": "可关注"}, {"push_no": 6, "company": "渤海银行", "project": "渤海银行2027年度开源软件技术支持人天服务采购项目", "budget": "-", "deadline": "2026-11-25", "tags": "人力外包", "rec": "可关注"}, {"push_no": 7, "company": "建设银行四川省分行", "project": "南充市高坪区中医医院综合支付结算系统项目", "budget": "-", "deadline": "2026-11-26", "tags": "渠道系统", "rec": "可关注"}, {"push_no": 8, "company": "广银理财", "project": "广银理财IT桌面运维外包服务项目", "budget": "-", "deadline": "2026-11-25", "tags": "运维服务", "rec": "可关注"}, {"push_no": 9, "company": "广银理财", "project": "广银理财IT运维外包服务采购项目", "budget": "-", "deadline": "2026-11-25", "tags": "运维服务", "rec": "可关注"}, {"push_no": 10, "company": "青银理财", "project": "青银理财2027年技术支持人力外包项目", "budget": "-", "deadline": "2026-11-25", "tags": "人力外包", "rec": "可关注"}, {"push_no": 11, "company": "华夏理财", "project": "华夏理财2026年ESG可持续投资外部数据引入项目供应商征集", "budget": "-", "deadline": "2026-11-24", "tags": "数据服务", "rec": "可关注"}, {"push_no": 12, "company": "中海信托", "project": "中海信托国产数据库采购", "budget": "-", "deadline": "2026-11-24", "tags": "信创", "rec": "可关注"}, {"push_no": 13, "company": "杭州工商信托", "project": "信用风险舆情数据采购项目", "budget": "-", "deadline": "2026-11-25", "tags": "数据服务", "rec": "可关注"}, {"push_no": 14, "company": "农业银行浙江省分行", "project": "银法智管平台与\"一张网\"系统支持服务项目（第二次）", "budget": "-", "deadline": "2026-11-25", "tags": "运维服务", "rec": "可关注"}, {"push_no": 15, "company": "湖州银行", "project": "湖州银行2026年度统一日志平台扩容项目", "budget": "-", "deadline": "2026-12-08", "tags": "运维服务", "rec": "可关注"}], "valid_tags": ["人力外包", "信创", "公司金融", "其他", "大模型应用", "数据平台", "数据服务", "渠道系统", "财富管理", "资产托管", "资产服务信托", "资产管理", "运维服务", "金市/资金/同业", "风控合规"]}</script>
+</div>
+<script type="application/json" id="blob">{"v": 1, "iter": 310000, "salt": "978b551a7b96d98f3aca540bc197ca3a", "iv": "18252f34a8ac1a647b9fe930", "ct": "9f7db6e2d793101cb37febc072de9cedb637a3672d28b911c46b7642b459ee8ac1881fe83375545959074b66bd302337dc80e1bcf03d8ee427bcaed9a1d0ca81ebd0564c1e5850a3d8a1d20542de3a004d2bb375e101159b15b3f8cb664934fbcd86d1bddffbaa4fc3612ab6f9d7866e28c0ad6842ff4965ef5b9ff710ce78d268b03b02ea2fb7469c61380e1da46b1eebfae68af289c9888dd00aa467266e6b16d4a9c8a0e5699ccc4d5730f4c014ec7f86f2a6ea0795c78fc38d9a63ea5e1305e66c61e40affd3dc73d1ef34661f776aebca3dd567acbf03d75c3c672c49cf0d4ca59f7b841c056da7b97cc7038748422fca439483cb0fbd4b6527b0cf37ff26a1bff16773ebbe1034940acd83c2bae0f807bc9a3f65625b42e2e137bfabc25b2c0f6ecf2b7ff893506f9c3c74bdd0defc3b01e71e59638e6200958f0b19de3630c1ce0e41f1023ac39dcaf89dfdb65411103eb3c02cf1d6b39cc85a7a174ddaecfe1b331fe042b673cae6c9b273b38b6351f635b7b27c35d0f03d9794fa1ba83d2df8a1ed917e56da1a8d1f89682188daf5d31cec8a0b0819ff2f26ea3f15040cd75280a3ec57eb311930c56d89658a3466176994a9d547b4b169f543d2c1863410bbe762d637b57df3100940d959fc2f035ae0d3e8817c1c2e9f6e7f91128b139e4399294e2cb10c8967995b7434ea2971a445f0d757205bffdadb236d4e8722c6d60e83c905cf1f1991811ab98e0c2e1947a77b137f29fe125e7d993f524df2a38836c3e92e4e196f0260c64a4bb90cbf2b8d30f6d4603a804403c572e724e33e5d4c31bb847a6ac0dfc07ce48e127a4d4f089ca2b996c03174f9fcaf55eb9116d4bc23512ae7325a757356d126da1e72ca1726cec671e8ff3f5dc1bcf6d30a255322a4b46c2efc1b35920a0e6012c8bf817ab83145bfc7fc90192b24b87139897dc47cb262ffc8c4acee70df9ee4d048edde5631feec4768fa28709f000f76fc020d4dba0666afd8525881b7c489376a4ad11e6619f76da9151f72fc6ac13997195b3a1ec7ebb44ee8a9ff149b4ec51e6a1f40d9ca0531e25b91a1631d67878c5604a3d95e80cf7649f417badf56b4f3319a64f2be4c6e3cca5ff37a28f8170daaf6ba227458fe96a9bc90254a3bb7876ab6981f6a361d68da776b0520753ccd2d228e14a1546d13083ea9c3d31308e1468c0b21e4bb3ea4d1ceae77ad9546ee21afe19c3bc2e744f66e9af397157e72198413534cb07d7afd7914dab622e53bed6029af9784ffe2d2f149d626a052203c80ebe8c868defec9064d8b1b0eb3a429b9ad7f822ad00812352927f85e1dab15570fe951762b66276c30ea2990b4c39ef46cef53695ce2e3965c19374eed66ddf7267d3aab954525a1d4f049cb1ffb4486d8200e99e6e3d22d4870dda4d70f14968915eeb27e3268ac8b74dbfd590cda39149c3549c67d90eb16fce651ec53e8193acc9abe9f16701fa6215e7f75ee0825391cc3cbd1c03e81ca80ed81f60e768f6b9a5a78f702ff89b175d0f147de4fd2a5d46d21584f726520b6425b58384be1c4ecb436d4b9582eeb32dc6287cf149137cb747b12e23b5ab7f44ca194df179e091a013d658605eba15a85c8a5c73e6ab8d6f33d94e206da2cce395d1e40a0093b2129babe1ce29823aaef4d3d40b77f8a040cfd122e607c30ca087eb1a24b805168200766be88977c27fa3d93974084622de023f7000477f92102cbe54c3653e03c7cef55914e5dcf06653fc11556b2330fc4dc9ec561b5bc223f3a43ffeaa762fe8d1442afa479800fce252725d3e368cb2cedc0f6119d91e9e4e50b5fa2fef5eb5895d1f76760f255253b427404ebf1c2589f3e18923570adfc83cef837b6420fe0c84d5db01382003c6c29dbd96cd5a09dc173b2fa843d248f6266b203203a5146d95d8d8749ba15d60ac7970c3f259b553a880fdb8ab3a6882086826d0bdef583656dde76169105afdc980d5c719e32dcb7fb11f05b640e8974edadfbd0b7c9fe178fb6da83675007ddcaa5d531eca518865d383740c609f31b53ed049fb3ab63cb5338b61e39b80d6199aef83a221a05a6a87a04716c7535b43ac1611629ccf2d3831b621e9ba528a95ae7c84cd1eb1e0637bb2fc50f366d3678e514ef4088e9047f4f2423964de429d4eef5da6cabf47948ef2e9d066f3be5293d14e590d51f1c024537f2d4ee8a56166d492b20616b98fbad68c885211dae1766e1fa70c180d060c2ddf415f8ceae9ecf3e130e2c73b877e8cc1ad9aa8e9b3e9d2ac18f5e86487e33aa720397a143d9f01c31904fa942a6afbfd0deea1e37c35bd635d21d3eea027bcacce9394e3ae92ae7a44b35c04e322883463c35d10c0b5f7071378ced60320350d05b5ffb245126fd9af35b76cda83cf4983bf52a585c1cdc5f91998a2606fd92b9c395fefb665e93be30e549caa831369a32ed6ed65ec00c8a6d54dd1bac409e872db905ca2c55e0bb44aa78371036d697f1749c74baf49a692d29cadf1304ea0536bca6136b364d92e9e15c214b2840e15a88bff044a6fb90044b1235d5f050731bb5023fbc2429caff4523254c2b9d0bd61f4f5cedf3512974cc6cd8c327c314fd9f93daabb9be545c82f8c7f247b17e8e2683e701c9de288b77903ba4a825bde00b13c14025ae35c2197a2021f76054f666db8aa7bb993bd1eec2a0cfc7a7a5754a9e360a108910469b44efc8cf6834c611b178119160a3bc69f058c38cdc4a0174a08fb83bfed2e728c1037d0aec581a31ad373d7ea751e71651ae8ac1bcb741331ca367a66ad720269eed81dda2a5c17f5b29fbd907892c0296869ae0eba49a53b12b1354205ed0214e52b6de2d1309442a540d2926ecd615a23c18aa4c457091ebb76142321e2ccbd000d5cc603ebd695ac231928a56be5eff6ca9fe086c2fc2b90e13e95179a268f7af8e2e6ce21430fe0222333bf59bf57490c9aa29da470a8c463bca3614942c0901118edfffa1b05fdfd8f39a7a97f9c08b45a9dfe7a1ead233aeb25c0fc11582a17c07213909f91da22b4fff37def227eb1a025b5b8780c0d145d7516fcbae5d26b7cde290e6002466e763fb2c0cefd1f6ba930f8a7bfcdb3ff233841980fe42ca5fb0a1c6c2e9cc24ea80043a2fe8e88fdf6bd1ecdc736b25d492f4504a84e5827e6391e674f8f1fbc550e8c27be11ce26e46dde0936ca03c3c801fa05d21b03da843924e58db72208a23d083325b7fdd3f83a01a40399329b8916fae10ef183eeb89b21887cc681edd2a3ce9c2bafdb672bd1aded1e622c5353c21c52778bdd1211eafa364bfc9ff0acb534d9489bf52bad284d5bb7753ed41570087ddb3bf085feb883d329c2bb14560d0be84bb1d6b49d414fdda2918eb13059f81398388f0dd346766c4a8bb38a9f3ec63684c6d3fa3621836c5fcafee8c804bc0a4c7ecf6d57fbeff79d56840c1cf8a0608997e3959cccce7ba50b0af09a0ef8a8de799c298f57a759ed169467cb45b39e69dce755fdaf19c6007f41744022de3a9305769567d206e438864d9da48664c484006b61959606012448478a56ae73fa681b9a39afbda16e924dc84c15b5784cd738139422672c859789bd67fddb6cf0678fc102f024c916056947fa013741c69dc269c58a70918403afad5ad9ffae59e415f1e8bc6905222bc504d36bf16fbabf84d1e40edca57bf98faaeb6fb09cfd1f1e7c2ecf0ab5e5b76025518a143831eee276439b46ddbecf5b72a5fa870d4aefe9b2910a4d8da3d2f1781217e800bb57b5e76daa569f63c24e8938b255e52e9e1d50469bb763c3e178773de20c004aa6a98eac9ac4a75ae80b2d23a5ab0d81e89454ae2e7272748b824becf3f9853ae3d132fd4ee570fd3de7fee40661855c05fc33538c0729722eff58c7e4a12a9559f66100b79893959b9828cc41bdc297bb795708ed8ecd5b458cb577258cdc5038eaec93009121a13aa77240518c9cb3b94ab3ee52a8b5b8909159b097468877fc01277755ba14f2c70d14668b19681de6e98bda30895b436e82f51450f3b5761abc027299ad7a967853e35843d653f05f95f8ca8c5181b687a61d84b39f3a2028db1645b4df82def250e1592f05b6517f7b532254a854d26b39f3ca309081dd6bebbf65794e67d3ec49198ab749f58992853af14380c8d9c25a74c293561b6710bbed8a4e637a42d31c4f2adb04a5f99699a32cbb53a8bb9215cf1098c998ddcbea41c273dd726992f9072b03add859f0740ea9b7ec91d9679b02a39d321eaa8a745f778bbb67be74bf6cb6b565f2eef3aa4d798697889d8ef1d09be654dfc608524d259388b4f0a32f8aca20f2b30f59d0d4283e7884bb3e7fee7fb72b5ee40d21dd99082defaab49fc5b3d09ebf2a3703ed9d05bd86ff1bfc26c0c73dffd7c7291b574083641c1c81ce7b5878a2e6e721e6b04b3b23aa30d71c6437aa38ae9f2981af37176f6556e9fa4d23fbda52dd5e76e96174ec7c93bb3eca12de9688b52faabf52e391ad2d1e4b260ac999eff67c34137ed71f699457ea14b1b292758a26524eb57b866a897a211bba4965c8c98b42008169364d4b9ce0553ad4b13d2ca23784ce05676e836cd9385bf8197d8c37877a267d15333d30e583b65428df02ba209e9a1dc58701aafcf5982c382d0caa99b5cdd81c8e230cf2aa2a2178e08509eded8c464c11ecb5e3b96470b41445ef5f08f725e79bc52b832a35289e189dba3ddbb018742f1e884bbfa1739ce949aee", "wiv": "1f5f0d160fa07f4f47333a06", "wct": "e3525e80db6f813264552cffaa61f503973cadbb9efc69eff8c7ea79c568a6180b7bd2a521255fed3cf244844a411dc0"}</script>
 <script>
 (function(){
-  var DATA=JSON.parse(document.getElementById('cand-data').textContent);
+  var BLOB=JSON.parse(document.getElementById('blob').textContent);
+  function ab(h){var a=new Uint8Array(h.length/2);for(var i=0;i<a.length;i++)a[i]=parseInt(h.substr(i*2,2),16);return a;}
+  function pbkdf2(pwd,salt,iter){
+    var enc=new TextEncoder();
+    return crypto.subtle.importKey('raw',enc.encode(pwd),'PBKDF2',false,['deriveKey']).then(function(k){
+      return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:iter,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['decrypt']);
+    });
+  }
+  function unlock(){
+    var btn=document.getElementById('unlock'),err=document.getElementById('gerr');
+    var pwd=document.getElementById('pwd').value;
+    if(!pwd){err.textContent='请输入密码';return}
+    btn.disabled=true;err.textContent='验证中…';
+    pbkdf2(pwd,ab(BLOB.salt),BLOB.iter).then(function(kek){
+      return crypto.subtle.decrypt({name:'AES-GCM',iv:ab(BLOB.wiv)},kek,ab(BLOB.wct)).then(function(dek){
+        return crypto.subtle.importKey('raw',dek,'AES-GCM',false,['decrypt']).then(function(k){
+          return crypto.subtle.decrypt({name:'AES-GCM',iv:ab(BLOB.iv)},k,ab(BLOB.ct));
+        });
+      });
+    }).then(function(pt){
+      start(JSON.parse(new TextDecoder().decode(pt)));
+    }).catch(function(){
+      err.textContent='密码错误或数据已过期';btn.disabled=false;
+    });
+  }
+  document.getElementById('unlock').addEventListener('click',unlock);
+  document.getElementById('pwd').addEventListener('keydown',function(e){if(e.key==='Enter')unlock()});
+
+function start(DATA){
+  document.getElementById('gate').style.display='none';
+  document.getElementById('app').style.display='block';
   var VALID=DATA.valid_tags||[];
   var decisions={};
   var $=function(id){return document.getElementById(id)};
   $('batch').textContent=DATA.batch+' · '+DATA.items.length+' 条';
-
   function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function defaults(){var d={};DATA.items.forEach(function(it){d[it.push_no]={decision:null,tags:it.tags,rec:it.rec}});return d}
   var KEY='decide-'+DATA.batch;
@@ -80,7 +126,7 @@
     }).join('')+'<datalist id="taglib">'+VALID.map(function(t){return '<option value="'+esc(t)+'">'}).join('')+'</datalist>';
     L.querySelectorAll('.seg button').forEach(function(b){
       b.addEventListener('click',function(){
-        var no=+b.dataset.no,base=(b.dataset.v==='纳入')?'on-y':'on-n';
+        var no=+b.dataset.no;
         if(decisions[no].decision===b.dataset.v){decisions[no].decision=null}
         else{decisions[no].decision=b.dataset.v}
         persist();render();
@@ -117,6 +163,7 @@
     }else{$('msg').className='msg ok';$('msg').textContent='请长按上方文本框手动复制后发送到 Kimi 对话'}
   });
   restore();render();
+}
 })();
 </script>
 </body>

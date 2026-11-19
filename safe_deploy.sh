@@ -110,6 +110,24 @@ if bad_co:
     sys.exit(1)
 print('✅ 招标单位简称归一化检查通过')
 
+# 2026-11-19 全字段代码闸自查补齐：投标建议四档 + 业务标签白名单两道闸
+# （validate_new_projects.py 本已有，此处为部署兜底双保险，防绕过 validate 的手改直发）
+try:
+    from config import VALID_RECS as _vrec, VALID_TAGS as _vtags
+    bad_rec = [(p.get('id'), p.get('rec')) for p in projects if p.get('rec') not in _vrec]
+    if bad_rec:
+        print(f'❌ 发现非规范投标建议 {len(bad_rec)} 条: {bad_rec[:5]}（只许四档: {_vrec}）')
+        sys.exit(1)
+    bad_tags = [(p.get('id'), t) for p in projects for t in (p.get('tags') or []) if t not in _vtags]
+    if bad_tags:
+        print(f'❌ 发现越界业务标签 {len(bad_tags)} 条: {bad_tags[:5]}（标准标签见 config.VALID_TAGS，新增只改 config.py）')
+        sys.exit(1)
+    print('✅ 投标建议/业务标签白名单检查通过')
+except SystemExit:
+    raise
+except Exception as _e:
+    print(f'⚠️ rec/tags 闸导入失败（{_e}），跳过低风险兜底')
+
 # 2026-10-30 规则 O-联系方式：增量硬检——id >= CONTACT_HARD_CHECK_MIN_ID 的项目必须带真实
 # 联系方式（联系人/电话/邮箱/代理机构至少一项），禁止 '-' / 空（用户 14:20 指令全场景立规）
 try:

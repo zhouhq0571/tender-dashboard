@@ -11,7 +11,7 @@ import json
 import re
 import sys
 
-from config import VALID_REGIONS, VALID_METHODS, VALID_RECS, BLOCKED_SOURCE_PATTERNS, normalize_source as _normalize_source, normalize_company as _normalize_company
+from config import VALID_REGIONS, VALID_METHODS, VALID_RECS, VALID_TAGS, BLOCKED_SOURCE_PATTERNS, normalize_source as _normalize_source, normalize_company as _normalize_company
 
 HTML_FILE = 'index.html'
 
@@ -86,6 +86,12 @@ def check_field_values(project):
 
     if not isinstance(project.get('tags'), list):
         errors.append("tags必须是数组")
+    else:
+        # 2026-11-19 新增：业务标签白名单硬检（对照 11-19 全字段代码闸自查补齐，
+        # 与看板导航 15 个标准标签同源 config.VALID_TAGS；越界标签即拦截，新增标签只改 config.py）
+        _bad_tags = [t for t in project['tags'] if t not in VALID_TAGS]
+        if _bad_tags:
+            errors.append(f"tags越界: {_bad_tags}，只许标准标签: {sorted(VALID_TAGS)}")
 
     # 2026-10-30 规则 O-联系方式：增量硬检（id >= CONTACT_HARD_CHECK_MIN_ID 的项目禁止空联系方式）
     try:

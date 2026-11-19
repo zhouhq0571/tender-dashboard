@@ -1,23 +1,128 @@
 {
-  "version": "v412",
-  "date": "2026年11月19日",
-  "timePeriod": "凌晨",
-  "total": 79,
-  "added": [],
-  "removed_count": 9,
-  "removed_note": "删除9条（deadline≤11-17）；9条今日（11-19）截止标记「☆☆☆ 已截止」保留",
-  "candidates": 15,
-  "pending_fill_count": 0,
-  "filled_recent": [],
-  "other_note": "sweep 后台一次完成（fresh 38）；兴业银行境外理财票据升级项目VIP核实无真实截止日期未送审；光大理财反洗钱变更公告、招银理财直销事前公示等按红线排除；⑦组件刷新改 Bash 直跑，三判据验收全过（v412入晨报、待确认15=pending 15、两组件mtime当次）",
-  "channel_stats": {
-    "date": "2026-11-19",
-    "added_total": 0,
-    "by_channel": {
-      "search": 0,
-      "user_url": 0,
-      "user_excel": 0,
-      "user_screenshot": 0
-    }
+ "version": "v415",
+ "date": "2026年11月19日",
+ "timePeriod": "上午",
+ "total": 91,
+ "added": [
+  {
+   "company": "华夏理财",
+   "project": "2026年ESG可持续投资外部数据引入项目供应商征集",
+   "deadline": "2026-11-24",
+   "tags": [
+    "数据服务",
+    "资产管理"
+   ]
+  },
+  {
+   "company": "中银理财",
+   "project": "2026年网络安全等级保护测评及信创技术支持服务采购项目",
+   "deadline": "2026-11-30",
+   "tags": [
+    "风控合规",
+    "资产管理"
+   ]
+  },
+  {
+   "company": "青银理财",
+   "project": "2027年技术支持人力外包项目",
+   "deadline": "2026-11-30 09:30",
+   "tags": [
+    "人力外包",
+    "资产管理"
+   ]
+  },
+  {
+   "company": "杭州工商信托",
+   "project": "信用风险舆情数据采购项目",
+   "deadline": "2026-11-25 09:00",
+   "tags": [
+    "数据服务",
+    "风控合规"
+   ]
+  },
+  {
+   "company": "兴银理财",
+   "project": "投资风控项目五期供应商征集调研",
+   "deadline": "2026-11-25",
+   "tags": [
+    "资产管理",
+    "风控合规"
+   ]
+  },
+  {
+   "company": "兴业银行",
+   "project": "企业年金受托管理项目三期（企业年金转移接续）供应商征集调研",
+   "deadline": "2026-11-25",
+   "tags": [
+    "大模型应用"
+   ]
+  },
+  {
+   "company": "兴业银行",
+   "project": "2027年理财数据服务项目",
+   "deadline": "2026-12-09",
+   "tags": [
+    "数据服务"
+   ]
+  },
+  {
+   "company": "兴业银行",
+   "project": "意图平台工程项目供应商征集调研",
+   "deadline": "2026-11-25",
+   "tags": [
+    "大模型应用"
+   ]
+  },
+  {
+   "company": "中海信托",
+   "project": "国产数据库采购",
+   "deadline": "2026-11-25 09:00",
+   "tags": [
+    "数据服务",
+    "信创"
+   ]
+  },
+  {
+   "company": "广银理财",
+   "project": "IT桌面运维外包服务项目",
+   "deadline": "2026-12-03 09:30",
+   "tags": [
+    "运维服务",
+    "资产管理"
+   ]
+  },
+  {
+   "company": "广银理财",
+   "project": "IT运维外包服务采购项目",
+   "deadline": "2026-12-04 09:30",
+   "tags": [
+    "运维服务",
+    "资产管理"
+   ]
+  },
+  {
+   "company": "建设银行四川省分行",
+   "project": "南充市高坪区中医医院综合支付结算系统项目",
+   "deadline": "2026-12-10 10:00",
+   "tags": [
+    "公司金融"
+   ]
   }
+ ],
+ "removed_count": 9,
+ "removed_note": "删除9条（deadline≤11-17）；9条今日（11-19）截止标记「☆☆☆ 已截止」保留",
+ "candidates": 0,
+ "pending_fill_count": 0,
+ "filled_recent": [],
+ "other_note": "sweep 后台一次完成（fresh 38）；兴业银行境外理财票据升级项目VIP核实无真实截止日期未送审；光大理财反洗钱变更公告、招银理财直销事前公示等按红线排除；⑦组件刷新改 Bash 直跑，三判据验收全过（v412入晨报、待确认15=pending 15、两组件mtime当次）；[meta自纠 2026-11-19 10:59] 版本/项目数/今日纳入已按看板 v415 回写",
+ "channel_stats": {
+  "date": "2026-11-19",
+  "added_total": 0,
+  "by_channel": {
+   "search": 0,
+   "user_url": 0,
+   "user_excel": 0,
+   "user_screenshot": 0
+  }
+ }
 }

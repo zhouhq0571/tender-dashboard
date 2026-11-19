@@ -26,7 +26,7 @@
 **任何会话**（含金融要闻周报项目对话、RC 远程端、主对话）收到千里马/快查结构化 JSONL 批次（含「【入库任务】…JSONL 批次」包装、`.jsonl` 附件、`千里马招标_结构化JSONL_*.jsonl` 等形态）时，标准动作是**两条通道并行，缺一不可**：
 
 1. **周报通道**：按金融要闻周报技能入暂存库（`wb_jsonl_ingest.py` + `staging_lint`）。
-2. **银信标讯通道（本工作区）**：按本技能判别 → `tools/dedup_filter.py` 过板级查重 → 过检条目写 `pending_candidates.json`（status=待确认）→ 生成六字段候选表**发送周老师决策**。禁止只跑通道①忘记通道②（2026-11-19 23:50 事故：漏发候选表被批）。
+2. **银信标讯通道（本工作区）**：按本技能判别 → `tools/dedup_filter.py` 过板级查重 → 过检条目写 `pending_candidates.json`（status=待确认）→ **`python3 build_decide_page.py` 重建 decide.html → `safe_deploy.sh` 部署** → 请周老师在 https://hstender.cn/decide.html 点选生成指令。禁止只跑通道①忘记通道②（2026-11-19 23:50 事故：漏发候选表被批）；**禁止用 Markdown 表代替决策组件送审**（2026-11-20 00:01 被批：decide.html 组件已是钦定交互，Markdown 表仅作留痕附件）。
 
 收到批次后先自查一句："候选表发出去了吗？"没发就是没做完。
 

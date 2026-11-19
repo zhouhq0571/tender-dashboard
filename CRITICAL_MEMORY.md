@@ -256,6 +256,7 @@
 ## decide.html 密码门（2026-11-19 启用，仅周红青可用；同日登录界面改版抄厂商看板作业）
 - 密码本地存 .decide_pwd（chmod 600，不进 git），线上仅 PBKDF2 包裹密文；与金融IT厂商中标看板同构。
 - **11-19 登录界面按厂商看板全套作业重做**（周老师钦定，以后任何只给周老师/授权人的外网加密登录页一律复用此模板，直接抄作业，规则已落 tender-daily-dispatch SKILL.md 规则 O-决策）：深色渐变门禁背景 + 白卡（右上个人签章，gate/seal.gif 本地副本→dataURI）+ 姓名/密码双字段（别名 周红青=周老师，非授权姓名拒登）+ 同一设备 30 分钟免密（localStorage 存 DEK+时间戳）+ 连错 3 次出提示与「重置密码」按钮（点击提示联系管理员会话重置）。
+- **签章选型口径（2026-11-19 周老师 UI 评估后钦定）**：登录卡一律用**方形篆体章**（seal.gif，小尺寸可辨、锚定卡角、"授权"语义）；长条行书落款章（zhou_hongqing_seal_hd.png）只用于**封面/封底落款位**（周报封底、hstender 封底、厂商看板封面）。两者不互换，以后任何会话不得再提换章。
 - 重建/轮换：改 .decide_pwd → python3 build_decide_page.py → safe_deploy.sh（已含 decide.html+robots.txt）。注意 build_decide_page.py 每次重建重新随机 DEK，旧免密会话自然失效（回落密码），属预期。
 - 已加 noindex+nofollow 与 robots.txt 禁录；泄露应急：改密码重建即旧密文作废。
 

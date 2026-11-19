@@ -97,6 +97,19 @@ if bad_canon:
     sys.exit(1)
 print('✅ 信息来源归一化检查通过')
 
+# 2026-11-19 新增：招标单位简称硬检（根治全称上板；口径：normalize_company(c) != c 即非规范写法，
+# 失守根因=映射只写在 SKILL.md 无代码消费；映射表见 config.COMPANY_SHORT_MAP，新增简称只改 config.py）
+try:
+    from config import normalize_company as _norm_co
+except Exception:
+    def _norm_co(s): return s
+bad_co = [(p.get('id'), p.get('company')) for p in projects
+          if _norm_co(p.get('company') or '') != (p.get('company') or '').strip()]
+if bad_co:
+    print(f'❌ 发现非规范招标单位全称 {len(bad_co)} 条: {bad_co[:8]}（映射表见 config.COMPANY_SHORT_MAP）')
+    sys.exit(1)
+print('✅ 招标单位简称归一化检查通过')
+
 # 2026-10-30 规则 O-联系方式：增量硬检——id >= CONTACT_HARD_CHECK_MIN_ID 的项目必须带真实
 # 联系方式（联系人/电话/邮箱/代理机构至少一项），禁止 '-' / 空（用户 14:20 指令全场景立规）
 try:
@@ -279,7 +292,7 @@ fi
 
 # 步骤5: 提交到本地git
 echo "📝 步骤5: 提交到本地git..."
-git add index.html .nojekyll CNAME
+git add index.html decide.html robots.txt .nojekyll CNAME
 # 2026-09-29 复盘改进：latest_meta.json 与执行汇报纳入每日提交，支持逐日回溯审计（文件缺失不阻断部署）
 git add reports/latest_meta.json "reports/最新执行汇报.md" 2>/dev/null || true
 git commit -m "$VERSION: $(date +'%Y年%m月%d日 %H:%M') 更新 ($PROJECTS 个项目)" || true

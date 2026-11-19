@@ -84,6 +84,50 @@ def normalize_source(s):
             return main
     return s
 
+# ========== 2026-11-19 规则 O-招标单位简称：代码硬检（周老师抓包"简称规则失守"后固化）==========
+# 失守根因：简称映射只写在 SKILL.md 文档表里，代码层无任何函数消费，执行全靠模型记忆→必漏。
+# 本函数为唯一口径（与 normalize_source 同构），消费方：validate_new_projects.py（上板前校验）、
+# safe_deploy.sh（部署兜底闸）、定时任务/自动化上板组记录。新增映射只改本表，映射表与 SKILL.md 同名节同步。
+COMPANY_SHORT_MAP = {
+    # 2026-11 前技能表既有 11 条
+    '中国人民银行清算总中心': '清算总中心',
+    '山东省农村信用社联合社': '山东农信',
+    '中邮消费金融有限公司': '中邮消金',
+    '广州农村商业银行': '广州农商行',
+    '五矿国际信托有限公司': '五矿信托',
+    '中国邮政储蓄银行': '邮储银行',
+    # 2026-11-19 板上存量抓包新增（简称取板上/历史文本惯用写法）
+    '北京农村商业银行股份有限公司': '北京农商银行',
+    '北京农村商业银行': '北京农商银行',
+    '陕西秦农农村商业银行股份有限公司': '秦农银行',
+    '青岛农村商业银行股份有限公司': '青岛农商银行',
+    '重庆农村商业银行股份有限公司': '重庆农商银行',
+    '重庆农村商业银行': '重庆农商银行',
+    '贵阳农村商业银行股份有限公司': '贵阳农商银行',
+    '河北省农村信用社联合社': '河北农信',
+    '中国银行股份有限公司宁波市分行': '中国银行宁波分行',
+    '中国银行宁波市分行': '中国银行宁波分行',
+    '上海农商银行集中采购中心': '上海农商银行',
+}
+COMPANY_SUFFIXES = ('股份有限公司', '有限责任公司', '有限公司')
+COMPANY_CENTER_TAILS = ('集中采购中心', '采购中心')
+
+def normalize_company(c):
+    """招标单位简称归一化：先查映射表，再剥法定的组织形式后缀与采购中心尾缀。
+    硬检口径：normalize_company(company) != company 即非规范写法，拦截。"""
+    s = (c or '').strip()
+    if s in COMPANY_SHORT_MAP:
+        return COMPANY_SHORT_MAP[s]
+    t = s
+    for tail in COMPANY_CENTER_TAILS:
+        if t.endswith(tail):
+            t = t[:-len(tail)]
+    for suf in COMPANY_SUFFIXES:
+        if t.endswith(suf) and len(t) > len(suf) + 2:
+            t = t[:-len(suf)]
+            break
+    return t if t else s
+
 VALID_REGIONS = {'东北', '华北', '西北', '华东', '华中', '西南', '华南'}
 VALID_PROVINCES = set(PROVINCE_ORDER.keys())
 

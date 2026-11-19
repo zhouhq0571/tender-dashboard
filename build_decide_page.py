@@ -209,7 +209,7 @@ GATED_TEMPLATE = r'''<!DOCTYPE html>
   .gate-card .gsub { font-size:12px; color:var(--ink3); margin-top:6px; }
   .gate-card .gfield { margin-top:14px; text-align:left; }
   .gate-card .gfield label { display:block; font-size:11.5px; color:var(--ink3); margin-bottom:5px; letter-spacing:.05em; }
-  .gate-card .gfield input { width:100%; box-sizing:border-box; padding:10px 12px; border:1px solid var(--line); border-radius:9px; font-size:14px; background:#fbfcfe; color:var(--ink); outline:none; transition:border-color .15s, box-shadow .15s; }
+  .gate-card .gfield input { width:100%; box-sizing:border-box; padding:10px 12px; border:1px solid var(--line); border-radius:9px; font-size:14px; background:#fbfcfe; color:var(--ink); outline:none; transition:border-color .15s, box-shadow .15s; text-align:center; }
   .gate-card .gfield input:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(11,92,173,.12); background:#fff; }
   .gate-card .gfield input:disabled { opacity:.6; }
   .gate-card .gbtn { width:100%; margin-top:18px; padding:11px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:14px; font-weight:700; cursor:pointer; }

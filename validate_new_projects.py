@@ -11,7 +11,7 @@ import json
 import re
 import sys
 
-from config import VALID_REGIONS, VALID_METHODS, VALID_RECS, BLOCKED_SOURCE_PATTERNS, normalize_source as _normalize_source
+from config import VALID_REGIONS, VALID_METHODS, VALID_RECS, BLOCKED_SOURCE_PATTERNS, normalize_source as _normalize_source, normalize_company as _normalize_company
 
 HTML_FILE = 'index.html'
 
@@ -75,7 +75,15 @@ def check_field_values(project):
     if _normalize_source(src) != src.strip():
         errors.append(f"source非规范全名: '{src}'，归一后应为 '{_normalize_source(src)}'"
                       f"（网站类裸名/公众号类带（公众号）后缀），见 config.SOURCE_ALIASES")
-    
+
+    # 2026-11-19 新增：招标单位简称硬检（根治"北京农村商业银行股份有限公司"等全称上板，
+    # 失守根因=映射只写在 SKILL.md 无代码消费；口径：normalize_company(c) != c 即非规范写法，
+    # 映射表见 config.COMPANY_SHORT_MAP，新增简称只改 config.py）
+    comp = project.get('company') or ''
+    if _normalize_company(comp) != comp.strip():
+        errors.append(f"company非规范简称: '{comp}'，归一后应为 '{_normalize_company(comp)}'"
+                      f"（映射表见 config.COMPANY_SHORT_MAP）")
+
     if not isinstance(project.get('tags'), list):
         errors.append("tags必须是数组")
 

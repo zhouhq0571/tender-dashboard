@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<title>标讯候选决策 · 银信标讯看板</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f6f7f9; color:#1a1a1a; padding:12px; max-width:720px; margin:0 auto; }
+  .head { display:flex; justify-content:space-between; align-items:baseline; margin:4px 2px 12px; }
+  h1 { font-size:17px; }
+  .meta { font-size:12px; color:#888; }
+  .card { background:#fff; border-radius:12px; padding:12px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .co { font-weight:600; font-size:14px; }
+  .pj { font-size:13px; color:#555; margin:4px 0 8px; line-height:1.5; }
+  .kv { font-size:12px; color:#888; margin-bottom:8px; }
+  .kv b { color:#444; font-weight:500; }
+  .seg { display:flex; gap:8px; margin-bottom:8px; }
+  .seg button { flex:1; padding:10px 0; font-size:15px; border-radius:8px; border:1px solid #ddd; background:#fafafa; color:#666; cursor:pointer; }
+  .seg button.on-y { background:#2f6fed; color:#fff; border-color:#2f6fed; }
+  .seg button.on-n { background:#d5483f; color:#fff; border-color:#d5483f; }
+  .edit { display:flex; gap:8px; }
+  .edit input,.edit select { flex:1; padding:8px; font-size:13px; border:1px solid #ddd; border-radius:8px; background:#fff; min-width:0; }
+  .edit input.bad { border-color:#d5483f; }
+  .terr { font-size:11px; color:#d5483f; margin-top:4px; }
+  .foot { position:sticky; bottom:0; background:#f6f7f9; padding:10px 0 16px; }
+  .gen { width:100%; padding:14px 0; font-size:16px; font-weight:600; border:none; border-radius:10px; background:#2f6fed; color:#fff; cursor:pointer; }
+  .gen:disabled { opacity:.5; }
+  .stat { text-align:center; font-size:12px; color:#888; margin-top:8px; }
+  .msg { font-size:13px; margin-top:8px; line-height:1.6; }
+  .msg.ok { color:#2e9e5b; } .msg.err { color:#d5483f; }
+  .empty { text-align:center; color:#888; padding:40px 0; font-size:14px; }
+  .tip { font-size:12px; color:#999; margin:0 2px 12px; line-height:1.6; }
+  textarea { width:100%; height:90px; margin-top:10px; padding:8px; font-size:13px; border:1px solid #ddd; border-radius:8px; }
+</style>
+</head>
+<body>
+<div class="head"><h1>标讯候选决策</h1><span class="meta" id="batch"></span></div>
+<div class="tip">点选「纳入 / 不纳入」（自动保存，刷新不丢）→ 底部生成决策指令 → 一键复制 → 粘贴到 Kimi「银信标讯」项目对话发送即执行上板。</div>
+<div id="list"></div>
+<div class="foot">
+  <button class="gen" id="gen">生成决策指令并复制</button>
+  <div class="stat" id="stat"></div>
+  <div class="msg" id="msg"></div>
+  <textarea id="out" readonly style="display:none" placeholder="决策指令将出现在这里"></textarea>
+</div>
+<script type="application/json" id="cand-data">{"batch": "2026-11-19", "items": [{"push_no": 1, "company": "兴业银行", "project": "兴业银行2027年理财数据服务项目", "budget": "33.25万元", "deadline": "2026-12-09", "tags": "数据服务", "rec": "可关注"}, {"push_no": 2, "company": "中银理财", "project": "中银理财2026年网络安全等级保护测评及信创技术支持服务采购项目", "budget": "-", "deadline": "2026-11-30", "tags": "信创", "rec": "可关注"}, {"push_no": 3, "company": "兴银理财", "project": "兴银理财投资风控项目五期供应商征集调研", "budget": "-", "deadline": "2026-11-25", "tags": "风控合规", "rec": "建议投标"}, {"push_no": 4, "company": "兴业银行", "project": "企业年金受托管理项目三期（企业年金转移接续）供应商征集调研", "budget": "-", "deadline": "2026-11-25", "tags": "资产服务信托", "rec": "建议投标"}, {"push_no": 5, "company": "兴业银行", "project": "意图平台工程项目供应商征集调研", "budget": "-", "deadline": "2026-11-25", "tags": "大模型应用", "rec": "可关注"}, {"push_no": 6, "company": "渤海银行", "project": "渤海银行2027年度开源软件技术支持人天服务采购项目", "budget": "-", "deadline": "2026-11-25", "tags": "人力外包", "rec": "可关注"}, {"push_no": 7, "company": "建设银行四川省分行", "project": "南充市高坪区中医医院综合支付结算系统项目", "budget": "-", "deadline": "2026-11-26", "tags": "渠道系统", "rec": "可关注"}, {"push_no": 8, "company": "广银理财", "project": "广银理财IT桌面运维外包服务项目", "budget": "-", "deadline": "2026-11-25", "tags": "运维服务", "rec": "可关注"}, {"push_no": 9, "company": "广银理财", "project": "广银理财IT运维外包服务采购项目", "budget": "-", "deadline": "2026-11-25", "tags": "运维服务", "rec": "可关注"}, {"push_no": 10, "company": "青银理财", "project": "青银理财2027年技术支持人力外包项目", "budget": "-", "deadline": "2026-11-25", "tags": "人力外包", "rec": "可关注"}, {"push_no": 11, "company": "华夏理财", "project": "华夏理财2026年ESG可持续投资外部数据引入项目供应商征集", "budget": "-", "deadline": "2026-11-24", "tags": "数据服务", "rec": "可关注"}, {"push_no": 12, "company": "中海信托", "project": "中海信托国产数据库采购", "budget": "-", "deadline": "2026-11-24", "tags": "信创", "rec": "可关注"}, {"push_no": 13, "company": "杭州工商信托", "project": "信用风险舆情数据采购项目", "budget": "-", "deadline": "2026-11-25", "tags": "数据服务", "rec": "可关注"}, {"push_no": 14, "company": "农业银行浙江省分行", "project": "银法智管平台与\"一张网\"系统支持服务项目（第二次）", "budget": "-", "deadline": "2026-11-25", "tags": "运维服务", "rec": "可关注"}, {"push_no": 15, "company": "湖州银行", "project": "湖州银行2026年度统一日志平台扩容项目", "budget": "-", "deadline": "2026-12-08", "tags": "运维服务", "rec": "可关注"}], "valid_tags": ["人力外包", "信创", "公司金融", "其他", "大模型应用", "数据平台", "数据服务", "渠道系统", "财富管理", "资产托管", "资产服务信托", "资产管理", "运维服务", "金市/资金/同业", "风控合规"]}</script>
+<script>
+(function(){
+  var DATA=JSON.parse(document.getElementById('cand-data').textContent);
+  var VALID=DATA.valid_tags||[];
+  var decisions={};
+  var $=function(id){return document.getElementById(id)};
+  $('batch').textContent=DATA.batch+' · '+DATA.items.length+' 条';
+
+  function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function defaults(){var d={};DATA.items.forEach(function(it){d[it.push_no]={decision:null,tags:it.tags,rec:it.rec}});return d}
+  var KEY='decide-'+DATA.batch;
+  function persist(){try{localStorage.setItem(KEY,JSON.stringify(decisions))}catch(e){}}
+  function restore(){try{var v=localStorage.getItem(KEY);if(v){decisions=JSON.parse(v);return}}catch(e){}decisions=defaults()}
+  function splitTags(s){return String(s||'').split(/[,，、;；\s]+/).map(function(t){return t.trim()}).filter(Boolean)}
+  function tagError(s){var ts=splitTags(s);if(ts.length>3)return '最多3个标签';for(var i=0;i<ts.length;i++){if(VALID.length&&VALID.indexOf(ts[i])<0)return '「'+ts[i]+'」不在标签库'}return ''}
+  function stat(){var n=Object.keys(decisions).filter(function(k){return decisions[k].decision}).length;$('stat').textContent='已决 '+n+' / '+DATA.items.length+' 条（本机自动保存）'}
+  function render(){
+    var L=$('list');
+    if(!DATA.items.length){L.innerHTML='<div class="empty">本批次暂无待确认候选</div>';stat();return}
+    L.innerHTML=DATA.items.map(function(it){
+      var d=decisions[it.push_no]||(decisions[it.push_no]={decision:null,tags:it.tags,rec:it.rec});
+      var te=tagError(d.tags);
+      return '<div class="card">'
+        +'<div class="co">'+it.push_no+'. '+esc(it.company)+'</div>'
+        +'<div class="pj">'+esc(it.project)+'</div>'
+        +'<div class="kv">预算 <b>'+esc(it.budget)+'</b> · 投标截止 <b>'+esc(it.deadline)+'</b></div>'
+        +'<div class="seg"><button data-no="'+it.push_no+'" data-v="纳入" class="'+(d.decision==='纳入'?'on-y':'')+'">纳入</button>'
+        +'<button data-no="'+it.push_no+'" data-v="不纳入" class="'+(d.decision==='不纳入'?'on-n':'')+'">不纳入</button></div>'
+        +'<div class="edit"><input data-no="'+it.push_no+'" class="'+(te?'bad':'')+'" value="'+esc(d.tags)+'" placeholder="标签,逗号分隔,最多3个" list="taglib"/>'
+        +'<select data-no="'+it.push_no+'">'+['强烈建议投标','建议投标','可关注'].map(function(r){return '<option'+(r===d.rec?' selected':'')+'>'+r+'</option>'}).join('')+'</select></div>'
+        +(te?'<div class="terr">'+esc(te)+'</div>':'')
+        +'</div>'
+    }).join('')+'<datalist id="taglib">'+VALID.map(function(t){return '<option value="'+esc(t)+'">'}).join('')+'</datalist>';
+    L.querySelectorAll('.seg button').forEach(function(b){
+      b.addEventListener('click',function(){
+        var no=+b.dataset.no,base=(b.dataset.v==='纳入')?'on-y':'on-n';
+        if(decisions[no].decision===b.dataset.v){decisions[no].decision=null}
+        else{decisions[no].decision=b.dataset.v}
+        persist();render();
+      });
+    });
+    L.querySelectorAll('input').forEach(function(t){
+      t.addEventListener('change',function(){decisions[+t.dataset.no].tags=t.value.trim();persist();render()});
+    });
+    L.querySelectorAll('select').forEach(function(sel){
+      sel.addEventListener('change',function(){decisions[+sel.dataset.no].rec=sel.value;persist()});
+    });
+    stat();
+  }
+  $('gen').addEventListener('click',function(){
+    var parts=[],errs=[];
+    DATA.items.forEach(function(it){
+      var d=decisions[it.push_no];if(!d||!d.decision)return;
+      var te=tagError(d.tags);
+      if(te){errs.push('第'+it.push_no+'行 '+it.company+'：'+te);return}
+      var s=it.push_no+(d.decision==='纳入'?'纳入':'不纳入');
+      var ts=splitTags(d.tags),orig=splitTags(it.tags);
+      if(ts.join()!==orig.join())s+='（标签：'+ts.join('、')+'）';
+      if(d.rec!==it.rec)s+='（建议：'+d.rec+'）';
+      parts.push(s);
+    });
+    if(errs.length){$('msg').className='msg err';$('msg').innerHTML=errs.join('<br/>');return}
+    if(!parts.length){$('msg').className='msg err';$('msg').textContent='请先点选至少一条';return}
+    var txt='【候选决策 '+DATA.batch+'】'+parts.join('；');
+    $('out').style.display='block';$('out').value=txt;
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){
+        $('msg').className='msg ok';$('msg').textContent='已复制 '+parts.length+' 条决策指令，请到 Kimi「银信标讯」项目对话粘贴发送';
+      },function(){$('msg').className='msg ok';$('msg').textContent='复制失败，请长按上方文本框手动复制'});
+    }else{$('msg').className='msg ok';$('msg').textContent='请长按上方文本框手动复制后发送到 Kimi 对话'}
+  });
+  restore();render();
+})();
+</script>
+</body>
+</html>

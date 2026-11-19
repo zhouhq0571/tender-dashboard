@@ -310,7 +310,7 @@ fi
 
 # 步骤5: 提交到本地git
 echo "📝 步骤5: 提交到本地git..."
-git add index.html decide.html robots.txt .nojekyll CNAME
+git add index.html decide.html robots.txt .nojekyll CNAME img/zhou_hongqing_seal_hd.png
 # 2026-09-29 复盘改进：latest_meta.json 与执行汇报纳入每日提交，支持逐日回溯审计（文件缺失不阻断部署）
 git add reports/latest_meta.json "reports/最新执行汇报.md" 2>/dev/null || true
 git commit -m "$VERSION: $(date +'%Y年%m月%d日 %H:%M') 更新 ($PROJECTS 个项目)" || true

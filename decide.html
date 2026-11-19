@@ -8,13 +8,32 @@
 <style>
   * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
   body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:#f6f7f9; color:#1a1a1a; }
-  #gate { max-width:400px; margin:15vh auto 0; background:#fff; border-radius:14px; padding:28px 22px; box-shadow:0 2px 12px rgba(0,0,0,.08); text-align:center; }
-  #gate h1 { font-size:17px; margin-bottom:6px; }
-  #gate p { font-size:12px; color:#888; margin-bottom:18px; line-height:1.6; }
-  #gate input { width:100%; padding:12px; font-size:16px; border:1px solid #ddd; border-radius:10px; text-align:center; letter-spacing:2px; }
-  #gate button { width:100%; margin-top:12px; padding:12px; font-size:15px; font-weight:600; border:none; border-radius:10px; background:#2f6fed; color:#fff; cursor:pointer; }
-  #gate button:disabled { opacity:.5; }
-  #gate .err { color:#d5483f; font-size:12px; margin-top:10px; min-height:16px; }
+  /* ===== 11-19 登录门禁：抄金融IT厂商中标看板登录作业（周老师钦定模板） ===== */
+  :root { --accent:#0b5cad; --ink:#1b2433; --ink2:#46536a; --ink3:#8a94a6; --line:#dfe5ee; }
+  #gate { position:fixed; inset:0; z-index:100; background:radial-gradient(1200px 600px at 20% -10%,#16345e 0%,#0d1f3a 55%,#0a1830 100%); display:flex; align-items:center; justify-content:center; padding:20px; }
+  #gate.hide { opacity:0; transition:opacity .25s; }
+  .gate-card { position:relative; background:rgba(255,255,255,.97); border-radius:18px; box-shadow:0 24px 80px rgba(0,0,0,.45); width:400px; max-width:100%; padding:34px 30px 28px; text-align:center; }
+  .gate-card .gseal { position:absolute; top:14px; right:14px; width:56px; transform:rotate(-8deg); opacity:.92; pointer-events:none; filter:drop-shadow(0 1px 3px rgba(160,30,30,.22)); }
+  .gate-card .gico { width:56px; height:56px; margin:0 auto 16px; border-radius:16px; background:linear-gradient(135deg,#0b5cad,#123a6d); display:flex; align-items:center; justify-content:center; font-size:26px; }
+  .gate-card h2 { font-size:17px; font-weight:700; }
+  .gate-card .gsub { font-size:12px; color:var(--ink3); margin-top:6px; }
+  .gate-card .gfield { margin-top:14px; text-align:left; }
+  .gate-card .gfield label { display:block; font-size:11.5px; color:var(--ink3); margin-bottom:5px; letter-spacing:.05em; }
+  .gate-card .gfield input { width:100%; box-sizing:border-box; padding:10px 12px; border:1px solid var(--line); border-radius:9px; font-size:14px; background:#fbfcfe; color:var(--ink); outline:none; transition:border-color .15s, box-shadow .15s; }
+  .gate-card .gfield input:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(11,92,173,.12); background:#fff; }
+  .gate-card .gfield input:disabled { opacity:.6; }
+  .gate-card .gbtn { width:100%; margin-top:18px; padding:11px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:14px; font-weight:700; cursor:pointer; }
+  .gate-card .gbtn:disabled { opacity:.6; cursor:wait; }
+  .gate-card .gerr { color:#c0392b; font-size:12px; margin-top:8px; min-height:16px; }
+  .gate-card .ghint { margin-top:10px; font-size:12px; color:#8a6d1a; background:#fff8e6; border:1px solid #ecd9a0; border-radius:8px; padding:7px 10px; text-align:left; line-height:1.6; }
+  .gate-card .greset { margin-top:8px; width:100%; padding:8px; border:1px solid var(--line); border-radius:9px; background:#fff; font-size:12.5px; color:var(--ink2); cursor:pointer; }
+  .gate-card .greset:hover { border-color:var(--accent); color:var(--accent); }
+  .gate-card .gprog { display:flex; align-items:center; justify-content:center; gap:7px; margin-top:14px; font-size:12.5px; color:var(--ink2); }
+  .gate-card .gprog .spinner { width:14px; height:14px; border:2px solid var(--line); border-top-color:var(--accent); border-radius:50%; animation:gspin .7s linear infinite; }
+  @keyframes gspin { to { transform:rotate(360deg); } }
+  .shake { animation:shake .4s; }
+  @keyframes shake { 0%,100% { transform:translateX(0); } 25% { transform:translateX(-7px); } 75% { transform:translateX(7px); } }
+  /* ===== 决策应用本体 ===== */
   #app { display:none; padding:12px; max-width:720px; margin:0 auto; }
   .head { display:flex; justify-content:space-between; align-items:baseline; margin:4px 2px 12px; }
   h1.a { font-size:17px; }
@@ -43,13 +62,7 @@
 </style>
 </head>
 <body>
-<div id="gate">
-  <h1>标讯候选决策</h1>
-  <p>仅授权用户可访问<br/>请输入访问密码</p>
-  <input id="pwd" type="password" placeholder="密码" autocomplete="current-password"/>
-  <button id="unlock">解 锁</button>
-  <div class="err" id="gerr"></div>
-</div>
+<div id="gate"></div>
 <div id="app">
 <div class="head"><h1 class="a">标讯候选决策</h1><span class="meta" id="batch"></span></div>
 <div class="tip">点选「纳入 / 不纳入」（自动保存）→ 底部生成决策指令 → 一键复制 → 粘贴到 Kimi「银信标讯」项目对话发送即执行。</div>
@@ -61,45 +74,121 @@
   <textarea id="out" readonly style="display:none"></textarea>
 </div>
 </div>
-<script type="application/json" id="blob">{"v": 1, "iter": 310000, "salt": "53e377f43a4a751c66d247d9b652ce11", "iv": "902a59742e021e4179d7563c", "ct": "299ed6c1aef57269b2c07019f5a3a4b613837112144dc97fb81addf663f73fc0be740af236fa3380a719eabb3dc908b1c754c1244b534aceed82546de511ae5707dc9cde134f0454229ba4bbf399b1cd3291bf2f81c9962f1bbaf89b94361b1b579345ba20e8e58f5ac13b45e1ca0c1b475877164c23811636c0adf739748cea505951c5bca72f75ca8f5ab0abecb0a0bf84edd03d664d446c58db1acc8d80a51ff51eefbb044df8cca69740c12f15d37e987aa0e2fc7181849fa4f6e4950870536f67a2d1bbdeaf1d06f62635169a67c735e8b29fb27e9f987ee26f2fad6f82392ce4534f9b0372ab8cf8ca2f88696bfbd75d5c7b6330e7f612dfe6979e843848a9c7db938aaef913fe4820222060f37d8f0dc6082df302a513cc4270d5cd0c18d763757e1cc8454b884a8a620b100753506ea53b124bb422b5874493584f41d3809adddc5ff0ac1b0d091a0a75e27de4d9b81aebb5d762ec4dd327691dc2f4e6bd37bd2acdfa305f098286f4215f04257cc32055142166ccf41823afdcf8128d55b409e7b3a1c4613874a6a2580e8fab121420716f214e99161cbb74fb8ab3b429a2ed7b28e8560b4c20e9495154aeb1c33a6e832d44cf65d6653ce3f8cf1500874f72ff8f6cfc5e5f5aa43015b000857b176bd50c5c20f6c0af633f97911129b3e36c52b0cd8cd110cb3d030e51185fca1a48e799c1832538cfc6a83c3b42571306c9fa4da96fc2a556810ef9a762531a8c2dda0d4eaba2f4e3811c32a3", "wiv": "ba6afcd635014f15bf6f1b2f", "wct": "f488eb7f6e38c7c7d8825a6144d74d7946aee1679004423f131de783a0d0f9616ba0e11f983d81e4e7883d81dc592d43"}</script>
+<script type="application/json" id="blob">{"v": 1, "iter": 310000, "salt": "9c560404d9f0802e3f478ba699b2578b", "iv": "64f914b2072125c14f7ae736", "ct": "f790e6162b3678de75f0734fa61ac17816db6dfe2a9981648617f5703351574096030f6d007bd37d3a5d31269167ac205f20d82369683e9e4cfe5b0b4c54b5f3b99285fad9a9a83b262a7853aa925ea36110fc6a7ba5bf7b079b706079cef987a0a91fe829062542acf343c3e0cce74f3e2252f6cc09d6dfe7c3804779e957a86dc6fea48fbde593e31d7e6ff4b289f7e21426b9ccd80c2a2488d1a130518d2cca2b41c8d38c990f971585f6247619eded3248690e4baa06b2a54c2711ef1bded7f213744df2e389296beb00261b69eaf75e54b77ad0262a61f7e090af8ef46d64eaf4d925f8a4cf0b85a255f92688f086edbf37419b7abf438fcf2c954ca22bdbe37209382978861669d9ddc9c29d79fe8d3f67e508c991fda4ae839a0261f8b1c3fafc48f6bf8e94cbc2c789773f31f967fd13ee994a4409c0a2e327954089a87234d6ceb26d89966fa21d988c5f8e64732d073788261b658cd364705bdcaf6960e174910fea9eafee016e001fb26458b436eb4756d0dd7b259d5913085df684a4b684f586f3cb48d2045727b1f403dc24fa4a278638a53234c563e3c16e8e250379b3bebdf2c69ca8f77a7a66f2ea23f5d4a0d48d444a579ea07d652edcd83cdb09fe3b9f07a57b8d69255d14224a11963b355c9e194e63cf8177bb94bc1ce9ed0c8197552982599a5d16eebe2e9ae87acf7e91e5b9828378ecf4ccd0b0f360f01a16d14fc6061599eed184dfd87863c083695c905a33265ba3e6709417", "wiv": "e6a7470da4e5701ced8ee016", "wct": "93b08bbf61a5d151f0a27c723500e5af38adc32c1b1817bc0f77429b33e5d0db41efccbb9af946e34d037c25c1e49993"}</script>
 <script>
 (function(){
   var BLOB=JSON.parse(document.getElementById('blob').textContent);
+  /* ===== 11-19 登录门禁（厂商看板同款作业） ===== */
+  var SEAL_URI = /*__SEAL__*/'data:image/gif;base64,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';
+  var GRACE_KEY = 'decide_gate_grace_v1', GRACE_MS = 30 * 60 * 1000;   // 同一设备 30 分钟免密会话
+  var NAME_KEY = 'decide_gate_name_v1';
+  var ALIAS = {'周红青':'周老师'};          // 姓名别名（与厂商看板口径一致）
+  var ALLOWED = ['周老师'];
+  var __fails = 0, __busy = false;
+  function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function ab(h){var a=new Uint8Array(h.length/2);for(var i=0;i<a.length;i++)a[i]=parseInt(h.substr(i*2,2),16);return a;}
+  function b64e(buf){var u8=new Uint8Array(buf),s='';for(var i=0;i<u8.length;i++)s+=String.fromCharCode(u8[i]);return btoa(s);}
   function pbkdf2(pwd,salt,iter){
     var enc=new TextEncoder();
     return crypto.subtle.importKey('raw',enc.encode(pwd),'PBKDF2',false,['deriveKey']).then(function(k){
       return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:iter,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['decrypt']);
     });
   }
-  function unlock(){
-    var btn=document.getElementById('unlock'),err=document.getElementById('gerr');
-    var pwd=document.getElementById('pwd').value;
-    if(!pwd){err.textContent='请输入密码';return}
-    btn.disabled=true;err.textContent='验证中…';
-    pbkdf2(pwd,ab(BLOB.salt),BLOB.iter).then(function(kek){
-      return crypto.subtle.decrypt({name:'AES-GCM',iv:ab(BLOB.wiv)},kek,ab(BLOB.wct)).then(function(dek){
-        return crypto.subtle.importKey('raw',dek,'AES-GCM',false,['decrypt']).then(function(k){
-          return crypto.subtle.decrypt({name:'AES-GCM',iv:ab(BLOB.iv)},k,ab(BLOB.ct));
+  function gateShow(html){var g=document.getElementById('gate');g.innerHTML=html;g.classList.remove('hide');g.style.display='flex';}
+  function gateHide(){var g=document.getElementById('gate');g.classList.add('hide');setTimeout(function(){g.style.display='none'},250);}
+  function decryptData(dekBuf){
+    return crypto.subtle.importKey('raw',dekBuf,'AES-GCM',false,['decrypt']).then(function(k){
+      return crypto.subtle.decrypt({name:'AES-GCM',iv:ab(BLOB.iv)},k,ab(BLOB.ct));
+    }).then(function(pt){return JSON.parse(new TextDecoder().decode(pt));});
+  }
+  /* 30 分钟免密：本机会话记忆（DEK+时间戳，过期/解密失败即回落密码常态） */
+  function gateBoot(){
+    try{
+      var g=JSON.parse(localStorage.getItem(GRACE_KEY)||'null');
+      if(g&&g.dek&&(Date.now()-g.t)<GRACE_MS){
+        decryptData(ab(g.dek)).then(function(DATA){gateHide();start(DATA);}).catch(function(){
+          localStorage.removeItem(GRACE_KEY);gateLock();
         });
+        return;
+      }
+      localStorage.removeItem(GRACE_KEY);
+    }catch(e){}
+    gateLock();
+  }
+  function gateLock(){
+    var lastName='';
+    try{lastName=localStorage.getItem(NAME_KEY)||'';}catch(e){}
+    gateShow('<div class="gate-card" id="gCard">'
+      +(SEAL_URI?'<img class="gseal" src="'+SEAL_URI+'" alt="" aria-hidden="true">':'')
+      +'<div class="gico">🔐</div>'
+      +'<h2>标讯候选决策</h2>'
+      +'<div class="gsub">授权访问 · 银信标讯看板</div>'
+      +'<div class="gfield"><label>姓名</label><input id="gName" type="text" placeholder="请输入姓名" autocomplete="username" value="'+esc(lastName)+'"></div>'
+      +'<div class="gfield"><label>访问密码</label><input id="gPwd" type="password" placeholder="请输入访问密码" autocomplete="current-password"></div>'
+      +'<button type="button" id="gLogin" class="gbtn">登 录</button>'
+      +'<div class="gerr" id="gErr"></div>'
+      +'<div id="gExtra"></div>'
+      +'<div class="gprog" id="gProg" style="display:none"><span class="spinner"></span>验证中…</div>'
+      +'</div>');
+    var nameEl=document.getElementById('gName'),pwdEl=document.getElementById('gPwd');
+    var go=function(){
+      if(__busy)return;
+      if(!nameEl.value.trim()){nameEl.focus();return;}
+      if(!pwdEl.value){pwdEl.focus();return;}
+      tryUnlock(nameEl.value.trim(),pwdEl.value);
+    };
+    [nameEl,pwdEl].forEach(function(el){el.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();go();}});});
+    document.getElementById('gLogin').addEventListener('click',go);
+    [nameEl,pwdEl].forEach(function(el){el.addEventListener('input',function(){
+      var e2=document.getElementById('gErr');if(e2)e2.textContent='';
+    });});
+    pwdEl.focus();
+  }
+  function failUnlock(msg){
+    __fails++;__busy=false;
+    document.getElementById('gProg').style.display='none';
+    document.getElementById('gName').disabled=false;
+    var pe=document.getElementById('gPwd');pe.disabled=false;
+    document.getElementById('gErr').textContent=msg;
+    var card=document.getElementById('gCard');card.classList.remove('shake');void card.offsetWidth;card.classList.add('shake');
+    if(__fails>=3){
+      document.getElementById('gExtra').innerHTML='<div class="ghint">已连续输错 '+__fails
+        +' 次，请核对姓名与密码（注意大小写）。<br/>如遗忘密码，点下方「重置密码」。</div>'
+        +'<button type="button" class="greset" id="gReset">重置密码</button>';
+      document.getElementById('gReset').addEventListener('click',function(){
+        document.getElementById('gExtra').innerHTML='<div class="ghint">密码重置请联系看板管理员（在 Kimi 会话中说一句话即可重置）；重置后重新打开本页，使用新密码登录。</div>';
       });
-    }).then(function(pt){
-      start(JSON.parse(new TextDecoder().decode(pt)));
+    }
+    pe.focus();pe.setSelectionRange(pe.value.length,pe.value.length);
+  }
+  function tryUnlock(name,pwd){
+    __busy=true;
+    document.getElementById('gErr').textContent='';
+    document.getElementById('gProg').style.display='';
+    document.getElementById('gName').disabled=true;
+    document.getElementById('gPwd').disabled=true;
+    var realName=ALIAS[name]||name;
+    if(ALLOWED.indexOf(realName)<0){failUnlock('姓名未授权');return;}
+    pbkdf2(pwd,ab(BLOB.salt),BLOB.iter).then(function(kek){
+      return crypto.subtle.decrypt({name:'AES-GCM',iv:ab(BLOB.wiv)},kek,ab(BLOB.wct));
+    }).then(function(dek){
+      try{localStorage.setItem(NAME_KEY,name);}catch(e){}
+      try{localStorage.setItem(GRACE_KEY,JSON.stringify({t:Date.now(),dek:b64e(dek)}));}catch(e){}  // 免密会话起算
+      return decryptData(dek);
+    }).then(function(DATA){
+      gateHide();start(DATA);
     }).catch(function(){
-      err.textContent='密码错误或数据已过期';btn.disabled=false;
+      failUnlock('姓名或密码不正确');
     });
   }
-  document.getElementById('unlock').addEventListener('click',unlock);
-  document.getElementById('pwd').addEventListener('keydown',function(e){if(e.key==='Enter')unlock()});
+  document.addEventListener('DOMContentLoaded',gateBoot);
 
 function start(DATA){
-  document.getElementById('gate').style.display='none';
   document.getElementById('app').style.display='block';
   var VALID=DATA.valid_tags||[];
   var decisions={};
   var $=function(id){return document.getElementById(id)};
   $('batch').textContent=DATA.batch+' · '+DATA.items.length+' 条';
-  function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function defaults(){var d={};DATA.items.forEach(function(it){d[it.push_no]={decision:null,tags:it.tags,rec:it.rec}});return d}
   var KEY='decide-'+DATA.batch;
   function persist(){try{localStorage.setItem(KEY,JSON.stringify(decisions))}catch(e){}}

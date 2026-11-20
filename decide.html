@@ -74,11 +74,8 @@
 
 <div class="head"><h1 class="a">标讯候选决策</h1><span class="meta" id="batch"></span></div>
 <div class="tip">编号为台账全局递增编号（非本批序号），历史上已闭环的编号不再显示。点选「纳入 / 不纳入」（本机自动保存，刷新不丢）→ 底部生成决策指令 → 一键复制 → 粘贴到 Kimi「银信标讯」项目对话发送即执行。</div>
-<div class="tbl-wrap"><table class="dl"><thead><tr>
-  <th style="width:44px">编号</th><th>招标单位 / 项目</th><th style="width:76px">预算</th>
-  <th style="width:96px">投标截止</th><th style="width:150px">业务标签</th>
-  <th style="width:118px">投标建议</th><th style="width:132px">决策</th>
-</tr></thead><tbody id="body"></tbody></table></div>
+<div class="tbl-wrap"><table class="dl"><thead><tr><th style="width:44px">编号</th><th>招标单位 / 项目</th><th style="width:76px">预算</th><th style="width:96px">投标截止</th><th style="width:150px">业务标签</th><th style="width:118px">投标建议</th><th style="width:132px">决策</th></tr></thead><tbody id="body"></tbody></table></div>
+<div class="empty" id="empty" style="display:none">本批次暂无待确认候选</div>
 <div class="foot">
   <button class="gen" id="gen">生成决策指令并复制</button>
   <div class="stat" id="stat"></div>
@@ -88,8 +85,88 @@
 </div>
 
 </div>
-<script type="application/json" id="blob">{"v": 1, "iter": 310000, "salt": "2a48ec5783f28e858cac0a616b5ddefe", "iv": "00827c0e8a5552ee6e29619d", "ct": "3901a4e6e26c2f7d8dcf0ac04408910318f23f11fa66d93bdc8ae6cc39f74d39c2b7ceebbb684b2c51b123f10ecbe56066edef846716b30c593e81896a8fc49f1888388a5060da57fd690d3c6d1bf2f97752179f551e472aeab80477e3ed901259af92e460d13dcc0a2f173e1cdc1ffcfd9a789a267573cb6b5fa504d1ab663ea7ba543891ff83d181930b93b7631aeabf2a61f179c6e7a0b3aba31d6c37523c90eff953e3deee57a8dd8c5fb26d5452ca5cff32ef0bf50c6d4d77e46ba0cd7bb643987f291111132fd0be4c95a41acf93a1591b8f20ad778f5f2c07b44ba19f2b17c6fffcd4551b5a833fb592bdb9f06804a34d8ef1beb8a99c72b6ab6f62e1eb2e7baabb1835b9adc89b3fb3bce091c157f4738fb44d3340118d3d317a924f14885445db5c58d03d958b100519c79575dfc1f3f0589ecfb5", "wiv": "8cab8531815bf78a4d76d1ee", "wct": "eb1b94ef7830b36d41f47965bf3a72ceb1e3a26971387142f3fffa64ab335f2a9dd2adf3c8d3ad33d54c8d8b374e7cbc"}</script>
+<script type="application/json" id="blob">{"v": 1, "iter": 310000, "salt": "4da74fe53ad45f14c2a56d22740cc80f", "iv": "da58dc16218d89fdc5b236d6", "ct": "1057f990cecee537fa4f4b6dc00e32cfe371339b142d1c8ed10981e62d1fef507a1165db7a723ee7dcdd721fd216e64d4cc3a729be25cd98805e8732d4882204b97082e7650165975458dd688552a07c9b26c78a218044a475f58c8b461dd7cc5cfc631b08af26a8c506a34610f1311dce07ba8767d569cf0aeb27b085ead0c55f6abb8f48c39ce9ebf647bb4acbbe9527af70349c8339be87f9811104075f55302e7974a6a87744e365c43714dcbedb8e468653cdc5942492d24b83a11b5a8e33e9d2e0a7d4c7b1c22e2251a30654585e0193833544dbe857468d8594c77b5e8bc2b1221ea6e87bb56ce115596136b27eb92151b10774d88ec2237ee6aa7d05671687deebddca798989e43604eda015a48c9ffb3146349b15d3d69136da0754df694e12af33df0a23186567b5de23d7fd3e7e82b17a63c006", "wiv": "0b57630e820a360e7536e6ca", "wct": "6a1158a7bbc6a843bc6cf761447527b75da78831055b4c4fc04b0f12df6198c144a3b47a889527e0f4dcc5ee4f9907ad"}</script>
 <script>
+
+window.DecisionCore = {
+  create: function(opts){
+    var DATA = opts.data, VALID = DATA.valid_tags || [];
+    var decisions = {}, persistFn = opts.persist || function(){}, onStat = opts.onStat || function(){};
+    var bodyEl = typeof opts.body === 'string' ? document.getElementById(opts.body) : opts.body;
+    function esc(x){ return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}); }
+    function defaults(){ var d={}; DATA.items.forEach(function(it){ d[it.push_no]={decision:null,tags:it.tags,rec:it.rec}; }); return d; }
+    function splitTags(s){ return String(s||'').split(/[,，、;；\s]+/).map(function(t){return t.trim()}).filter(Boolean); }
+    function tagError(s){
+      var ts = splitTags(s);
+      if (ts.length > 3) return '最多 3 个标签';
+      for (var i=0;i<ts.length;i++){ if (VALID.length && VALID.indexOf(ts[i])<0) return '「'+ts[i]+'」不在标签库'; }
+      return '';
+    }
+    function get(){ return decisions; }
+    function updateStat(){ var n=Object.keys(decisions).filter(function(k){return decisions[k].decision}).length; onStat(n, DATA.items.length); }
+    function render(){
+      if (!DATA.items.length){ bodyEl.innerHTML=''; updateStat(); return; }
+      var dl = '<datalist id="taglib">'+VALID.map(function(t){return '<option value="'+esc(t)+'">'}).join('')+'</datalist>';
+      var h = dl;
+      DATA.items.forEach(function(it){
+        var d = decisions[it.push_no] || (decisions[it.push_no]={decision:null,tags:it.tags,rec:it.rec});
+        var te = tagError(d.tags);
+        h += '<tr data-no="'+it.push_no+'">'
+          + '<td class="num">'+esc(it.push_no)+'</td>'
+          + '<td><div class="co">'+esc(it.company)+'</div><div class="pj">'+esc(it.project)+'</div></td>'
+          + '<td class="num">'+esc(it.budget)+'</td>'
+          + '<td class="num">'+esc(it.deadline)+'</td>'
+          + '<td><input list="taglib" placeholder="最多3个，逗号分隔" class="tag-in'+(te?' bad':'')+'" data-no="'+it.push_no+'" value="'+esc(d.tags)+'"/>'
+          + (te?'<div class="tag-err">'+esc(te)+'</div>':'')+'</td>'
+          + '<td><select class="rec-sel" data-no="'+it.push_no+'">'
+          + ["强烈建议投标", "建议投标", "可关注"].map(function(r){return '<option'+(r===d.rec?' selected':'')+'>'+r+'</option>'}).join('')
+          + '</select></td>'
+          + '<td><div class="rec-seg">'
+          + '<button type="button" class="chip pos" data-no="'+it.push_no+'" data-v="纳入" aria-pressed="'+(d.decision==='纳入')+'">纳入</button>'
+          + '<button type="button" class="chip neg" data-no="'+it.push_no+'" data-v="不纳入" aria-pressed="'+(d.decision==='不纳入')+'">不纳入</button>'
+          + '</div></td></tr>';
+      });
+      bodyEl.innerHTML = h;
+      bodyEl.querySelectorAll('.chip').forEach(function(c){
+        c.addEventListener('click', function(){
+          var no = +c.dataset.no;
+          decisions[no].decision = (decisions[no].decision===c.dataset.v) ? null : c.dataset.v;
+          persistFn(decisions); updateStat();
+          c.closest('tr').querySelectorAll('.chip').forEach(function(x){
+            x.setAttribute('aria-pressed', decisions[no].decision===x.dataset.v ? 'true':'false');
+          });
+        });
+      });
+      bodyEl.querySelectorAll('.tag-in').forEach(function(t){
+        t.addEventListener('input', function(){ decisions[+t.dataset.no].tags=t.value; persistFn(decisions); });
+        t.addEventListener('change', function(){ decisions[+t.dataset.no].tags=t.value.trim(); persistFn(decisions); render(); });
+        t.addEventListener('blur', function(){ render(); });
+      });
+      bodyEl.querySelectorAll('.rec-sel').forEach(function(sel){
+        sel.addEventListener('change', function(){ decisions[+sel.dataset.no].rec=sel.value; persistFn(decisions); updateStat(); });
+      });
+      updateStat();
+    }
+    // 收集提交载荷；errors 非空时禁止提交
+    function collect(){
+      var ds=[], errs=[];
+      DATA.items.forEach(function(it){
+        var d = decisions[it.push_no]; if (!d || !d.decision) return;
+        var te = tagError(d.tags);
+        if (te){ errs.push('第'+it.push_no+'行：'+te); return; }
+        ds.push({push_no:it.push_no, decision:d.decision, tags:splitTags(d.tags).join(','), rec:d.rec});
+      });
+      return {list:ds, errors:errs};
+    }
+    return {
+      render: render, collect: collect, get: get,
+      snapshot: function(){ return JSON.parse(JSON.stringify(decisions)); },
+      restore: function(saved){ decisions = (saved && typeof saved==='object') ? saved : defaults(); render(); persistFn(decisions); },
+      reset: function(){ decisions = defaults(); render(); persistFn(decisions); }
+    };
+  }
+};
+
 
 (function(){
   var BLOB=JSON.parse(document.getElementById('blob').textContent);
@@ -200,78 +277,36 @@
 
 
 function start(DATA){
-  document.getElementById('app').style.display='block';
-  var VALID=DATA.valid_tags||[];
-  var decisions={};
+  var appEl=document.getElementById('app'); if(appEl) appEl.style.display='block';
   var $=function(id){return document.getElementById(id)};
   $('batch').textContent=DATA.batch+' 批次 · '+DATA.items.length+' 条候选';
-
-  function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-  function defaults(){var d={};DATA.items.forEach(function(it){d[it.push_no]={decision:null,tags:it.tags,rec:it.rec}});return d}
   var KEY='decide-'+DATA.batch;
-  function persist(){try{localStorage.setItem(KEY,JSON.stringify(decisions))}catch(e){}}
-  function restore(){try{var v=localStorage.getItem(KEY);if(v){decisions=JSON.parse(v);return}}catch(e){}decisions=defaults()}
-  function splitTags(s){return String(s||'').split(/[,，、;；\s]+/).map(function(t){return t.trim()}).filter(Boolean)}
-  function tagError(s){var ts=splitTags(s);if(ts.length>3)return '最多3个标签';for(var i=0;i<ts.length;i++){if(VALID.length&&VALID.indexOf(ts[i])<0)return '「'+ts[i]+'」不在标签库'}return ''}
-  function stat(){var n=Object.keys(decisions).filter(function(k){return decisions[k].decision}).length;$('stat').textContent='已决 '+n+' / '+DATA.items.length+' 条（本机自动保存）'}
-  function render(){
-    var B=$('body');
-    if(!DATA.items.length){B.parentNode.parentNode.innerHTML='<div class="empty">本批次暂无待确认候选</div>';stat();return}
-    var dl='<datalist id="taglib">'+VALID.map(function(t){return '<option value="'+esc(t)+'">'}).join('')+'</datalist>';
-    var h='';
-    DATA.items.forEach(function(it){
-      var d=decisions[it.push_no]||(decisions[it.push_no]={decision:null,tags:it.tags,rec:it.rec});
-      var te=tagError(d.tags);
-      h+='<tr>'
-        +'<td class="num">'+it.push_no+'</td>'
-        +'<td><div class="co">'+esc(it.company)+'</div><div class="pj">'+esc(it.project)+'</div></td>'
-        +'<td class="kv">'+esc(it.budget)+'</td>'
-        +'<td class="kv">'+esc(it.deadline)+'</td>'
-        +'<td><input list="taglib" class="tag-in'+(te?' bad':'')+'" data-no="'+it.push_no+'" value="'+esc(d.tags)+'" placeholder="最多3个，逗号分隔"/>'
-        +(te?'<div class="tag-err">'+esc(te)+'</div>':'')+'</td>'
-        +'<td><select class="rec-sel" data-no="'+it.push_no+'">'
-        +['强烈建议投标','建议投标','可关注'].map(function(r){return '<option'+(r===d.rec?' selected':'')+'>'+r+'</option>'}).join('')
-        +'</select></td>'
-        +'<td><div class="rec-seg">'
-        +'<button type="button" class="chip pos" data-no="'+it.push_no+'" data-v="纳入" aria-pressed="'+(d.decision==='纳入')+'">纳入</button>'
-        +'<button type="button" class="chip neg" data-no="'+it.push_no+'" data-v="不纳入" aria-pressed="'+(d.decision==='不纳入')+'">不纳入</button>'
-        +'</div></td></tr>';
-    });
-    B.innerHTML=dl+h;
-    B.querySelectorAll('.chip').forEach(function(c){
-      c.addEventListener('click',function(){
-        var no=+c.dataset.no;
-        decisions[no].decision=(decisions[no].decision===c.dataset.v)?null:c.dataset.v;
-        persist();stat();
-        c.closest('tr').querySelectorAll('.chip').forEach(function(x){
-          x.setAttribute('aria-pressed',decisions[no].decision===x.dataset.v?'true':'false');
-        });
-      });
-    });
-    B.querySelectorAll('.tag-in').forEach(function(t){
-      t.addEventListener('input',function(){decisions[+t.dataset.no].tags=t.value;persist()});
-      t.addEventListener('change',function(){decisions[+t.dataset.no].tags=t.value.trim();persist();render()});
-      t.addEventListener('blur',function(){render()});
-    });
-    B.querySelectorAll('.rec-sel').forEach(function(sel){
-      sel.addEventListener('change',function(){decisions[+sel.dataset.no].rec=sel.value;persist()});
-    });
-    stat();
+  var core=window.DecisionCore.create({
+    data:DATA, body:'body',
+    persist:function(d){ try{localStorage.setItem(KEY,JSON.stringify(d))}catch(e){} },
+    onStat:function(n,t){ $('stat').textContent='已决 '+n+' / '+t+' 条（本机自动保存）' }
+  });
+  (function(){ try{ var v=localStorage.getItem(KEY); if(v){ core.restore(JSON.parse(v)); return } }catch(e){} core.reset(); })();
+  if(!DATA.items.length){
+    document.querySelector('.tbl-wrap').style.display='none';
+    $('empty').style.display='block';
+    $('gen').disabled=true;
+    $('stat').textContent='本批次无需决策';
   }
   $('gen').addEventListener('click',function(){
-    var parts=[],errs=[];
-    DATA.items.forEach(function(it){
-      var d=decisions[it.push_no];if(!d||!d.decision)return;
-      var te=tagError(d.tags);
-      if(te){errs.push('第'+it.push_no+'行 '+it.company+'：'+te);return}
-      var s=it.push_no+(d.decision==='纳入'?'纳入':'不纳入');
-      var ts=splitTags(d.tags),orig=splitTags(it.tags);
+    var r=core.collect();
+    if(r.errors.length){ $('msg').className='msg err'; $('msg').innerHTML=r.errors.join('<br/>'); return }
+    if(!r.list.length){ $('msg').className='msg err'; $('msg').textContent='请先点选至少一条'; return }
+    var byNo={}; DATA.items.forEach(function(it){ byNo[it.push_no]=it });
+    var parts=r.list.map(function(d){
+      var it=byNo[d.push_no];
+      var s=d.push_no+(d.decision==='纳入'?'纳入':'不纳入');
+      var ts=String(d.tags||'').split(',').filter(Boolean);
+      var orig=String(it.tags||'').split(/[,，、;；\s]+/).map(function(t){return t.trim()}).filter(Boolean);
       if(ts.join()!==orig.join())s+='（标签：'+ts.join('、')+'）';
       if(d.rec!==it.rec)s+='（建议：'+d.rec+'）';
-      parts.push(s);
+      return s;
     });
-    if(errs.length){$('msg').className='msg err';$('msg').innerHTML=errs.join('<br/>');return}
-    if(!parts.length){$('msg').className='msg err';$('msg').textContent='请先点选至少一条';return}
     var txt='【候选决策 '+DATA.batch+'】'+parts.join('；');
     $('out').style.display='block';$('out').value=txt;$('copybtn').style.display='block';
     if(navigator.clipboard&&navigator.clipboard.writeText){
@@ -290,7 +325,6 @@ function start(DATA){
       });
     }else{$('out').select();document.execCommand&&document.execCommand('copy');okMsg('已复制（兼容模式），请到 Kimi 对话粘贴发送')}
   });
-  restore();render();
 }
 
 })();

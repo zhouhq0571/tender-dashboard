@@ -18,6 +18,10 @@
 import json, datetime, base64
 from pathlib import Path
 
+# 2026-11-20 与侧栏「标讯晨报·决策一体」组件同源：数据/列序/交互状态机全部收敛到
+# decision_core.py（契约见其文件头）；本文件只做网页适配（localStorage 草稿+指令生成+加密门禁）。
+import decision_core
+
 BIDDING = Path("/Users/zhouhq/Documents/kimi/workspace/bidding-daily")
 OUT = BIDDING / "decide.html"
 SEAL = BIDDING / "gate" / "seal.gif"   # 11-19 个人签章（与厂商看板同源 seal.gif 的本地副本）
@@ -66,11 +70,8 @@ APP_CSS = r'''
 APP_HTML = r'''
 <div class="head"><h1 class="a">标讯候选决策</h1><span class="meta" id="batch"></span></div>
 <div class="tip">编号为台账全局递增编号（非本批序号），历史上已闭环的编号不再显示。点选「纳入 / 不纳入」（本机自动保存，刷新不丢）→ 底部生成决策指令 → 一键复制 → 粘贴到 Kimi「银信标讯」项目对话发送即执行。</div>
-<div class="tbl-wrap"><table class="dl"><thead><tr>
-  <th style="width:44px">编号</th><th>招标单位 / 项目</th><th style="width:76px">预算</th>
-  <th style="width:96px">投标截止</th><th style="width:150px">业务标签</th>
-  <th style="width:118px">投标建议</th><th style="width:132px">决策</th>
-</tr></thead><tbody id="body"></tbody></table></div>
+<div class="tbl-wrap"><table class="dl">__HEAD__<tbody id="body"></tbody></table></div>
+<div class="empty" id="empty" style="display:none">本批次暂无待确认候选</div>
 <div class="foot">
   <button class="gen" id="gen">生成决策指令并复制</button>
   <div class="stat" id="stat"></div>
@@ -82,78 +83,36 @@ APP_HTML = r'''
 
 APP_JS = r'''
 function start(DATA){
-  document.getElementById('app').style.display='block';
-  var VALID=DATA.valid_tags||[];
-  var decisions={};
+  var appEl=document.getElementById('app'); if(appEl) appEl.style.display='block';
   var $=function(id){return document.getElementById(id)};
   $('batch').textContent=DATA.batch+' 批次 · '+DATA.items.length+' 条候选';
-
-  function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-  function defaults(){var d={};DATA.items.forEach(function(it){d[it.push_no]={decision:null,tags:it.tags,rec:it.rec}});return d}
   var KEY='decide-'+DATA.batch;
-  function persist(){try{localStorage.setItem(KEY,JSON.stringify(decisions))}catch(e){}}
-  function restore(){try{var v=localStorage.getItem(KEY);if(v){decisions=JSON.parse(v);return}}catch(e){}decisions=defaults()}
-  function splitTags(s){return String(s||'').split(/[,，、;；\s]+/).map(function(t){return t.trim()}).filter(Boolean)}
-  function tagError(s){var ts=splitTags(s);if(ts.length>3)return '最多3个标签';for(var i=0;i<ts.length;i++){if(VALID.length&&VALID.indexOf(ts[i])<0)return '「'+ts[i]+'」不在标签库'}return ''}
-  function stat(){var n=Object.keys(decisions).filter(function(k){return decisions[k].decision}).length;$('stat').textContent='已决 '+n+' / '+DATA.items.length+' 条（本机自动保存）'}
-  function render(){
-    var B=$('body');
-    if(!DATA.items.length){B.parentNode.parentNode.innerHTML='<div class="empty">本批次暂无待确认候选</div>';stat();return}
-    var dl='<datalist id="taglib">'+VALID.map(function(t){return '<option value="'+esc(t)+'">'}).join('')+'</datalist>';
-    var h='';
-    DATA.items.forEach(function(it){
-      var d=decisions[it.push_no]||(decisions[it.push_no]={decision:null,tags:it.tags,rec:it.rec});
-      var te=tagError(d.tags);
-      h+='<tr>'
-        +'<td class="num">'+it.push_no+'</td>'
-        +'<td><div class="co">'+esc(it.company)+'</div><div class="pj">'+esc(it.project)+'</div></td>'
-        +'<td class="kv">'+esc(it.budget)+'</td>'
-        +'<td class="kv">'+esc(it.deadline)+'</td>'
-        +'<td><input list="taglib" class="tag-in'+(te?' bad':'')+'" data-no="'+it.push_no+'" value="'+esc(d.tags)+'" placeholder="最多3个，逗号分隔"/>'
-        +(te?'<div class="tag-err">'+esc(te)+'</div>':'')+'</td>'
-        +'<td><select class="rec-sel" data-no="'+it.push_no+'">'
-        +['强烈建议投标','建议投标','可关注'].map(function(r){return '<option'+(r===d.rec?' selected':'')+'>'+r+'</option>'}).join('')
-        +'</select></td>'
-        +'<td><div class="rec-seg">'
-        +'<button type="button" class="chip pos" data-no="'+it.push_no+'" data-v="纳入" aria-pressed="'+(d.decision==='纳入')+'">纳入</button>'
-        +'<button type="button" class="chip neg" data-no="'+it.push_no+'" data-v="不纳入" aria-pressed="'+(d.decision==='不纳入')+'">不纳入</button>'
-        +'</div></td></tr>';
-    });
-    B.innerHTML=dl+h;
-    B.querySelectorAll('.chip').forEach(function(c){
-      c.addEventListener('click',function(){
-        var no=+c.dataset.no;
-        decisions[no].decision=(decisions[no].decision===c.dataset.v)?null:c.dataset.v;
-        persist();stat();
-        c.closest('tr').querySelectorAll('.chip').forEach(function(x){
-          x.setAttribute('aria-pressed',decisions[no].decision===x.dataset.v?'true':'false');
-        });
-      });
-    });
-    B.querySelectorAll('.tag-in').forEach(function(t){
-      t.addEventListener('input',function(){decisions[+t.dataset.no].tags=t.value;persist()});
-      t.addEventListener('change',function(){decisions[+t.dataset.no].tags=t.value.trim();persist();render()});
-      t.addEventListener('blur',function(){render()});
-    });
-    B.querySelectorAll('.rec-sel').forEach(function(sel){
-      sel.addEventListener('change',function(){decisions[+sel.dataset.no].rec=sel.value;persist()});
-    });
-    stat();
+  var core=window.DecisionCore.create({
+    data:DATA, body:'body',
+    persist:function(d){ try{localStorage.setItem(KEY,JSON.stringify(d))}catch(e){} },
+    onStat:function(n,t){ $('stat').textContent='已决 '+n+' / '+t+' 条（本机自动保存）' }
+  });
+  (function(){ try{ var v=localStorage.getItem(KEY); if(v){ core.restore(JSON.parse(v)); return } }catch(e){} core.reset(); })();
+  if(!DATA.items.length){
+    document.querySelector('.tbl-wrap').style.display='none';
+    $('empty').style.display='block';
+    $('gen').disabled=true;
+    $('stat').textContent='本批次无需决策';
   }
   $('gen').addEventListener('click',function(){
-    var parts=[],errs=[];
-    DATA.items.forEach(function(it){
-      var d=decisions[it.push_no];if(!d||!d.decision)return;
-      var te=tagError(d.tags);
-      if(te){errs.push('第'+it.push_no+'行 '+it.company+'：'+te);return}
-      var s=it.push_no+(d.decision==='纳入'?'纳入':'不纳入');
-      var ts=splitTags(d.tags),orig=splitTags(it.tags);
+    var r=core.collect();
+    if(r.errors.length){ $('msg').className='msg err'; $('msg').innerHTML=r.errors.join('<br/>'); return }
+    if(!r.list.length){ $('msg').className='msg err'; $('msg').textContent='请先点选至少一条'; return }
+    var byNo={}; DATA.items.forEach(function(it){ byNo[it.push_no]=it });
+    var parts=r.list.map(function(d){
+      var it=byNo[d.push_no];
+      var s=d.push_no+(d.decision==='纳入'?'纳入':'不纳入');
+      var ts=String(d.tags||'').split(',').filter(Boolean);
+      var orig=String(it.tags||'').split(/[,，、;；\s]+/).map(function(t){return t.trim()}).filter(Boolean);
       if(ts.join()!==orig.join())s+='（标签：'+ts.join('、')+'）';
       if(d.rec!==it.rec)s+='（建议：'+d.rec+'）';
-      parts.push(s);
+      return s;
     });
-    if(errs.length){$('msg').className='msg err';$('msg').innerHTML=errs.join('<br/>');return}
-    if(!parts.length){$('msg').className='msg err';$('msg').textContent='请先点选至少一条';return}
     var txt='【候选决策 '+DATA.batch+'】'+parts.join('；');
     $('out').style.display='block';$('out').value=txt;$('copybtn').style.display='block';
     if(navigator.clipboard&&navigator.clipboard.writeText){
@@ -172,7 +131,6 @@ function start(DATA){
       });
     }else{$('out').select();document.execCommand&&document.execCommand('copy');okMsg('已复制（兼容模式），请到 Kimi 对话粘贴发送')}
   });
-  restore();render();
 }
 '''
 
@@ -322,6 +280,7 @@ __APP_HTML__
 </div>
 <script type="application/json" id="blob">__BLOB__</script>
 <script>
+__CORE_JS__
 __GATE_JS__
 __APP_JS__
 })();
@@ -341,9 +300,11 @@ OPEN_HTML = r'''<!DOCTYPE html>
 __APP_HTML__
 <script type="application/json" id="cand-data">__DATA__</script>
 <script>
+__CORE_JS__
 (function(){
   var DATA=JSON.parse(document.getElementById('cand-data').textContent);
 __APP_JS__
+start(DATA);
 })();
 </script>
 </body>
@@ -364,25 +325,20 @@ __GATE_HTML__
 </html>'''
 
 
+def head_html():
+    """共用列序契约 + 网页版列宽（列序以 decision_core.COLUMNS 为准，宽度和样式本地定）。"""
+    widths = ["44px", None, "76px", "96px", "150px", "118px", "132px"]
+    ths = []
+    for c, w in zip(decision_core.COLUMNS, widths):
+        ths.append(f'<th{f" style=\"width:{w}\"" if w else ""}>{c}</th>')
+    return "<thead><tr>" + "".join(ths) + "</tr></thead>"
+
+
 def main():
-    batch = datetime.date.today().isoformat()
-    items = []
-    p = BIDDING / "pending_candidates.json"
-    if p.exists():
-        for e in json.loads(p.read_text(encoding="utf-8")):
-            if e.get("status") == "待确认":
-                items.append({"push_no": e.get("push_no"), "company": e.get("company", ""),
-                              "project": e.get("project", ""), "budget": e.get("budget", "-"),
-                              "deadline": e.get("deadline", ""), "tags": e.get("tags", ""),
-                              "rec": e.get("rec", "可关注")})
-    try:
-        import importlib.util as vu
-        vs = vu.spec_from_file_location("cfg", str(BIDDING / "config.py"))
-        vm = vu.module_from_spec(vs); vs.loader.exec_module(vm)
-        valid = sorted(getattr(vm, "VALID_TAGS", []))
-    except Exception:
-        valid = []
-    data = json.dumps({"batch": batch, "items": items, "valid_tags": valid}, ensure_ascii=False)
+    data = decision_core.build_data()
+    items = data["items"]
+    batch = data["batch"]
+    app_html = APP_HTML.replace("__HEAD__", head_html())
     pwd = load_pwd()
     if pwd:
         import os, hashlib
@@ -391,7 +347,7 @@ def main():
         dek = os.urandom(32); salt = os.urandom(16)
         kek = hashlib.pbkdf2_hmac('sha256', pwd.encode(), salt, ITER, dklen=32)
         iv = os.urandom(12)
-        ct = AESGCM(dek).encrypt(iv, data.encode(), None)
+        ct = AESGCM(dek).encrypt(iv, json.dumps(data, ensure_ascii=False).encode(), None)
         wiv = os.urandom(12)
         wct = AESGCM(kek).encrypt(wiv, dek, None)
         blob = {"v":1,"iter":ITER,"salt":salt.hex(),"iv":iv.hex(),"ct":ct.hex(),"wiv":wiv.hex(),"wct":wct.hex()}
@@ -400,18 +356,20 @@ def main():
         page = (GATED_HTML.replace("__GATE_CSS__", GATE_CSS)
                           .replace("__APP_CSS__", APP_CSS)
                           .replace("__GATE_HTML__", GATE_HTML)
-                          .replace("__APP_HTML__", APP_HTML)
+                          .replace("__APP_HTML__", app_html)
                           .replace("__GATE_JS__", GATE_JS)
                           .replace("__APP_JS__", APP_JS)
+                          .replace("__CORE_JS__", decision_core.CORE_JS)
                           .replace("__BLOB__", payload)
                           .replace("/*__SEAL__*/''", "/*__SEAL__*/'" + seal_uri + "'"))
         OUT.write_text(page, encoding="utf-8")
         print(f"decide.html written (GATED): {len(items)} items, batch {batch}")
     else:
         page = (OPEN_HTML.replace("__APP_CSS__", APP_CSS)
-                         .replace("__APP_HTML__", APP_HTML)
+                         .replace("__APP_HTML__", app_html)
                          .replace("__APP_JS__", APP_JS)
-                         .replace("__DATA__", data.replace("</", "<\\/")))
+                         .replace("__CORE_JS__", decision_core.CORE_JS)
+                         .replace("__DATA__", decision_core.data_json(data)))
         OUT.write_text(page, encoding="utf-8")
         print(f"decide.html written (OPEN): {len(items)} items, batch {batch} — 未设密码！写 .decide_pwd 后重建即为加密版")
 

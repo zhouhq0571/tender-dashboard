@@ -39,6 +39,15 @@
   .head { display:flex; justify-content:space-between; align-items:baseline; margin:4px 2px 12px; flex-wrap:wrap; gap:4px; }
   h1.a { font-size:18px; }
   .meta { font-size:12px; color:#888; }
+  .meta2 { font-size:11.5px; color:#a0a8b5; margin:-6px 2px 10px; }
+  /* 与晨报组件同款 KPI 条（卡片样式本地适配，数字口径同源） */
+  .kpi-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:0 2px 10px; }
+  .kpi { background:#fff; border:1px solid #eceff3; border-radius:10px; padding:10px 6px; text-align:center; }
+  .kpi b { display:block; font-size:19px; font-weight:700; color:#1b2433; font-variant-numeric:tabular-nums; }
+  .kpi span { font-size:11px; color:#8a94a6; }
+  .kpi.ok b { color:#2e9e5b; }
+  .kpi.warn b { color:#d5883f; }
+  @media (max-width:640px){ .kpi-strip{grid-template-columns:repeat(2,1fr)} }
   .tip { font-size:12px; color:#999; margin:0 2px 12px; line-height:1.7; }
   .tbl-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
   table.dl { width:100%; border-collapse:collapse; font-size:13px; background:#fff; }
@@ -73,6 +82,14 @@
 <div id="app">
 
 <div class="head"><h1 class="a">标讯候选决策</h1><span class="meta" id="batch"></span></div>
+<!-- 2026-11-21 与「标讯晨报」侧栏看板同口径状态条：数字一律由 build 时从台账/晨报元数据动态取，杜绝两份 UI 各自演进 -->
+<div class="kpi-strip" id="kpiStrip">
+  <div class="kpi"><b id="kpiProposed">–</b><span>初选候选</span></div>
+  <div class="kpi ok"><b id="kpiAdopted">–</b><span>已采纳上板</span></div>
+  <div class="kpi warn"><b id="kpiPending">–</b><span>待决策</span></div>
+  <div class="kpi"><b id="kpiBoard">–</b><span>看板项目</span></div>
+</div>
+<div class="meta2" id="boardMeta"></div>
 <div class="tip">编号为台账全局递增编号（非本批序号），历史上已闭环的编号不再显示。点选「纳入 / 不纳入」（本机自动保存，刷新不丢）→ 底部生成决策指令 → 一键复制 → 粘贴到 Kimi「银信标讯」项目对话发送即执行。</div>
 <div class="tbl-wrap"><table class="dl"><thead><tr><th style="width:44px">编号</th><th>招标单位 / 项目</th><th style="width:76px">预算</th><th style="width:96px">投标截止</th><th style="width:150px">业务标签</th><th style="width:118px">投标建议</th><th style="width:132px">决策</th></tr></thead><tbody id="body"></tbody></table></div>
 <div class="empty" id="empty" style="display:none">本批次暂无待确认候选</div>
@@ -85,7 +102,7 @@
 </div>
 
 </div>
-<script type="application/json" id="blob">{"v": 1, "iter": 310000, "salt": "a24749d8cddd3fa92d9be0d49f3c531d", "iv": "9466bf4f24662fec0a71068d", "ct": "e218c2562710aa29ff4da08fd8cf9106206d48024225fa19e2e5ed51160d3f28363a3fb050137125acead2f03e6ee988d02ad3a64ca96a524a3ac19277d7a2891e159ad6ce3ad3677deb44ac5fd810c4c31e57cab7573e0e5e401b4a29d40c9c5fd7449c37bf9ab0e53e0d22316177872b237437b3d4cc3040a8264d52218297d25d85f1f8342da8e0c7d962792ced83ad95e6aac15e41bfbb04d645e1640ec3b6bf317e78367690e3a10845704467b5a43bf89c5a4f0402089591f6a455a4d25f97c50062018e3a6becbce5b4e08c7fb70944b26841f8e55ab6b270fd4477284950962399fb7d08303ae5d281028a0068549ec4369221a3d10fdcb112c0688015f39a2b4abbc2444bbed7003668fa2594cbb7e4fc205bf03351b08cd2e823e6b450d994c874f56da27b6417ca3aaf4f7a090f883e4e3314dd", "wiv": "8d10ab71570e635ac6a93a96", "wct": "d8b5398215fae6047d92356e6dc98fecf1b34195ec99c35494fa8db1d373907ee106235a1fbec151b1b4c06b1df6c536"}</script>
+<script type="application/json" id="blob">{"v": 1, "iter": 310000, "salt": "53ef66348feeafb4f7a5cd0d5d3a9c99", "iv": "08040e19d12ca8b83c172dd4", "ct": "e2a157949a2bb314f4ab25b033e1a7efed7cadcb7663ed90f5b708891d11c471c7342d3835bd7ffe496c0f0f1bd705a7828ab2a42d3bef8ff160656906538840e6481e2f8e7cca1323ee3b26f1e3523b4fc29aaf18fe95932f04431425b06e9441396b41b57c355e2b44e5dd7935291b8f1a6ba92b69c294fb5965ebe70b3d6ca67c76734b68dac150d3bc660a1ff1acaec6139c5af31f7e63863892f70a3ed047be83414ad151b62c64f2737f8b7393db16f20d7bc48fda4432df4fea3aea55a05999bdfb133a643a822f485dbc4f46067bc0a09b5d41484e4816aeafb77b26f6c5288bb0e87a6509c06fb9b4b514c93e9d6df9ea9030e5b4eff858613056690f21e271442be5a6091bc999d79d240bb24c6a324e7291f2cb02aa533431794e985d865800fcf62c6bf5f5a743ea38639467a0ea86596700d35efb64a67f03bd274c118ccf419c5abce0855e8fe6ccf33b738d706e1da1109c0cb910f1073f1e6be0353321645426ef8776865d5d54539560efff2e675496f140f1b8adc910a37c317f3ac95a8526ab6e9c482c8fa0d78d98e56e7245bf2a5f2963a5aeadfc6a046efc56927c8e3dbb74f01b02d88141c824ada735213a00846df0e749c89d03", "wiv": "12b6cf14568735d3a9e025a3", "wct": "af59489023b8d2d1db2f8a4d872f357fa84186c72fd35db9799d3433a580477e640096d1462c8f755f90cccd3a12f5ac"}</script>
 <script>
 
 window.DecisionCore = {
@@ -280,6 +297,14 @@ function start(DATA){
   var appEl=document.getElementById('app'); if(appEl) appEl.style.display='block';
   var $=function(id){return document.getElementById(id)};
   $('batch').textContent=DATA.batch+' 批次 · '+DATA.items.length+' 条候选';
+  (function(){ /* 与晨报同口径 KPI 状态条 */
+    var L=DATA.loop; if(!L){document.getElementById('kpiStrip').style.display='none';return}
+    var set=function(id,v){document.getElementById(id).textContent=(v==null?'–':v)};
+    set('kpiProposed',L.proposed);set('kpiAdopted',L.adopted);set('kpiPending',L.pending);set('kpiBoard',L.board_total);
+    var bm=document.getElementById('boardMeta');
+    if(L.board_version){bm.textContent='看板 '+L.board_version+(L.board_total!=null?' · '+L.board_total+' 个项目':'')+(L.board_date?' · '+L.board_date+' 更新':'')}
+    else{bm.style.display='none'}
+  })();
   var KEY='decide-'+DATA.batch;
   var core=window.DecisionCore.create({
     data:DATA, body:'body',

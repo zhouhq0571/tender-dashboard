@@ -1,5 +1,5 @@
 {
- "version": "v444",
+ "version": "v445",
  "date": "2026年11月24日",
  "timePeriod": "凌晨",
  "total": 81,
@@ -72,7 +72,7 @@
  ],
  "removed_count": 16,
  "removed_note": "删除16条（deadline≤11-21）；6条今日（11-23）截止标记「☆☆☆ 已截止」保留",
- "candidates": 0,
+ "candidates": 5,
  "pending_fill_count": 0,
  "filled_recent": [],
  "other_note": "周一窗口近4天；sweep 后台一次完成（fresh 26）；嘉兴银行数据安全监测平台按安全类口径排除、中信信托ARM笔记本纯硬件排除；候选10条达标未触发升级；decide.html 已重建（10条，批次2026-11-23）；组件三判据验收全过（晨报含v439、候选待确认10=pending 10、批次当日、双组件mtime当次）",

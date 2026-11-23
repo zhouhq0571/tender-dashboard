@@ -1,23 +1,89 @@
 {
-  "version": "v439",
-  "date": "2026年11月23日",
-  "timePeriod": "凌晨",
-  "total": 74,
-  "added": [],
-  "removed_count": 16,
-  "removed_note": "删除16条（deadline≤11-21）；6条今日（11-23）截止标记「☆☆☆ 已截止」保留",
-  "candidates": 10,
-  "pending_fill_count": 0,
-  "filled_recent": [],
-  "other_note": "周一窗口近4天；sweep 后台一次完成（fresh 26）；嘉兴银行数据安全监测平台按安全类口径排除、中信信托ARM笔记本纯硬件排除；候选10条达标未触发升级；decide.html 已重建（10条，批次2026-11-23）；组件三判据验收全过（晨报含v439、候选待确认10=pending 10、批次当日、双组件mtime当次）",
-  "channel_stats": {
-    "date": "2026-11-23",
-    "added_total": 0,
-    "by_channel": {
-      "search": 0,
-      "user_url": 0,
-      "user_excel": 0,
-      "user_screenshot": 0
-    }
+ "version": "v442",
+ "date": "2026年11月23日",
+ "timePeriod": "中午",
+ "total": 81,
+ "added": [
+  {
+   "company": "光大理财",
+   "project": "光大理财估值核算系统信创改造项目",
+   "budget": "-",
+   "deadline": "2026-11-27",
+   "tags": [
+    "资产管理"
+   ]
+  },
+  {
+   "company": "中信信托",
+   "project": "中信信托文档中台采购项目",
+   "budget": "-",
+   "deadline": "2026-12-08",
+   "tags": [
+    "其他"
+   ]
+  },
+  {
+   "company": "中信信托",
+   "project": "中信信托电子传真信创改造项目",
+   "budget": "-",
+   "deadline": "2026-12-08",
+   "tags": [
+    "信创"
+   ]
+  },
+  {
+   "company": "中信信托",
+   "project": "中信信托综合业务报表管理系统2026年建设项目",
+   "budget": "-",
+   "deadline": "2026-12-09",
+   "tags": [
+    "资产管理",
+    "数据平台"
+   ]
+  },
+  {
+   "company": "中信信托",
+   "project": "中信信托关联交易系统2026年改造项目",
+   "budget": "-",
+   "deadline": "2026-12-09",
+   "tags": [
+    "资产管理",
+    "风控合规"
+   ]
+  },
+  {
+   "company": "北京银行",
+   "project": "北京银行2026年资产托管系统优化升级二期项目",
+   "budget": "-",
+   "deadline": "2026-12-01 09:30",
+   "tags": [
+    "资产托管"
+   ]
+  },
+  {
+   "company": "湖州银行",
+   "project": "湖州银行供应链系统建设项目-二阶段改造开发实施项目",
+   "budget": "-",
+   "deadline": "2026-12-10",
+   "tags": [
+    "公司金融"
+   ]
   }
+ ],
+ "removed_count": 16,
+ "removed_note": "删除16条（deadline≤11-21）；6条今日（11-23）截止标记「☆☆☆ 已截止」保留",
+ "candidates": 0,
+ "pending_fill_count": 0,
+ "filled_recent": [],
+ "other_note": "周一窗口近4天；sweep 后台一次完成（fresh 26）；嘉兴银行数据安全监测平台按安全类口径排除、中信信托ARM笔记本纯硬件排除；候选10条达标未触发升级；decide.html 已重建（10条，批次2026-11-23）；组件三判据验收全过（晨报含v439、候选待确认10=pending 10、批次当日、双组件mtime当次）",
+ "channel_stats": {
+  "date": "2026-11-23",
+  "added_total": 0,
+  "by_channel": {
+   "search": 0,
+   "user_url": 0,
+   "user_excel": 0,
+   "user_screenshot": 0
+  }
+ }
 }

@@ -1,7 +1,7 @@
 {
- "version": "v448",
+ "version": "v449",
  "date": "2026年11月25日",
- "timePeriod": "凌晨",
+ "timePeriod": "早上",
  "total": 78,
  "added": [
   {
@@ -35,7 +35,7 @@
  ],
  "removed_count": 0,
  "removed_note": "删除0条；5条今日（11-24）截止标记「☆☆☆ 已截止」保留（id 14/33/67/74/75）",
- "candidates": 0,
+ "candidates": 8,
  "pending_fill_count": 0,
  "filled_recent": [],
  "channel_stats": {

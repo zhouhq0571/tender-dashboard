@@ -7,7 +7,7 @@
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0"/>
 <meta content="no-cache" http-equiv="Pragma"/>
 <meta content="0" http-equiv="Expires"/>
-<title>恒生银信招标资讯每日速递 | 2026年11月25日（更新）v451</title>
+<title>恒生银信招标资讯每日速递 | 2026年11月25日（更新）v452</title>
 <meta content="适合恒生银信LBO关注和参与的银行及理财子公司、信托公司近期公开发布的最新有效招标资讯信息/每日看板，可供行业销售/解决方案/产品售前人员日常工作参考了解。" name="description"/>
 <meta property="og:title" content="恒生银信招标资讯速递"/>
 <meta property="og:description" content="适合恒生银信LBO关注和参与的银行及理财子公司、信托公司近期公开发布的最新有效招标资讯信息/每日看板，可供行业销售/解决方案/产品售前人员日常工作参考了解。"/>
@@ -152,7 +152,7 @@ th.col-project,td.col-project{border-right:2px solid var(--primary-light)}
 </div>
 <h1>恒生银信招标资讯每日速递</h1>
 <div class="cover-subtitle">银行信托事业群&nbsp;&nbsp;销售代表/解决方案&amp;售前人员专用</div>
-<div class="cover-meta" id="cover-update-time">数据更新时间：2026年11月25日 上午</div>
+<div class="cover-meta" id="cover-update-time">数据更新时间：2026年11月25日 中午</div>
 <div class="cover-author">编制单位：恒生电子银信解决方案部</div>
 <div class="cover-disclaimer">免责声明：本看板数据由AI辅助生成，仅供内部参考，具体以招标单位官方文件为准。</div>
 </div>
@@ -263,7 +263,7 @@ th.col-project,td.col-project{border-right:2px solid var(--primary-light)}
 <span style="font-size:16px;font-weight:600;opacity:0.9">恒生电子银信解决方案部</span>
 </div>
 <h2>恒生银信招标资讯每日速递</h2>
-<p>编制单位：恒生电子银信解决方案部<br/><span id="footer-update-time">2026年11月25日 上午</span></p>
+<p>编制单位：恒生电子银信解决方案部<br/><span id="footer-update-time">2026年11月25日 中午</span></p>
 <div class="footer-disclaimer">
 <strong>重要声明：</strong>本看板所有数据和信息均由AI辅助生成，来源于公开招投标信息平台。信息可能存在滞后、不完整或偏差，仅供恒生电子内部销售、解决方案、售前团队研究参考使用，不构成任何投标决策依据或法律建议。具体招标信息、投标资格要求、截止日期等关键信息，请务必以各招标单位官方发布的最新招标文件为准。
 </div>
@@ -271,9 +271,9 @@ th.col-project,td.col-project{border-right:2px solid var(--primary-light)}
 </div>
 
 <script type="application/json" id="tender-data">{
-  "version": "v451",
+  "version": "v452",
   "date": "2026年11月25日",
-  "timePeriod": "上午",
+  "timePeriod": "中午",
   "projects": [
     {
       "id": 1,
@@ -2025,7 +2025,178 @@ function updateStats() {
       const timePeriod = data.timePeriod || '上午';
       const timeStr = `${date} ${timePeriod}`;
       const coverEl = document.getElementById('cover-update-time');
-      if (coverEl) coverEl.textContent = `数据更新时间：2026年11月25日 凌晨<span class="filter-chip" onclick="clearFilter('province')">省份: ${province} <span class="remove">×</span></span>`; hasFilter = true; }
+      if (coverEl) coverEl.textContent = `数据更新时间：${timeStr}`;
+      const footerEl = document.getElementById('footer-update-time');
+      if (footerEl) footerEl.textContent = timeStr;
+    } catch (e) {
+      // 静默失败，保持HTML中的静态时间
+    }
+  }
+
+  // 填充筛选下拉框
+  populateFilters();
+}
+
+function updateEmptyState(tabId, count) {
+  const empty = document.getElementById('empty-' + tabId);
+  if (empty) empty.classList.toggle('show', count === 0);
+}
+
+// 填充筛选下拉框选项
+function populateFilters() {
+  const provinces = [...new Set(allProjects.map(p => p.province))].sort();
+  const methods = [...new Set(allProjects.map(p => p.method))].sort();
+  const recs = [...new Set(allProjects.map(p => p.rec))].sort();
+  const companies = [...new Set(allProjects.map(p => p.company))].sort();
+  const sources = [...new Set(allProjects.map(p => p.source))].sort();
+  
+  fillSelect('filter-province', provinces);
+  fillSelect('filter-method', methods);
+  fillSelect('filter-rec', recs);
+  fillSelect('filter-company', companies);
+  fillSelect('filter-source', sources);
+}
+
+function fillSelect(id, items) {
+  const sel = document.getElementById(id);
+  if (!sel) return;
+  const first = sel.options[0];
+  sel.innerHTML = '';
+  sel.appendChild(first);
+  items.forEach(item => {
+    const opt = document.createElement('option');
+    opt.value = item;
+    opt.textContent = item;
+    sel.appendChild(opt);
+  });
+}
+
+// ==================== Tab切换 ====================
+let currentTab = 'all';
+let activeTags = [];
+
+function showTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.group-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  event.target.classList.add('active');
+  currentTab = tabId;
+  applyFilters();
+}
+
+document.querySelectorAll('.group-tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    const text = this.textContent;
+    if (text.includes('全部')) currentTab = 'all';
+    else if (text.includes('银行行业')) currentTab = 'bank';
+    else if (text.includes('信托')) currentTab = 'trust';
+    else if (text.includes('强烈')) currentTab = 'strong';
+    else if (text.includes('建议投标')) currentTab = 'suggest';
+  });
+});
+
+// ==================== 筛选逻辑 ====================
+function filterByTag(tag) {
+  if (tag === '') {
+    activeTags = [];
+    document.querySelectorAll('.filter-tag-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.tag === '');
+    });
+  } else {
+    const index = activeTags.indexOf(tag);
+    if (index > -1) { activeTags.splice(index, 1); }
+    else { activeTags.push(tag); }
+    document.querySelectorAll('.filter-tag-btn').forEach(btn => {
+      const btnTag = btn.dataset.tag;
+      if (btnTag === '') { btn.classList.toggle('active', activeTags.length === 0); }
+      else { btn.classList.toggle('active', activeTags.includes(btnTag)); }
+    });
+  }
+  applyFilters();
+}
+
+function applyFilters() {
+  const province = document.getElementById('filter-province').value;
+  const method = document.getElementById('filter-method').value;
+  const rec = document.getElementById('filter-rec').value;
+  const company = document.getElementById('filter-company').value;
+  const source = document.getElementById('filter-source').value;
+  const search = document.getElementById('filter-search').value.toLowerCase();
+  
+  updateActiveFilters();
+  
+  // 获取当前tab的所有行
+  const tabBodyId = 'tbody-' + currentTab;
+  const tbody = document.getElementById(tabBodyId);
+  if (!tbody) return;
+  
+  const rows = tbody.querySelectorAll('tr');
+  let visibleCount = 0;
+  
+  rows.forEach(row => {
+    const rProvince = row.dataset.province || '';
+    const rMethod = row.dataset.method || '';
+    const rRec = row.dataset.rec || '';
+    const rCompany = row.dataset.company || '';
+    const rTags = row.dataset.tags || '';
+    const rProject = row.dataset.project || '';
+    
+    // 从URL链接的title属性获取source（简化处理）
+    const link = row.querySelector('.url-link-colored');
+    const rSource = link ? link.getAttribute('title') || '' : '';
+    
+    let show = true;
+    if (province && rProvince !== province) show = false;
+    if (method && rMethod !== method) show = false;
+    if (rec && rRec !== rec) show = false;
+    if (company && rCompany !== company) show = false;
+    if (source && rSource !== source) show = false;
+    if (search && !rProject.toLowerCase().includes(search)) show = false;
+    if (activeTags.length > 0) {
+      const rowTags = rTags.split(',');
+      const hasTag = activeTags.some(t => rowTags.includes(t));
+      if (!hasTag) show = false;
+    }
+    
+    row.style.display = show ? '' : 'none';
+    if (show) visibleCount++;
+  });
+  
+  // 重新编号可见行
+  let seq = 1;
+  rows.forEach(row => {
+    if (row.style.display !== 'none') {
+      const seqCell = row.querySelector('.col-seq');
+      if (seqCell) seqCell.textContent = seq;
+      // 更新zebra类
+      row.classList.toggle('zebra', seq % 2 === 0);
+      seq++;
+    }
+  });
+  
+  // 更新result-count
+  const countEl = document.getElementById('count-' + currentTab);
+  if (countEl) {
+    countEl.textContent = visibleCount;
+    countEl.classList.add('changed');
+    setTimeout(() => countEl.classList.remove('changed'), 300);
+  }
+  
+  // 更新空状态
+  updateEmptyState(currentTab, visibleCount);
+}
+
+function updateActiveFilters() {
+  const province = document.getElementById('filter-province').value;
+  const method = document.getElementById('filter-method').value;
+  const rec = document.getElementById('filter-rec').value;
+  const company = document.getElementById('filter-company').value;
+  const source = document.getElementById('filter-source').value;
+  const search = document.getElementById('filter-search').value;
+  const container = document.getElementById('active-filters-container');
+  const panel = document.getElementById('active-filters');
+  let html = ''; let hasFilter = false;
+  if (province) { html += `<span class="filter-chip" onclick="clearFilter('province')">省份: ${province} <span class="remove">×</span></span>`; hasFilter = true; }
   if (method) { html += `<span class="filter-chip" onclick="clearFilter('method')">方式: ${method} <span class="remove">×</span></span>`; hasFilter = true; }
   if (rec) { html += `<span class="filter-chip" onclick="clearFilter('rec')">建议: ${rec} <span class="remove">×</span></span>`; hasFilter = true; }
   if (company) { html += `<span class="filter-chip" onclick="clearFilter('company')">单位: ${company} <span class="remove">×</span></span>`; hasFilter = true; }
@@ -2626,5 +2797,5 @@ document.addEventListener('DOMContentLoaded', function() {
 </body>
 </html>
 
-<!-- Deployed v451 at 2026-11-25 09:20:20 -->
+<!-- Deployed v452 at 2026-11-25 12:52:14 -->
 <!-- rebuild trigger 1784509489 -->

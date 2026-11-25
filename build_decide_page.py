@@ -15,7 +15,7 @@
 ② 修复 30 分钟免密失效真 bug：原实现 dek 存 base64、恢复时按 hex 解析（ab 函数），
    必然解密失败→每次都要输密码。改为存 hex（hexE），与 ab 解析一致；
 ③ 窄屏（手机）表格横向滚动，交互与桌面一致。"""
-import json, datetime, base64
+import json, datetime, base64, sys
 from pathlib import Path
 
 # 2026-11-20 与侧栏「标讯晨报·决策一体」组件同源：数据/列序/交互状态机全部收敛到
@@ -39,6 +39,15 @@ APP_CSS = r'''
   .head { display:flex; justify-content:space-between; align-items:baseline; margin:4px 2px 12px; flex-wrap:wrap; gap:4px; }
   h1.a { font-size:18px; }
   .meta { font-size:12px; color:#888; }
+  .meta2 { font-size:11.5px; color:#a0a8b5; margin:-6px 2px 10px; }
+  /* 与晨报组件同款 KPI 条（卡片样式本地适配，数字口径同源） */
+  .kpi-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:0 2px 10px; }
+  .kpi { background:#fff; border:1px solid #eceff3; border-radius:10px; padding:10px 6px; text-align:center; }
+  .kpi b { display:block; font-size:19px; font-weight:700; color:#1b2433; font-variant-numeric:tabular-nums; }
+  .kpi span { font-size:11px; color:#8a94a6; }
+  .kpi.ok b { color:#2e9e5b; }
+  .kpi.warn b { color:#d5883f; }
+  @media (max-width:640px){ .kpi-strip{grid-template-columns:repeat(2,1fr)} }
   .tip { font-size:12px; color:#999; margin:0 2px 12px; line-height:1.7; }
   .tbl-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
   table.dl { width:100%; border-collapse:collapse; font-size:13px; background:#fff; }
@@ -69,6 +78,14 @@ APP_CSS = r'''
 
 APP_HTML = r'''
 <div class="head"><h1 class="a">标讯候选决策</h1><span class="meta" id="batch"></span></div>
+<!-- 2026-11-21 与「标讯晨报」侧栏看板同口径状态条：数字一律由 build 时从台账/晨报元数据动态取，杜绝两份 UI 各自演进 -->
+<div class="kpi-strip" id="kpiStrip">
+  <div class="kpi"><b id="kpiProposed">–</b><span>初选候选</span></div>
+  <div class="kpi ok"><b id="kpiAdopted">–</b><span>已采纳上板</span></div>
+  <div class="kpi warn"><b id="kpiPending">–</b><span>待决策</span></div>
+  <div class="kpi"><b id="kpiBoard">–</b><span>看板项目</span></div>
+</div>
+<div class="meta2" id="boardMeta"></div>
 <div class="tip">编号为台账全局递增编号（非本批序号），历史上已闭环的编号不再显示。点选「纳入 / 不纳入」（本机自动保存，刷新不丢）→ 底部生成决策指令 → 一键复制 → 粘贴到 Kimi「银信标讯」项目对话发送即执行。</div>
 <div class="tbl-wrap"><table class="dl">__HEAD__<tbody id="body"></tbody></table></div>
 <div class="empty" id="empty" style="display:none">本批次暂无待确认候选</div>
@@ -86,6 +103,14 @@ function start(DATA){
   var appEl=document.getElementById('app'); if(appEl) appEl.style.display='block';
   var $=function(id){return document.getElementById(id)};
   $('batch').textContent=DATA.batch+' 批次 · '+DATA.items.length+' 条候选';
+  (function(){ /* 与晨报同口径 KPI 状态条 */
+    var L=DATA.loop; if(!L){document.getElementById('kpiStrip').style.display='none';return}
+    var set=function(id,v){document.getElementById(id).textContent=(v==null?'–':v)};
+    set('kpiProposed',L.proposed);set('kpiAdopted',L.adopted);set('kpiPending',L.pending);set('kpiBoard',L.board_total);
+    var bm=document.getElementById('boardMeta');
+    if(L.board_version){bm.textContent='看板 '+L.board_version+(L.board_total!=null?' · '+L.board_total+' 个项目':'')+(L.board_date?' · '+L.board_date+' 更新':'')}
+    else{bm.style.display='none'}
+  })();
   var KEY='decide-'+DATA.batch;
   var core=window.DecisionCore.create({
     data:DATA, body:'body',
@@ -338,6 +363,34 @@ def main():
     data = decision_core.build_data()
     items = data["items"]
     batch = data["batch"]
+    # 2026-11-21 与「标讯晨报」同口径状态条：数字从台账/晨报元数据动态取，禁手填
+    try:
+        pend_all = json.loads((BIDDING / "pending_candidates.json").read_text(encoding="utf-8"))
+        proposed = len(pend_all)
+        adopted = sum(1 for c in pend_all if c.get("status") == "纳入")
+        pending_n = sum(1 for c in pend_all if str(c.get("status", "待确认")) in ("待确认", "None", ""))
+    except Exception:
+        proposed = adopted = pending_n = None
+    meta = {}
+    # 2026-11-23 事故固化：构建前先跑 meta 自愈（版本/总数/待决策数从 index.html+台账派生），
+    # 杜绝 stale meta 污染本页 KPI；同步失败不阻塞构建（退回读取现有 meta）
+    import subprocess
+    try:
+        subprocess.run([sys.executable, str(BIDDING / "tools" / "sync_loop_meta.py")],
+                       check=False, capture_output=True, timeout=30)
+    except Exception:
+        pass
+    mp = BIDDING / "reports" / "latest_meta.json"
+    if mp.exists():
+        try:
+            meta = json.loads(mp.read_text(encoding="utf-8"))
+        except Exception:
+            meta = {}
+    data["loop"] = {
+        "proposed": proposed, "adopted": adopted, "pending": pending_n,
+        "board_total": meta.get("total"), "board_version": meta.get("version"),
+        "board_date": meta.get("date"),
+    }
     app_html = APP_HTML.replace("__HEAD__", head_html())
     pwd = load_pwd()
     if pwd:
@@ -372,6 +425,14 @@ def main():
                          .replace("__DATA__", decision_core.data_json(data)))
         OUT.write_text(page, encoding="utf-8")
         print(f"decide.html written (OPEN): {len(items)} items, batch {batch} — 未设密码！写 .decide_pwd 后重建即为加密版")
+    # 2026-11-23 事故固化：决策页与晨报 Widget 同源同刻刷新，杜绝侧栏停留凌晨快照
+    try:
+        import subprocess
+        r = subprocess.run([sys.executable, str(BIDDING / "tools" / "refresh_morning_widget.py")],
+                           check=False, capture_output=True, text=True, timeout=60)
+        print(r.stdout.strip() or r.stderr.strip() or "(refresh_morning_widget 无输出)")
+    except Exception as e:
+        print(f"⚠️ 晨报 Widget 联动刷新失败（不阻塞）: {e}")
 
 
 if __name__ == "__main__":

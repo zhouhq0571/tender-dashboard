@@ -1,0 +1,37 @@
+{
+ "run_at": "20261125_0553",
+ "sources": [
+  {
+   "name": "乐采云兜底-A-浙江冠名机构",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 150,
+   "new_count": 1
+  },
+  {
+   "name": "乐采云兜底-B-轮转城商行:杭州银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 37,
+   "new_count": 1
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国建设银行浙江省分行\"市场主体金融画像\"系统软件使用服务采购项目供应商征集公告（中国建设银行股份有限公司浙江省分行）",
+   "date": "2026-11-24",
+   "deadline": "2026-12-01",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-A-浙江冠名机构"
+  },
+  {
+   "title": "兴业银行杭州管理部2027-2028年度驾驶员外包服务项目招标公告（兴业银行股份有限公司杭州分行）",
+   "date": "2026-11-20",
+   "deadline": "2026-11-26",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:杭州银行"
+  }
+ ]
+}

@@ -1,0 +1,391 @@
+{
+ "run_at": "20261124_0548",
+ "window": 3,
+ "channels": {
+  "vip_tb": {
+   "status": "ok",
+   "files": 1,
+   "kept": 3,
+   "tail": "OK 3/40 -> subscribe_items_tabbit_20261124_0548.json"
+  },
+  "kc": {
+   "status": "ok",
+   "files": 1,
+   "kept": 19,
+   "tail": " KEEP: 中信信托职业年金受托安全网关和签名验签设备采购项目二次招标-公开招标公告（中信信托有限责任公司） | 2026-12-09"
+  },
+  "qlsub": {
+   "status": "ok",
+   "files": 2,
+   "kept": 3,
+   "tail": "明细: /Users/zhouhq/Documents/kimi/workspace/bidding-daily/monitor/subscribe_items_20261124_0549.json"
+  },
+  "l1bank": {
+   "status": "ok",
+   "files": 1,
+   "kept": 9,
+   "tail": " KEEP: 北京银行2026-2029年金融终端采购项目竞争性磋商公告 | 2026-11-23 | 北京银行集中采购管理平台 | https://login-cpm-xt.bankofbeijing.com.cn/cms/default"
+  },
+  "ccb": {
+   "status": "ok",
+   "files": 1,
+   "kept": 5,
+   "tail": " KEEP: 烟台分行山东工商学院银校合作项目全场景收缴费系统采购招标公告 | 截止"
+  },
+  "lcy": {
+   "status": "ok",
+   "files": 1,
+   "kept": 4,
+   "tail": " KEEP: 永信恒昌工程管理有限公司关于湖州银行2026年度分布式数据库同步工具采购项目的公开招标公告（湖州银行股份有限公司） | 截止 2026-11-30 | 2026-11-10"
+  },
+  "lecaiyun": {
+   "status": "ok",
+   "files": 1,
+   "kept": 5,
+   "tail": " KEEP: 宁波银行江北数据中心人防设施维修采购项目招标公告（宁波银行股份有限公司） | 截止 2026-11-25 | 2026-11-18"
+  },
+  "sdicc": {
+   "status": "ok",
+   "files": 1,
+   "kept": 13,
+   "tail": " KEEP: 2026-11-23 [结果公告] TA迭代优化改造项目（2026年第三期）结果公告"
+  },
+  "sm": {
+   "status": "ok",
+   "files": 1,
+   "kept": 6,
+   "tail": "明细: /Users/zhouhq/Documents/kimi/workspace/bidding-daily/monitor/new_items_20261124_0552.json"
+  },
+  "qlsearch": {
+   "status": "ok",
+   "files": 1,
+   "kept": 0,
+   "tail": "qlsearch: 关键词1组 原始20 预筛保留0 -> /Users/zhouhq/Documents/kimi/workspace/bidding-daily/monitor/new_items_qlsearch_20261124_0"
+  },
+  "_scope_gate": {
+   "status": "ok",
+   "kept": 35,
+   "blocked": 2
+  }
+ },
+ "merged": 67,
+ "pre_dedup": 57,
+ "fresh": 35,
+ "items": [
+  {
+   "title": "昆仑银行关于中国司法大数据研究院涉诉信息数据服务续采",
+   "url": "https://www.qianlima.com/bid-650069402.html",
+   "date": "2026-11-23",
+   "deadline": "",
+   "contact": "",
+   "source": "vip_tb",
+   "origin": "vip_tb"
+  },
+  {
+   "title": "天津银行数据库审计系统扩容项目-公开招标公告",
+   "url": "https://www.qianlima.com/bid-650172583.html",
+   "date": "2026-11-23",
+   "deadline": "",
+   "contact": "",
+   "source": "vip_tb",
+   "origin": "vip_tb"
+  },
+  {
+   "title": "宁波通商银行上海分行安全认证网关设备采购（宁波通商银行股份有限公司上海分行）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_383b84eb796c4b06844013a874fc516a&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-30",
+   "contact": "代理 上海东方投资监理有限公司",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "宁波通商银行上海分行安全防范联网报警服务项目（宁波通商银行股份有限公司上海分行）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_a1e8aa94d55349d8a17becebda22a51d&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-30",
+   "contact": "代理 上海东方投资监理有限公司",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "青海省分行前端设备维护外包服务项目采购（中国银行股份有限公司青海省分行）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ctpch_fmscop_f2a76470408c6ea07a5afff58cf222d5&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-30",
+   "contact": "",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "招商银行合肥分行营销用蛋糕集中采购项目供应商征集公告",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_fba0b556e5194478a798ddff7685afcb&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-12-03",
+   "contact": "",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "中国民生银行股份有限公司信用卡中心系统类华为存储维保服务项目征询公告",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_cfdaed3eaaf9407e859b1fe74d6ae65b&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-30",
+   "contact": "代理 北京国际贸易有限公司",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "长春分行现金寄库服务外包采购公告（广发银行股份有限公司长春分行）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_aaea6f9b94444de999d8ed0220290f2c&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-30",
+   "contact": "代理 中联国际工程管理有限公司",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "建行湖南省分行营业网点新风系统项目市场调研供应商征集公告（中国建设银行股份有限公司湖南省分行）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_7b974a7a9cb041d88b9345818218e3f7&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-30",
+   "contact": "",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "烟台分行山东工商学院银校合作项目全场景收缴费系统采购招标公告（中国建设银行股份有限公司山东省分行）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=jianhangcj_2124828403016441856&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-30",
+   "contact": "代理 山东毕博项目管理有限公司",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "中国邮政储蓄银行股份有限公司新疆分行网络安全等级保护备案测评项目(第2次招标)公开招标公告（中国邮政储蓄银行股份有限公司新疆维吾尔自治区分行）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_2ae4df4ca7a74049bbd26255871d2302&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-12-01",
+   "contact": "代理 公诚管理咨询有限公司",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "中国工商银行广东肇庆分行现金清分整点外包服务项目招标公告（中国工商银行股份有限公司肇庆分行）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_f592214b18544d929d271a0737d8c468&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-30",
+   "contact": "代理 建成工程咨询股份有限公司",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "北京银行2026年统一监管报送平台优化升级项目(二次)竞争性磋商公告（北京银行股份有限公司）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_d7e3eb8a4ee042cbb7b9b4394a4a7325&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-30",
+   "contact": "代理 中金招标有限责任公司",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "关于浙银理财通用金融数据终端采购的公开招标公告（浙银理财有限责任公司）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_acf5d3288ce6430dbe8a738d3ae19314&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-12-07",
+   "contact": "代理 浙江豪圣建设项目管理有限公司",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "建信信托有限责任公司技术底座和数据底座维护服务采购项目供应商征集公告",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=jianhangcj_2124821641564340226&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-30",
+   "contact": "",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "中信信托职业年金受托安全网关和签名验签设备采购项目二次招标-公开招标公告（中信信托有限责任公司）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_992f8aac088745e4aa1ba6682915c900&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-12-09",
+   "contact": "代理 中信国际招标有限公司",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "2026年中信信托公司信创终端(ARM笔记本)联合采购项目招标公告（中信信托有限责任公司）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_dlztb_07py_c2f35d68c6483296fca97f9d91f7417c&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-12-08",
+   "contact": "代理 中国电力招标采购网",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "(询比采购)[外贸信托投研数据平台账号采购/1601-PS202611230337]采购公告（中国对外经济贸易信托有限公司）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_scmsinochem_2124761106785353730&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-30",
+   "contact": "",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "中信信托2026年度信创终端(ARM笔记本)联合采购项目-招标公告（中信信托有限责任公司）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_dlztb_07py_6607ca1f048a8dd3a3174b718689d6ac&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-12-08",
+   "contact": "代理 中国电力招标采购网",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "(询比采购)[咨询平台采购(2026)/1601-PS202611171166]采购公告（中国对外经济贸易信托有限公司）",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_scmsinochem_2124701434445864962&type=AllBeacon",
+   "date": "2026-11-23",
+   "deadline": "2026-11-27",
+   "contact": "",
+   "source": "快查",
+   "origin": "kc"
+  },
+  {
+   "title": "中国邮政储蓄银行股份有限公司新疆分行网络安全等级保护备案测评项目(第2次招标)公开招标公告",
+   "url": "https://cg.psbc.com/cms/default/webfile/1ywgg2/20261123/1309598863434186752.html",
+   "date": "2026-11-23",
+   "deadline": "",
+   "contact": "",
+   "source": "中国邮政储蓄银行邮银易采平台",
+   "origin": "l1bank"
+  },
+  {
+   "title": "2026-ZH-0120 中信银行股份有限公司“融盾”终端安全一体化管控建设所需终端基础防护软件采购项目招标公告",
+   "url": "https://ebid.cfhc.citic/cms/default/webfile/ywgg1/20261123/1309583472536322048.html",
+   "date": "2026-11-23",
+   "deadline": "",
+   "contact": "",
+   "source": "中信金控采购共享平台",
+   "origin": "l1bank"
+  },
+  {
+   "title": "2026-ZH-0121 中信银行股份有限公司“融盾”终端安全一体化管控建设所需终端网络准入软件采购项目招标公告",
+   "url": "https://ebid.cfhc.citic/cms/default/webfile/ywgg1/20261123/1309582996768030720.html",
+   "date": "2026-11-23",
+   "deadline": "",
+   "contact": "",
+   "source": "中信金控采购共享平台",
+   "origin": "l1bank"
+  },
+  {
+   "title": "北京银行2026年财报披露管理系统三期优化项目竞争性磋商公告",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261123/1309589714923159552.html",
+   "date": "2026-11-23",
+   "deadline": "",
+   "contact": "",
+   "source": "北京银行集中采购管理平台",
+   "origin": "l1bank"
+  },
+  {
+   "title": "北京银行2026-2029年智能柜员机设备入围项目招标公告",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261123/1309574983852228608.html",
+   "date": "2026-11-23",
+   "deadline": "",
+   "contact": "",
+   "source": "北京银行集中采购管理平台",
+   "origin": "l1bank"
+  },
+  {
+   "title": "北京银行撮合赢与智投e合系统合并项目竞争性磋商公告",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261123/1309511699820183552.html",
+   "date": "2026-11-23",
+   "deadline": "",
+   "contact": "",
+   "source": "北京银行集中采购管理平台",
+   "origin": "l1bank"
+  },
+  {
+   "title": "北京银行2026-2029年金融终端采购项目竞争性磋商公告",
+   "url": "https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20261123/1309476104746041344.html",
+   "date": "2026-11-23",
+   "deadline": "",
+   "contact": "",
+   "source": "北京银行集中采购管理平台",
+   "origin": "l1bank"
+  },
+  {
+   "title": "业务运营自动化机器人中心系统2027年度维护候选人公示",
+   "url": "https://www.sdicc.com.cn/cgxx/zbhxrDetail?bdGuid=aae18fa2-56a8-4801-a1ff-e62fe852232f&guid=25ea8047-b270-4ffc-bffc-9e7081e08aec-0",
+   "date": "2026-11-23",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "TA迭代优化改造项目（2026年第三期）结果公告",
+   "url": "https://www.sdicc.com.cn/cgxx/zbjgDetail?bdGuid=402146ca-26fa-410a-af94-5ba35bc22f72&guid=458ab614-3b62-45e1-a3af-ca695e2c155a",
+   "date": "2026-11-23",
+   "deadline": "",
+   "contact": "",
+   "source": "国投集团电子采购平台",
+   "origin": "sdicc"
+  },
+  {
+   "title": "华夏银行南宁分行直营收单团队营销外拓外包项目成交结果公示",
+   "url": "https://www.mpaypass.com.cn/news/202611/23200606.html",
+   "date": "",
+   "deadline": "",
+   "contact": "",
+   "source": "移动支付网",
+   "origin": "sm"
+  },
+  {
+   "title": "华夏银行南宁分行收单业务聚合支付技术服务外包项目成交结果公示",
+   "url": "https://www.mpaypass.com.cn/news/202611/23200139.html",
+   "date": "",
+   "deadline": "",
+   "contact": "",
+   "source": "移动支付网",
+   "origin": "sm"
+  },
+  {
+   "title": "秦农银行信息科技外包服务供应商入围项目（数据类系统开发运维服务）中标结果公告",
+   "url": "https://www.mpaypass.com.cn/news/202611/23185256.html",
+   "date": "",
+   "deadline": "",
+   "contact": "",
+   "source": "移动支付网",
+   "origin": "sm"
+  },
+  {
+   "title": "甘肃农商银行2026年测试人力外包框架入围项目中标候选人公示",
+   "url": "https://www.mpaypass.com.cn/news/202611/23184757.html",
+   "date": "",
+   "deadline": "",
+   "contact": "",
+   "source": "移动支付网",
+   "origin": "sm"
+  },
+  {
+   "title": "无锡农商银行2027-2028 年度收单业务外包服务及拓展服务合作机构入围采购项目招标公告",
+   "url": "https://www.mpaypass.com.cn/news/202611/23174219.html",
+   "date": "",
+   "deadline": "",
+   "contact": "",
+   "source": "移动支付网",
+   "origin": "sm"
+  },
+  {
+   "title": "7鲲鹏支付发布最新公告，将启动下一阶段工作",
+   "url": "https://www.mpaypass.com.cn/news/202611/20111038.html",
+   "date": "",
+   "deadline": "",
+   "contact": "",
+   "source": "移动支付网",
+   "origin": "sm"
+  }
+ ]
+}

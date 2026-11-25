@@ -271,3 +271,21 @@
 - SKILL.md 规则 O-决策（三入口契约+统一管线+【候选决策】指令格式，标注"任何项目会话收到即执行"）；
 - 金融要闻周报 AGENTS.md 〇点一节：收到决策指令无条件转规则 O-决策，禁重建逻辑；
 - 定时任务/组件/管线已同源（prompt④/组件C/decide.html/决策自动化 prompt 均按三入口口径）。
+
+## 双显示不一致事故与同源刷新闭环（2026-11-23 周老师 12:45/14:54 两次质询后固化）
+
+- **事故#8（12:45）**：裁决执行后 decide.html 显示 74 项/待决策 10、晨报 meta 消费方同失真，与板上实际 81/0 不符。根因：决策管线上板后**从不回写 latest_meta.json**（该文件由凌晨主任务写入后即静止），单一 stale 真源污染全部消费方。
+- **事故#9（14:54）**：侧栏「标讯晨报·决策一体」Widget（widget_8fb97907）整天显示凌晨烘焙快照（v439/74/10 候选）。根因：Widget workspace/index.html 的 4 处动态点是 05:47 主任务**烘焙死的静态内嵌**，对话决策管线无任何刷新触发器；只修 meta 不重烘焙 Widget 文件等于没修（与 #8 同型上下层）。中间层误会：中午重跑的管线日报自动化（automation_c597735c→widget_94dd82f3 管线日报）与决策一体 Widget 是两块不同 Widget，刷新互不覆盖。
+- **固化（规则必须代码化，两处新脚本+三处挂载）**：
+  1. `tools/sync_loop_meta.py`：version/total/date/timePeriod ← index.html 板上事实；candidates ← pending_candidates.json 待确认数；added ← decision_date==今天的纳入条目回查板上最终值（deadline/tags/budget 取板上值，守 09-30 规则 O-晨报字段红线）。挂载：build_decide_page.py 构建前 + safe_deploy.sh 步骤3.5（index.html 版本定稿后、部署前）——**凡部署必自愈**。
+  2. `tools/refresh_morning_widget.py`：以上述同源数据重烘焙 Widget 4 处动态点（dz-meta 看板行 / stats 三卡 / 需确认 badge / cand-data），每处 regex 锚点断言，缺锚点报错退出禁静默写坏。挂载：build_decide_page.py main() 末尾——**decide.html 每次重建必联动刷新 Widget，同源同刻**。
+  3. 台账新增 `decision_date` 字段（决策回写时自动带当天日期），供 added 推导；注意历史条目无此字段，批量回填须以结构校验锁定批次（11-23 曾误回填 112 条，按"末 N 条已决=今晨批次"断言校正）。
+  4. 时序铁律：bump_version → build_decide_page（内嵌 sync+Widget 联动）→ safe_deploy（内嵌 meta 自愈），三者版本恒等；decide.html 里看板行快照版本=部署版本=meta 版本。
+- **排障地图（再遇"显示不一致"按图索骥）**：先 curl 线上 index.html 版本号定板上真值 → 查 reports/latest_meta.json 是否一致（不一致则跑 sync_loop_meta.py）→ 查 Widget workspace/index.html 内嵌 cand-data/dz-meta 是否为烘焙快照（是则跑 refresh_morning_widget.py + Widget.show）→ 客户端侧栏仍旧则是渲染缓存，重开侧栏/重启客户端即刷新。三块 Widget 分清：widget_8fb97907=标讯晨报·决策一体（本工作区）、widget_94dd82f3=管线日报（自动化 c597735c 刷新）、widget_c9f127ff=退役决策组件备查。
+
+## 渲染硬闸天条（2026-11-25 特级事故：白屏7小时后固化）
+- **任何部署（safe_deploy.sh）过门必须 Playwright 实测渲染**：无 pageerror + 封面统计数字=JSON 项目数 + 表格行数=项目数 + 页面无 "undefined"，任一不过即中止部署（步骤3.6，2026-11-25 起硬编码进 safe_deploy.sh）。
+- **根因教训**：v448-v451 四连坏（JS 语法损坏，try 缺 catch）全部通过 hash/字段/正则等文件级检查上线——文件完好 ≠ 页面能渲染。用户可见终态只在浏览器里。凡"页面级交付物"（看板/门禁/decide/Widget），验收=无头浏览器实测，curl/hash 只是必要条件。
+- 反向验证要求：部署脚本加新硬闸后，必须用一份已知损坏的旧文件验证拦截有效（11-25 已用 v449 实证），只测通过不测拦截=没加闸。
+- Widget 进度/状态类 UI 必须有**双通道收口**：状态回调（onStatusChange）+ 数据回调（onDataChange）任一到达终态即收面板，单通道依赖状态机必然漏态卡死（11-25 "执行中206分钟"实录，结果已回显面板不收）。
+- 待办：凌晨主任务"全量重写 HTML"模板来源彻查（为何 11-25 重写出语法损坏脚本），防源头再生。

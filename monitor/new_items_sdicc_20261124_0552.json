@@ -1,0 +1,139 @@
+{
+ "run_at": "20261124_0552",
+ "sources": [
+  {
+   "name": "国投平台-招标公告",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 0
+  },
+  {
+   "name": "国投平台-事前公示",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 7
+  },
+  {
+   "name": "国投平台-中标候选人",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 5
+  },
+  {
+   "name": "国投平台-结果公告",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 10,
+   "new_count": 1
+  }
+ ],
+ "new_items": [
+  {
+   "title": "2026-2027年度电子签章系统运维服务事前公示",
+   "pubdate": "2026-11-19",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=fabee6f3-b321-4519-a886-93f4e7d82071&fromType=10",
+   "channel": "事前公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "AI智能双录信创升级建设项目事前公示",
+   "pubdate": "2026-11-19",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=5d8b3be0-4dd6-4df3-a917-cfa326d723f7&fromType=10",
+   "channel": "事前公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "2026-2029年内网网站维保服务事前公示",
+   "pubdate": "2026-11-17",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=aa237523-e6c0-4901-8eed-401e924dab6c&fromType=10",
+   "channel": "事前公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "积分商城管理系统2027年维保服务事前公示",
+   "pubdate": "2026-11-17",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=f70f5d06-2e74-469a-aed5-2f31d2cd4b36&fromType=10",
+   "channel": "事前公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "衡泰投资交易管理系统交易所风控限额优化改造项目事前公示",
+   "pubdate": "2026-11-10",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=0d9245e6-9f73-4fcd-b42a-2ae35acef0cf&fromType=10",
+   "channel": "事前公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "业务运营自动化机器人中心系统2027年度维护事前公示",
+   "pubdate": "2026-11-10",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=9fd7b704-f0ae-4f07-b5a9-de82edde023e&fromType=10",
+   "channel": "事前公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "2026年智能双录系统维护服务事前公示",
+   "pubdate": "2026-11-10",
+   "url": "https://www.sdicc.com.cn/cgxx/preNoticeDetail?guid=1a64a2cd-6b00-4328-869d-2534120957fc&fromType=10",
+   "channel": "事前公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "业务运营自动化机器人中心系统2027年度维护候选人公示",
+   "pubdate": "2026-11-23",
+   "url": "https://www.sdicc.com.cn/cgxx/zbhxrDetail?bdGuid=aae18fa2-56a8-4801-a1ff-e62fe852232f&guid=25ea8047-b270-4ffc-bffc-9e7081e08aec-0",
+   "channel": "候选人公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "衡泰投资交易管理系统交易所风控限额优化改造项目候选人公示",
+   "pubdate": "2026-11-20",
+   "url": "https://www.sdicc.com.cn/cgxx/zbhxrDetail?bdGuid=efefcddd-f352-4294-9445-6c2b80133143&guid=f6c9bd3a-8321-4158-91dc-1f133b4e7ad1-0",
+   "channel": "候选人公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "估值系统迭代优化改造项目（2026年度）候选人公示",
+   "pubdate": "2026-11-12",
+   "url": "https://www.sdicc.com.cn/cgxx/zbhxrDetail?bdGuid=f7487eca-8743-4756-9ae6-8da4b84ad95c&guid=d22d627d-cd2e-4275-a1e8-697219812ea1-0",
+   "channel": "候选人公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "TA迭代优化改造项目（2026年第四期）候选人公示",
+   "pubdate": "2026-11-12",
+   "url": "https://www.sdicc.com.cn/cgxx/zbhxrDetail?bdGuid=88843cc8-7749-4f53-aec6-fe23df9982a4&guid=47b82cf8-821a-4e37-b6a1-07c597698e30-0",
+   "channel": "候选人公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "某集合资金信托计划专项项目研判服务候选人公示",
+   "pubdate": "2026-11-09",
+   "url": "https://www.sdicc.com.cn/cgxx/zbhxrDetail?bdGuid=07b12608-155b-45c0-a8cd-7bd8e057de1d&guid=7b836135-06bd-4624-90a5-d04c14a4d51d-0",
+   "channel": "候选人公示",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  },
+  {
+   "title": "TA迭代优化改造项目（2026年第三期）结果公告",
+   "pubdate": "2026-11-23",
+   "url": "https://www.sdicc.com.cn/cgxx/zbjgDetail?bdGuid=402146ca-26fa-410a-af94-5ba35bc22f72&guid=458ab614-3b62-45e1-a3af-ca695e2c155a",
+   "channel": "结果公告",
+   "deadline": "",
+   "source": "国投集团电子采购平台"
+  }
+ ]
+}

@@ -1,0 +1,175 @@
+{
+ "run_at": "20261123_0548",
+ "sources": [
+  {
+   "name": "快查-数据×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-大模型×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 3
+  },
+  {
+   "name": "快查-信创×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-智能体×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-财富×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 1
+  },
+  {
+   "name": "快查-托管×银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 50,
+   "new_count": 0
+  },
+  {
+   "name": "快查-×理财有限责任公司",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 7,
+   "new_count": 5
+  },
+  {
+   "name": "快查-×信托公司",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 15,
+   "new_count": 5
+  }
+ ],
+ "new_items": [
+  {
+   "title": "嘉兴银行数据安全监测平台建设项目公开招标采购公告（嘉兴银行股份有限公司）",
+   "date": "2026-11-20",
+   "deadline": "2026-12-17",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_33ef9c35a4404616becced5a7f687d68&type=AllBeacon",
+   "contact": "代理 嘉兴市千秋工程咨询有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国工商银行安徽省分行报警监控应急管理中心外包项目招标公告（中国工商银行股份有限公司安徽省分行）",
+   "date": "2026-11-20",
+   "deadline": "2026-11-27",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=jiangsuzbzx_3767&type=AllBeacon",
+   "contact": "代理 江苏省招标中心有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "源代码管理平台项目(二次)（贵州农村商业联合银行股份有限公司）",
+   "date": "2026-11-20",
+   "deadline": "2026-11-27",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_516ab83517b34abc8ee1432f3ac99d7e&type=AllBeacon",
+   "contact": "代理 贵州拓迈电子招标投标服务有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中国工商银行安徽省分行全辖防尾随联动互锁安全门等设备采购项目招标公告（中国工商银行股份有限公司安徽省分行）",
+   "date": "2026-11-20",
+   "deadline": "2026-12-08",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_6486f9928edb43f4b55f6e6294345332&type=AllBeacon",
+   "contact": "代理 智埔国际建设集团有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "青银理财有限责任公司2027年-2028年度理财信息披露文件分发服务项目直接采购公示",
+   "date": "2026-11-20",
+   "deadline": "2026-12-01",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_qdygcg_f347d4b66451cfe2246b14309f6fe42b&type=AllBeacon",
+   "contact": "代理 青岛鸿翔招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "信银理财有限责任公司司机服务外包项目招标公告",
+   "date": "2026-11-20",
+   "deadline": "2026-11-30",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_4e7be94385494f7b928888645c597bab&type=AllBeacon",
+   "contact": "代理 江苏省招标中心有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "光大理财有限责任公司估值核算系统信创改造项目招标公告",
+   "date": "2026-11-20",
+   "deadline": "2026-11-27",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_qdcgz_cm2x_b355bf84733008776829a361a68fcc2b&type=AllBeacon",
+   "contact": "代理 青岛采购招标中心有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中邮理财2026-2027年碳中和咨询服务采购项目竞争性磋商公告（中邮理财有限责任公司）",
+   "date": "2026-11-19",
+   "deadline": "2026-11-25",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_95ca665a442541c9a978dc5bd927c891&type=AllBeacon",
+   "contact": "代理 江苏省招标中心有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "2026年广银理财销售渠道支持类助理外包服务采购项目招标公告（广银理财有限责任公司）",
+   "date": "2026-11-19",
+   "deadline": "2026-11-27",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_a67330b3da9748409de9825e45d50ca7&type=AllBeacon",
+   "contact": "代理 上海同济工程项目管理咨询有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中信信托有限公司文档中台采购项目招标公告（中信信托有限责任公司）",
+   "date": "2026-11-20",
+   "deadline": "2026-12-08",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_daqih_8181_66b894ff45f0ff52b66870a8fbd740fa&type=AllBeacon",
+   "contact": "代理 中信国际招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中信信托有限公司电子传真信创改造项目招标公告（中信信托有限责任公司）",
+   "date": "2026-11-20",
+   "deadline": "2026-12-08",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_951faee7bfa14101ba0e5e1794bb31a4&type=AllBeacon",
+   "contact": "代理 中信国际招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中信信托2026年度信创终端(ARM笔记本)联合采购项目招标公告（中信信托有限责任公司）",
+   "date": "2026-11-20",
+   "deadline": "2026-12-08",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_24130f66a836458d9de698ec46a672b0&type=AllBeacon",
+   "contact": "代理 中信国际招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中信信托综合业务报表管理系统2026年建设项目-公开招标公告（中信信托有限责任公司）",
+   "date": "2026-11-20",
+   "deadline": "2026-12-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_2e73ea50f2614a6faec3c68459d40ad2&type=AllBeacon",
+   "contact": "代理 中信国际招标有限公司",
+   "source": "快查"
+  },
+  {
+   "title": "中信信托关联交易系统2026年改造项目-公开招标公告（中信信托有限责任公司）",
+   "date": "2026-11-20",
+   "deadline": "2026-12-09",
+   "url": "https://www.kuaicha365.com/outer/tender-bid/project-process?urlId=ccgp_jincaiwang_7962cd2139154ca69e198cc1df908f27&type=AllBeacon",
+   "contact": "代理 中信国际招标有限公司",
+   "source": "快查"
+  }
+ ]
+}

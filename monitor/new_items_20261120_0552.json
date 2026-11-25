@@ -1,0 +1,40 @@
+{
+ "run_at": "2026-11-20 05:52:43",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 0,
+   "new_count": 0,
+   "note": "首次运行，仅建立指纹基线，不输出新增"
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 4,
+   "new_count": 3
+  }
+ ],
+ "new_items": [
+  {
+   "title": "天津滨海农商银行机器人流程自动化（RPA）系统建设项目成交结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/19164218.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "新疆自治区人事考试网上缴费第三方支付服务项目竞争性磋商公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/19162424.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "3建行无锡分行江阴小黑人商户聚合支付项目采购结果公布",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/13144355.html",
+   "source": "移动支付网"
+  }
+ ]
+}

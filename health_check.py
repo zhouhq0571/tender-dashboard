@@ -267,6 +267,33 @@ def check_cron_status():
         'detail': '请手动运行: Cron(action="status") 查看 3 个任务是否启用且最近有执行记录'
     }
 
+def check_embedded_bloat():
+    """内嵌资源体积闸（2026-11-20 追加，周老师钦定同类防复发）：单文件看板任何 base64
+    内嵌资源过大 → 首屏体积膨胀、HTML 未下完 JS 不执行（11-19 厂商看板签章 1.25MB 把
+    外网页撑到 1.77MB、手机白屏 1 分钟实证）。判据：单块 base64 >100KB 或单文件总量
+    >300KB → WARN（整改口径=资源静态化外链，禁整图 dataURI 内嵌）。"""
+    import glob
+    pat = re.compile(r'data:[\w/.+-]+;base64,([A-Za-z0-9+/=]+)')
+    targets = [HTML_PATH, os.path.join(os.path.dirname(HTML_PATH) or '.', 'decide.html')]
+    hits = []
+    for f in targets:
+        if not os.path.exists(f):
+            continue
+        with open(f, encoding='utf-8', errors='ignore') as fh:
+            chunks = [len(m.group(1)) for m in pat.finditer(fh.read())]
+        for ln in chunks:
+            if ln > 100 * 1024:
+                hits.append(f"{os.path.basename(f)}: 单块内嵌base64 {ln//1024}KB（>100KB闸）")
+                break
+        if sum(chunks) > 300 * 1024:
+            hits.append(f"{os.path.basename(f)}: base64总量 {sum(chunks)//1024}KB（>300KB闸）")
+    return {
+        'check': '内嵌资源体积闸',
+        'status': 'PASS' if not hits else 'WARN',
+        'detail': '无 oversized 内嵌资源' if not hits else '；'.join(hits[:3])
+    }
+
+
 def run_all_checks():
     data, content = parse_html()
     if not data:
@@ -290,6 +317,7 @@ def run_all_checks():
     results.append(check_title_tag(data, content))
     results.append(check_skill_version_sync())
     results.append(check_cron_status())
+    results.append(check_embedded_bloat())
     
     print("=" * 60)
     print(f"恒生银信招标看板 - 全面健康自检报告")

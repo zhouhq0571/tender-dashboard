@@ -1,0 +1,58 @@
+{
+ "run_at": "2026-11-24 05:52:38",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 0,
+   "new_count": 0,
+   "note": "首次运行，仅建立指纹基线，不输出新增"
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 7,
+   "new_count": 6
+  }
+ ],
+ "new_items": [
+  {
+   "title": "华夏银行南宁分行直营收单团队营销外拓外包项目成交结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/23200606.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "华夏银行南宁分行收单业务聚合支付技术服务外包项目成交结果公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/23200139.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "秦农银行信息科技外包服务供应商入围项目（数据类系统开发运维服务）中标结果公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/23185256.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "甘肃农商银行2026年测试人力外包框架入围项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/23184757.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "无锡农商银行2027-2028 年度收单业务外包服务及拓展服务合作机构入围采购项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/23174219.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "7鲲鹏支付发布最新公告，将启动下一阶段工作",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/20111038.html",
+   "source": "移动支付网"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "run_at": "20261120_0552",
+ "sources": [
+  {
+   "name": "乐采云兜底-A-浙江冠名机构",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 150,
+   "new_count": 1
+  },
+  {
+   "name": "乐采云兜底-B-轮转城商行:嘉兴银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 8,
+   "new_count": 1
+  }
+ ],
+ "new_items": [
+  {
+   "title": "关于丽水分行辖内消控室值守服务外包供应商采购项目的公开招标公告（中国建设银行股份有限公司浙江省分行）",
+   "date": "2026-11-19",
+   "deadline": "2026-11-26",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-A-浙江冠名机构"
+  },
+  {
+   "title": "嘉兴银行数据中心网络设备维保采购项目公开招标采购公告（嘉兴银行股份有限公司）",
+   "date": "2026-11-16",
+   "deadline": "2026-12-07",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:嘉兴银行"
+  }
+ ]
+}

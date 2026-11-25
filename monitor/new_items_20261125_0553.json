@@ -1,0 +1,46 @@
+{
+ "run_at": "2026-11-25 05:53:54",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 0,
+   "new_count": 0,
+   "note": "首次运行，仅建立指纹基线，不输出新增"
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 5,
+   "new_count": 4
+  }
+ ],
+ "new_items": [
+  {
+   "title": "南京银行手机银行意图识别系统建设项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/24193932.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "江西农商联合银行2026年人力外包服务采购项目（通用渠道类软件研发服务）中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/24190608.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "江南农商银行移动应用管控平台定制开发升级服务项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/24172811.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "5鲲鹏支付发布最新公告，将启动下一阶段工作",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/20111038.html",
+   "source": "移动支付网"
+  }
+ ]
+}

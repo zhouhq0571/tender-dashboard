@@ -1,0 +1,29 @@
+{
+ "run_at": "20261123_0551",
+ "sources": [
+  {
+   "name": "乐采云兜底-A-浙江冠名机构",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 150,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云兜底-B-轮转城商行:台州银行",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 12,
+   "new_count": 1
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中国银行福州闽都支行2026年中银财富节客户尊享活动项目采购公告（中国银行股份有限公司福州台江支行）",
+   "date": "2026-11-20",
+   "deadline": "2026-11-27",
+   "url": "https://www.kuaicha365.com/",
+   "source": "快查",
+   "channel": "乐采云兜底-B-轮转城商行:台州银行"
+  }
+ ]
+}

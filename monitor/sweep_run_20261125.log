@@ -1,0 +1,1 @@
+{"sweep": {"vip_tb": ["ok", 1], "kc": ["ok", 20], "qlsub": ["ok", 1], "l1bank": ["ok", 13], "ccb": ["ok", 4], "lcy": ["ok", 2], "lecaiyun": ["ok", 3], "sdicc": ["ok", 12], "sm": ["ok", 4], "qlsearch": ["ok", 0], "_scope_gate": ["ok", 24]}, "merged": 60, "fresh": 24, "shortlist": "sweep_shortlist_20261125_0548.json"}

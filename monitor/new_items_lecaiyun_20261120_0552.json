@@ -1,0 +1,56 @@
+{
+ "run_at": "20261120_0552",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "total_items": 0,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云WAF兜底-快查API定向补",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 92,
+   "new_count": 3,
+   "quota_calls": 6,
+   "window_days": 15
+  }
+ ],
+ "new_items": [
+  {
+   "title": "浙江中瑞工程管理有限公司关于湖州银行2026年度统一日志平台扩容项目的公开招标公告（湖州银行股份有限公司）",
+   "pubdate": "2026-11-18",
+   "deadline": "2026-12-08",
+   "url": "https://www.kuaicha365.com/?n=ccgp_zhejiangqycgxx_Xf7oM4an3BDLM1WRfNSa5w",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 48.0,
+   "url_id": "ccgp_zhejiangqycgxx_Xf7oM4an3BDLM1WRfNSa5w"
+  },
+  {
+   "title": "宁波银行江北科技中心健身房健身器材采购项目招标公告（宁波银行股份有限公司）",
+   "pubdate": "2026-11-19",
+   "deadline": "2026-11-25",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jincaiwang_8ec09fdd3f624caab5540692bcd5420f",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 24.8,
+   "url_id": "ccgp_jincaiwang_8ec09fdd3f624caab5540692bcd5420f"
+  },
+  {
+   "title": "宁波银行江北数据中心人防设施维修采购项目招标公告（宁波银行股份有限公司）",
+   "pubdate": "2026-11-18",
+   "deadline": "2026-11-25",
+   "url": "https://www.kuaicha365.com/?n=ccgp_jincaiwang_9206ef90ed784d4d86bca9db9cbe4eec",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": "",
+   "url_id": "ccgp_jincaiwang_9206ef90ed784d4d86bca9db9cbe4eec"
+  }
+ ]
+}

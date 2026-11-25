@@ -127,6 +127,27 @@ except SystemExit:
 except Exception as _e:
     print(f'⚠️ 机构范围闸导入失败（{_e}），跳过（高风险，须人工复核）')
 
+# 2026-11-20 新增：内嵌资源体积硬检（周老师钦定同类防复发）——单文件看板 base64 内嵌资源
+# （图/字体）过大 → 首屏体积膨胀、HTML 未下完 JS 不执行（11-19 厂商看板签章 1.25MB 把页面
+# 撑到 1.77MB、国内手机白屏 1 分钟实证）。单块 >100KB 或单文件总量 >300KB → 拒绝部署，
+# 整改口径=资源静态化外链，禁整图 dataURI 内嵌。
+import re as _re
+_b64_pat = _re.compile(r'data:[\w/.+-]+;base64,([A-Za-z0-9+/=]+)')
+for _f in ('index.html', 'decide.html'):
+    try:
+        with open(_f, encoding='utf-8', errors='ignore') as _fh:
+            _chunks = [len(m.group(1)) for m in _b64_pat.finditer(_fh.read())]
+    except FileNotFoundError:
+        continue
+    _big = [ln for ln in _chunks if ln > 100 * 1024]
+    if _big:
+        print(f'❌ {_f} 存在超大内嵌base64资源 {len(_big)} 块（最大 {_big[0]//1024}KB>100KB闸）——须改静态文件外链（防首屏白屏）')
+        sys.exit(1)
+    if sum(_chunks) > 300 * 1024:
+        print(f'❌ {_f} base64内嵌总量 {sum(_chunks)//1024}KB>300KB闸——须静态化整改')
+        sys.exit(1)
+print('✅ 内嵌资源体积硬检通过（单块≤100KB、总量≤300KB）')
+
 # 2026-11-19 全字段代码闸自查补齐：投标建议四档 + 业务标签白名单两道闸
 # （validate_new_projects.py 本已有，此处为部署兜底双保险，防绕过 validate 的手改直发）
 try:
@@ -283,6 +304,49 @@ with open('index.html', 'w') as f:
 
 print(f'✅ 时间更新: {full_str}')
 PYTHON_EOF
+
+# 步骤3后：meta 自愈（2026-11-23 事故固化——决策管线上板后不写 meta 致 decide/晨报双失真；
+# 此处 index.html 版本号已最终定稿，派生的 version/total 才是部署真相；消费 meta 的 UI 永不吃 stale 数据）
+echo "📝 步骤3.5: 同步晨报元数据（sync_loop_meta）..."
+python3 tools/sync_loop_meta.py || echo "⚠️ sync_loop_meta 失败（不阻塞部署，但需关注）"
+
+# 步骤3.6: 渲染硬闸（2026-11-25 特级事故固化：v448-v451 带 JS 语法损坏连过四道部署，
+# 线上白屏近7小时。此后凡部署必须无头浏览器实测：无 pageerror、统计数字=项目数、表格有行，
+# 任一不过即中止部署——curl/hash 只是文件层证据，不等于用户可见终态）
+echo "📝 步骤3.6: 渲染硬闸（Playwright 实测）..."
+python3 << 'RENDER_EOF'
+import json, re, sys
+html = open('index.html', encoding='utf-8').read()
+m = re.search(r'id="tender-data">(.*?)</script>', html, re.S)
+expected = len(json.loads(m.group(1))['projects'])
+try:
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as p:
+        b = p.chromium.launch()
+        pg = b.new_page()
+        errs = []
+        pg.on('pageerror', lambda e: errs.append(str(e)[:200]))
+        pg.goto('file:///Users/zhouhq/Documents/kimi/workspace/bidding-daily/index.html')
+        pg.wait_for_timeout(2500)
+        stat = pg.evaluate("parseInt(document.getElementById('stat-all')?.textContent || '0')")
+        rows = pg.evaluate("document.querySelectorAll('#tbody-all tr').length")
+        undef = 'undefined' in (pg.evaluate("document.body.innerText") or '')
+        b.close()
+    ok = (not errs) and stat == expected and rows == expected and not undef
+    print(f'   渲染: 期望{expected} 行/统计{stat} 行{rows} pageerror={len(errs)} undefined={undef}')
+    if not ok:
+        print('❌ 渲染硬闸拦截：页面不可正常渲染，部署中止！')
+        sys.exit(1)
+    print('✅ 渲染硬闸通过')
+except SystemExit:
+    raise
+except Exception as e:
+    print(f'⚠️ 渲染硬闸自身异常（不阻塞）: {e}')
+RENDER_EOF
+if [ $? -ne 0 ]; then
+    echo "❌ 部署被渲染硬闸中止，请修复 index.html 后重试"
+    exit 1
+fi
 
 # 步骤4: 提取版本号
 echo "📝 步骤4: 提取版本号..."

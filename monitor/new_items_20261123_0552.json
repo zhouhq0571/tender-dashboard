@@ -1,0 +1,46 @@
+{
+ "run_at": "2026-11-23 05:52:06",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 0,
+   "new_count": 0,
+   "note": "首次运行，仅建立指纹基线，不输出新增"
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 5,
+   "new_count": 4
+  }
+ ],
+ "new_items": [
+  {
+   "title": "中信银行“智能化安全漏洞渗透工具箱采购项目”供应商征集公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/21113200.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "建设银行江苏省分行商户收单用扫码终端采购项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/20192458.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "张家港农商银行“开发安全测试人力项目”竞争性磋商公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/20192337.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "建行山东省分行2027-2028年第三方支付权益服务项目招标公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/20184759.html",
+   "source": "移动支付网"
+  }
+ ]
+}

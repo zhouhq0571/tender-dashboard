@@ -52,6 +52,10 @@
 | 9 | 11-23 14:54 侧栏「标讯晨报·决策一体」Widget 仍显示凌晨快照（v439/74/10 候选） | Widget 数据为 05:47 主任务烘焙的静态内嵌，对话决策管线无刷新触发器；修 meta 不触发 Widget 文件重烘焙（与 #8 同型上下层） | `tools/refresh_morning_widget.py`（4 处动态点重烘焙，锚点断言）挂载 build_decide_page.py main()——decide.html 每次重建必联动刷新 Widget，同源同刻 |
 | 10 | 11-25 12:49 看板白屏"清零"近 7 小时（v448-v451 连续四版损坏）+ 决策任务假"执行中"206 分钟 | ①凌晨主任务全量重写 HTML 产出 JS 语法损坏文件（try 缺 catch），safe_deploy 文件级检查（hash/字段/正则）发现不了语法错，连过四道部署；②Widget 进度面板只靠 onStatusChange 收口，状态机漏态即永久"执行中"（结果其实已回显） | safe_deploy.sh 新增步骤3.6 **渲染硬闸**（Playwright 实测：无 pageerror+统计=项目数+表格行=项目数，不过即中止部署；v449 反向测试实证拦截）；Widget onDataChange 收结果即强制 stopProgress(true) 兜底 |
 
+**处分（2026-11-25 13:02 周老师裁定）：记大过一次**——特级故障（白屏7小时），记入本工作区处分台账，与事故 #10 同档。
+
+**事故 #10 根因终审（2026-11-25 13:30 彻查结论）**：非"全量重写 HTML"，而是凌晨主任务日期刷新脚本把正则的**日期锚点丢了**——19/20 日用的是 `re.sub(r'数据更新时间：2026年11月20日 [^<]*', ...)`（带具体日期锚点，只碰静态文本），25 日错写成 `re.sub(r'数据更新时间：[^<]*', ...)`（无锚），该正则吞掉 JS 动态模板行 ``coverEl.textContent = `数据更新时间：${timeStr}` `` 的 `${timeStr}` 及后续代码直到下一个 `<`，把静态日期文本缝进 live JS → 主脚本 SyntaxError（Missing catch or finally after try）→ 整段 JS 不执行 → 白屏。safe_deploy 当时只 curl 查版本号/日期字符串/JSON，不验 JS 语法与渲染 → 坏版照常"验证通过"上线。固化：SKILL.md 新增"无锚正则替换禁令"（必须锚定具体旧日期值或精确字符串 replace，写回后 node --check 自检）。
+
 **教训通则（全工作区生效）**：
 - **规则必须代码化**：凡"每次都要判"的口径，只写文档=没写。新增口径同日建消费函数（config.py）并挂 validate/safe_deploy 兜底双保险（本工作区已有先例：简称映射 11-19 失守→normalize_company 代码化）。
 - **单文件看板内嵌资源体积闸（2026-11-20 周老师钦定，防"厂商看板签章 1.25MB 内嵌致手机白屏 1 分钟"同类事故）**：单块 base64 >100KB 或单文件总量 >300KB = 违规，必须静态文件外链（展示尺寸小的图禁整图 dataURI 内嵌）。已代码化两处：`health_check.py` check_embedded_bloat（WARN 体检项）+ `safe_deploy.sh` 部署硬检（拒绝部署）；反向测试实证拦截有效。

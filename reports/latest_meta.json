@@ -1,12 +1,41 @@
 {
- "version": "v450",
+ "version": "v451",
  "date": "2026年11月25日",
  "timePeriod": "上午",
  "total": 81,
- "added": [],
+ "added": [
+  {
+   "company": "中国银行",
+   "project": "中国银行金融工具估值模型和标准初始保证金模型验证咨询项目",
+   "budget": "-",
+   "deadline": "2026-12-08 17:00",
+   "tags": [
+    "金市/资金/同业"
+   ]
+  },
+  {
+   "company": "建设银行湖南省分行",
+   "project": "湖南**股份有限公司财资一体化平台开发项目软件开发服务采购",
+   "budget": "350万元",
+   "deadline": "2026-12-02 17:00",
+   "tags": [
+    "公司金融"
+   ]
+  },
+  {
+   "company": "北银理财",
+   "project": "北银理财风险底座国产化升级建设项目",
+   "budget": "30万元",
+   "deadline": "2026-11-30 16:00",
+   "tags": [
+    "信创",
+    "风控合规"
+   ]
+  }
+ ],
  "removed_count": 6,
  "removed_note": "删除6条（11-23截止逾期2天：id 44/45/59/81/82/83）；15条今日（11-25）截止标记「☆☆☆ 已截止」保留（id 3/35/36/49/50/52/53/60/63/64/65/66/69/70/76）",
- "candidates": 8,
+ "candidates": 0,
  "pending_fill_count": 0,
  "filled_recent": [],
  "channel_stats": {

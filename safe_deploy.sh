@@ -310,6 +310,26 @@ PYTHON_EOF
 echo "📝 步骤3.5: 同步晨报元数据（sync_loop_meta）..."
 python3 tools/sync_loop_meta.py || echo "⚠️ sync_loop_meta 失败（不阻塞部署，但需关注）"
 
+# 步骤3.55: total 字段一致性硬检（2026-11-26 固化：cron v454 删 5 条过期后 total 字段未跟随，
+# 统计/封面与表格双失真——与 #8 同型。凡部署 total 必须 == len(projects)，不符即中止）
+echo "📝 步骤3.55: total 字段一致性硬检..."
+python3 << 'TOTAL_EOF'
+import json, re, sys
+html = open('index.html', encoding='utf-8').read()
+m = re.search(r'id="tender-data">(.*?)</script>', html, re.S)
+data = json.loads(m.group(1))
+declared, actual = data.get('total'), len(data['projects'])
+if declared != actual:
+    print(f'❌ total 字段拦截：声明 {declared} ≠ 实际 {actual}，部署中止！')
+    print('   修复：data["total"] = len(data["projects"]) 后重试')
+    sys.exit(1)
+print(f'✅ total 字段一致：{declared} = {actual}')
+TOTAL_EOF
+if [ $? -ne 0 ]; then
+    echo "❌ 部署被 total 字段硬检中止，请修复 index.html 后重试"
+    exit 1
+fi
+
 # 步骤3.6: 渲染硬闸（2026-11-25 特级事故固化：v448-v451 带 JS 语法损坏连过四道部署，
 # 线上白屏近7小时。此后凡部署必须无头浏览器实测：无 pageerror、统计数字=项目数、表格有行，
 # 任一不过即中止部署——curl/hash 只是文件层证据，不等于用户可见终态）

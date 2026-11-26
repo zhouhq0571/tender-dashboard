@@ -54,6 +54,19 @@ def check_duplicates(data):
         'detail': '无重复' if not duplicates else f'发现 {len(duplicates)} 个重复: {duplicates[:3]}'
     }
 
+def check_total_field(data):
+    """total 字段与实际项目数一致性（2026-11-26 固化：cron v454 删 5 条后 total 字段未跟随，
+    封面统计与表格行数双失真——#8 同型，字段层检查，渲染硬闸的上游）"""
+    declared = data.get('total')
+    actual = len(data['projects'])
+    ok = declared == actual
+    return {
+        'check': 'total 字段一致性',
+        'status': 'PASS' if ok else 'FAIL',
+        'detail': f'total 字段={declared}，实际项目数={actual}' if ok else f'total 字段({declared}) ≠ 实际项目数({actual})，须以 len(projects) 为准修正后重部署'
+    }
+
+
 def check_id_continuity(data):
     """检查 ID 连续性（2026-09-03 用户确认：ID 断档为删除过期项目的自然遗留，保持 id 稳定不重排，降级为 INFO）"""
     ids = [int(p['id']) for p in data['projects']]
@@ -302,6 +315,7 @@ def run_all_checks():
     
     results = []
     results.append(check_sorting(data))
+    results.append(check_total_field(data))
     results.append(check_duplicates(data))
     results.append(check_id_continuity(data))
     results.append(check_required_fields(data))

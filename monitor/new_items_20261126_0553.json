@@ -1,0 +1,40 @@
+{
+ "run_at": "2026-11-26 05:53:23",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 0,
+   "new_count": 0,
+   "note": "首次运行，仅建立指纹基线，不输出新增"
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 4,
+   "new_count": 3
+  }
+ ],
+ "new_items": [
+  {
+   "title": "兴业银行深圳分行2027-2028年度合作收单机构营销项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/25175518.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "广发银行信用卡中心微信和支付宝服务商集采项目公告",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/25175037.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "2鲲鹏支付发布最新公告，将启动下一阶段工作",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/20111038.html",
+   "source": "移动支付网"
+  }
+ ]
+}

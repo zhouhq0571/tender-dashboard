@@ -1,0 +1,56 @@
+{
+ "run_at": "20261126_0553",
+ "sources": [
+  {
+   "name": "乐采云-项目采购公告",
+   "mode": "fetch",
+   "status": "waf_blocked",
+   "total_items": 0,
+   "new_count": 0
+  },
+  {
+   "name": "乐采云WAF兜底-快查API定向补",
+   "mode": "api",
+   "status": "ok",
+   "total_items": 100,
+   "new_count": 3,
+   "quota_calls": 6,
+   "window_days": 15
+  }
+ ],
+ "new_items": [
+  {
+   "title": "湖州银行供应链系统建设项目-二阶段改造开发实施项目公开招标公告（湖州银行股份有限公司）",
+   "pubdate": "2026-11-20",
+   "deadline": "2026-12-10",
+   "url": "https://www.kuaicha365.com/?n=ccgp_lecaiyun_2051000015546781",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采",
+   "method": "公开招标",
+   "budget": 150.0,
+   "url_id": "ccgp_lecaiyun_2051000015546781"
+  },
+  {
+   "title": "浙江中瑞工程管理有限公司关于湖州银行2026年度统一日志平台扩容项目的公开招标公告（湖州银行股份有限公司）",
+   "pubdate": "2026-11-18",
+   "deadline": "2026-12-08",
+   "url": "https://www.kuaicha365.com/?n=ccgp_zhejiangqycgxx_Xf7oM4an3BDLM1WRfNSa5w",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 48.0,
+   "url_id": "ccgp_zhejiangqycgxx_Xf7oM4an3BDLM1WRfNSa5w"
+  },
+  {
+   "title": "宁波银行无锡分行2027-2028年度行政外包服务采购项目招标公告（宁波银行股份有限公司无锡分行）",
+   "pubdate": "2026-11-20",
+   "deadline": "2026-11-27",
+   "url": "https://www.kuaicha365.com/?n=ccgp_daqih_8181_245a71038739bd61f35bc4986acbaa65",
+   "source": "快查",
+   "channel": "乐采云WAF兜底补采-他源",
+   "method": "公开招标",
+   "budget": 2576.0,
+   "url_id": "ccgp_daqih_8181_245a71038739bd61f35bc4986acbaa65"
+  }
+ ]
+}

@@ -57,10 +57,11 @@
   table.dl td.kv { white-space:nowrap; font-variant-numeric:tabular-nums; }
   .co { font-weight:600; font-size:13px; }
   .pj { font-size:12px; color:#666; margin-top:3px; line-height:1.5; }
-  .tag-in, .rec-sel { width:100%; box-sizing:border-box; padding:6px 8px; font-size:12.5px; border:1px solid #dfe5ee; border-radius:7px; background:#fbfcfe; color:#1b2433; outline:none; font-family:inherit; min-width:90px; }
-  .tag-in:focus, .rec-sel:focus { border-color:#0b5cad; background:#fff; }
-  .tag-in.bad { border-color:#d5483f; }
-  .tag-err { font-size:11px; color:#d5483f; margin-top:3px; }
+  .tag-slot { width:100%; box-sizing:border-box; padding:5px 6px; font-size:12px; border:1px solid #dfe5ee; border-radius:6px; background:#fbfcfe; color:#1b2433; outline:none; font-family:inherit; margin-bottom:3px; }
+  .tag-slot:last-child { margin-bottom:0; }
+  .tag-slot:focus { border-color:#0b5cad; background:#fff; }
+  .rec-sel { width:100%; box-sizing:border-box; padding:6px 8px; font-size:12.5px; border:1px solid #dfe5ee; border-radius:7px; background:#fbfcfe; color:#1b2433; outline:none; font-family:inherit; min-width:90px; }
+  .rec-sel:focus { border-color:#0b5cad; background:#fff; }
   .rec-seg { display:flex; gap:6px; }
   .chip { flex:1; padding:6px 0; font-size:12.5px; border-radius:7px; border:1px solid #dfe5ee; background:#fafafa; color:#666; cursor:pointer; white-space:nowrap; font-family:inherit; min-width:56px; }
   .chip.pos[aria-pressed="true"] { background:#2f6fed; color:#fff; border-color:#2f6fed; }
@@ -91,7 +92,7 @@
 </div>
 <div class="meta2" id="boardMeta"></div>
 <div class="tip">编号为台账全局递增编号（非本批序号），历史上已闭环的编号不再显示。点选「纳入 / 不纳入」（本机自动保存，刷新不丢）→ 底部生成决策指令 → 一键复制 → 粘贴到 Kimi「银信标讯」项目对话发送即执行。</div>
-<div class="tbl-wrap"><table class="dl"><thead><tr><th style="width:44px">编号</th><th>招标单位 / 项目</th><th style="width:76px">预算</th><th style="width:96px">投标截止</th><th style="width:150px">业务标签</th><th style="width:118px">投标建议</th><th style="width:132px">决策</th></tr></thead><tbody id="body"></tbody></table></div>
+<div class="tbl-wrap"><table class="dl"><thead><tr><th style="width:44px">编号</th><th>招标单位 / 项目</th><th style="width:76px">预算</th><th style="width:96px">投标截止</th><th style="width:118px">业务标签</th><th style="width:118px">投标建议</th><th style="width:132px">决策</th></tr></thead><tbody id="body"></tbody></table></div>
 <div class="empty" id="empty" style="display:none">本批次暂无待确认候选</div>
 <div class="foot">
   <button class="gen" id="gen">生成决策指令并复制</button>
@@ -102,16 +103,18 @@
 </div>
 
 </div>
-<script type="application/json" id="blob">{"v": 1, "iter": 310000, "salt": "d2778a4358ba81186a806e46c062fba4", "iv": "6cb033328053af1977fda69f", "ct": "031c7095ce557ae2b6c8e961780d89e85eb6d9cf4b67b8c4c0622d26438bdc161188774bd926f6dc882f6589121a782df9e5353dd7b2ba4855f90fce5080acb234ff82c8a0d6f475d3fba1d300904f5be1996fab1914d681e316a071ca4c48aa7c24f0d5888d6a17e7dd3e7595d07e13e943acffd549261ad08179d88830dcefc221325663d1f6c92bc7afafcf53f3b4153f9e9586e18a628b2d1e380c5e7277243ed2b83cef080c389aafc3b97b4474e682dbaeafd2179d6dbd662ecacb06e90ac86b9825f96cedd3dc001a6b27b702e4e8cbd667614ddd0f49febb7e5fffc2c2a3c89ec8abeb44b8dfffb6d0cbca36759193ec29f00012e722a061ed5e489b6e705b9475e1a368d92cbe938b15532260c83f9fd5a7386cb4ea0701ccee200c8914fdfdf883c48ce2ff990eda5e5d0ba1506e5bbe738f01b5bbe792ee49570f717609fe1976db8a5da03d0fd3e4d24e7512cd233b2b5dddb3a09805d50b79c29a76f0ae18089955d3f67bc60f225ac1871bb1626c221704ddd3e6707ff6639e521c4dd683bb6536422869d44637431f0044d2eaae3fd3a65a0380da6c3cc2051fdc5397a9425270938b6b90a63e8f02867fe01df8cfbd3944380f02c52205a8", "wiv": "58f66d741b4ab35caf9628f6", "wct": "cdf71f1b18835503df0b8617de7a72b9bd927fdf41c6547b5cc09bb31b5cbabfb81f4a4fa9d5108edcd8b74da0f58e87"}</script>
+<script type="application/json" id="blob">{"v": 1, "iter": 310000, "salt": "621cc0369b955d6b3d3b1c11575428b6", "iv": "f3ecd47c06a922f541c2a837", "ct": "b49d65f0962240e620db52bf61241f07b1abb236c5b6fdeaac30be856c987a00f4f674ac1019cc4d9fac32fc96837d713df7d97a4c639794f5f4c3f68a310085c6f5a3fe17240ae828ee40987a942f899b7b6d4295e8c30e19fc047e3371b15014bfdc60c7119d0440c0c572727235be83d0fbb9709cf729202bbdb661f2430ec3239d69872deb657a07be2b7754429e7e43ad206e6963f879e11b9a7b1a097ade0d8e452a8c1873c454f09d936ce0ef0b14021fa547f3cdfe4c114231c6261176c0c4db4ba62c30295c4b88242c74f995a1253ddd03c0a7c87ab1fe2c001baad780a0c7374bcbeae480eb199f2d54049585be8f6426f30c6933e10a6e5fd0408f5a242e4887880746cb9d816676229eef9c700f4afe6ccad03d32ce0827a72f723de0074c6ce1a61fdc29d1920d0a9ed9a6c030abf49c97290f1c6ca333684e87e9870357f1034b7e46ecd3d8f0ca187bbe2559c987eee2204cade1bb8a0ce3a87c23568ab90a614e189d02da2f6f2e5bbd709977fe9a191b7fe8d0d8a405f67b73178654ccd250e7788004bd7d0c3820b483b092d62cee54cccfe3255e8b8e068399b680b14d54152f35699e22e859f5388e7b787ac8564b8c25e41e27ff5b306a4664a880e17e551aa74ca11c288d4c1985c3e1135d49659bbd36c679c2411fd0e0da43a0233cdc26a7d6831c65a274411ba55314c2237e21240c80ce3241a58af0db616706bed286290c099c2ca3266860ffc94af259ea7c303276c38d0a171634fcfeb0972b4fc56d1be41f1eab4f2b0e82c598bb406e2e52042c08dbee79e3ad7d3029a6e9e4e4d0fe5a936e4d85f2d4bfec3d960bd9ba1239558a310b2b860ccef99aaa2fff991ac519d015b67664543d3e2bab08dd44dd0d97ab588144288ff159e51aa728a1f30c117b31b7473c08757ade6561cafe9b099213feda777ed0a5f7fed85da7e1a014b4e0d15d81b70e9b67a1995a62c072bbca5cd5e359228c0350c2", "wiv": "8b485b818593fc6b332cbe56", "wct": "a7553df33e04d22376b47cd86d23538a9b44eab93e2646cc147b5a242d19e2703eab691c999cc976a3cd9cee7c8da305"}</script>
 <script>
 
 window.DecisionCore = {
   create: function(opts){
     var DATA = opts.data, VALID = DATA.valid_tags || [];
+    // 2026-11-26 改版：标签下拉按板上最近使用频度排序（tag_options），非常用标签垫后
+    var TAGOPTS = (DATA.tag_options && DATA.tag_options.length) ? DATA.tag_options : VALID;
     var decisions = {}, persistFn = opts.persist || function(){}, onStat = opts.onStat || function(){};
     var bodyEl = typeof opts.body === 'string' ? document.getElementById(opts.body) : opts.body;
     function esc(x){ return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}); }
-    function defaults(){ var d={}; DATA.items.forEach(function(it){ d[it.push_no]={decision:null,tags:it.tags,rec:it.rec}; }); return d; }
+    function defaults(){ var d={}; DATA.items.forEach(function(it){ d[it.push_no]={decision:null,tags:splitTags(it.tags).join(','),rec:it.rec}; }); return d; }
     function splitTags(s){ return String(s||'').split(/[,，、;；\s]+/).map(function(t){return t.trim()}).filter(Boolean); }
     function tagError(s){
       var ts = splitTags(s);
@@ -121,20 +124,33 @@ window.DecisionCore = {
     }
     function get(){ return decisions; }
     function updateStat(){ var n=Object.keys(decisions).filter(function(k){return decisions[k].decision}).length; onStat(n, DATA.items.length); }
+    // 2026-11-26 周老师手机端体验改版：三槽下拉替代手填输入框。
+    // 槽1预填判定标签（无判定时给"请选择"空项），槽2/3预填其余判定、带"（可空）"空项；
+    // 变更时三槽去重归并（保序）写回状态并重渲染，手机端用原生选择器零打字。
+    function tagCell(it, d){
+      var cur = splitTags(d.tags);
+      var h = '<div class="tag-slots">';
+      for (var si=0; si<3; si++){
+        var v = cur[si] || '';
+        h += '<select class="tag-slot" data-no="'+it.push_no+'" data-slot="'+si+'" aria-label="业务标签'+(si+1)+'">';
+        if (si>0) h += '<option value="">（可空）</option>';
+        else if (!cur.length) h += '<option value="">请选择标签</option>';
+        TAGOPTS.forEach(function(t){ h += '<option value="'+esc(t)+'"'+(t===v?' selected':'')+'>'+esc(t)+'</option>'; });
+        h += '</select>';
+      }
+      return h + '</div>';
+    }
     function render(){
       if (!DATA.items.length){ bodyEl.innerHTML=''; updateStat(); return; }
-      var dl = '<datalist id="taglib">'+VALID.map(function(t){return '<option value="'+esc(t)+'">'}).join('')+'</datalist>';
-      var h = dl;
+      var h = '';
       DATA.items.forEach(function(it){
-        var d = decisions[it.push_no] || (decisions[it.push_no]={decision:null,tags:it.tags,rec:it.rec});
-        var te = tagError(d.tags);
+        var d = decisions[it.push_no] || (decisions[it.push_no]={decision:null,tags:splitTags(it.tags).join(','),rec:it.rec});
         h += '<tr data-no="'+it.push_no+'">'
           + '<td class="num">'+esc(it.push_no)+'</td>'
           + '<td><div class="co">'+esc(it.company)+'</div><div class="pj">'+esc(it.project)+'</div></td>'
           + '<td class="num">'+esc(it.budget)+'</td>'
           + '<td class="num">'+esc(it.deadline)+'</td>'
-          + '<td><input list="taglib" placeholder="最多3个，逗号分隔" class="tag-in'+(te?' bad':'')+'" data-no="'+it.push_no+'" value="'+esc(d.tags)+'"/>'
-          + (te?'<div class="tag-err">'+esc(te)+'</div>':'')+'</td>'
+          + '<td>'+tagCell(it,d)+'</td>'
           + '<td><select class="rec-sel" data-no="'+it.push_no+'">'
           + ["强烈建议投标", "建议投标", "可关注"].map(function(r){return '<option'+(r===d.rec?' selected':'')+'>'+r+'</option>'}).join('')
           + '</select></td>'
@@ -154,10 +170,15 @@ window.DecisionCore = {
           });
         });
       });
-      bodyEl.querySelectorAll('.tag-in').forEach(function(t){
-        t.addEventListener('input', function(){ decisions[+t.dataset.no].tags=t.value; persistFn(decisions); });
-        t.addEventListener('change', function(){ decisions[+t.dataset.no].tags=t.value.trim(); persistFn(decisions); render(); });
-        t.addEventListener('blur', function(){ render(); });
+      bodyEl.querySelectorAll('.tag-slot').forEach(function(sel){
+        sel.addEventListener('change', function(){
+          var no = +sel.dataset.no, vals = [];
+          sel.closest('tr').querySelectorAll('.tag-slot').forEach(function(s){
+            var v = s.value.trim(); if (v && vals.indexOf(v)<0) vals.push(v);
+          });
+          decisions[no].tags = vals.join(',');
+          persistFn(decisions); render();
+        });
       });
       bodyEl.querySelectorAll('.rec-sel').forEach(function(sel){
         sel.addEventListener('change', function(){ decisions[+sel.dataset.no].rec=sel.value; persistFn(decisions); updateStat(); });
@@ -178,7 +199,12 @@ window.DecisionCore = {
     return {
       render: render, collect: collect, get: get,
       snapshot: function(){ return JSON.parse(JSON.stringify(decisions)); },
-      restore: function(saved){ decisions = (saved && typeof saved==='object') ? saved : defaults(); render(); persistFn(decisions); },
+      restore: function(saved){
+        decisions = (saved && typeof saved==='object') ? saved : defaults();
+        // 旧版手填草稿归一化：非法/超3个标签在 restore 时即收敛为槽位可选的合法值
+        Object.keys(decisions).forEach(function(k){ decisions[k].tags = splitTags(decisions[k].tags).slice(0,3).join(','); });
+        render(); persistFn(decisions);
+      },
       reset: function(){ decisions = defaults(); render(); persistFn(decisions); }
     };
   }

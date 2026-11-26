@@ -57,10 +57,11 @@ APP_CSS = r'''
   table.dl td.kv { white-space:nowrap; font-variant-numeric:tabular-nums; }
   .co { font-weight:600; font-size:13px; }
   .pj { font-size:12px; color:#666; margin-top:3px; line-height:1.5; }
-  .tag-in, .rec-sel { width:100%; box-sizing:border-box; padding:6px 8px; font-size:12.5px; border:1px solid #dfe5ee; border-radius:7px; background:#fbfcfe; color:#1b2433; outline:none; font-family:inherit; min-width:90px; }
-  .tag-in:focus, .rec-sel:focus { border-color:#0b5cad; background:#fff; }
-  .tag-in.bad { border-color:#d5483f; }
-  .tag-err { font-size:11px; color:#d5483f; margin-top:3px; }
+  .tag-slot { width:100%; box-sizing:border-box; padding:5px 6px; font-size:12px; border:1px solid #dfe5ee; border-radius:6px; background:#fbfcfe; color:#1b2433; outline:none; font-family:inherit; margin-bottom:3px; }
+  .tag-slot:last-child { margin-bottom:0; }
+  .tag-slot:focus { border-color:#0b5cad; background:#fff; }
+  .rec-sel { width:100%; box-sizing:border-box; padding:6px 8px; font-size:12.5px; border:1px solid #dfe5ee; border-radius:7px; background:#fbfcfe; color:#1b2433; outline:none; font-family:inherit; min-width:90px; }
+  .rec-sel:focus { border-color:#0b5cad; background:#fff; }
   .rec-seg { display:flex; gap:6px; }
   .chip { flex:1; padding:6px 0; font-size:12.5px; border-radius:7px; border:1px solid #dfe5ee; background:#fafafa; color:#666; cursor:pointer; white-space:nowrap; font-family:inherit; min-width:56px; }
   .chip.pos[aria-pressed="true"] { background:#2f6fed; color:#fff; border-color:#2f6fed; }
@@ -352,7 +353,7 @@ __GATE_HTML__
 
 def head_html():
     """共用列序契约 + 网页版列宽（列序以 decision_core.COLUMNS 为准，宽度和样式本地定）。"""
-    widths = ["44px", None, "76px", "96px", "150px", "118px", "132px"]
+    widths = ["44px", None, "76px", "96px", "118px", "118px", "132px"]
     ths = []
     for c, w in zip(decision_core.COLUMNS, widths):
         ths.append(f'<th{f" style=\"width:{w}\"" if w else ""}>{c}</th>')

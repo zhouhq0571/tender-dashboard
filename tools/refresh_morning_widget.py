@@ -70,6 +70,27 @@ def main():
     payload = decision_core.data_json(data)
     html = re.sub(pat, lambda m: m.group(1) + payload + m.group(2), html, flags=re.S)
 
+    # ⑤ 决策 UI 自愈（2026-11-26 三槽下拉改版固化）：cron 若用旧模板全量重烘焙 Widget，
+    # 会把三槽下拉 JS/CSS 刷回手填版；每次刷新强制把 DecisionCore 块与标签 CSS 归一到
+    # decision_core 权威源——刷新即自愈，不依赖任何人记得复核（规则代码化通则）
+    new_js = decision_core.CORE_JS.replace('__REC_OPTIONS__', '["强烈建议投标", "建议投标", "可关注"]')
+    mj = re.search(r'window\.DecisionCore = \{.*?\n\};\n', html, re.S)
+    assert mj, "锚点⑤ DecisionCore 块未命中"
+    canonical_js = new_js.strip('\n') + '\n'   # 首尾去换行：正则从 'window' 起匹配，文件内前导换行保留在原文
+    if mj.group(0) != canonical_js:
+        html = html[:mj.start()] + canonical_js + html[mj.end():]
+        print("  ⑤ DecisionCore 块已归一（检测到旧版/漂移，已自愈）")
+    if '.tag-slots' not in html:
+        mo = re.search(r'  \.tag-in \{[^}]*\}\n(  \.tag-in:focus \{[^}]*\}\n)?(  \.tag-in\.bad \{[^}]*\}\n)?', html)
+        assert mo, "锚点⑤ 标签 CSS 未命中（既无新 .tag-slots 也无旧 .tag-in，Widget 结构异常）"
+        new_css = ('  .tag-slots { display:flex; flex-direction:column; gap:3px; }\n'
+                   '  .tag-slot { width:100%; box-sizing:border-box; padding:4px 6px; font-size:12px; '
+                   'border:1px solid var(--kimi-border-color, #dfe5ee); border-radius:6px; '
+                   'background:var(--kimi-bg, #fbfcfe); color:inherit; outline:none; }\n'
+                   '  .tag-slot:focus { border-color:#1B3A5F; }\n')
+        html = html[:mo.start()] + new_css + html[mo.end():]
+        print("  ⑤ 标签 CSS 已归一（旧 .tag-in 已替换）")
+
     WIDGET_HTML.write_text(html, encoding="utf-8")
     print(f"晨报 Widget 已重烘焙：{version}/{total} · 待确认 {n_pending} · 新上板 +{n_added} · 过期 -{n_removed}")
     return 0

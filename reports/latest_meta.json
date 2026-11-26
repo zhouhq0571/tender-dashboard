@@ -1,5 +1,5 @@
 {
- "version": "v458",
+ "version": "v459",
  "date": "2026年11月27日",
  "timePeriod": "凌晨",
  "total": 66,
@@ -54,7 +54,7 @@
  ],
  "removed_count": 5,
  "removed_note": "删除5条（11-24截止逾期2天：id 27华夏理财/46临商银行/74上海银行/77重庆农商/80四川银行）；4条今日（11-26）截止标记「☆☆☆ 已截止」保留（id 15/32/67/79）",
- "candidates": 0,
+ "candidates": 13,
  "pending_fill_count": 0,
  "filled_recent": [],
  "channel_stats": {

@@ -1,12 +1,12 @@
 {
- "version": "v462",
+ "version": "v463",
  "date": "2026年11月27日",
  "timePeriod": "上午",
  "total": 76,
  "added": [],
  "removed_count": 15,
  "removed_note": "删除15条（11-25截止逾期2天：id 3/35/36/49/50/52/53/60/63/64/65/66/69/70/76）；14条今日（11-27）截止标记「☆☆☆ 已截止」保留（id 4/5/6/7/16/17/18/29/37/40/47/61/62/84）",
- "candidates": 13,
+ "candidates": 0,
  "pending_fill_count": 0,
  "filled_recent": [],
  "channel_stats": {

@@ -14,6 +14,10 @@
    编号|招标单位/项目|预算|投标截止|业务标签|投标建议|决策（chips），不再用手机卡片式；
 ② 修复 30 分钟免密失效真 bug：原实现 dek 存 base64、恢复时按 hex 解析（ab 函数），
    必然解密失败→每次都要输密码。改为存 hex（hexE），与 ab 解析一致；
+11-27 修复免密跨部署失效真 bug（周老师 09:10 报告：半小时内再次登录仍要输密码）：
+   原实现每次构建 os.urandom 随机 DEK，重部署后旧免密钥匙解密新数据包必然失败。
+   DEK 改为确定性派生 PBKDF2(密码, b'decide-dek-v1'+工作级盐 .decide_salt)，
+   跨构建/重部署恒定，免密 30 分钟真正跨部署生效；blob 升 v2（废弃 wct/wiv 包裹层）。
 ③ 窄屏（手机）表格横向滚动，交互与桌面一致。"""
 import json, datetime, base64, sys
 from pathlib import Path
@@ -27,11 +31,26 @@ OUT = BIDDING / "decide.html"
 SEAL = BIDDING / "gate" / "seal.gif"   # 11-19 个人签章（与厂商看板同源 seal.gif 的本地副本）
 
 PWD_FILE = BIDDING / ".decide_pwd"
+SALT_FILE = BIDDING / ".decide_salt"   # 11-27 确定性 DEK 派生盐（工作区级、持久；免密跨部署生效的前提）
 
 def load_pwd():
     if PWD_FILE.exists():
         return PWD_FILE.read_text().strip()
     return ""
+
+def load_salt() -> bytes:
+    """稳定工作级盐：已存则复用，缺失则生成并落盘（chmod 600）。DEK=PBKDF2(密码, b'decide-dek-v1'+salt)，
+    故同一密码+同一盐 → 每次构建/重部署 DEK 恒定，免密钥匙（localStorage DEK hex）跨部署持续有效。"""
+    import os
+    if SALT_FILE.exists():
+        return bytes.fromhex(SALT_FILE.read_text().strip())
+    salt = os.urandom(16)
+    SALT_FILE.write_text(salt.hex(), encoding="utf-8")
+    try:
+        SALT_FILE.chmod(0o600)
+    except Exception:
+        pass
+    return salt
 
 APP_CSS = r'''
   /* ===== 决策应用本体（11-20 对齐侧栏组件表格交互） ===== */
@@ -205,29 +224,37 @@ GATE_JS = r'''
   var NAME_KEY = 'decide_gate_name_v1';
   var ALIAS = {'周红青':'周老师'};          // 姓名别名（与厂商看板口径一致）
   var ALLOWED = ['周老师'];
+  /* 11-27 blob v2：DEK=PBKDF2(密码, SHA-256('decide-dek-v1'‖salt)) 确定性派生（与构建端同式），
+     免密钥匙（GRACE_KEY 存 DEK hex）跨部署持续有效。 */
   var __fails = 0, __busy = false;
   function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function ab(h){var a=new Uint8Array(h.length/2);for(var i=0;i<a.length;i++)a[i]=parseInt(h.substr(i*2,2),16);return a;}
   function hexE(buf){var u8=new Uint8Array(buf),s='';for(var i=0;i<u8.length;i++){s+=('0'+u8[i].toString(16)).slice(-2);}return s;}
-  function pbkdf2(pwd,salt,iter){
+  function dekSaltBuf(){
+    var pre=new TextEncoder().encode('decide-dek-v1'), s=ab(BLOB.salt);   // 与构建端 b'decide-dek-v1'+原始盐字节 同式
+    var buf=new Uint8Array(pre.length+s.length); buf.set(pre); buf.set(s,pre.length);
+    return buf;
+  }
+  function pbkdf2(pwd,saltBuf,iter){
     var enc=new TextEncoder();
     return crypto.subtle.importKey('raw',enc.encode(pwd),'PBKDF2',false,['deriveKey']).then(function(k){
-      return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:iter,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['decrypt']);
+      return crypto.subtle.deriveKey({name:'PBKDF2',salt:saltBuf,iterations:iter,hash:'SHA-256'},k,{name:'AES-GCM',length:256},true,['decrypt']);
     });
   }
   function gateShow(html){var g=document.getElementById('gate');g.innerHTML=html;g.classList.remove('hide');g.style.display='flex';}
   function gateHide(){var g=document.getElementById('gate');g.classList.add('hide');setTimeout(function(){g.style.display='none'},250);}
-  function decryptData(dekBuf){
-    return crypto.subtle.importKey('raw',dekBuf,'AES-GCM',false,['decrypt']).then(function(k){
-      return crypto.subtle.decrypt({name:'AES-GCM',iv:ab(BLOB.iv)},k,ab(BLOB.ct));
-    }).then(function(pt){return JSON.parse(new TextDecoder().decode(pt));});
+  function decryptWithKey(key){
+    return crypto.subtle.decrypt({name:'AES-GCM',iv:ab(BLOB.iv)},key,ab(BLOB.ct))
+      .then(function(pt){return JSON.parse(new TextDecoder().decode(pt));});
   }
   /* 30 分钟免密：本机会话记忆（DEK+时间戳，过期/解密失败即回落密码常态） */
   function gateBoot(){
     try{
       var g=JSON.parse(localStorage.getItem(GRACE_KEY)||'null');
       if(g&&g.dek&&(Date.now()-g.t)<GRACE_MS){
-        decryptData(ab(g.dek)).then(function(DATA){gateHide();start(DATA);}).catch(function(){
+        crypto.subtle.importKey('raw',ab(g.dek),'AES-GCM',false,['decrypt']).then(function(key){
+          return decryptWithKey(key);
+        }).then(function(DATA){gateHide();start(DATA);}).catch(function(){
           localStorage.removeItem(GRACE_KEY);gateLock();
         });
         return;
@@ -290,12 +317,12 @@ GATE_JS = r'''
     document.getElementById('gPwd').disabled=true;
     var realName=ALIAS[name]||name;
     if(ALLOWED.indexOf(realName)<0){failUnlock('姓名未授权');return;}
-    pbkdf2(pwd,ab(BLOB.salt),BLOB.iter).then(function(kek){
-      return crypto.subtle.decrypt({name:'AES-GCM',iv:ab(BLOB.wiv)},kek,ab(BLOB.wct));
-    }).then(function(dek){
-      try{localStorage.setItem(NAME_KEY,name);}catch(e){}
-      try{localStorage.setItem(GRACE_KEY,JSON.stringify({t:Date.now(),dek:hexE(dek)}));}catch(e){}  // 免密会话起算（hex，与 ab 解析一致）
-      return decryptData(dek);
+    pbkdf2(pwd,dekSaltBuf(),BLOB.iter).then(function(key){
+      return crypto.subtle.exportKey('raw',key).then(function(raw){
+        try{localStorage.setItem(NAME_KEY,name);}catch(e){}
+        try{localStorage.setItem(GRACE_KEY,JSON.stringify({t:Date.now(),dek:hexE(raw)}));}catch(e){}  // 免密会话起算（hex，与 ab 解析一致）
+        return decryptWithKey(key);
+      });
     }).then(function(DATA){
       gateHide();start(DATA);
     }).catch(function(){
@@ -434,13 +461,13 @@ def main():
         import os, hashlib
         from cryptography.hazmat.primitives.ciphers.aead import AESGCM
         ITER = 310000
-        dek = os.urandom(32); salt = os.urandom(16)
-        kek = hashlib.pbkdf2_hmac('sha256', pwd.encode(), salt, ITER, dklen=32)
+        salt = load_salt()
+        # 11-27 修复免密跨部署失效真 bug：DEK 原为每次构建随机（os.urandom），重部署即作废
+        # localStorage 免密钥匙。改为 密码+固定盐 确定性派生，跨构建/重部署恒定；改密码即换 DEK。
+        dek = hashlib.pbkdf2_hmac('sha256', pwd.encode(), b'decide-dek-v1' + salt, ITER, dklen=32)
         iv = os.urandom(12)
         ct = AESGCM(dek).encrypt(iv, json.dumps(data, ensure_ascii=False).encode(), None)
-        wiv = os.urandom(12)
-        wct = AESGCM(kek).encrypt(wiv, dek, None)
-        blob = {"v":1,"iter":ITER,"salt":salt.hex(),"iv":iv.hex(),"ct":ct.hex(),"wiv":wiv.hex(),"wct":wct.hex()}
+        blob = {"v": 2, "iter": ITER, "salt": salt.hex(), "iv": iv.hex(), "ct": ct.hex()}
         payload = json.dumps(blob, ensure_ascii=False)
         seal_uri = "data:image/gif;base64," + base64.b64encode(SEAL.read_bytes()).decode() if SEAL.exists() else ""
         page = (GATED_HTML.replace("__GATE_CSS__", GATE_CSS)

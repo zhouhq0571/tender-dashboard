@@ -50,14 +50,22 @@ APP_CSS = r'''
   @media (max-width:640px){ .kpi-strip{grid-template-columns:repeat(2,1fr)} }
   .tip { font-size:12px; color:#999; margin:0 2px 12px; line-height:1.7; }
   .tbl-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
-  table.dl { width:100%; border-collapse:collapse; font-size:13px; background:#fff; }
+  /* 2026-11-27 手机端三修：表格设最小总宽防挤压；前两列冻结（横滑不丢项目）；表头吸顶 */
+  table.dl { width:100%; min-width:880px; border-collapse:separate; border-spacing:0; font-size:13px; background:#fff; }
   table.dl th, table.dl td { text-align:left; padding:8px 10px; border-bottom:1px solid #eceff3; vertical-align:top; }
-  table.dl th { font-size:11.5px; color:#8a94a6; font-weight:500; white-space:nowrap; background:#fafbfc; }
-  table.dl td.num { color:#8a94a6; text-align:center; white-space:nowrap; }
+  table.dl th { font-size:11.5px; color:#8a94a6; font-weight:500; white-space:nowrap; background:#fafbfc; position:sticky; top:0; z-index:4; }
+  table.dl th:nth-child(1), table.dl td:nth-child(1) { position:sticky; left:0; z-index:3; }
+  table.dl th:nth-child(2), table.dl td:nth-child(2) { position:sticky; left:44px; z-index:3; box-shadow:5px 0 6px -5px rgba(27,36,51,.18); }
+  table.dl th:nth-child(1), table.dl th:nth-child(2) { z-index:5; }
+  table.dl td:nth-child(1), table.dl td:nth-child(2) { background:#fff; }
+  table.dl th:nth-child(1) { width:44px; min-width:44px; }
+  table.dl td:nth-child(2), table.dl th:nth-child(2) { min-width:200px; max-width:240px; }
+  table.dl th:nth-child(3), table.dl th:nth-child(4) { min-width:86px; }
+  table.dl td.num { color:#8a94a6; text-align:center; white-space:nowrap; font-variant-numeric:tabular-nums; }
   table.dl td.kv { white-space:nowrap; font-variant-numeric:tabular-nums; }
   .co { font-weight:600; font-size:13px; }
   .pj { font-size:12px; color:#666; margin-top:3px; line-height:1.5; }
-  .tag-slot { width:100%; box-sizing:border-box; padding:5px 6px; font-size:12px; border:1px solid #dfe5ee; border-radius:6px; background:#fbfcfe; color:#1b2433; outline:none; font-family:inherit; margin-bottom:3px; }
+  .tag-slot { width:100%; box-sizing:border-box; padding:5px 4px; font-size:12px; border:1px solid #dfe5ee; border-radius:6px; background:#fbfcfe; color:#1b2433; outline:none; font-family:inherit; margin-bottom:3px; white-space:nowrap; }
   .tag-slot:last-child { margin-bottom:0; }
   .tag-slot:focus { border-color:#0b5cad; background:#fff; }
   .rec-sel { width:100%; box-sizing:border-box; padding:6px 8px; font-size:12.5px; border:1px solid #dfe5ee; border-radius:7px; background:#fbfcfe; color:#1b2433; outline:none; font-family:inherit; min-width:90px; }
@@ -75,6 +83,10 @@ APP_CSS = r'''
   .msg { font-size:13px; margin-top:8px; line-height:1.6; }
   .msg.ok { color:#2e9e5b; } .msg.err { color:#d5483f; }
   textarea { width:100%; height:90px; margin-top:10px; padding:8px; font-size:13px; border:1px solid #ddd; border-radius:8px; box-sizing:border-box; }
+  /* 2026-11-27 手工横屏：优先真横屏锁定（Android Chrome），iOS/桌面回落 CSS 旋转整页 */
+  .rotbtn { width:100%; margin-bottom:8px; padding:9px 0; font-size:13.5px; font-weight:600; border:1px solid #b8c4d6; border-radius:10px; background:#fff; color:#3d4c63; cursor:pointer; font-family:inherit; }
+  body.rot90 { overflow:hidden; }
+  body.rot90 #app { position:fixed; top:0; left:100vw; width:100vh; height:100vw; max-width:none; transform:rotate(90deg); transform-origin:top left; overflow-y:auto; overflow-x:hidden; background:#f6f7f9; padding:12px; box-sizing:border-box; }
 '''
 
 APP_HTML = r'''
@@ -91,6 +103,7 @@ APP_HTML = r'''
 <div class="tbl-wrap"><table class="dl">__HEAD__<tbody id="body"></tbody></table></div>
 <div class="empty" id="empty" style="display:none">本批次暂无待确认候选</div>
 <div class="foot">
+  <button class="rotbtn" id="rot">🔄 横屏决策（显示更多字段）</button>
   <button class="gen" id="gen">生成决策指令并复制</button>
   <div class="stat" id="stat"></div>
   <div class="msg" id="msg"></div>
@@ -147,6 +160,29 @@ function start(DATA){
       },function(){$('msg').className='msg ok';$('msg').textContent='复制失败，请长按上方文本框手动复制'});
     }else{$('msg').className='msg ok';$('msg').textContent='请长按上方文本框手动复制后发送到 Kimi 对话'}
   });
+  // 2026-11-27 手工横屏：Android Chrome 走全屏+方向锁（真横屏）；iOS Safari/桌面不支持 lock，
+  // 回落 CSS 整页旋转 90°（视觉横屏，字段全展开）；再点返回竖屏
+  (function(){
+    var rotated=false;
+    $('rot').addEventListener('click',function(){
+      if(!rotated){
+        rotated=true; $('rot').textContent='↩ 返回竖屏';
+        var el=document.documentElement, req=(el.requestFullscreen||el.webkitRequestFullscreen);
+        var p=req?req.call(el):Promise.reject(new Error('no-fs'));
+        if(p&&p.then){ p.then(function(){
+            if(screen.orientation&&screen.orientation.lock) return screen.orientation.lock('landscape');
+            throw new Error('no-lock');
+          }).catch(function(){ document.body.classList.add('rot90'); }); }
+        else{ document.body.classList.add('rot90'); }
+      }else{
+        rotated=false; $('rot').textContent='🔄 横屏决策（显示更多字段）';
+        document.body.classList.remove('rot90');
+        var ex=document.exitFullscreen||document.webkitExitFullscreen;
+        if(ex&&(document.fullscreenElement||document.webkitFullscreenElement)){ try{ ex.call(document); }catch(e){} }
+        if(screen.orientation&&screen.orientation.unlock){ try{ screen.orientation.unlock(); }catch(e){} }
+      }
+    });
+  })();
   $('copybtn').addEventListener('click',function(){
     var txt=$('out').value;
     if(!txt){$('msg').className='msg err';$('msg').textContent='请先生成决策指令';return}

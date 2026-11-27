@@ -1,0 +1,46 @@
+{
+ "run_at": "2026-11-27 05:52:53",
+ "sources": [
+  {
+   "name": "中招联合招标采购平台",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 0,
+   "new_count": 0,
+   "note": "首次运行，仅建立指纹基线，不输出新增"
+  },
+  {
+   "name": "移动支付网",
+   "mode": "fetch",
+   "status": "ok",
+   "total_items": 6,
+   "new_count": 4
+  }
+ ],
+ "new_items": [
+  {
+   "title": "曲靖市商业银行审计管理系统建设项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/26195931.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "兰州银行市场风险管理系统采购项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/26195653.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "兴业银行福州分行2027-2028年度零售合作收单采购项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/26174331.html",
+   "source": "移动支付网"
+  },
+  {
+   "title": "南通农商银行2027年收单业务外包项目中标候选人公示",
+   "date": "",
+   "url": "https://www.mpaypass.com.cn/news/202611/26174058.html",
+   "source": "移动支付网"
+  }
+ ]
+}

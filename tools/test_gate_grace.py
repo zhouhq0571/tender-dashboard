@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """decide.html 免密跨部署回归测试（11-27 blob v2 确定性 DEK）。"""
-import sys, subprocess
+import sys, os, subprocess
 from pathlib import Path
 from playwright.sync_api import sync_playwright
+
+SKIP_REBUILD = os.environ.get("SKIP_REBUILD") == "1"   # 部署闸模式：不改写 decide.html（构建已定型）
 
 BIDDING = Path("/Users/zhouhq/Documents/kimi/workspace/bidding-daily")
 URL = "file://" + str(BIDDING / "decide.html")
@@ -47,13 +49,17 @@ with sync_playwright() as p:
     page2.close(); page.close()
 
     # ③ 模拟重部署：重建（新 iv/新 blob），同 context 再重载 → 必须仍然免密（本 bug 回归测试）
-    r = subprocess.run([sys.executable, str(BIDDING / "build_decide_page.py")],
-                       capture_output=True, text=True, check=True)
-    assert "GATED" in r.stdout
-    page3 = open_page(ctx)
-    assert app_visible(page3), "③ 重部署后免密失效（回归）"
-    print("③ 重建（重部署）后同会话重载 → 免密仍直进 ✓")
-    page3.close()
+    # 部署闸模式（SKIP_REBUILD=1）跳过：deploy 内不许改写 decide.html，跨部署确定性由固定盐结构保证
+    if SKIP_REBUILD:
+        print("③ 重建回归：SKIP_REBUILD=1 跳过（部署闸模式）")
+    else:
+        r = subprocess.run([sys.executable, str(BIDDING / "build_decide_page.py")],
+                           capture_output=True, text=True, check=True)
+        assert "GATED" in r.stdout
+        page3 = open_page(ctx)
+        assert app_visible(page3), "③ 重部署后免密失效（回归）"
+        print("③ 重建（重部署）后同会话重载 → 免密仍直进 ✓")
+        page3.close()
 
     # ④ 负例：错误密码必须被拒；且不得污染免密钥匙
     page4 = open_page(ctx)

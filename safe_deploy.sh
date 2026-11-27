@@ -368,6 +368,18 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+# 步骤3.7: decide.html 门禁回归（2026-11-27 固化：11-27 免密跨部署失效真 bug 修复后立规——
+# 凡部署必实测决策页：登录/免密/负例/手机视口，任一不过即中止。SKIP_REBUILD=1 因部署中
+# decide.html 已定型，禁重建；跨部署确定性由 .decide_salt 固定盐结构保证。未设密码的 OPEN 版跳过）
+echo "📝 步骤3.7: 决策页门禁+手机视口回归（Playwright 实测）..."
+if [ -f .decide_pwd ]; then
+    SKIP_REBUILD=1 python3 tools/test_gate_grace.py || { echo "❌ 部署被门禁回归测试中止"; exit 1; }
+    python3 tools/test_mobile_viewport.py || { echo "❌ 部署被手机视口回归测试中止"; exit 1; }
+    echo "✅ 门禁+手机视口回归通过"
+else
+    echo "⚠️ 未设 .decide_pwd（OPEN 版），跳过决策页回归"
+fi
+
 # 步骤4: 提取版本号
 echo "📝 步骤4: 提取版本号..."
 VERSION=$(python3 -c "
